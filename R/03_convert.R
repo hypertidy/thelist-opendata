@@ -14,7 +14,8 @@
 ## has a 0-feature gdb beside a 9900-feature shp; a dozen zips have an empty
 ## gdb beside a full shp).
 ##
-## Everything streams from the public URL via /vsizip//vsicurl/ unless
+## Uses the unified 'gdal' CLI (GDAL >= 3.11): gdal vector pipeline, gdal raster
+## pipeline / convert, gdal vsi copy. Everything streams from the public URL via /vsizip//vsicurl/ unless
 ## SRC_ROOT points at a local mirror of opendata/data/ (bowerbird), in which
 ## case /vsizip/ reads local files. The rasters the peek skipped as too big
 ## (CHM and Slope 2 m, 8-24 GB zips) are only converted from SRC_ROOT.
@@ -25,12 +26,12 @@
 ##   PRODUCT    regex on product to restrict the run, e.g. '^LIST_(PARCELS|ADDRESS)'
 ##   RAW=0      skip the raw copy
 ##   DRY=1      print commands only
-##   CORES=4    parallel ogr2ogr/gdal_translate jobs
+##   CORES=4    parallel gdal jobs
 ## Progress goes to manifest/converted.csv keyed by source url + etag + output;
 ## anything already logged with the same etag is skipped, so re-runs only do
 ## what changed upstream.
 
-suppressPackageStartupMessages({ library(gdalraster); library(parallel) })
+suppressPackageStartupMessages(library(parallel))
 
 DEST <- Sys.getenv("DEST", "out")
 SRC_ROOT <- Sys.getenv("SRC_ROOT", "")
@@ -56,11 +57,13 @@ etag <- setNames(files$etag, files$url)
 logf <- "manifest/converted.csv"
 done <- if (file.exists(logf)) read.csv(logf, stringsAsFactors = FALSE) else
   data.frame(url = character(), etag = character(), output = character(), status = character(), when = character())
-is_done <- function(url, out) any(done$url == url & done$output == out & done$etag == etag[url] & done$status == "ok")
+is_done <- function(url, out) { et <- unname(etag[url]); !is.na(et) && any(done$url == url & done$output == out & done$etag == et & done$status == "ok") }
 log_done <- function(url, out, status) {
   if (DRY) return(invisible())
-  done <<- rbind(done, data.frame(url = url, etag = etag[url], output = out, status = status,
-                                  when = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")))
+  et <- unname(etag[url]); if (is.null(et) || is.na(et)) et <- ""
+  done <<- rbind(done[done$output != out, ],                       # one row per output: latest status wins
+                 data.frame(url = url, etag = et, output = out, status = status,
+                            when = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")))
   write.csv(done, logf, row.names = FALSE)
 }
 
@@ -73,6 +76,9 @@ src_dsn <- function(url, member) {
 ## a local DEST needs its directories made; a /vsi* DEST (object store) does not
 ensure_dir <- function(out) { if (!grepl("^/vsi", out) && !DRY) dir.create(dirname(out), recursive = TRUE, showWarnings = FALSE); out }
 has <- function(x) !is.null(x) && length(x) == 1 && !is.na(x) && nzchar(x)
+## a dsn from the peek is only usable if it is a GDAL path (a bare URL or a
+## stray value means the peek row is stale): otherwise build it from url + member
+usable_dsn <- function(x) has(x) && grepl("^(/vsi|OpenFileGDB:)", x)
 safe_job <- function(f) function(i) tryCatch(f(i), error = function(e)
   data.frame(url = NA_character_, out = NA_character_, status = paste("R error:", conditionMessage(e))))
 run <- function(cmd, args) {
@@ -88,13 +94,15 @@ mga55_extent <- function(ext) {
   e <- suppressWarnings(as.numeric(strsplit(ext, " ")[[1]]))
   length(e) >= 4 && !anyNA(e[1:4]) && e[1] > 150000 && e[3] < 750000 && e[2] > 5000000 && e[4] < 5800000
 }
-srs_args <- function(crs, ext) {
-  if (crs == "" || grepl("^EPSG:", crs)) return(character())
-  if (grepl("AHD", crs) && mga55_extent(ext)) return(c("-a_srs", "EPSG:28355+5711"))
+assign_crs <- function(crs, ext) {
+  if (crs == "" || grepl("^EPSG:", crs)) return("")
+  if (grepl("AHD", crs) && mga55_extent(ext)) return("EPSG:28355+5711")
   if (grepl("GDA.?(19)?94|MGA|Zone.?55|Transverse_Mercator", crs, ignore.case = TRUE) && mga55_extent(ext))
-    return(c("-a_srs", "EPSG:28355"))
-  character()
+    return("EPSG:28355")
+  ""
 }
+## pipeline steps are joined with " ! "
+pipe <- function(...) paste(c(...), collapse = " ! ")
 
 ## ---- pick one source per (product, region, layer) -------------------------
 vec <- layers[layers$geom_type != "raster" & layers$error == "" & !is.na(layers$feature_count), ]
@@ -113,7 +121,7 @@ if (RAW) {
     u <- raw$url[i]; out <- ensure_dir(file.path(DEST, "raw", raw$path[i]))
     if (is_done(u, out)) next
     message("copy ", raw$path[i])
-    ok <- DRY || isTRUE(tryCatch(vsi_copy_file(local_or_url(u), out), error = function(e) FALSE))
+    ok <- run("gdal", c("vsi", "copy", shQuote(local_or_url(u)), shQuote(out))) == 0L
     log_done(u, out, if (ok) "ok" else "copy failed")
   }
 }
@@ -124,15 +132,17 @@ vec_job <- function(i) {
   sub <- if (L$geom_type %in% c("None", "")) "parquet" else "geoparquet"
   out <- ensure_dir(file.path(DEST, sub, slug(L$product), slug(L$region), paste0(slug(L$layer), ".parquet")))
   if (is_done(L$url, out)) return(NULL)
-  dsn <- if (has(L$dsn) && !nzchar(SRC_ROOT)) L$dsn else src_dsn(L$url, L$member)
-  args <- c("-f", "Parquet", shQuote(out), shQuote(dsn), shQuote(L$layer),
-            if (sub == "geoparquet") c("-nlt", "PROMOTE_TO_MULTI") else character(),
-            srs_args(L$crs, L$extent),
-            "-lco", "COMPRESSION=ZSTD", "-lco", "ROW_GROUP_SIZE=65536",
-            "-lco", "GEOMETRY_ENCODING=WKB", "-lco", "WRITE_COVERING_BBOX=YES",
-            "-lco", "SORT_BY_BBOX=YES", "-lco", "GEOMETRY_NAME=geometry")
-  rc <- run("ogr2ogr", args)
-  data.frame(url = L$url, out = out, status = if (rc == 0L) "ok" else paste("ogr2ogr rc", rc))
+  dsn <- if (usable_dsn(L$dsn) && !nzchar(SRC_ROOT)) L$dsn else src_dsn(L$url, L$member)
+  crs <- assign_crs(L$crs, L$extent)
+  steps <- pipe(paste("read --layer", shQuote(L$layer), shQuote(dsn)),
+                if (sub == "geoparquet") "set-geom-type --multi",
+                if (nzchar(crs)) paste("edit --crs", crs),
+                paste("write --of Parquet --overwrite",
+                      "--lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
+                      "--lco GEOMETRY_ENCODING=WKB --lco WRITE_COVERING_BBOX=YES",
+                      "--lco SORT_BY_BBOX=YES --lco GEOMETRY_NAME=geometry", shQuote(out)))
+  rc <- run("gdal", c("vector", "pipeline", steps))
+  data.frame(url = L$url, out = out, status = if (rc == 0L) "ok" else paste("gdal vector rc", rc))
 }
 res <- do.call(rbind, mclapply(seq_len(nrow(vec)), safe_job(vec_job), mc.cores = CORES))
 for (i in seq_len(NROW(res))) if (!is.na(res$url[i])) log_done(res$url[i], res$out[i], res$status[i])
@@ -141,7 +151,7 @@ if (any(grepl("^R error", res$status))) message("R errors in vector jobs:\n", pa
 ## ---- 3. union VRT per LGA-split product --------------------------------------
 ## Recipe, not payload: an OGR VRT unioning the per-LGA parquet files, with the
 ## source LGA as a field. Open it directly, or materialise:
-##   ogr2ogr -f Parquet all.parquet <layer>_union.vrt
+##   gdal vector convert --of Parquet <layer>_union.vrt all.parquet
 split <- vec[vec$region_type == "lga" & !vec$geom_type %in% c("None", ""), ]
 strip_region <- function(layer, region) mapply(function(l, r) sub(paste0("_", tolower(r), "$"), "", tolower(l)), layer, region, USE.NAMES = FALSE)
 split$key <- paste(split$product, strip_region(split$layer, split$region))
@@ -153,15 +163,17 @@ for (key in unique(split$key)) {
            sprintf('  <OGRVRTUnionLayer name="%s">', lname),
            "    <PreserveSrcFID>OFF</PreserveSrcFID>",
            "    <SourceLayerFieldName>lga</SourceLayerFieldName>",
+           "    <FieldStrategy>FirstLayer</FieldStrategy>",   # sources share one schema; keeps Int16/DateTime instead of String
            sprintf('    <OGRVRTLayer name="%s">\n      <SrcDataSource relativeToVRT="1">%s/%s.parquet</SrcDataSource>\n      <SrcLayer>%s</SrcLayer>\n    </OGRVRTLayer>',
                    slug(s$region), slug(s$region), slug(s$layer), slug(s$layer)),
            "  </OGRVRTUnionLayer>", "</OGRVRTDataSource>")
   message("vrt ", vrt)
-  if (!DRY) { tmp <- tempfile(fileext = ".vrt"); writeLines(xml, tmp); vsi_copy_file(tmp, vrt) }
+  if (!DRY) { tmp <- tempfile(fileext = ".vrt"); writeLines(xml, tmp); run("gdal", c("vsi", "copy", shQuote(tmp), shQuote(vrt))) }
 }
 
 ## ---- 4. raster -> COG ---------------------------------------------------------
 ras <- layers[layers$geom_type == "raster", ]
+ras <- ras[!duplicated(ras[, c("url", "member", "layer")]), ]
 ras_job <- function(i) {
   R <- ras[i, ]
   skipped <- grepl("^skipped", R$error)
@@ -169,15 +181,21 @@ ras_job <- function(i) {
   if (skipped && !nzchar(SRC_ROOT)) {
     message("needs local copy (SRC_ROOT): ", R$name, " / ", R$member); return(NULL)
   }
-  nm <- if (has(R$dsn) && grepl("^OpenFileGDB:", R$dsn)) sub("^.*:", "", R$dsn) else basename(R$member)
+  nm <- if (usable_dsn(R$dsn) && grepl("^OpenFileGDB:", R$dsn)) sub("^.*:", "", R$dsn) else basename(R$member)
   out <- ensure_dir(file.path(DEST, "cog", slug(R$product), slug(R$region), paste0(slug(nm), ".tif")))
   if (is_done(R$url, out)) return(NULL)
-  dsn <- if (has(R$dsn) && !nzchar(SRC_ROOT)) R$dsn else src_dsn(R$url, R$member)
-  args <- c("-of", "COG", shQuote(dsn), shQuote(out), srs_args(R$crs, R$extent),
-            "-co", "COMPRESS=ZSTD", "-co", "PREDICTOR=YES", "-co", "BLOCKSIZE=512",
-            "-co", "OVERVIEWS=IGNORE_EXISTING", "-co", "NUM_THREADS=ALL_CPUS", "-co", "BIGTIFF=IF_SAFER")
-  rc <- run("gdal_translate", args)
-  data.frame(url = R$url, out = out, status = if (rc == 0L) "ok" else paste("gdal_translate rc", rc))
+  dsn <- if (usable_dsn(R$dsn) && !nzchar(SRC_ROOT)) R$dsn else src_dsn(R$url, R$member)
+  ## predictor only pays for >= 16-bit and float data; sub-byte (NBITS < 8) rasters reject it
+  dtype <- sub("^.*band ", "", R$layer)
+  co <- paste("--co COMPRESS=ZSTD --co BLOCKSIZE=512 --co OVERVIEWS=IGNORE_EXISTING",
+              "--co NUM_THREADS=ALL_CPUS --co BIGTIFF=IF_SAFER",
+              if (grepl("Int16|Int32|Int64|Float", dtype)) "--co PREDICTOR=YES" else "")
+  crs <- assign_crs(R$crs, R$extent)
+  rc <- if (nzchar(crs))
+    run("gdal", c("raster", "pipeline", pipe(paste("read", shQuote(dsn)), paste("edit --crs", crs),
+                                             paste("write --of COG --overwrite", co, shQuote(out)))))
+  else run("gdal", c("raster", "convert", "--of", "COG", "--overwrite", co, shQuote(dsn), shQuote(out)))
+  data.frame(url = R$url, out = out, status = if (rc == 0L) "ok" else paste("gdal raster rc", rc))
 }
 res <- do.call(rbind, mclapply(seq_len(nrow(ras)), safe_job(ras_job), mc.cores = max(1L, CORES %/% 2L)))
 for (i in seq_len(NROW(res))) if (!is.na(res$url[i])) log_done(res$url[i], res$out[i], res$status[i])
@@ -199,9 +217,9 @@ for (i in seq_len(nrow(bare))) {
   region <- if (nzchar(bare$region[i])) slug(bare$region[i]) else "statewide"
   out <- ensure_dir(file.path(DEST, "geoparquet", slug(bare$product[i]), region, paste0(bare$stem[i], ".parquet")))
   if (is_done(bare$url[i], out)) next
-  rc <- run("ogr2ogr", c("-f", "Parquet", shQuote(out), shQuote(dsn), "-nlt", "PROMOTE_TO_MULTI",
-                         "-lco", "COMPRESSION=ZSTD", "-lco", "ROW_GROUP_SIZE=65536",
-                         "-lco", "WRITE_COVERING_BBOX=YES", "-lco", "SORT_BY_BBOX=YES"))
-  log_done(bare$url[i], out, if (rc == 0L) "ok" else paste("ogr2ogr rc", rc))
+  rc <- run("gdal", c("vector", "pipeline", pipe(paste("read", shQuote(dsn)), "set-geom-type --multi",
+                      paste("write --of Parquet --overwrite --lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
+                            "--lco WRITE_COVERING_BBOX=YES --lco SORT_BY_BBOX=YES", shQuote(out)))))
+  log_done(bare$url[i], out, if (rc == 0L) "ok" else paste("gdal vector rc", rc))
 }
 message("done; ", sum(done$status == "ok"), " outputs ok, ", sum(done$status != "ok"), " not ok; log in ", logf)

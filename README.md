@@ -33,7 +33,7 @@ re-run in isolation and the CSVs can be committed to git to leave a trail.
 
 Step 02 uses GDAL's `/vsizip//vsicurl/` to read zip central directories and
 layer metadata over HTTP range requests, so the "what is in the zips" map is
-built without downloading them. Step 03 uses the same path for `ogr2ogr`, so a
+built without downloading them. Step 03 uses the same path for `gdal vector pipeline`, so a
 conversion is a single command from the public URL to the bucket with nothing
 unpacked locally. If you would rather fetch the zips first (bowerbird), point
 `SRC_ROOT` in `03_convert.R` at the local mirror and it will use `/vsizip/`
@@ -42,7 +42,8 @@ on local files instead; the recipe is otherwise identical.
 ## Requirements
 
 - R >= 4.2 with `httr2`, `jsonlite`, `gdalraster`
-- GDAL >= 3.9 on PATH (`ogrinfo`, `ogr2ogr`, `gdal_translate`) built with the
+- GDAL >= 3.11 on PATH (the unified `gdal` CLI, plus `ogrinfo`/`gdalinfo` for
+  the peek) built with the
   Arrow/Parquet driver (`ogrinfo --formats | grep -i parquet`); the
   ghcr.io/osgeo/gdal images and conda-forge libgdal-arrow-parquet have it
 - for step 03: credentials for the target object store in the usual GDAL

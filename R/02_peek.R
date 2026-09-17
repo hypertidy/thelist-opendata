@@ -227,12 +227,22 @@ for (k in seq_along(chunks)) {
                               tolower(sub("^.*\\.", "", res$member))))
   res <- res[, c("product", "region", "region_type", "name", "member", "format", "formats", "driver",
                  "layer", "geom_type", "feature_count", "n_fields", "crs", "extent", "error", "dsn", "url")]
+  if (file.exists(layers_file)) {          # append must follow the file's column order
+    hdr <- names(read.csv(layers_file, nrows = 1, stringsAsFactors = FALSE))
+    for (h in setdiff(hdr, names(res))) res[[h]] <- NA
+    res <- res[, hdr]
+  }
   write.table(res, layers_file, sep = ",", row.names = FALSE, na = "",
               col.names = !file.exists(layers_file), append = file.exists(layers_file))
   message(sprintf("chunk %d/%d: %d layers written", k, length(chunks), nrow(res)))
 }
 
 layers <- read.csv(layers_file, stringsAsFactors = FALSE)
+## repair rows written by an earlier version that appended dsn/url swapped
+sw <- grepl("^(/vsi|OpenFileGDB:)", layers$url)
+if (any(sw)) { tmp <- layers$url[sw]; layers$url[sw] <- layers$dsn[sw]; layers$dsn[sw] <- tmp
+  message("repaired ", sum(sw), " rows with swapped url/dsn") }
+layers <- layers[!duplicated(layers[, c("url", "member", "layer", "dsn")]), ]
 ## formats carried by each zip, from contents (no network), so it is never stale
 fmt_of <- function(u) {
   mm <- sub("/+$", "", contents$member[contents$url == u])
