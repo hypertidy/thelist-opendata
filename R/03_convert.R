@@ -185,11 +185,14 @@ ras_job <- function(i) {
   out <- ensure_dir(file.path(DEST, "cog", slug(R$product), slug(R$region), paste0(slug(nm), ".tif")))
   if (is_done(R$url, out)) return(NULL)
   dsn <- if (usable_dsn(R$dsn) && !nzchar(SRC_ROOT)) R$dsn else src_dsn(R$url, R$member)
-  ## predictor only pays for >= 16-bit and float data; sub-byte (NBITS < 8) rasters reject it
+  ## predictor only pays for >= 16-bit and float data; sub-byte (NBITS < 8) rasters reject it.
+  ## Byte rasters here are class grids (soil drainage 1..6 etc.): overviews must not
+  ## interpolate between classes, so NEAREST; continuous data keeps the COG default.
   dtype <- sub("^.*band ", "", R$layer)
   co <- paste("--co COMPRESS=ZSTD --co BLOCKSIZE=512 --co OVERVIEWS=IGNORE_EXISTING",
               "--co NUM_THREADS=ALL_CPUS --co BIGTIFF=IF_SAFER",
-              if (grepl("Int16|Int32|Int64|Float", dtype)) "--co PREDICTOR=YES" else "")
+              if (grepl("Int16|Int32|Int64|Float", dtype)) "--co PREDICTOR=YES" else "",
+              if (grepl("^Byte", dtype)) "--co RESAMPLING=NEAREST --co OVERVIEW_RESAMPLING=NEAREST" else "")
   crs <- assign_crs(R$crs, R$extent)
   rc <- if (nzchar(crs))
     run("gdal", c("raster", "pipeline", pipe(paste("read", shQuote(dsn)), paste("edit --crs", crs),
@@ -207,7 +210,7 @@ if (any(grepl("^R error", res$status))) message("R errors in raster jobs:\n", pa
 ## reads its tables by name, so EMPTY_DIR does not get in the way). Where a gdb
 ## and a shp sit side by side the gdb wins.
 bare <- files[(files$is_dir & grepl("\\.gdb/$", files$path)) |
-              (!files$is_dir & files$ext == "shp" & !grepl("/", files$path)), ]
+                (!files$is_dir & files$ext == "shp" & !grepl("/", files$path)), ]
 bare$stem <- tolower(sub("\\.(gdb/|shp)$", "", basename(sub("/$", "", bare$path))))
 bare <- bare[order(bare$stem, bare$ext != "dir"), ]
 bare <- bare[!duplicated(bare$stem), ]
@@ -218,8 +221,8 @@ for (i in seq_len(nrow(bare))) {
   out <- ensure_dir(file.path(DEST, "geoparquet", slug(bare$product[i]), region, paste0(bare$stem[i], ".parquet")))
   if (is_done(bare$url[i], out)) next
   rc <- run("gdal", c("vector", "pipeline", pipe(paste("read", shQuote(dsn)), "set-geom-type --multi",
-                      paste("write --of Parquet --overwrite --lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
-                            "--lco WRITE_COVERING_BBOX=YES --lco SORT_BY_BBOX=YES", shQuote(out)))))
+                                                 paste("write --of Parquet --overwrite --lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
+                                                       "--lco WRITE_COVERING_BBOX=YES --lco SORT_BY_BBOX=YES", shQuote(out)))))
   log_done(bare$url[i], out, if (rc == 0L) "ok" else paste("gdal vector rc", rc))
 }
 message("done; ", sum(done$status == "ok"), " outputs ok, ", sum(done$status != "ok"), " not ok; log in ", logf)
