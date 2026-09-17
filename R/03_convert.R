@@ -57,7 +57,7 @@ etag <- setNames(files$etag, files$url)
 logf <- "manifest/converted.csv"
 done <- if (file.exists(logf)) read.csv(logf, stringsAsFactors = FALSE) else
   data.frame(url = character(), etag = character(), output = character(), status = character(), when = character())
-is_done <- function(url, out) { et <- unname(etag[url]); !is.na(et) && any(done$url == url & done$output == out & done$etag == et & done$status == "ok") }
+is_done <- function(url, out) { et <- unname(etag[url]); !is.na(et) && any(done$url == url & done$output == out & done$etag == et & startsWith(done$status, "ok")) }
 log_done <- function(url, out, status) {
   if (DRY) return(invisible())
   et <- unname(etag[url]); if (is.null(et) || is.na(et)) et <- ""
@@ -81,10 +81,16 @@ has <- function(x) !is.null(x) && length(x) == 1 && !is.na(x) && nzchar(x)
 usable_dsn <- function(x) has(x) && grepl("^(/vsi|OpenFileGDB:)", x)
 safe_job <- function(f) function(i) tryCatch(f(i), error = function(e)
   data.frame(url = NA_character_, out = NA_character_, status = paste("R error:", conditionMessage(e))))
+## returns the exit code; on failure the tail of stderr is kept in attr(, "err")
 run <- function(cmd, args) {
   message(cmd, " ", paste(args, collapse = " "))
-  if (DRY) 0L else system2(cmd, args, stdout = FALSE, stderr = "")
+  if (DRY) return(0L)
+  err <- tempfile(); rc <- system2(cmd, args, stdout = FALSE, stderr = err)
+  if (rc != 0L) { msg <- tail(readLines(err, warn = FALSE), 3); message(paste(msg, collapse = "\n"))
+  attr(rc, "err") <- paste(msg, collapse = " | ") }
+  unlink(err); rc
 }
+status_of <- function(rc, what) if (rc == 0L) "ok" else paste0(what, " rc ", rc, ": ", attr(rc, "err"))
 
 ## ---- CRS policy -----------------------------------------------------------
 ## Native CRS is kept. The only intervention: an unidentified ESRI WKT that
@@ -103,13 +109,20 @@ assign_crs <- function(crs, ext) {
 }
 ## pipeline steps are joined with " ! "
 pipe <- function(...) paste(c(...), collapse = " ! ")
+## GeoParquet has no M ordinate: drop it (keep Z) for ZM / M geometries
+geom_step <- function(geom_type) paste("set-geom-type --multi --linear",
+                                       if (grepl("ZM$", geom_type)) "--dim XYZ" else if (grepl("[^Z]M$", geom_type)) "--dim XY" else "")
 
 ## ---- pick one source per (product, region, layer) -------------------------
 vec <- layers[layers$geom_type != "raster" & layers$error == "" & !is.na(layers$feature_count), ]
 vec <- vec[vec$feature_count > 0 | vec$format == "gdb", ]     # tables with 0 rows in gdb still convert
 pref <- c(gdb = 1, gpkg = 2, shp = 3, tab = 4, mif = 5, geojson = 6, kml = 7, gml = 8)
 vec$rank <- pref[vec$format] + ifelse(vec$feature_count == 0, 10, 0)   # 0-feature gdb ranks below a full shp
-vec <- vec[order(vec$product, vec$region, tolower(vec$layer), vec$rank), ]
+## every LGA zip ships the LGA boundary as municipality_<lga>: 1277 copies of 29
+## polygons. Make it one product, converted once per LGA from the first zip seen.
+is_muni <- grepl("^municipality_", vec$layer, ignore.case = TRUE)
+vec$product[is_muni] <- "MUNICIPALITY"
+vec <- vec[order(vec$product, vec$region, tolower(vec$layer), vec$rank, vec$url), ]
 vec <- vec[!duplicated(vec[, c("product", "region", "layer")]), ]
 message(nrow(vec), " vector layers selected; source formats: ", paste(names(table(vec$format)), table(vec$format), collapse = ", "))
 
@@ -135,14 +148,32 @@ vec_job <- function(i) {
   dsn <- if (usable_dsn(L$dsn) && !nzchar(SRC_ROOT)) L$dsn else src_dsn(L$url, L$member)
   crs <- assign_crs(L$crs, L$extent)
   steps <- pipe(paste("read --layer", shQuote(L$layer), shQuote(dsn)),
-                if (sub == "geoparquet") "set-geom-type --multi",
+                if (sub == "geoparquet") geom_step(L$geom_type),
                 if (nzchar(crs)) paste("edit --crs", crs),
                 paste("write --of Parquet --overwrite",
                       "--lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
                       "--lco GEOMETRY_ENCODING=WKB --lco WRITE_COVERING_BBOX=YES",
                       "--lco SORT_BY_BBOX=YES --lco GEOMETRY_NAME=geometry", shQuote(out)))
   rc <- run("gdal", c("vector", "pipeline", steps))
-  data.frame(url = L$url, out = out, status = if (rc == 0L) "ok" else paste("gdal vector rc", rc))
+  ## Coded field domains become Arrow dictionary columns, which the Parquet writer
+  ## cannot emit when a domain entry has a null description (LAND_USE_2019_BRS,
+  ## POTENTIAL_AG_LAND). Bounce through FlatGeobuf, which drops domains but keeps
+  ## field names, Int16/DateTime types and multi geometries.
+  if (rc != 0L && grepl("DictionaryArray", attr(rc, "err"))) {
+    fgb <- tempfile(fileext = ".fgb")
+    rc <- run("gdal", c("vector", "pipeline", pipe(paste("read --layer", shQuote(L$layer), shQuote(dsn)),
+                                                   if (sub == "geoparquet") geom_step(L$geom_type),
+                                                   if (nzchar(crs)) paste("edit --crs", crs),
+                                                   paste("write --of FlatGeobuf --overwrite", shQuote(fgb)))))
+    if (rc == 0L) rc <- run("gdal", c("vector", "convert", "--of Parquet --overwrite",
+                                      "--lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
+                                      "--lco GEOMETRY_ENCODING=WKB --lco WRITE_COVERING_BBOX=YES",
+                                      "--lco SORT_BY_BBOX=YES --lco GEOMETRY_NAME=geometry",
+                                      "--output-layer", shQuote(L$layer), shQuote(fgb), shQuote(out)))
+    unlink(fgb)
+    if (rc == 0L) return(data.frame(url = L$url, out = out, status = "ok (via FlatGeobuf: domain fields)"))
+  }
+  data.frame(url = L$url, out = out, status = status_of(rc, "gdal vector"))
 }
 res <- do.call(rbind, mclapply(seq_len(nrow(vec)), safe_job(vec_job), mc.cores = CORES))
 for (i in seq_len(NROW(res))) if (!is.na(res$url[i])) log_done(res$url[i], res$out[i], res$status[i])
@@ -174,6 +205,13 @@ for (key in unique(split$key)) {
 ## ---- 4. raster -> COG ---------------------------------------------------------
 ras <- layers[layers$geom_type == "raster", ]
 ras <- ras[!duplicated(ras[, c("url", "member", "layer")]), ]
+## the same raster can ship twice in one zip (DEM_25M: .asc and a raster gdb),
+## which would map to one output path: keep one, gdb > tif > asc
+sub_ds <- !is.na(ras$dsn) & grepl("^OpenFileGDB:", ras$dsn)
+ras$stem <- slug(ifelse(sub_ds, sub("^.*:", "", ras$dsn), basename(ras$member)))
+ras$rank <- match(ras$format, c("gdb", "tif", "tiff", "img", "asc", "jp2", "ecw"))
+ras <- ras[order(ras$product, ras$region, ras$stem, ras$rank), ]
+ras <- ras[!duplicated(ras[, c("product", "region", "stem")]), ]
 ras_job <- function(i) {
   R <- ras[i, ]
   skipped <- grepl("^skipped", R$error)
@@ -198,7 +236,7 @@ ras_job <- function(i) {
     run("gdal", c("raster", "pipeline", pipe(paste("read", shQuote(dsn)), paste("edit --crs", crs),
                                              paste("write --of COG --overwrite", co, shQuote(out)))))
   else run("gdal", c("raster", "convert", "--of", "COG", "--overwrite", co, shQuote(dsn), shQuote(out)))
-  data.frame(url = R$url, out = out, status = if (rc == 0L) "ok" else paste("gdal raster rc", rc))
+  data.frame(url = R$url, out = out, status = status_of(rc, "gdal raster"))
 }
 res <- do.call(rbind, mclapply(seq_len(nrow(ras)), safe_job(ras_job), mc.cores = max(1L, CORES %/% 2L)))
 for (i in seq_len(NROW(res))) if (!is.na(res$url[i])) log_done(res$url[i], res$out[i], res$status[i])
@@ -220,9 +258,9 @@ for (i in seq_len(nrow(bare))) {
   region <- if (nzchar(bare$region[i])) slug(bare$region[i]) else "statewide"
   out <- ensure_dir(file.path(DEST, "geoparquet", slug(bare$product[i]), region, paste0(bare$stem[i], ".parquet")))
   if (is_done(bare$url[i], out)) next
-  rc <- run("gdal", c("vector", "pipeline", pipe(paste("read", shQuote(dsn)), "set-geom-type --multi",
+  rc <- run("gdal", c("vector", "pipeline", pipe(paste("read", shQuote(dsn)), "set-geom-type --multi --linear",
                                                  paste("write --of Parquet --overwrite --lco COMPRESSION=ZSTD --lco ROW_GROUP_SIZE=65536",
                                                        "--lco WRITE_COVERING_BBOX=YES --lco SORT_BY_BBOX=YES", shQuote(out)))))
-  log_done(bare$url[i], out, if (rc == 0L) "ok" else paste("gdal vector rc", rc))
+  log_done(bare$url[i], out, status_of(rc, "gdal vector"))
 }
-message("done; ", sum(done$status == "ok"), " outputs ok, ", sum(done$status != "ok"), " not ok; log in ", logf)
+message("done; ", sum(startsWith(done$status, "ok")), " outputs ok, ", sum(!startsWith(done$status, "ok")), " not ok; log in ", logf)

@@ -87,3 +87,16 @@ Known oddities upstream (worth reporting to Land Tasmania):
 - Nothing is materialised that can be derived; the manifest is the payload.
 - Statewide products are one file; LGA-split products are converted per LGA and
   then a union per product is written alongside, so both granularities exist.
+- The LGA boundary shipped in every zip (municipality_<lga>) is converted once,
+  as its own product, not 1277 times.
+- Vector output is GeoParquet from the gdb source: field names and types as in
+  the gdb (Int16, DateTime), geometries promoted to MULTI, curves (CurvePolygon,
+  MultiSurface) linearised since GeoParquet has no curve types. Coded-value
+  field domains are not carried: Parquet has no place for them, and the Arrow
+  writer cannot emit a domain with a null description (LAND_USE_2019_BRS,
+  POTENTIAL_AG_LAND go through a FlatGeobuf hop for that reason, see
+  converted.csv status). The domain tables themselves are in the gdb in raw/.
+- Raster output is COG, ZSTD, 512 blocks; Byte class grids get NEAREST
+  overviews, continuous data the COG default. Raster FileGDBs (NCH) carry no
+  colour table through OpenFileGDB, but their attribute tables come out as
+  non-spatial layers in parquet/.
