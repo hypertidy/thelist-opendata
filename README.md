@@ -3,6 +3,9 @@
 Reproducible, from-scratch map and mirror of the LIST (Tasmania) open data bulk
 downloads at https://listdata.thelist.tas.gov.au/opendata/data/
 
+NOTE: new approach taken for entire nation here: https://github.com/mdsumner/banksia
+
+
 ## What the source actually is
 
 There is no API and no catalogue page worth scraping. `/opendata/` is a static
