@@ -5,6 +5,48 @@ downloads at https://listdata.thelist.tas.gov.au/opendata/data/
 
 NOTE: new approach taken for entire nation here: https://github.com/mdsumner/banksia
 
+## Where the mirror lives
+
+Published on Source Cooperative: https://source.coop/mdsumner/thelist-opendata
+
+    https://data.source.coop/mdsumner/thelist-opendata/<path>                 (HTTP, CORS open, range requests)
+    s3://us-west-2.opendata.source.coop/mdsumner/thelist-opendata/<path>      (anonymous S3, AWS_NO_SIGN_REQUEST=YES)
+
+The store's own README (`README.md` at the root of the product) has the
+attribution wording, licence and reading examples for DuckDB, GDAL, R and
+Python. The full catalogue, including the conversion log `converted.csv`, is
+under `manifest/` in the store.
+
+Current snapshot: crawled 2026-09-10, converted 2026-09-17, uploaded
+2026-10-13 (geoparquet 12.7 GiB, cog 7.3 GiB, parquet 0.02 GiB).
+
+### Known gaps in the published snapshot
+
+- `raw/` (the source zips, 183 GB) is not uploaded, although the store README
+  describes it.
+- The snapshot predates converting `municipality_<lga>` once: it holds 1276
+  copies inside product folders (plus `municipality_union.vrt` per product)
+  as well as `geoparquet/municipality/`. A fresh convert writes only the
+  latter; the old copies would need deleting from the store.
+- Raster output paths changed since the snapshot (`cog/<product>/<region>/`),
+  so about 30 logged outputs are not at their logged path and about 24 store
+  files are not in the log.
+- 14 source zips are not converted: the 2 m CHM and slope rasters (need
+  `SRC_ROOT`), the known empty or odd zips listed below, and
+  INTERIM_PLANNING_SCHEME_OVERLAY_STATEWIDE, SES_DESIGN_FLOOD_EVENT_STATEWIDE,
+  LIST_SHELLMAP_HARVEST_AREA_BOUNDARIES_STATEWIDE and
+  LIST_TREE_CANOPY_HEIGHT_STATEWIDE (to check).
+- Source Cooperative has no object versioning, so each refresh overwrites in
+  place. `converted.csv` records the source etag behind every output.
+
+## Refresh
+
+`.github/workflows/refresh.yml` re-runs the pipeline monthly (and on demand):
+crawl, parse, peek, then convert only what changed upstream (etag skip, using
+the store's `manifest/converted.csv` as the log), then syncs new outputs and
+the manifest to the store. It needs repository secrets for a Source
+Cooperative service account (see the workflow header).
+
 
 ## What the source actually is
 
