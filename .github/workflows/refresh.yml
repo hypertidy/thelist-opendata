@@ -1,0 +1,101 @@
+# Monthly refresh of the LIST open data mirror on Source Cooperative.
+#
+#   crawl -> parse -> peek -> convert (only what changed upstream) -> sync to store
+#
+# Conversion runs with DEST=out (local), so output paths match the log in
+# manifest/converted.csv; the log is fetched from the store first and
+# written back after, so the etag skip works across runs. RAW=0: the source
+# zips are not mirrored.
+#
+# Required repository secrets (a Source Cooperative service account with
+# write access to mdsumner/thelist-opendata):
+#   SOURCE_COOP_ACCESS_KEY_ID
+#   SOURCE_COOP_SECRET_ACCESS_KEY
+#   SOURCE_COOP_SESSION_TOKEN   (leave unset if the account issues long-lived keys)
+#
+# Writes go through the Source Cooperative S3 proxy (https://data.source.coop),
+# addressed as /vsis3/<account>/<product>/.
+
+name: refresh
+
+on:
+  schedule:
+    - cron: "17 3 1 * *"   # 03:17 UTC on the 1st of each month
+  workflow_dispatch:
+    inputs:
+      product:
+        description: "Regex on product to restrict the convert step (blank = all)"
+        required: false
+        default: ""
+      dry:
+        description: "DRY=1: print convert commands only, no upload"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    container: ghcr.io/hypertidy/gdal-r-python-extras:latest
+    env:
+      STORE: /vsis3/mdsumner/thelist-opendata
+      PUBLIC: https://data.source.coop/mdsumner/thelist-opendata
+      DEST: out
+      RAW: "0"
+      CORES: "4"
+      PRODUCT: ${{ github.event.inputs.product || '' }}
+      DRY: ${{ github.event.inputs.dry || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tools
+        run: |
+          gdal --version
+          Rscript -e 'for (p in c("httr2", "jsonlite", "gdalraster")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")'
+
+      - name: Fetch conversion log from the store
+        run: curl -fsSL -o manifest/converted.csv "$PUBLIC/manifest/converted.csv"
+
+      - name: Crawl, parse, peek
+        run: make crawl parse peek
+
+      - name: Convert changed sources
+        run: make convert
+
+      - name: Sync outputs and manifest to the store
+        if: env.DRY != '1'
+        env:
+          AWS_S3_ENDPOINT: data.source.coop
+          AWS_VIRTUAL_HOSTING: "FALSE"
+          AWS_HTTPS: "YES"
+          AWS_ACCESS_KEY_ID: ${{ secrets.SOURCE_COOP_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SOURCE_COOP_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.SOURCE_COOP_SESSION_TOKEN }}
+        run: |
+          if [ -d out ]; then gdal vsi sync -r out/ "$STORE/"; fi
+          for f in manifest/*.csv; do gdal vsi copy "$f" "$STORE/$f"; done
+
+      - name: Open a PR with the updated manifest
+        if: env.DRY != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- manifest; then echo "manifest unchanged"; exit 0; fi
+          b="refresh/$(date -u +%Y-%m-%d)"
+          git checkout -b "$b"
+          git add manifest
+          git commit -m "Refresh manifest $(date -u +%Y-%m-%d)"
+          git push -u origin "$b"
+          gh pr create --title "Refresh manifest $(date -u +%Y-%m-%d)" \
+            --body "Automated monthly refresh. Outputs and manifest already synced to the store."
