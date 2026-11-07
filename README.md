@@ -24,10 +24,10 @@ Current snapshot: crawled 2026-09-10, converted 2026-09-17, uploaded
 
 - `raw/` (the source zips, 183 GB) is not uploaded, although the store README
   describes it.
-- The snapshot predates converting `municipality_<lga>` once: it holds 1276
-  copies inside product folders (plus `municipality_union.vrt` per product)
-  as well as `geoparquet/municipality/`. A fresh convert writes only the
-  latter; the old copies would need deleting from the store.
+- The stale `municipality_<lga>` copies inside product folders (1275
+  parquets plus 47 `municipality_union.vrt`) were deleted from the store on
+  2026-11-07 and their 1276 rows pruned from `converted.csv`; boundaries now
+  live only under `geoparquet/municipality/`.
 - Raster output paths changed since the snapshot (`cog/<product>/<region>/`),
   so about 30 logged outputs are not at their logged path and about 24 store
   files are not in the log.
@@ -46,6 +46,23 @@ crawl, parse, peek, then convert only what changed upstream (etag skip, using
 the store's `manifest/converted.csv` as the log), then syncs new outputs and
 the manifest to the store. It needs repository secrets for a Source
 Cooperative service account (see the workflow header).
+
+The store READMEs are kept in `store/<product>/README.md` and uploaded by hand.
+
+## Derived products
+
+Anything built *from* the mirror goes in its own product, so the mirror stays
+a straight conversion.
+
+- https://source.coop/mdsumner/tas-transport-web: LIST_TRANSPORT_SEGMENTS as
+  one statewide browser layer (EPSG:4326, clipped LGA pieces rejoined to one
+  row per TRANSEG_ID, integer `node0`/`node1`, Hilbert-sorted GeoParquet plus
+  PMTiles). Built by `R/10_transport_web.R` from the mirror's GeoParquet, into
+  dated snapshot folders that are never overwritten, plus `latest.json`. See
+  `store/tas-transport-web/README.md`. Upload:
+
+      WEB_OUT=out_web Rscript R/10_transport_web.R
+      aws --endpoint-url https://data.source.coop s3 cp --recursive out_web/ s3://mdsumner/tas-transport-web/
 
 
 ## What the source actually is

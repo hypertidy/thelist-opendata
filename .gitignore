@@ -2,3 +2,5 @@ out/
 manifest/converted.csv
 .Rproj.user
 .Rhistory
+manifest/converted_*.csv
+out_web/
