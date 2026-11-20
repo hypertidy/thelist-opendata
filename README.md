@@ -20,15 +20,25 @@ profile (passes `portolan check`). Browse it on a map in the
 [Portolan Browser](https://browser.portolan-sdi.org/#/external/hypertidy.github.io/thelist-opendata/stac/catalog.json).
 Themed subcatalogs, one collection per product, one item per COG where a
 product has several; every asset points into the store with its size and
-sha256. Built by `make checksums thumbnails stac`:
+sha256. Built by `make checksums thumbnails pmtiles stac`:
 
 - `R/21_checksums.R`: sha256 of every statewide file (`manifest/checksums.csv`,
   re-hashed only when a file changes)
 - `R/23_thumbnails.R`: a preview per geospatial product (`stac-thumbs/`);
   vectors are burned with [controlledburn](https://github.com/hypertidy/controlledburn)
   from the geometry column alone, rasters read from COG overviews
+- `R/24_pmtiles.R`: PMTiles map tiles for big vector layers
+  (`pmtiles/<product>/statewide/` in the store, MapLibre styles in
+  `stac-styles/`, `manifest/pmtiles.json`). The Portolan Browser draws a
+  GeoParquet directly up to 10,000 features and 50 MB (reprojecting from its
+  CRS), so small layers stay GeoParquet-only; 81 of 235 vector layers are over
+  that. Tiled so far: parcels, TASVEG 4.0 and 5.0 (one shared vegetation-group
+  palette), transport segments, landslide
+  hazard bands (GDAL's PMTiles writer).
 - `R/22_stac.R` then `portolan stac-geoparquet`: the catalogue in `site/stac/`
-  (with `items.parquet` mirrors for multi-COG collections)
+  (with `items.parquet` mirrors for multi-COG collections); a tileset is
+  linked (`rel: pmtiles`, a `visual` asset, a `style` asset) once it is live
+  in the store
 
 It is staged on GitHub Pages with absolute asset hrefs into the store; it can
 move to the store root later unchanged.

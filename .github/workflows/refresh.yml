@@ -93,11 +93,21 @@ jobs:
         if: env.DRY != '1'
         run: make catalog
 
-      - name: Checksums, thumbnails and the STAC catalogue (only changed files are re-hashed and redrawn)
+      - name: Checksums, thumbnails, PMTiles and the STAC catalogue (only what changed is redone)
         if: env.DRY != '1'
+        env:
+          AWS_S3_ENDPOINT: data.source.coop
+          AWS_VIRTUAL_HOSTING: "FALSE"
+          AWS_HTTPS: "YES"
+          AWS_ACCESS_KEY_ID: ${{ secrets.SOURCE_COOP_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SOURCE_COOP_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.SOURCE_COOP_SESSION_TOKEN }}
         run: |
           pip install --quiet portolan-cli
-          make checksums thumbnails stac
+          make checksums thumbnails pmtiles
+          # tiles go up before the catalogue: 22_stac.R links a tileset only once it is live
+          if [ -d out/pmtiles ]; then gdal vsi sync -r out/pmtiles/ "$STORE/pmtiles/"; fi
+          make stac
           (cd site/stac && portolan check --metadata --data-scope local .)
 
       - name: Open a PR with the updated manifest
@@ -111,7 +121,7 @@ jobs:
           if git diff --quiet -- manifest; then echo "manifest unchanged"; exit 0; fi
           b="refresh/$(date -u +%Y-%m-%d)"
           git checkout -b "$b"
-          git add manifest site/catalog.json site/stac site/stac-paths.json stac-thumbs
+          git add manifest site/catalog.json site/stac site/stac-paths.json stac-thumbs stac-styles
           git commit -m "Refresh manifest $(date -u +%Y-%m-%d)"
           git push -u origin "$b"
           gh pr create --title "Refresh manifest $(date -u +%Y-%m-%d)" \

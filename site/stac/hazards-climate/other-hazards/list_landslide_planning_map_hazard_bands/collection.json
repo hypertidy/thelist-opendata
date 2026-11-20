@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_landslide_planning_map_hazard_bands",
   "title": "LIST Landslide Planning Map Hazard Bands",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_TAMAR.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Landslide Planning Map Hazard Bands (vector tiles)",
+      "pmtiles:layers": [
+        "list_landslide_planning_map_hazard_bands"
+      ]
     }
   ],
   "assets": {
@@ -372,6 +382,27 @@
       ],
       "file:size": 56059,
       "file:checksum": "12202386375d3e8891dfd86b80b22e6cb84d8b9306d9c28f0f6bf0926e6d7c5cea06"
+    },
+    "list_landslide_planning_map_hazard_bands_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Landslide Planning Map Hazard Bands (vector tiles, zoom 8-13)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 143683552,
+      "file:checksum": "12209e18a5f4d8feeaca0c28c20a738f4b9873434f1f8c473ff27ad13df4215a4275"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Landslide Planning Map Hazard Bands by hazard band 1",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1495,
+      "file:checksum": "12200dbeb4437f0f3f46ae89ceea9f3df90c35dbb0e3e87912cfcbb3fc6a77c27dfd"
     }
   },
   "table:primary_geometry": "geometry"

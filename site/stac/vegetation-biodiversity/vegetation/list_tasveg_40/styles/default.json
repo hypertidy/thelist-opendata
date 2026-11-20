@@ -1,0 +1,119 @@
+{
+  "version": 8,
+  "name": "LIST TASVEG 40 by vegetation group",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Modified land",
+        "value": "Modified land",
+        "color": "#e8d9a8"
+      },
+      {
+        "label": "Wet eucalypt forest and woodland",
+        "value": "Wet eucalypt forest and woodland",
+        "color": "#1b7837"
+      },
+      {
+        "label": "Dry eucalypt forest and woodland",
+        "value": "Dry eucalypt forest and woodland",
+        "color": "#a6cf6b"
+      },
+      {
+        "label": "Scrub, heathland and coastal complexes",
+        "value": "Scrub, heathland and coastal complexes",
+        "color": "#c2a35b"
+      },
+      {
+        "label": "Rainforest and related scrub",
+        "value": "Rainforest and related scrub",
+        "color": "#00441b"
+      },
+      {
+        "label": "Non eucalypt forest and woodland",
+        "value": "Non eucalypt forest and woodland",
+        "color": "#5aae61"
+      },
+      {
+        "label": "Moorland, sedgeland and rushland",
+        "value": "Moorland, sedgeland and rushland",
+        "color": "#c994c7"
+      },
+      {
+        "label": "Other natural environments",
+        "value": "Other natural environments",
+        "color": "#bdbdbd"
+      },
+      {
+        "label": "Highland and treeless vegetation",
+        "value": "Highland and treeless vegetation",
+        "color": "#8c6bb1"
+      },
+      {
+        "label": "Native grassland",
+        "value": "Native grassland",
+        "color": "#fdd49e"
+      },
+      {
+        "label": "Saltmarsh and wetland",
+        "value": "Saltmarsh and wetland",
+        "color": "#4eb3d3"
+      },
+      {
+        "label": "Modified Land",
+        "value": "Modified Land",
+        "color": "#e8d9a8"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_40/statewide/list_tasveg_40_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_tasveg_40-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_tasveg_40",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "VEG_GROUP"
+          ],
+          "Modified land",
+          "#e8d9a8",
+          "Wet eucalypt forest and woodland",
+          "#1b7837",
+          "Dry eucalypt forest and woodland",
+          "#a6cf6b",
+          "Scrub, heathland and coastal complexes",
+          "#c2a35b",
+          "Rainforest and related scrub",
+          "#00441b",
+          "Non eucalypt forest and woodland",
+          "#5aae61",
+          "Moorland, sedgeland and rushland",
+          "#c994c7",
+          "Other natural environments",
+          "#bdbdbd",
+          "Highland and treeless vegetation",
+          "#8c6bb1",
+          "Native grassland",
+          "#fdd49e",
+          "Saltmarsh and wetland",
+          "#4eb3d3",
+          "Modified Land",
+          "#e8d9a8",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.75
+      }
+    }
+  ]
+}
