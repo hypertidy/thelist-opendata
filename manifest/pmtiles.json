@@ -1,0 +1,62 @@
+{
+  "list_parcels": {
+    "path": "pmtiles/list_parcels/statewide/list_parcels_statewide.pmtiles",
+    "layer": "list_parcels",
+    "minzoom": 10,
+    "maxzoom": 15,
+    "fields": ["PID", "CID", "TENURE_TY", "CAD_TYPE1"],
+    "color_by": "TENURE_TY",
+    "geometry": "MultiPolygon",
+    "bytes": 145013391,
+    "sha256": "170f2c8a0260dd757e651ff5bb2d9e86cfaa0d0fee44c52e0e340e07ccc13332",
+    "source": "geoparquet/list_parcels/statewide/list_parcels_statewide.parquet",
+    "source_sha256": "2bee0920e4b3c2f23c63e22e27b54b9d72b9cf43313a775906bcd8b830625232",
+    "center": null,
+    "built": "2026-11-20T11:49:50Z"
+  },
+  "list_tasveg_40": {
+    "path": "pmtiles/list_tasveg_40/statewide/list_tasveg_40_statewide.pmtiles",
+    "layer": "list_tasveg_40",
+    "minzoom": 7,
+    "maxzoom": 13,
+    "fields": ["VEG_GROUP", "VEGCODE", "VEGCODE_D"],
+    "color_by": "VEG_GROUP",
+    "geometry": "MultiPolygon",
+    "bytes": 205733891,
+    "sha256": "e5859bee172ee497ea002cf74b0c3f5b42567987d69700776911f880e663a363",
+    "source": "geoparquet/list_tasveg_40/statewide/list_tasveg_40_statewide.parquet",
+    "source_sha256": "d85e1617c7b434580bc2c5bd8028110c41ef692212c0d2b71eddd26798a57fc4",
+    "center": null,
+    "built": "2026-11-20T11:51:09Z"
+  },
+  "list_transport_segments": {
+    "path": "pmtiles/list_transport_segments/statewide/list_transport_segments_statewide.pmtiles",
+    "layer": "list_transport_segments",
+    "minzoom": 7,
+    "maxzoom": 14,
+    "fields": ["TRANSEG_ID", "TRAN_CLASS", "TRANS_TYPE", "PRI_NAME"],
+    "color_by": "TRAN_CLASS",
+    "geometry": "MultiLineString",
+    "bytes": 54711989,
+    "sha256": "27e441145b59dc10a07b1886823b56d3ed180a72aa5aeb39dc84ed5d6867e6bd",
+    "source": "geoparquet/list_transport_segments/statewide/list_transport_segments_statewide.parquet",
+    "source_sha256": "c664a6e395e47e030d3b3a68ae3a49e83ff2714d19af90fe4674ad696439e518",
+    "center": null,
+    "built": "2026-11-20T11:47:55Z"
+  },
+  "list_landslide_planning_map_hazard_bands": {
+    "path": "pmtiles/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.pmtiles",
+    "layer": "list_landslide_planning_map_hazard_bands",
+    "minzoom": 8,
+    "maxzoom": 13,
+    "fields": ["HAZARD_BAND_1", "COMPONENT"],
+    "color_by": "HAZARD_BAND_1",
+    "geometry": "MultiPolygon",
+    "bytes": 143683552,
+    "sha256": "9e18a5f4d8feeaca0c28c20a738f4b9873434f1f8c473ff27ad13df4215a4275",
+    "source": "geoparquet/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.parquet",
+    "source_sha256": "cca72101122f8f45ec1cfa7be19a68589f2ccc31f7b96b9c2682524c233e6517",
+    "center": null,
+    "built": "2026-11-20T11:57:38Z"
+  }
+}

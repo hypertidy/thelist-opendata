@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_transport_segments",
   "title": "LIST Transport Segments",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_TRANSPORT_SEGMENTS_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_transport_segments/statewide/list_transport_segments_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Transport Segments (vector tiles)",
+      "pmtiles:layers": [
+        "list_transport_segments"
+      ]
     }
   ],
   "assets": {
@@ -424,6 +434,27 @@
       ],
       "file:size": 47242,
       "file:checksum": "12202b57da6467789b1da4db596fbd72eef8bd9088efe1a1c801e04f2473013ea6d4"
+    },
+    "list_transport_segments_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_transport_segments/statewide/list_transport_segments_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Transport Segments (vector tiles, zoom 7-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 54711989,
+      "file:checksum": "122027e441145b59dc10a07b1886823b56d3ed180a72aa5aeb39dc84ed5d6867e6bd"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Transport Segments by tran class",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 4973,
+      "file:checksum": "1220e29925bb422631e44dade06a91ca5256aa9564d25e969a29a579eb8b2e022236"
     }
   },
   "table:primary_geometry": "geometry"

@@ -1,0 +1,159 @@
+{
+  "version": 8,
+  "name": "LIST Parcels by tenure ty",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Freehold Title",
+        "color": "#1b9e77"
+      },
+      {
+        "label": "Crown Land",
+        "color": "#d95f02"
+      },
+      {
+        "label": "Horizontal Strata",
+        "color": "#7570b3"
+      },
+      {
+        "label": "Vertical Strata",
+        "color": "#e7298a"
+      },
+      {
+        "label": "Council",
+        "color": "#66a61e"
+      },
+      {
+        "label": "Unknown",
+        "color": "#e6ab02"
+      },
+      {
+        "label": "Body Corporate",
+        "color": "#a6761d"
+      },
+      {
+        "label": "Not Applicable",
+        "color": "#1f78b4"
+      },
+      {
+        "label": "Tidal Crown Land",
+        "color": "#b2df8a"
+      },
+      {
+        "label": "Vested",
+        "color": "#fb9a99"
+      },
+      {
+        "label": "Commonwealth of Australia",
+        "color": "#cab2d6"
+      },
+      {
+        "label": "Vertical Subdivision",
+        "color": "#ffff99"
+      },
+      {
+        "label": "Share Title",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Marine Crown Land",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Multiple Interest",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Fee Farm",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Purchase Contract",
+        "color": "#9a9a9a"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_parcels/statewide/list_parcels_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_parcels-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_parcels",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "TENURE_TY"
+          ],
+          "Freehold Title",
+          "#1b9e77",
+          "Crown Land",
+          "#d95f02",
+          "Horizontal Strata",
+          "#7570b3",
+          "Vertical Strata",
+          "#e7298a",
+          "Council",
+          "#66a61e",
+          "Unknown",
+          "#e6ab02",
+          "Body Corporate",
+          "#a6761d",
+          "Not Applicable",
+          "#1f78b4",
+          "Tidal Crown Land",
+          "#b2df8a",
+          "Vested",
+          "#fb9a99",
+          "Commonwealth of Australia",
+          "#cab2d6",
+          "Vertical Subdivision",
+          "#ffff99",
+          "Share Title",
+          "#9a9a9a",
+          "Marine Crown Land",
+          "#9a9a9a",
+          "Multiple Interest",
+          "#9a9a9a",
+          "Fee Farm",
+          "#9a9a9a",
+          "Purchase Contract",
+          "#9a9a9a",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.35
+      }
+    },
+    {
+      "id": "list_parcels-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_parcels",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

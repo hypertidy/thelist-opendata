@@ -32,7 +32,8 @@ STAC_VERSION <- "1.1.0"
 EXT <- c(portolan = "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
          file = "https://stac-extensions.github.io/file/v2.1.0/schema.json",
          proj = "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-         table = "https://stac-extensions.github.io/table/v1.2.0/schema.json")
+         table = "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+         wml = "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json")
 LICENSE_URL <- "https://creativecommons.org/licenses/by/3.0/au/"
 PROVIDERS <- list(                                         # Portolan: the host provider comes last
   list(name = "Land Tasmania (theLIST)", roles = I(c("producer", "licensor")), url = "https://www.thelist.tas.gov.au/",
@@ -120,6 +121,12 @@ theme_by_id <- setNames(THEMES, vapply(THEMES, `[[`, "", "id"))
 cat_json <- fromJSON("site/catalog.json", simplifyVector = FALSE)
 sums <- read.csv(Sys.getenv("CHECKSUMS", "manifest/checksums.csv"), colClasses = "character")
 sha <- setNames(sums$sha256, sums$path)
+## PMTiles map derivatives (R/24_pmtiles.R): linked only once live in the store
+pmt <- if (file.exists("manifest/pmtiles.json")) fromJSON("manifest/pmtiles.json", simplifyVector = FALSE) else list()
+is_live <- function(u) Sys.getenv("PMTILES_ASSUME_LIVE") == "1" ||
+  identical(suppressWarnings(system2("curl", c("-sfI", "-o", "/dev/null", "-w", "%{http_code}", shQuote(u)), stdout = TRUE)), "200")
+pmt <- Filter(function(t) is_live(paste0(ASSET_BASE, "/", t$path)), pmt)
+if (length(pmt)) message("PMTiles live: ", paste(names(pmt), collapse = ", "))
 items <- cat_json$items
 nosum <- vapply(items, function(it) is.na(sha[it$path]), TRUE)
 if (any(nosum)) stop(sum(nosum), " files have no checksum; run R/21_checksums.R first")
@@ -214,6 +221,17 @@ make_collection <- function(prod, its) {
   if (has_thumb) assets$thumbnail <- list(href = "./thumbnail.png", type = "image/png", title = paste(title, "(preview)"),
                                           roles = I("thumbnail"), `file:size` = file.size(thumb),
                                           `file:checksum` = paste0("1220", digest_sha256(thumb)))
+  tiles <- pmt[[prod]]
+  style_src <- if (!is.null(tiles)) file.path("stac-styles", paste0(prod, ".json"))
+  if (!is.null(tiles) && file.exists(style_src)) {
+    pkey <- sub("\\.parquet$", "", basename(tiles$source))
+    assets[[paste0(pkey, "-tiles")]] <- list(href = paste0(ASSET_BASE, "/", tiles$path), type = "application/vnd.pmtiles",
+      title = sprintf("%s (vector tiles, zoom %d-%d)", title, tiles$minzoom, tiles$maxzoom), roles = I("visual"),
+      `file:size` = tiles$bytes, `file:checksum` = paste0("1220", tiles$sha256))
+    st <- fromJSON(style_src, simplifyVector = FALSE)
+    assets[["style-default"]] <- list(href = "./styles/default.json", type = "application/vnd.mapbox.style+json", title = st$name,
+      roles = I(c("style", "default")), `file:size` = file.size(style_src), `file:checksum` = paste0("1220", digest_sha256(style_src)))
+  } else tiles <- NULL
   item_objs <- lapply(rasters, function(it) {
     iid <- sub("\\.tif$", "", basename(it$path)); b <- to_lonlat(it$bbox, it$crs %||% NA) %||% bbox
     list(id = iid, it = it, json = list(
@@ -230,7 +248,7 @@ make_collection <- function(prod, its) {
   })
   col <- list(type = "Collection", stac_version = STAC_VERSION,
               stac_extensions = I(unname(EXT[c("portolan", "file", if (any(vapply(its, `[[`, "", "kind") != "table")) "proj",
-                                              if (any(vapply(its, `[[`, "", "kind") != "raster")) "table")])),
+                                              if (any(vapply(its, `[[`, "", "kind") != "raster")) "table", if (!is.null(tiles)) "wml")])),
               id = prod, title = title, description = desc,
               keywords = I(unique(c("Tasmania", "theLIST", code, c(vector = "vector", raster = "raster", table = "table")[[main$kind]]))),
               license = "CC-BY-3.0-AU", providers = PROVIDERS,
@@ -245,10 +263,12 @@ make_collection <- function(prod, its) {
                      link("license", LICENSE_URL, "text/html", "CC BY 3.0 AU"),
                      link("alternate", site_link(main$path), "text/html", "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)")),
                 lapply(src$zips, function(z) link("via", z$url, "text/html", paste0("Source: ", z$name, " (LIST, released ", z$released, ")"))),
-                lapply(item_objs, function(o) link("item", sprintf("./%s/%s.json", o$id, o$id), "application/geo+json", o$json$properties$title))))
+                lapply(item_objs, function(o) link("item", sprintf("./%s/%s.json", o$id, o$id), "application/geo+json", o$json$properties$title)),
+                if (!is.null(tiles)) list(c(link("pmtiles", paste0(ASSET_BASE, "/", tiles$path), "application/vnd.pmtiles", paste(title, "(vector tiles)")),
+                                            list(`pmtiles:layers` = I(tiles$layer))))))
   if (length(assets)) col$assets <- assets
   if (main$kind == "vector") col$`table:primary_geometry` <- "geometry"
-  list(collection = col, path = path, its = its, main = main, items = item_objs, thumb = if (has_thumb) thumb)
+  list(collection = col, path = path, its = its, main = main, items = item_objs, thumb = if (has_thumb) thumb, style = if (!is.null(tiles)) style_src)
 }
 digest_sha256 <- function(f) sub(" .*", "", system(sprintf("sha256sum %s", shQuote(f)), intern = TRUE))
 
@@ -292,6 +312,7 @@ for (cl in cls) {
   writeLines(readme_for(cl), file.path(d, "README.md"))
   writeLines(Filter(nzchar, agents_for(cl)), file.path(d, "AGENTS.md"))
   if (!is.null(cl$thumb)) invisible(file.copy(cl$thumb, file.path(d, "thumbnail.png"), overwrite = TRUE))
+  if (!is.null(cl$style)) { dir.create(file.path(d, "styles"), showWarnings = FALSE); invisible(file.copy(cl$style, file.path(d, "styles", "default.json"), overwrite = TRUE)) }
   for (o in cl$items) write_json_file(o$json, file.path(d, o$id, paste0(o$id, ".json")))
 }
 

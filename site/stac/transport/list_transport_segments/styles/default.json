@@ -1,0 +1,227 @@
+{
+  "version": 8,
+  "name": "LIST Transport Segments by tran class",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Access Road",
+        "color": "#1b9e77"
+      },
+      {
+        "label": "Local Road",
+        "color": "#d95f02"
+      },
+      {
+        "label": "Vehicular Track",
+        "color": "#7570b3"
+      },
+      {
+        "label": "Collector Road",
+        "color": "#e7298a"
+      },
+      {
+        "label": "Arterial Road",
+        "color": "#66a61e"
+      },
+      {
+        "label": "National/State Highway",
+        "color": "#e6ab02"
+      },
+      {
+        "label": "Sub Arterial Road",
+        "color": "#a6761d"
+      },
+      {
+        "label": "Walking",
+        "color": "#1f78b4"
+      },
+      {
+        "label": "Railway",
+        "color": "#b2df8a"
+      },
+      {
+        "label": "Not Applicable",
+        "color": "#fb9a99"
+      },
+      {
+        "label": "Bike",
+        "color": "#cab2d6"
+      },
+      {
+        "label": "Shared Use Bike/Walking",
+        "color": "#ffff99"
+      },
+      {
+        "label": "AS2156 Track Class 3 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "AS2156 Track Class 4 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Horse Trail",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Railway Siding",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "AS2156 Track Class 2 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "AS2156 Track Class 5 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "AS2156 Track Class 6 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "AS2156 Track Class 1 (PWS)",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Mall",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Arcade",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Shared Use Track",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Ferry",
+        "color": "#9a9a9a"
+      },
+      {
+        "label": "Tramway",
+        "color": "#9a9a9a"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_transport_segments/statewide/list_transport_segments_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_transport_segments-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_transport_segments",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "TRAN_CLASS"
+          ],
+          "Access Road",
+          "#1b9e77",
+          "Local Road",
+          "#d95f02",
+          "Vehicular Track",
+          "#7570b3",
+          "Collector Road",
+          "#e7298a",
+          "Arterial Road",
+          "#66a61e",
+          "National/State Highway",
+          "#e6ab02",
+          "Sub Arterial Road",
+          "#a6761d",
+          "Walking",
+          "#1f78b4",
+          "Railway",
+          "#b2df8a",
+          "Not Applicable",
+          "#fb9a99",
+          "Bike",
+          "#cab2d6",
+          "Shared Use Bike/Walking",
+          "#ffff99",
+          "AS2156 Track Class 3 (PWS)",
+          "#9a9a9a",
+          "AS2156 Track Class 4 (PWS)",
+          "#9a9a9a",
+          "Horse Trail",
+          "#9a9a9a",
+          "Railway Siding",
+          "#9a9a9a",
+          "AS2156 Track Class 2 (PWS)",
+          "#9a9a9a",
+          "AS2156 Track Class 5 (PWS)",
+          "#9a9a9a",
+          "AS2156 Track Class 6 (PWS)",
+          "#9a9a9a",
+          "AS2156 Track Class 1 (PWS)",
+          "#9a9a9a",
+          "Mall",
+          "#9a9a9a",
+          "Arcade",
+          "#9a9a9a",
+          "Shared Use Track",
+          "#9a9a9a",
+          "Ferry",
+          "#9a9a9a",
+          "Tramway",
+          "#9a9a9a",
+          "#9a9a9a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          [
+            "case",
+            [
+              "in",
+              [
+                "get",
+                "TRAN_CLASS"
+              ],
+              [
+                "literal",
+                ["National/State Highway", "Arterial Road", "Sub Arterial Road", "Collector Road"]
+              ]
+            ],
+            1.4,
+            0.3
+          ],
+          14,
+          [
+            "case",
+            [
+              "in",
+              [
+                "get",
+                "TRAN_CLASS"
+              ],
+              [
+                "literal",
+                ["National/State Highway", "Arterial Road", "Sub Arterial Road", "Collector Road"]
+              ]
+            ],
+            4,
+            1.2
+          ]
+        ]
+      }
+    }
+  ]
+}

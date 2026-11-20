@@ -1,0 +1,59 @@
+{
+  "version": 8,
+  "name": "LIST Landslide Planning Map Hazard Bands by hazard band 1",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Low",
+        "color": "#f2e394"
+      },
+      {
+        "label": "Medium",
+        "color": "#f2b134"
+      },
+      {
+        "label": "Medium - Active",
+        "color": "#e4572e"
+      },
+      {
+        "label": "High",
+        "color": "#a4161a"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_landslide_planning_map_hazard_bands-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_landslide_planning_map_hazard_bands",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "HAZARD_BAND_1"
+          ],
+          "Low",
+          "#f2e394",
+          "Medium",
+          "#f2b134",
+          "Medium - Active",
+          "#e4572e",
+          "High",
+          "#a4161a",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.7
+      }
+    }
+  ]
+}
