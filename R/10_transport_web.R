@@ -41,7 +41,7 @@ logf <- "manifest/converted.csv"
 if (!file.exists(logf)) download.file(paste0(PUBLIC, "/", logf), logf, quiet = TRUE)
 log  <- read.csv(logf, colClasses = "character")
 src  <- log[grepl("^out/geoparquet/list_transport_segments/[^/]+/[^/]+\\.parquet$", log$output) &
-            startsWith(log$status, "ok"), ]
+            !grepl("/statewide/", log$output) & startsWith(log$status, "ok"), ]
 src  <- src[!duplicated(src$output, fromLast = TRUE), ]
 src$lga <- basename(dirname(src$output))
 files <- read.csv("manifest/files.csv", colClasses = "character")

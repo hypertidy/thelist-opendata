@@ -5,7 +5,6 @@
 ##   raw/<zipname>.zip                             bit-for-bit copy of the source zip
 ##   raw/<loose files>                             the loose top-level shp/tab/gdb components
 ##   geoparquet/<product>/<region>/<layer>.parquet one GeoParquet per vector layer
-##   geoparquet/<product>/<layer>_union.vrt        OGR union over the LGA files of a split product
 ##   parquet/<product>/<region>/<table>.parquet    attribute-only tables (geom_type None)
 ##   cog/<product>/<region>/<name>.tif             rasters (tif/asc members, raster FileGDBs) as COG
 ##
@@ -179,28 +178,8 @@ res <- do.call(rbind, mclapply(seq_len(nrow(vec)), safe_job(vec_job), mc.cores =
 for (i in seq_len(NROW(res))) if (!is.na(res$url[i])) log_done(res$url[i], res$out[i], res$status[i])
 if (any(grepl("^R error", res$status))) message("R errors in vector jobs:\n", paste(unique(res$status[grepl("^R error", res$status)]), collapse = "\n"))
 
-## ---- 3. union VRT per LGA-split product --------------------------------------
-## Recipe, not payload: an OGR VRT unioning the per-LGA parquet files, with the
-## source LGA as a field. Open it directly, or materialise:
-##   gdal vector convert --of Parquet <layer>_union.vrt all.parquet
-split <- vec[vec$region_type == "lga" & !vec$geom_type %in% c("None", ""), ]
-strip_region <- function(layer, region) mapply(function(l, r) sub(paste0("_", tolower(r), "$"), "", tolower(l)), layer, region, USE.NAMES = FALSE)
-split$key <- paste(split$product, strip_region(split$layer, split$region))
-for (key in unique(split$key)) {
-  s <- split[split$key == key, ]; s <- s[order(s$region), ]
-  lname <- slug(strip_region(s$layer[1], s$region[1]))
-  vrt <- ensure_dir(file.path(DEST, "geoparquet", slug(s$product[1]), paste0(lname, "_union.vrt")))
-  xml <- c("<OGRVRTDataSource>",
-           sprintf('  <OGRVRTUnionLayer name="%s">', lname),
-           "    <PreserveSrcFID>OFF</PreserveSrcFID>",
-           "    <SourceLayerFieldName>lga</SourceLayerFieldName>",
-           "    <FieldStrategy>FirstLayer</FieldStrategy>",   # sources share one schema; keeps Int16/DateTime instead of String
-           sprintf('    <OGRVRTLayer name="%s">\n      <SrcDataSource relativeToVRT="1">%s/%s.parquet</SrcDataSource>\n      <SrcLayer>%s</SrcLayer>\n    </OGRVRTLayer>',
-                   slug(s$region), slug(s$region), slug(s$layer), slug(s$layer)),
-           "  </OGRVRTUnionLayer>", "</OGRVRTDataSource>")
-  message("vrt ", vrt)
-  if (!DRY) { tmp <- tempfile(fileext = ".vrt"); writeLines(xml, tmp); run("gdal", c("vsi", "copy", shQuote(tmp), shQuote(vrt))) }
-}
+## ---- 3. statewide layers for LGA-split products ----------------------------
+## Built by R/04_statewide.R (rejoins features clipped at LGA boundaries), not here.
 
 ## ---- 4. raster -> COG ---------------------------------------------------------
 ras <- layers[layers$geom_type == "raster", ]

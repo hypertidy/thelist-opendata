@@ -19,6 +19,7 @@ under `manifest/` in the store.
 
 Current snapshot: crawled 2026-09-10, converted 2026-09-17, uploaded
 2026-10-13 (geoparquet 12.7 GiB, cog 7.3 GiB, parquet 0.02 GiB).
+Statewide layers for the 25 LGA-split products added 2026-11-20 (3.3 GB).
 
 ### Known gaps in the published snapshot
 
@@ -28,9 +29,16 @@ Current snapshot: crawled 2026-09-10, converted 2026-09-17, uploaded
   parquets plus 47 `municipality_union.vrt`) were deleted from the store on
   2026-11-07 and their 1276 rows pruned from `converted.csv`; boundaries now
   live only under `geoparquet/municipality/`.
-- Raster output paths changed since the snapshot (`cog/<product>/<region>/`),
-  so about 30 logged outputs are not at their logged path and about 24 store
-  files are not in the log.
+- About 24 logged outputs with no region (the NCH enterprise-suitability COGs
+  and the `Python.zip` lookup tables) are logged with a `//` in the path; the
+  store has them at the single-slash path.
+- Five files logged as converted were missing from the store (Southern Midlands
+  parcels, DEM 25 m for Break O'Day, Flinders and Tasman, and Land Use 2021
+  statewide); reconverted and re-uploaded 2026-11-20.
+- `LIST_PUBLIC_LAND_CLASS-REVOKED` and `LIST_PUBLIC_LAND_CLASS_REVOKED` slug to
+  the same folder; the second (which LIST also ships statewide) is what is there.
+- Three stray `*.gdb.parquet` files (Clarence building polygons, Brighton and
+  Circular Head municipality) sit beside the real LGA files; they are not used.
 - 14 source zips are not converted: the 2 m CHM and slope rasters (need
   `SRC_ROOT`), the known empty or odd zips listed below, and
   INTERIM_PLANNING_SCHEME_OVERLAY_STATEWIDE, SES_DESIGN_FLOOD_EVENT_STATEWIDE,
@@ -43,16 +51,28 @@ Current snapshot: crawled 2026-09-10, converted 2026-09-17, uploaded
 
 `.github/workflows/refresh.yml` re-runs the pipeline monthly (and on demand):
 crawl, parse, peek, then convert only what changed upstream (etag skip, using
-the store's `manifest/converted.csv` as the log), then syncs new outputs and
-the manifest to the store. It needs repository secrets for a Source
+the store's `manifest/converted.csv` as the log), rebuild the statewide layer
+of any LGA-split product with a changed LGA source (`R/04_statewide.R`), then
+syncs new outputs and the manifest to the store. It needs repository secrets for a Source
 Cooperative service account (see the workflow header).
 
 The store READMEs are kept in `store/<product>/README.md` and uploaded by hand.
 
-## Derived products
+## Statewide layers
 
-Anything built *from* the mirror goes in its own product, so the mirror stays
-a straight conversion.
+Every product has a `statewide/` file in the mirror. Where LIST ships only
+per-LGA zips (25 layers: parcels, transport, hydro, contours, TASVEG 4.0,
+the LGA boundaries themselves, DEM 25 m and others) `R/04_statewide.R` builds
+it from the LGA files: features LIST clipped at LGA boundaries are rejoined to
+one row per `LIST_GUID` (polygons unioned, lines merged in their own
+direction, repeated copies kept once), with an `lga` column naming the source
+LGAs. Layers with no feature id (TASVEG 4.0 and its fire attributes) are
+stacked. The DEM 25 m tiles are mosaicked to one COG. Details are in the
+script header and the store README.
+
+    make statewide                        # or: PRODUCT='^list_parcels$' Rscript R/04_statewide.R
+
+## Related products
 
 - https://source.coop/mdsumner/tas-transport-web: LIST_TRANSPORT_SEGMENTS as
   one statewide browser layer (EPSG:4326, clipped LGA pieces rejoined to one
@@ -146,9 +166,9 @@ Known oddities upstream (worth reporting to Land Tasmania):
 ## Conventions
 
 - Text output only, ASCII only, one row per thing, stable column order.
-- Nothing is materialised that can be derived; the manifest is the payload.
-- Statewide products are one file; LGA-split products are converted per LGA and
-  then a union per product is written alongside, so both granularities exist.
+- Statewide products are one file; LGA-split products are converted per LGA
+  and a statewide file is built from those, with clipped features rejoined, so
+  both granularities exist and every product has a statewide file.
 - The LGA boundary shipped in every zip (municipality_<lga>) is converted once,
   as its own product, not 1277 times.
 - Vector output is GeoParquet from the gdb source: field names and types as in

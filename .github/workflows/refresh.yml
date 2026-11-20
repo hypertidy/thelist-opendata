@@ -1,6 +1,7 @@
 # Monthly refresh of the LIST open data mirror on Source Cooperative.
 #
-#   crawl -> parse -> peek -> convert (only what changed upstream) -> sync to store
+#   crawl -> parse -> peek -> convert (only what changed upstream)
+#     -> statewide (rebuild a split product's statewide layer if an LGA source changed) -> sync to store
 #
 # Conversion runs with DEST=out (local), so output paths match the log in
 # manifest/converted.csv; the log is fetched from the store first and
@@ -59,7 +60,7 @@ jobs:
       - name: Tools
         run: |
           gdal --version
-          Rscript -e 'for (p in c("httr2", "jsonlite", "gdalraster")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")'
+          Rscript -e 'for (p in c("httr2", "jsonlite", "gdalraster", "duckdb", "geos", "wk", "blob")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")'
 
       - name: Fetch conversion log from the store
         run: curl -fsSL -o manifest/converted.csv "$PUBLIC/manifest/converted.csv"
@@ -69,6 +70,10 @@ jobs:
 
       - name: Convert changed sources
         run: make convert
+
+      - name: Rebuild statewide layers of LGA-split products
+        if: env.DRY != '1'
+        run: make statewide
 
       - name: Sync outputs and manifest to the store
         if: env.DRY != '1'
