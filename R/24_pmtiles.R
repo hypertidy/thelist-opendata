@@ -26,11 +26,29 @@ CORES  <- as.integer(Sys.getenv("CORES", "4"))
 MANF   <- "manifest/pmtiles.json"
 STYLES <- "stac-styles"
 
+## TASVEG vegetation groups share one palette across versions, keyed on the group
+## name with punctuation and 'and' dropped (4.0 and 5.0 spell them a little differently)
+norm_group <- function(x) gsub("[^a-z]", "", gsub("\\band\\b", "", tolower(x)))
+TASVEG_COLOURS <- setNames(
+  c("#e8d9a8", "#1b7837", "#a6cf6b", "#c2a35b", "#00441b", "#5aae61", "#bdbdbd", "#c994c7", "#8c6bb1", "#4eb3d3", "#fdd49e"),
+  norm_group(c("Modified land", "Wet eucalypt forest and woodland", "Dry eucalypt forest and woodland", "Scrub, heathland and coastal complexes",
+               "Rainforest and related scrub", "Non eucalypt forest and woodland", "Other natural environments", "Moorland, sedgeland and rushland",
+               "Highland and treeless vegetation", "Saltmarsh and wetland", "Native grassland")))
+TASVEG_COLOURS[norm_group("Highland treeless vegetation")] <- TASVEG_COLOURS[norm_group("Highland and treeless vegetation")]
+## TASVEG 5.0 carries only the group code; names from its fire-attributes companion (joined on VEGCODE)
+TASVEG5_GROUPS <- c(`1` = "Dry eucalypt forest and woodland", `2` = "Wet eucalypt forest and woodland", `3` = "Rainforest and related scrub",
+                    `4` = "Non eucalypt forest and woodland", `5` = "Saltmarsh and wetland", `6` = "Scrub heathland and coastal complexes",
+                    `7` = "Highland treeless vegetation", `8` = "Moorland sedgeland and rushland", `9` = "Native grassland",
+                    `10` = "Modified land", `11` = "Other natural environments")
+
 ## which layers get tiles, and how they are drawn. type: fill | line
 TILESETS <- list(
   list_parcels = list(fields = c("PID", "CID", "TENURE_TY", "CAD_TYPE1"), type = "fill", by = "TENURE_TY", minzoom = 10, maxzoom = 15,
                       outline = TRUE, opacity = 0.35),
-  list_tasveg_40 = list(fields = c("VEG_GROUP", "VEGCODE", "VEGCODE_D"), type = "fill", by = "VEG_GROUP", minzoom = 7, maxzoom = 13, opacity = 0.75),
+  list_tasveg_40 = list(fields = c("VEG_GROUP", "VEGCODE", "VEGCODE_D"), type = "fill", by = "VEG_GROUP", minzoom = 7, maxzoom = 13, opacity = 0.75,
+                        palette = "tasveg"),
+  list_tasveg_50 = list(fields = c("VEG_GRP_CODE", "VEGCODE"), type = "fill", by = "VEG_GRP_CODE", minzoom = 7, maxzoom = 13, opacity = 0.75,
+                        palette = "tasveg", labels = TASVEG5_GROUPS),
   list_transport_segments = list(fields = c("TRANSEG_ID", "TRAN_CLASS", "TRANS_TYPE", "PRI_NAME"), type = "line", by = "TRAN_CLASS", minzoom = 7, maxzoom = 14),
   list_landslide_planning_map_hazard_bands = list(fields = c("HAZARD_BAND_1", "COMPONENT"), type = "fill", by = "HAZARD_BAND_1", minzoom = 8, maxzoom = 13,
                                                   opacity = 0.7, order = c("Low", "Medium", "Medium - Active", "High"),
@@ -58,10 +76,13 @@ categories <- function(url, col, order = NULL) {
 style_for <- function(prod, cfg, it, cats, url) {
   layer <- prod
   vals <- cats$v
-  cols <- if (!is.null(cfg$colours)) cfg$colours[match(vals, cfg$order)] else PALETTE[(seq_along(vals) - 1) %% length(PALETTE) + 1]
+  labs <- if (!is.null(cfg$labels)) unname(ifelse(is.na(cfg$labels[as.character(vals)]), as.character(vals), cfg$labels[as.character(vals)])) else as.character(vals)
+  cols <- if (identical(cfg$palette, "tasveg")) unname(TASVEG_COLOURS[norm_group(labs)])
+          else if (!is.null(cfg$colours)) cfg$colours[match(vals, cfg$order)] else PALETTE[(seq_along(vals) - 1) %% length(PALETTE) + 1]
   cols[is.na(cols)] <- "#999999"
-  if (length(vals) > length(PALETTE) && is.null(cfg$colours)) cols[(length(PALETTE) + 1):length(vals)] <- "#9a9a9a"   # the long tail in grey
-  match_expr <- c(list("match", list("get", cfg$by)), as.list(c(rbind(vals, cols))), list("#9a9a9a"))
+  if (length(vals) > length(PALETTE) && is.null(cfg$colours) && is.null(cfg$palette)) cols[(length(PALETTE) + 1):length(vals)] <- "#9a9a9a"   # the long tail in grey
+  ## value/colour pairs, keeping each value's type (rbind() would turn numeric codes into strings that never match)
+  match_expr <- c(list("match", list("get", cfg$by)), unlist(Map(function(v, k) list(v, k), vals, cols), recursive = FALSE, use.names = FALSE), list("#9a9a9a"))
   layers <- if (cfg$type == "fill") {
     l <- list(list(id = paste0(layer, "-fill"), type = "fill", source = "data", `source-layer` = layer,
                    paint = list(`fill-color` = match_expr, `fill-opacity` = cfg$opacity %||% 0.6)))
@@ -76,8 +97,8 @@ style_for <- function(prod, cfg, it, cats, url) {
                                                list("case", list("in", list("get", cfg$by), list("literal", major)), 1.4, 0.3), 14,
                                                list("case", list("in", list("get", cfg$by), list("literal", major)), 4, 1.2)))))
   }
-  list(version = 8, name = paste(it$title, "by", tolower(gsub("_", " ", cfg$by))),
-       metadata = list(legend = lapply(seq_along(vals), function(i) list(label = vals[i], color = cols[i])), attribution = "theLIST (c) State of Tasmania, CC BY 3.0 AU"),
+  list(version = 8, name = paste(it$title, "by", if (identical(cfg$palette, "tasveg")) "vegetation group" else tolower(gsub("_", " ", cfg$by))),
+       metadata = list(legend = lapply(seq_along(vals), function(i) list(label = labs[i], value = vals[i], color = cols[i])), attribution = "theLIST (c) State of Tasmania, CC BY 3.0 AU"),
        sources = list(data = list(type = "vector", url = paste0("pmtiles://", url), attribution = "theLIST (c) State of Tasmania, CC BY 3.0 AU")),
        layers = layers)
 }
@@ -88,8 +109,14 @@ build <- function(prod) {
   rel <- sprintf("pmtiles/%s/statewide/%s_statewide.pmtiles", prod, prod)
   out <- file.path(DEST, rel); dir.create(dirname(out), recursive = TRUE, showWarnings = FALSE)
   prev <- man[[prod]]
-  if (!is.null(prev) && identical(prev$source_sha256, src_sha) && file.exists(out)) return(prev)
   url <- paste0(PUBLIC, "/", it$path)
+  store_url <- paste0(PUBLIC, "/", rel)
+  write_style <- function() {                                   # styles are cheap: always rewritten
+    dir.create(STYLES, showWarnings = FALSE)
+    writeLines(toJSON(style_for(prod, cfg, it, categories(url, cfg$by, cfg$order), store_url), auto_unbox = TRUE, pretty = TRUE),
+               file.path(STYLES, paste0(prod, ".json")))
+  }
+  if (!is.null(prev) && identical(prev$source_sha256, src_sha) && file.exists(out)) { write_style(); return(prev) }
   args <- c("vector", "pipeline", paste(
     "read", shQuote(paste0("/vsicurl/", url)),
     "! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field geometry",   # keep the geometry (a bare field list drops it)
@@ -103,10 +130,7 @@ build <- function(prod) {
   t0 <- Sys.time(); message(prod, ": tiling z", cfg$minzoom, "-", cfg$maxzoom)
   rc <- system2("gdal", args, stdout = FALSE, stderr = file.path(tempdir(), paste0(prod, ".log")))
   if (rc != 0L) stop(prod, ": gdal failed, see ", file.path(tempdir(), paste0(prod, ".log")))
-  cats <- categories(url, cfg$by, cfg$order)
-  store_url <- paste0(PUBLIC, "/", rel)
-  dir.create(STYLES, showWarnings = FALSE)
-  writeLines(toJSON(style_for(prod, cfg, it, cats, store_url), auto_unbox = TRUE, pretty = TRUE), file.path(STYLES, paste0(prod, ".json")))
+  write_style()
   message(prod, ": ", round(file.size(out) / 1e6, 1), " MB in ", round(as.numeric(difftime(Sys.time(), t0, units = "mins")), 1), " min")
   list(path = rel, layer = prod, minzoom = cfg$minzoom, maxzoom = cfg$maxzoom, fields = cfg$fields, color_by = cfg$by,
        geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha,

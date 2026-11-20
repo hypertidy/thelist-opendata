@@ -1,55 +1,67 @@
 {
   "version": 8,
-  "name": "LIST TASVEG 40 by veg group",
+  "name": "LIST TASVEG 40 by vegetation group",
   "metadata": {
     "legend": [
       {
         "label": "Modified land",
-        "color": "#1b9e77"
+        "value": "Modified land",
+        "color": "#e8d9a8"
       },
       {
         "label": "Wet eucalypt forest and woodland",
-        "color": "#d95f02"
+        "value": "Wet eucalypt forest and woodland",
+        "color": "#1b7837"
       },
       {
         "label": "Dry eucalypt forest and woodland",
-        "color": "#7570b3"
+        "value": "Dry eucalypt forest and woodland",
+        "color": "#a6cf6b"
       },
       {
         "label": "Scrub, heathland and coastal complexes",
-        "color": "#e7298a"
+        "value": "Scrub, heathland and coastal complexes",
+        "color": "#c2a35b"
       },
       {
         "label": "Rainforest and related scrub",
-        "color": "#66a61e"
+        "value": "Rainforest and related scrub",
+        "color": "#00441b"
       },
       {
         "label": "Non eucalypt forest and woodland",
-        "color": "#e6ab02"
+        "value": "Non eucalypt forest and woodland",
+        "color": "#5aae61"
       },
       {
         "label": "Moorland, sedgeland and rushland",
-        "color": "#a6761d"
+        "value": "Moorland, sedgeland and rushland",
+        "color": "#c994c7"
       },
       {
         "label": "Other natural environments",
-        "color": "#1f78b4"
+        "value": "Other natural environments",
+        "color": "#bdbdbd"
       },
       {
         "label": "Highland and treeless vegetation",
-        "color": "#b2df8a"
+        "value": "Highland and treeless vegetation",
+        "color": "#8c6bb1"
       },
       {
         "label": "Native grassland",
-        "color": "#fb9a99"
+        "value": "Native grassland",
+        "color": "#fdd49e"
       },
       {
         "label": "Saltmarsh and wetland",
-        "color": "#cab2d6"
+        "value": "Saltmarsh and wetland",
+        "color": "#4eb3d3"
       },
       {
         "label": "Modified Land",
-        "color": "#ffff99"
+        "value": "Modified Land",
+        "color": "#e8d9a8"
       }
     ],
     "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
@@ -75,29 +87,29 @@
             "VEG_GROUP"
           ],
           "Modified land",
-          "#1b9e77",
+          "#e8d9a8",
           "Wet eucalypt forest and woodland",
-          "#d95f02",
+          "#1b7837",
           "Dry eucalypt forest and woodland",
-          "#7570b3",
+          "#a6cf6b",
           "Scrub, heathland and coastal complexes",
-          "#e7298a",
+          "#c2a35b",
           "Rainforest and related scrub",
-          "#66a61e",
+          "#00441b",
           "Non eucalypt forest and woodland",
-          "#e6ab02",
+          "#5aae61",
           "Moorland, sedgeland and rushland",
-          "#a6761d",
+          "#c994c7",
           "Other natural environments",
-          "#1f78b4",
+          "#bdbdbd",
           "Highland and treeless vegetation",
-          "#b2df8a",
+          "#8c6bb1",
           "Native grassland",
-          "#fb9a99",
+          "#fdd49e",
           "Saltmarsh and wetland",
-          "#cab2d6",
+          "#4eb3d3",
           "Modified Land",
-          "#ffff99",
+          "#e8d9a8",
           "#9a9a9a"
         ],
         "fill-opacity": 0.75

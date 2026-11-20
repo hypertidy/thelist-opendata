@@ -1,0 +1,112 @@
+{
+  "version": 8,
+  "name": "LIST TASVEG 50 by vegetation group",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Modified land",
+        "value": 10,
+        "color": "#e8d9a8"
+      },
+      {
+        "label": "Wet eucalypt forest and woodland",
+        "value": 2,
+        "color": "#1b7837"
+      },
+      {
+        "label": "Dry eucalypt forest and woodland",
+        "value": 1,
+        "color": "#a6cf6b"
+      },
+      {
+        "label": "Scrub heathland and coastal complexes",
+        "value": 6,
+        "color": "#c2a35b"
+      },
+      {
+        "label": "Rainforest and related scrub",
+        "value": 3,
+        "color": "#00441b"
+      },
+      {
+        "label": "Non eucalypt forest and woodland",
+        "value": 4,
+        "color": "#5aae61"
+      },
+      {
+        "label": "Other natural environments",
+        "value": 11,
+        "color": "#bdbdbd"
+      },
+      {
+        "label": "Moorland sedgeland and rushland",
+        "value": 8,
+        "color": "#c994c7"
+      },
+      {
+        "label": "Highland treeless vegetation",
+        "value": 7,
+        "color": "#8c6bb1"
+      },
+      {
+        "label": "Saltmarsh and wetland",
+        "value": 5,
+        "color": "#4eb3d3"
+      },
+      {
+        "label": "Native grassland",
+        "value": 9,
+        "color": "#fdd49e"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_50/statewide/list_tasveg_50_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_tasveg_50-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_tasveg_50",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "VEG_GRP_CODE"
+          ],
+          10,
+          "#e8d9a8",
+          2,
+          "#1b7837",
+          1,
+          "#a6cf6b",
+          6,
+          "#c2a35b",
+          3,
+          "#00441b",
+          4,
+          "#5aae61",
+          11,
+          "#bdbdbd",
+          8,
+          "#c994c7",
+          7,
+          "#8c6bb1",
+          5,
+          "#4eb3d3",
+          9,
+          "#fdd49e",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.75
+      }
+    }
+  ]
+}

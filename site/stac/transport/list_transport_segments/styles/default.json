@@ -5,102 +5,127 @@
     "legend": [
       {
         "label": "Access Road",
+        "value": "Access Road",
         "color": "#1b9e77"
       },
       {
         "label": "Local Road",
+        "value": "Local Road",
         "color": "#d95f02"
       },
       {
         "label": "Vehicular Track",
+        "value": "Vehicular Track",
         "color": "#7570b3"
       },
       {
         "label": "Collector Road",
+        "value": "Collector Road",
         "color": "#e7298a"
       },
       {
         "label": "Arterial Road",
+        "value": "Arterial Road",
         "color": "#66a61e"
       },
       {
         "label": "National/State Highway",
+        "value": "National/State Highway",
         "color": "#e6ab02"
       },
       {
         "label": "Sub Arterial Road",
+        "value": "Sub Arterial Road",
         "color": "#a6761d"
       },
       {
         "label": "Walking",
+        "value": "Walking",
         "color": "#1f78b4"
       },
       {
         "label": "Railway",
+        "value": "Railway",
         "color": "#b2df8a"
       },
       {
         "label": "Not Applicable",
+        "value": "Not Applicable",
         "color": "#fb9a99"
       },
       {
         "label": "Bike",
+        "value": "Bike",
         "color": "#cab2d6"
       },
       {
         "label": "Shared Use Bike/Walking",
+        "value": "Shared Use Bike/Walking",
         "color": "#ffff99"
       },
       {
         "label": "AS2156 Track Class 3 (PWS)",
+        "value": "AS2156 Track Class 3 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "AS2156 Track Class 4 (PWS)",
+        "value": "AS2156 Track Class 4 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "Horse Trail",
+        "value": "Horse Trail",
         "color": "#9a9a9a"
       },
       {
         "label": "Railway Siding",
+        "value": "Railway Siding",
         "color": "#9a9a9a"
       },
       {
         "label": "AS2156 Track Class 2 (PWS)",
+        "value": "AS2156 Track Class 2 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "AS2156 Track Class 5 (PWS)",
+        "value": "AS2156 Track Class 5 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "AS2156 Track Class 6 (PWS)",
+        "value": "AS2156 Track Class 6 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "AS2156 Track Class 1 (PWS)",
+        "value": "AS2156 Track Class 1 (PWS)",
         "color": "#9a9a9a"
       },
       {
         "label": "Mall",
+        "value": "Mall",
         "color": "#9a9a9a"
       },
       {
         "label": "Arcade",
+        "value": "Arcade",
         "color": "#9a9a9a"
       },
       {
         "label": "Shared Use Track",
+        "value": "Shared Use Track",
         "color": "#9a9a9a"
       },
       {
         "label": "Ferry",
+        "value": "Ferry",
         "color": "#9a9a9a"
       },
       {
         "label": "Tramway",
+        "value": "Tramway",
         "color": "#9a9a9a"
       }
     ],

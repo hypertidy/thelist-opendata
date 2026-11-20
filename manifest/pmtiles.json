@@ -4,7 +4,12 @@
     "layer": "list_parcels",
     "minzoom": 10,
     "maxzoom": 15,
-    "fields": ["PID", "CID", "TENURE_TY", "CAD_TYPE1"],
+    "fields": [
+      "PID",
+      "CID",
+      "TENURE_TY",
+      "CAD_TYPE1"
+    ],
     "color_by": "TENURE_TY",
     "geometry": "MultiPolygon",
     "bytes": 145013391,
@@ -19,7 +24,11 @@
     "layer": "list_tasveg_40",
     "minzoom": 7,
     "maxzoom": 13,
-    "fields": ["VEG_GROUP", "VEGCODE", "VEGCODE_D"],
+    "fields": [
+      "VEG_GROUP",
+      "VEGCODE",
+      "VEGCODE_D"
+    ],
     "color_by": "VEG_GROUP",
     "geometry": "MultiPolygon",
     "bytes": 205733891,
@@ -34,7 +43,12 @@
     "layer": "list_transport_segments",
     "minzoom": 7,
     "maxzoom": 14,
-    "fields": ["TRANSEG_ID", "TRAN_CLASS", "TRANS_TYPE", "PRI_NAME"],
+    "fields": [
+      "TRANSEG_ID",
+      "TRAN_CLASS",
+      "TRANS_TYPE",
+      "PRI_NAME"
+    ],
     "color_by": "TRAN_CLASS",
     "geometry": "MultiLineString",
     "bytes": 54711989,
@@ -49,7 +63,10 @@
     "layer": "list_landslide_planning_map_hazard_bands",
     "minzoom": 8,
     "maxzoom": 13,
-    "fields": ["HAZARD_BAND_1", "COMPONENT"],
+    "fields": [
+      "HAZARD_BAND_1",
+      "COMPONENT"
+    ],
     "color_by": "HAZARD_BAND_1",
     "geometry": "MultiPolygon",
     "bytes": 143683552,
@@ -58,5 +75,23 @@
     "source_sha256": "cca72101122f8f45ec1cfa7be19a68589f2ccc31f7b96b9c2682524c233e6517",
     "center": null,
     "built": "2026-11-20T11:57:38Z"
+  },
+  "list_tasveg_50": {
+    "path": "pmtiles/list_tasveg_50/statewide/list_tasveg_50_statewide.pmtiles",
+    "layer": "list_tasveg_50",
+    "minzoom": 7,
+    "maxzoom": 13,
+    "fields": [
+      "VEG_GRP_CODE",
+      "VEGCODE"
+    ],
+    "color_by": "VEG_GRP_CODE",
+    "geometry": "MultiPolygon",
+    "bytes": 208684488,
+    "sha256": "25db81439d7c94b2661f490efb3784505d54451f9dbc963c2c5a0a4caad9ca72",
+    "source": "geoparquet/list_tasveg_50/statewide/tasveg_5_0.parquet",
+    "source_sha256": "3faf797593bb45b4049bf86a163673cc2938122265e92e09e836347d3995f72b",
+    "center": null,
+    "built": "2026-11-20T12:17:36Z"
   }
 }

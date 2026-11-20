@@ -5,18 +5,22 @@
     "legend": [
       {
         "label": "Low",
+        "value": "Low",
         "color": "#f2e394"
       },
       {
         "label": "Medium",
+        "value": "Medium",
         "color": "#f2b134"
       },
       {
         "label": "Medium - Active",
+        "value": "Medium - Active",
         "color": "#e4572e"
       },
       {
         "label": "High",
+        "value": "High",
         "color": "#a4161a"
       }
     ],

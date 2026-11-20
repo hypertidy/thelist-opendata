@@ -32,7 +32,8 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   `stac-styles/`, `manifest/pmtiles.json`). The Portolan Browser draws a
   GeoParquet directly up to 10,000 features and 50 MB (reprojecting from its
   CRS), so small layers stay GeoParquet-only; 81 of 235 vector layers are over
-  that. Tiled so far: parcels, TASVEG 4.0, transport segments, landslide
+  that. Tiled so far: parcels, TASVEG 4.0 and 5.0 (one shared vegetation-group
+  palette), transport segments, landslide
   hazard bands (GDAL's PMTiles writer).
 - `R/22_stac.R` then `portolan stac-geoparquet`: the catalogue in `site/stac/`
   (with `items.parquet` mirrors for multi-COG collections); a tileset is
