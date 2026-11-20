@@ -36,15 +36,16 @@ This mirror converts each layer once, from the FileGDB where there is one.
                    source etag (converted.csv)
     geoparquet/<product>/<region>/<layer>.parquet
                    one GeoParquet per vector layer; region is an LGA or statewide
-    geoparquet/<product>/<layer>_union.vrt
-                   an OGR VRT unioning the LGA files of a split product into one
-                   statewide layer (with an lga field); open it directly or
-                   read the per-LGA files as a partitioned dataset
+    geoparquet/<product>/statewide/<layer>_statewide.parquet
+                   every product has one: LIST's own statewide file where LIST
+                   ships one, otherwise built here from the 29 LGA files, with
+                   features clipped at LGA boundaries rejoined (see below)
     parquet/<product>/<region>/<table>.parquet
                    attribute-only tables, including the class tables of the
                    NCH raster products
     cog/<product>/<region>/<name>.tif
-                   rasters as COG (ZSTD, 512 px blocks, overviews)
+                   rasters as COG (ZSTD, 512 px blocks, overviews); the LGA-split
+                   DEM 25 m is also mosaicked to cog/list_dem_25m/statewide/
 
 Sizes as of the first release: 13 GB GeoParquet, 7 GB COG (the source zips,
 not mirrored, total 183 GB).
@@ -55,12 +56,15 @@ Everything is readable in place. The GeoParquet is GeoParquet 1.1 with a
 covering bbox column and rows sorted by bbox, so spatial predicates prune row
 groups.
 
-DuckDB, one LGA-split product as a single table:
+DuckDB, statewide parcels:
 
-    INSTALL spatial; LOAD spatial;
+    INSTALL httpfs; LOAD httpfs; INSTALL spatial; LOAD spatial;
     SELECT count(*) FROM read_parquet(
-      's3://us-west-2.opendata.source.coop/mdsumner/thelist-opendata/geoparquet/list_parcels/*/*.parquet',
-      hive_partitioning = false);
+      'https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_parcels/statewide/list_parcels_statewide.parquet');
+
+For `s3://us-west-2.opendata.source.coop/...` paths in DuckDB, first
+`SET s3_region = 'us-west-2'; SET s3_url_style = 'path';` (the dots in the
+bucket name break virtual-host style TLS).
 
 GDAL / ogr:
 
@@ -97,12 +101,21 @@ Set `AWS_NO_SIGN_REQUEST=YES` for anonymous S3 access with GDAL.
   Byte class grids have nearest-neighbour overviews.
 - The LGA boundary that every per-LGA zip ships (`municipality_<lga>`) is
   converted once, under `geoparquet/municipality/`.
-- Features that straddle LGA boundaries appear in both LGAs' files. In
-  LIST_TRANSPORT_SEGMENTS they are clipped at the boundary, each piece keeping
-  the same TRANSEG_ID. The `_union.vrt` is a union, not a dissolve;
-  deduplicating is left to the reader (for LIST products `LIST_GUID` or `UFI`
-  are the stable keys).
-- Nothing was cleaned, clipped, simplified or edited.
+- In LGA-split products a feature that crosses an LGA boundary is clipped
+  into each LGA's file, every piece keeping the feature's `LIST_GUID` and
+  attributes; a feature lying along a boundary (boundary segments, some
+  hydlines) ships whole in both. The per-LGA files are as LIST ships them.
+- The built statewide files put the pieces back: one row per `LIST_GUID` (or
+  the layer's own id: `ID`, `RS_ID`, `WL_ID`), attributes as in the pieces,
+  polygons unioned, lines merged end to end in their own direction, repeated
+  copies kept once. `SHAPE_Length` and `SHAPE_Area` are recomputed for
+  rejoined rows; `COMP_LEN` / `COMP_AREA` are LIST's. A column `lga` names the
+  source LGA, or every source LGA separated by `;`. A piece that fell outside
+  every LGA (the middle of a bridge over the Derwent or Tamar, a parcel's part
+  in open water) is not in any LGA file, so it is not in the statewide file
+  either. TASVEG 4.0 and its fire attributes have no feature id: their
+  statewide files are the LGA files stacked, still cut at LGA boundaries.
+- Apart from that rejoin, nothing was cleaned, clipped, simplified or edited.
 
 ## Known issues in the source, as found
 
@@ -116,10 +129,9 @@ Set `AWS_NO_SIGN_REQUEST=YES` for anonymous S3 access with GDAL.
 Details and the exact files are in `manifest/layers.csv` and in the code
 repository's README.
 
-## Derived products
+## Related products
 
-Things built from this mirror live in separate products, so this one stays a
-straight conversion:
+Built from this mirror for a particular use:
 
 - https://source.coop/mdsumner/tas-transport-web - LIST_TRANSPORT_SEGMENTS as
   one statewide, browser-ready layer: EPSG:4326, clipped pieces rejoined to one
