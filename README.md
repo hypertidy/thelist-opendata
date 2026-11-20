@@ -5,6 +5,11 @@ downloads at https://listdata.thelist.tas.gov.au/opendata/data/
 
 NOTE: new approach taken for entire nation here: https://github.com/mdsumner/banksia
 
+**Cloudifying another collection (Antarctic data, banksia, anything else)?
+Start with [CLOUDIFY.md](CLOUDIFY.md)**: the playbook this project grew into,
+from crawling the source to a validated STAC catalogue with thumbnails and map
+tiles, with every gotcha we hit and what changes near a pole.
+
 ## Where the mirror lives
 
 Published on Source Cooperative: https://source.coop/mdsumner/thelist-opendata
