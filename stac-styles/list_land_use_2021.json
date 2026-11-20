@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Land Use 2021",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2021/statewide/list_land_use_2021_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_land_use_2021-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_land_use_2021",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_land_use_2021-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_land_use_2021",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

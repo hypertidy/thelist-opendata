@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "wedgetailed_eagle_nesting_habitat_nw",
   "title": "Wedgetailed Eagle Nesting Habitat NW",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_NW_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_NW_STATEWIDE.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/wedgetailed_eagle_nesting_habitat_nw/statewide/wedgetailed_eagle_nesting_habitat_nw_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Wedgetailed Eagle Nesting Habitat NW (vector tiles)",
+      "pmtiles:layers": [
+        "wedgetailed_eagle_nesting_habitat_nw"
+      ]
     }
   ],
   "assets": {
@@ -168,6 +178,27 @@
       ],
       "file:size": 38434,
       "file:checksum": "12205a5a07e4b5e42f0ab3aeb03311367690455556a7c353ad7ec9380e01e5a20974"
+    },
+    "wedgetailed_eagle_nesting_habitat_nw_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/wedgetailed_eagle_nesting_habitat_nw/statewide/wedgetailed_eagle_nesting_habitat_nw_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Wedgetailed Eagle Nesting Habitat NW (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 13664614,
+      "file:checksum": "1220c6fb7592319790a3680b9a965585fde259a96e80fc85d4a0de0212667d81c83f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Wedgetailed Eagle Nesting Habitat NW",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1216,
+      "file:checksum": "1220293836e91de02a481c47c98006326253938a6f2e8d6c02afae1d9b611e9a95a1"
     }
   },
   "table:primary_geometry": "geometry"

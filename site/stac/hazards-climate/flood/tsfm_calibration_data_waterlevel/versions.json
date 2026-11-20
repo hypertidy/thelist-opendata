@@ -4,15 +4,15 @@
   "versions": [
     {
       "version": "1.0.0",
-      "created": "2026-11-20T12:29:21.904549Z",
+      "created": "2026-11-20T20:02:10.347470Z",
       "breaking": false,
       "assets": {
         "items.parquet": {
           "sha256": "f7e9e7c9c886e1002db22ec99fee499156b02245c384c65227bb0c74fad42ca4",
           "size_bytes": 22348,
           "href": "hazards-climate/flood/tsfm_calibration_data_waterlevel/items.parquet",
-          "mtime": 1795177761.8994958,
-          "source_fingerprint": "c951ca09c1de579cf5871da7bb0ed886331898bdabb43c50ac818c8e4676cb18"
+          "mtime": 1795204930.3425786,
+          "source_fingerprint": "89c65baf4be4a652d10e4e3756dab0af91df3e79dfc7bc852def7e620c226c82"
         }
       },
       "changes": [

@@ -59,10 +59,42 @@ TILESETS <- list(
 cat_json <- fromJSON("site/catalog.json", simplifyVector = FALSE)
 sums <- read.csv("manifest/checksums.csv", colClasses = "character"); sha <- setNames(sums$sha256, sums$path)
 man <- if (file.exists(MANF)) fromJSON(MANF, simplifyVector = FALSE) else list()
+src_of <- function(prod) Filter(function(it) it$kind == "vector" && strsplit(it$path, "/")[[1]][2] == prod, cat_json$items)[[1]]
+
+## Any other layer over the browser's direct-draw limit can be tiled with a default config:
+## AUTO_MAX_ROWS=50000 tiles every unconfigured over-limit layer up to that many features.
+## Up to 8 descriptive fields, one colour by geometry type, minimum zoom from feature count.
+OVER_ROWS <- 10000; OVER_BYTES <- 52428800                     # the Portolan Browser's GeoParquet limits
+SYSTEM_FIELDS <- c("SHAPE_Length", "SHAPE_Area", "SHAPE_LENG", "OBJECTID", "FID", "UFI", "LIST_GUID", "CREATED_ON", "COMP_AREA",
+                   "COMP_LEN", "MEAS_AREA", "FMP", "NOM_REG_NO", "CRC_ID", "lga", "SHAPE", "geometry", "geometry_bbox", "SHAPE_bbox")
+auto_cfg <- function(it) {
+  cols <- setdiff(vapply(it$columns, function(c) c[[1]], ""), SYSTEM_FIELDS)
+  pri <- grepl("NAME|TYPE|_TY$|CLASS|CATEG|DESC|CODE|ZONE|STATUS|GROUP|BAND|PURPOSE", cols, ignore.case = TRUE)
+  cols <- c(cols[pri], cols[!pri]); cols <- cols[seq_len(min(8, length(cols)))]
+  geom <- it$geometry %||% ""
+  type <- if (grepl("Polygon", geom)) "fill" else if (grepl("Line", geom)) "line" else "circle"
+  n <- it$rows %||% 0
+  list(fields = cols, type = type, minzoom = if (n <= 50000) 6 else if (n <= 150000) 8 else if (n <= 500000) 9 else 10,
+       maxzoom = 14, opacity = 0.45, outline = type == "fill", auto = TRUE)
+}
+AUTO_MAX <- as.numeric(Sys.getenv("AUTO_MAX_ROWS", "0"))
+if (AUTO_MAX > 0) {
+  for (it in cat_json$items) {
+    prod <- strsplit(it$path, "/")[[1]][2]
+    over <- (it$rows %||% 0) > OVER_ROWS || it$bytes > OVER_BYTES
+    if (it$kind != "vector" || !over || (it$rows %||% 0) > AUTO_MAX || prod %in% names(TILESETS) ||
+        prod == "tasveg_5_release" || grepl("\\.gdb\\.parquet$", it$path)) next
+    if (!identical(src_of(prod)$path, it$path)) next             # one tileset per product: its first vector file
+    TILESETS[[prod]] <- auto_cfg(it)
+  }
+}
 todo <- names(TILESETS)
 if (nzchar(Sys.getenv("PRODUCT"))) todo <- todo[grepl(Sys.getenv("PRODUCT"), todo, ignore.case = TRUE)]
-
-src_of <- function(prod) Filter(function(it) it$kind == "vector" && strsplit(it$path, "/")[[1]][2] == prod, cat_json$items)[[1]]
+if (Sys.getenv("DRY") == "1") {                                   # show what would be tiled, and how
+  for (p in todo) { k <- TILESETS[[p]]; message(sprintf("%-55s %-6s z%d-%d %s  [%s]", p, k$type, k$minzoom, k$maxzoom,
+                                                        if (isTRUE(k$auto)) "auto" else "configured", paste(k$fields, collapse = ", "))) }
+  quit(save = "no")
+}
 sha_file <- function(f) sub(" .*", "", system(sprintf("sha256sum %s", shQuote(f)), intern = TRUE))
 
 ## categorical colours: a fixed qualitative palette, most common category first
@@ -75,22 +107,32 @@ categories <- function(url, col, order = NULL) {
   d
 }
 
+INK <- "#1f6f5c"
 style_for <- function(prod, cfg, it, cats, url) {
   layer <- prod
-  vals <- cats$v
+  vals <- if (is.null(cats)) character() else cats$v
   labs <- if (!is.null(cfg$labels)) unname(ifelse(is.na(cfg$labels[as.character(vals)]), as.character(vals), cfg$labels[as.character(vals)])) else as.character(vals)
   cols <- if (identical(cfg$palette, "tasveg")) unname(TASVEG_COLOURS[norm_group(labs)])
           else if (!is.null(cfg$colours)) cfg$colours[match(vals, cfg$order)] else PALETTE[(seq_along(vals) - 1) %% length(PALETTE) + 1]
   cols[is.na(cols)] <- "#999999"
   if (length(vals) > length(PALETTE) && is.null(cfg$colours) && is.null(cfg$palette)) cols[(length(PALETTE) + 1):length(vals)] <- "#9a9a9a"   # the long tail in grey
   ## value/colour pairs, keeping each value's type (rbind() would turn numeric codes into strings that never match)
-  match_expr <- c(list("match", list("get", cfg$by)), unlist(Map(function(v, k) list(v, k), vals, cols), recursive = FALSE, use.names = FALSE), list("#9a9a9a"))
-  layers <- if (cfg$type == "fill") {
+  match_expr <- if (is.null(cfg$by)) INK else
+    c(list("match", list("get", cfg$by)), unlist(Map(function(v, k) list(v, k), vals, cols), recursive = FALSE, use.names = FALSE), list("#9a9a9a"))
+  layers <- if (cfg$type == "circle") {
+    list(list(id = paste0(layer, "-point"), type = "circle", source = "data", `source-layer` = layer,
+              paint = list(`circle-color` = match_expr, `circle-opacity` = 0.85,
+                           `circle-radius` = list("interpolate", list("linear"), list("zoom"), 6, 1.2, 14, 4.5),
+                           `circle-stroke-color` = "#ffffff", `circle-stroke-width` = list("interpolate", list("linear"), list("zoom"), 6, 0, 14, 0.8))))
+  } else if (cfg$type == "fill") {
     l <- list(list(id = paste0(layer, "-fill"), type = "fill", source = "data", `source-layer` = layer,
                    paint = list(`fill-color` = match_expr, `fill-opacity` = cfg$opacity %||% 0.6)))
     if (isTRUE(cfg$outline)) l <- c(l, list(list(id = paste0(layer, "-line"), type = "line", source = "data", `source-layer` = layer,
                                                  paint = list(`line-color` = "#1f4e45", `line-width` = list("interpolate", list("linear"), list("zoom"), 10, 0.2, 16, 1.2)))))
     l
+  } else if (!identical(cfg$by, "TRAN_CLASS")) {
+    list(list(id = paste0(layer, "-line"), type = "line", source = "data", `source-layer` = layer,
+              paint = list(`line-color` = match_expr, `line-width` = list("interpolate", list("linear"), list("zoom"), 6, 0.4, 14, 2))))
   } else {
     major <- c("National/State Highway", "Arterial Road", "Sub Arterial Road", "Collector Road")
     list(list(id = paste0(layer, "-line"), type = "line", source = "data", `source-layer` = layer,
@@ -99,7 +141,7 @@ style_for <- function(prod, cfg, it, cats, url) {
                                                list("case", list("in", list("get", cfg$by), list("literal", major)), 1.4, 0.3), 14,
                                                list("case", list("in", list("get", cfg$by), list("literal", major)), 4, 1.2)))))
   }
-  list(version = 8, name = paste(it$title, "by", if (identical(cfg$palette, "tasveg")) "vegetation group" else tolower(gsub("_", " ", cfg$by))),
+  list(version = 8, name = if (is.null(cfg$by)) it$title else paste(it$title, "by", if (identical(cfg$palette, "tasveg")) "vegetation group" else tolower(gsub("_", " ", cfg$by))),
        metadata = list(legend = lapply(seq_along(vals), function(i) list(label = labs[i], value = vals[i], color = cols[i])), attribution = "theLIST (c) State of Tasmania, CC BY 3.0 AU"),
        sources = list(data = list(type = "vector", url = paste0("pmtiles://", url), attribution = "theLIST (c) State of Tasmania, CC BY 3.0 AU")),
        layers = layers)
@@ -115,7 +157,7 @@ build <- function(prod) {
   store_url <- paste0(PUBLIC, "/", rel)
   write_style <- function() {                                   # styles are cheap: always rewritten
     dir.create(STYLES, showWarnings = FALSE)
-    cats <- if (is.null(cfg$derive)) categories(url, cfg$by, cfg$order) else {
+    cats <- if (is.null(cfg$by)) NULL else if (is.null(cfg$derive)) categories(url, cfg$by, cfg$order) else {
       d <- categories(url, cfg$derive$from); d$v <- unname(cfg$derive$map[as.character(d$v)]); d }
     writeLines(toJSON(style_for(prod, cfg, it, cats, store_url), auto_unbox = TRUE, pretty = TRUE),
                file.path(STYLES, paste0(prod, ".json")))
@@ -127,7 +169,12 @@ build <- function(prod) {
     write_style(); prev$config_md5 <- cfg_hash; return(prev)
   }
   src_layer <- sub("\\.parquet$", "", basename(it$path))
-  pick <- if (is.null(cfg$derive)) paste("! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field geometry")   # keep the geometry (a bare field list drops it)
+  gcol <- local({                                                # the primary geometry column ('SHAPE' in files from bare gdbs)
+    con <- dbConnect(duckdb(shared_home = FALSE)); on.exit(dbDisconnect(con, shutdown = TRUE))
+    invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
+    g <- dbGetQuery(con, sprintf("SELECT decode(value) v FROM parquet_kv_metadata('%s') WHERE decode(key) = 'geo'", url))$v
+    if (length(g)) fromJSON(g)$primary_column else "geometry" })
+  pick <- if (is.null(cfg$derive)) paste("! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field", gcol)   # name the geometry (a bare field list drops it)
           else {                                                 # add a derived name column with a CASE over the code
             dv <- cfg$derive
             case <- paste0("CASE ", dv$from, " ", paste(sprintf("WHEN %s THEN '%s'", names(dv$map), gsub("'", "''", dv$map)), collapse = " "), " END AS ", dv$name)

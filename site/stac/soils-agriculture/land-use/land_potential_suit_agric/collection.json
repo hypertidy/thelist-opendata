@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "land_potential_suit_agric",
   "title": "Land Potential Suit Agric",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LAND_POTENTIAL_SUIT_AGRIC_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LAND_POTENTIAL_SUIT_AGRIC_STATEWIDE.zip (LIST, released 2025-07-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/land_potential_suit_agric/statewide/land_potential_suit_agric_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Land Potential Suit Agric (vector tiles)",
+      "pmtiles:layers": [
+        "land_potential_suit_agric"
+      ]
     }
   ],
   "assets": {
@@ -268,6 +278,27 @@
       ],
       "file:size": 33947,
       "file:checksum": "1220858fdccb508131d145f35154634d4031d4eb5b1b5bb12f39a7df3396749659c3"
+    },
+    "land_potential_suit_agric_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/land_potential_suit_agric/statewide/land_potential_suit_agric_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Land Potential Suit Agric (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 32570767,
+      "file:checksum": "1220333d9994f8d5e6b496ffbc82db8726b5cd57d19e2c9b03d5ebd839383ad39f75"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Land Potential Suit Agric",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1139,
+      "file:checksum": "1220d9d68d6e375084428fd19bd1eea37c0227029f8c62799ebc94313a04691acbba"
     }
   },
   "table:primary_geometry": "geometry"

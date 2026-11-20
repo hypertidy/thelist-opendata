@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "Pft Private Forest Group",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/pft_private_forest_group/statewide/pft_private_forest_group_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "pft_private_forest_group-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "pft_private_forest_group",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "pft_private_forest_group-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "pft_private_forest_group",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

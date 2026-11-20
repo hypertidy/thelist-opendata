@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Inland Acid Sulfate Soils",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_inland_acid_sulfate_soils/statewide/list_inland_acid_sulfate_soils_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_inland_acid_sulfate_soils-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_inland_acid_sulfate_soils",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_inland_acid_sulfate_soils-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_inland_acid_sulfate_soils",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

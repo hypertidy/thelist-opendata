@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "Wedgetailed Eagle Nesting Habitat NW",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/wedgetailed_eagle_nesting_habitat_nw/statewide/wedgetailed_eagle_nesting_habitat_nw_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "wedgetailed_eagle_nesting_habitat_nw-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "wedgetailed_eagle_nesting_habitat_nw",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "wedgetailed_eagle_nesting_habitat_nw-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "wedgetailed_eagle_nesting_habitat_nw",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

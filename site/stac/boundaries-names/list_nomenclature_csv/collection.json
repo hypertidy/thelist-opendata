@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_nomenclature_csv",
   "title": "LIST Nomenclature Csv",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_NOMENCLATURE_CSV_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_NOMENCLATURE_CSV_STATEWIDE.zip (LIST, released 2022-05-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_nomenclature_csv/statewide/list_nomenclature_csv_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Nomenclature Csv (vector tiles)",
+      "pmtiles:layers": [
+        "list_nomenclature_csv"
+      ]
     }
   ],
   "assets": {
@@ -272,6 +282,27 @@
       ],
       "file:size": 29196,
       "file:checksum": "1220bc376f128890c3a03948792778d550d109fb2e6f355e57cee3b407d5aceb572f"
+    },
+    "list_nomenclature_csv_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_nomenclature_csv/statewide/list_nomenclature_csv_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Nomenclature Csv (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 10481909,
+      "file:checksum": "1220314498954c4c4c83e04b856b6cffa7806088dfe8d448369585073b0a4f26d643"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Nomenclature Csv",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1170,
+      "file:checksum": "12205adb193ddaf3462219ad5e547f09d772087984af15a943d27662dfd60347d7c2"
     }
   },
   "table:primary_geometry": "geometry"

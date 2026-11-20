@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_hydpnt",
   "title": "LIST Hydpnt",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDPNT_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_HYDPNT_STATEWIDE.zip (LIST, released 2021-01-12)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydpnt/statewide/list_hydpnt_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydpnt (vector tiles)",
+      "pmtiles:layers": [
+        "list_hydpnt"
+      ]
     }
   ],
   "assets": {
@@ -212,6 +222,27 @@
       ],
       "file:size": 14034,
       "file:checksum": "1220f4e17dd4bb29b22290839a7414c96166b4c960581e64b4c9028695407445f6f8"
+    },
+    "list_hydpnt_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydpnt/statewide/list_hydpnt_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydpnt (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 4431654,
+      "file:checksum": "12209f51af57a65bd81a7563cca4fd256a364559a3dc5b7d1f2b20905cabdd566a6f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Hydpnt",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1120,
+      "file:checksum": "12201ea441325600315e807016e78d7b7aa873395822e61a044a04deea7623dd775d"
     }
   },
   "table:primary_geometry": "geometry"

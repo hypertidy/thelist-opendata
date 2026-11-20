@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "Tasmanian Planning Scheme Zones",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/tasmanian_planning_scheme_zones/statewide/tasmanian_planning_scheme_zones_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "tasmanian_planning_scheme_zones-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "tasmanian_planning_scheme_zones",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "tasmanian_planning_scheme_zones-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "tasmanian_planning_scheme_zones",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

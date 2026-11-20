@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "name": "LIST TASWATER S Main",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_s_main/statewide/list_taswater_s_main_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_taswater_s_main-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_taswater_s_main",
+      "paint": {
+        "line-color": "#1f6f5c",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.4,
+          14,
+          2
+        ]
+      }
+    }
+  ]
+}

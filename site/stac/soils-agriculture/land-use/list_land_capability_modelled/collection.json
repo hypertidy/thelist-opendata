@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_land_capability_modelled",
   "title": "LIST Land Capability Modelled",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND%20CAPABILITY_MODELLED_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LAND%20CAPABILITY_MODELLED_STATEWIDE.zip (LIST, released 2018-07-05)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_capability_modelled/statewide/list_land_capability_modelled_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Capability Modelled (vector tiles)",
+      "pmtiles:layers": [
+        "list_land_capability_modelled"
+      ]
     }
   ],
   "assets": {
@@ -258,6 +268,27 @@
       ],
       "file:size": 14862,
       "file:checksum": "122044d1c4fa848faf501596b9861e936471ae71e5d82c86c8a743119d7c92c112fc"
+    },
+    "list_land-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_capability_modelled/statewide/list_land_capability_modelled_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Capability Modelled (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 33379026,
+      "file:checksum": "12201be51acf2f2979f50a26cc30a853729dd69197d38ee25340ab98a48d802a1e7b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Land Capability Modelled",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1167,
+      "file:checksum": "12207ff6dcdc55884c5d74e96bb5c38b2dabd14a15dd4bbc58c5c1907cd0ecd66296"
     }
   },
   "table:primary_geometry": "geometry"

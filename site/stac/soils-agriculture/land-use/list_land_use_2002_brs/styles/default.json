@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Land Use 2002 BRS",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2002_brs/statewide/list_land_use_2002_brs_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_land_use_2002_brs-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_land_use_2002_brs",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_land_use_2002_brs-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_land_use_2002_brs",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

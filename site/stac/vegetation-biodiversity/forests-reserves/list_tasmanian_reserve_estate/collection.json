@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasmanian_reserve_estate",
   "title": "LIST Tasmanian Reserve Estate",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASMANIAN_RESERVE_ESTATE_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASMANIAN_RESERVE_ESTATE_STATEWIDE.zip (LIST, released 2026-01-29)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasmanian_reserve_estate/statewide/list_tasmanian_reserve_estate_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasmanian Reserve Estate (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasmanian_reserve_estate"
+      ]
     }
   ],
   "assets": {
@@ -252,6 +262,27 @@
       ],
       "file:size": 5364,
       "file:checksum": "1220b93006c56c54c84e73309cc0b465908ebbcdb75e83a898ecc2925967b5e2eb15"
+    },
+    "list_tasmanian_reserve_estate_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasmanian_reserve_estate/statewide/list_tasmanian_reserve_estate_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasmanian Reserve Estate (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 31923446,
+      "file:checksum": "12203d10897495b7b980d4ef62b6e955ed28c8cda70e35d4e363e3ebee6948a52ff6"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Tasmanian Reserve Estate",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1167,
+      "file:checksum": "1220c087ba25ce86d565b4f02052b988f914e162b7c7c555bc7a7cf46ccbe51e6d2d"
     }
   },
   "table:primary_geometry": "geometry"
