@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "epa_aquatic_ecosystem_dgvs_for_surface_water_catchments",
+  "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments",
+  "description": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments: LIST product `EPA_AQUATIC_ECOSYSTEM_DGVS_FOR_SURFACE_WATER_CATCHMENTS`, statewide. 48 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-02-03. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"EPA Aquatic Ecosystem DGVS For Surface Water Catchments\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "EPA_AQUATIC_ECOSYSTEM_DGVS_FOR_SURFACE_WATER_CATCHMENTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.60739,
+          -43.86034,
+          148.586144,
+          -39.149199
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-02-03T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water management and irrigation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fepa_aquatic_ecosystem_dgvs_for_surface_water_catchments%2Fstatewide%2Fepa_aquatic_ecosystem_dgvs_for_surface_water_catchments_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/EPA_AQUATIC_ECOSYSTEM_DGVS_FOR_SURFACE_WATER_CATCHMENTS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: EPA_AQUATIC_ECOSYSTEM_DGVS_FOR_SURFACE_WATER_CATCHMENTS_STATEWIDE.zip (LIST, released 2021-02-03)"
+    }
+  ],
+  "assets": {
+    "epa_aquatic_ecosystem_dgvs_for_surface_water_catchments_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/epa_aquatic_ecosystem_dgvs_for_surface_water_catchments/statewide/epa_aquatic_ecosystem_dgvs_for_surface_water_catchments_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_aquatic_ecosystem_dgvs_for_surface_water_catchments_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 8618487,
+      "file:checksum": "12208d577e8e48d6461c30e0b89dd8ce30a81de528f4d5bac27b9fdc51d2837c7672",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227127.1023,
+        5143634.5592,
+        627489.6336,
+        5661916.6443
+      ],
+      "table:row_count": 48,
+      "table:columns": [
+        {
+          "name": "CAT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "DGVS_PEVS",
+          "type": "string"
+        },
+        {
+          "name": "DGVS_SUM",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14054,
+      "file:checksum": "122060086d140d7f95ce6adcc49064607980ef2ea4999fce0acef440c54105a7fd94"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,76 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "topography-imagery-lidar",
+  "title": "LiDAR coverage",
+  "description": "Elevation, imagery and map indexes: LiDAR coverage. 7 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation, imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LiDAR coverage documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_forestry_tasmania_index/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Forestry Tasmania Index"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_all_projects/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index All Projects"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_climate_futures/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index Climate Futures"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_coal_mines_port_arthur/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index Coal Mines Port Arthur"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_dpac_coastal/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index DPAC Coastal"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_latest/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index Latest"
+    },
+    {
+      "rel": "child",
+      "href": "./lidar_index_mt_wellington/collection.json",
+      "type": "application/json",
+      "title": "LIDAR Index Mt Wellington"
+    }
+  ]
+}

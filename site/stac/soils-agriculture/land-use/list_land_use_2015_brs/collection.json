@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_land_use_2015_brs",
+  "title": "LIST Land Use 2015 BRS",
+  "description": "LIST Land Use 2015 BRS: LIST product `LIST_LAND_USE_2015_BRS`, statewide. 168,952 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-10-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Land Use 2015 BRS\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LAND_USE_2015_BRS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606137,
+          -43.860343,
+          148.58189,
+          -39.154948
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-10-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:58Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Land Use 2015 BRS documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_land_use_2015_brs%2Fstatewide%2Flist_land_use_2015_brs_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2015_BRS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LAND_USE_2015_BRS_STATEWIDE.zip (LIST, released 2019-10-16)"
+    }
+  ],
+  "assets": {
+    "list_land_use_2015_brs_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_use_2015_brs/statewide/list_land_use_2015_brs_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land_use_2015_brs_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 345289382,
+      "file:checksum": "1220b462ee53da5a3549cfe4c0edbe5ffbd03eb64685263872a56c51ef2813e15311",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227026.2041,
+        5143634.561,
+        627147.629,
+        5661274.1861
+      ],
+      "table:row_count": 168952,
+      "table:columns": [
+        {
+          "name": "LU_CODE",
+          "type": "string"
+        },
+        {
+          "name": "LUC_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "LU_DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_CODE",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_DESC",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_SCALE",
+          "type": "string"
+        },
+        {
+          "name": "LU_CODEN",
+          "type": "int32"
+        },
+        {
+          "name": "SOURCE_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_DATA",
+          "type": "string"
+        },
+        {
+          "name": "CONFIDENCE",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_CODE2",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_DESC2",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_CODE",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_DESC",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_CODE2",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_DESC2",
+          "type": "string"
+        },
+        {
+          "name": "LU_ID",
+          "type": "int32"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Land Use 2015 BRS (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13053,
+      "file:checksum": "1220e74c1a59a09fef4c02e29fc0ce9e243dcd796d80e17d733a7fcedb6a750dea41"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,170 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "abalone_commercial_dive_blocks",
+  "title": "Abalone Commercial Dive Blocks",
+  "description": "Abalone Commercial Dive Blocks: LIST product `ABALONE_COMMERCIAL_DIVE_BLOCKS`, statewide. 61 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Abalone Commercial Dive Blocks\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "ABALONE_COMMERCIAL_DIVE_BLOCKS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.524483,
+          -43.768274,
+          148.70218,
+          -39.128216
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Abalone Commercial Dive Blocks documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fabalone_commercial_dive_blocks%2Fstatewide%2Fabalone_commercial_dive_blocks_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/ABALONE_COMMERCIAL_DIVE_BLOCKS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: ABALONE_COMMERCIAL_DIVE_BLOCKS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "abalone_commercial_dive_blocks_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/abalone_commercial_dive_blocks/statewide/abalone_commercial_dive_blocks_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "abalone_commercial_dive_blocks_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 7553221,
+      "file:checksum": "1220438ea1c5222dc207df6c8f22776bc9e7d20a562b74b6e73ad408ab973e703ad1",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        220017.3242,
+        5153857.9809,
+        637030.4732,
+        5663998.1847
+      ],
+      "table:row_count": 61,
+      "table:columns": [
+        {
+          "name": "ZONE",
+          "type": "string"
+        },
+        {
+          "name": "BLOCKNO",
+          "type": "int32"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Abalone Commercial Dive Blocks (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16112,
+      "file:checksum": "1220ea97800c66b6a164d3732f86fe0c73babd40ffdd2b064e56ae7ae76e726bdd6f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

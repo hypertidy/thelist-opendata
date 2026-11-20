@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "tas_landsat_mosaic_2014_2015",
+  "title": "TAS Landsat Mosaic 2014 2015",
+  "description": "TAS Landsat Mosaic 2014 2015: LIST product `TAS_LANDSAT_MOSAIC_2014_2015`, statewide. Byte grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2017-11-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TAS Landsat Mosaic 2014 2015\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TAS_LANDSAT_MOSAIC_2014_2015",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.569506,
+          -43.888597,
+          148.620181,
+          -39.124721
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-11-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TAS Landsat Mosaic 2014 2015 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftas_landsat_mosaic_2014_2015%2Fstatewide%2Ftas_landsat_mosaic_1415_mga55.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TAS_LANDSAT_MOSAIC_2014_2015_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TAS_LANDSAT_MOSAIC_2014_2015_STATEWIDE.zip (LIST, released 2017-11-09)"
+    }
+  ],
+  "assets": {
+    "tas_landsat_mosaic_1415_mga55": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tas_landsat_mosaic_2014_2015/statewide/tas_landsat_mosaic_1415_mga55.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tas_landsat_mosaic_1415_mga55.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 398232830,
+      "file:checksum": "12200802e529d4be6e634ccf121f84962741263e8b30306aea549662ebe68fed2833",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        224205,
+        5140495,
+        630165,
+        5664535
+      ],
+      "proj:shape": [
+        17468,
+        13532
+      ],
+      "proj:transform": [
+        30,
+        0,
+        224205,
+        0,
+        -30,
+        5664535
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TAS Landsat Mosaic 2014 2015 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 45599,
+      "file:checksum": "1220ef8adad8cf63f4c72520b3a8f7cded51dce31b973d8952ae336e852477ee5662"
+    }
+  }
+}

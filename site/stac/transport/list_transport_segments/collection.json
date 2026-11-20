@@ -1,0 +1,430 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_transport_segments",
+  "title": "LIST Transport Segments",
+  "description": "LIST Transport Segments: LIST product `LIST_TRANSPORT_SEGMENTS`, statewide. 284,831 features, multi-linestring (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Transport Segments\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TRANSPORT_SEGMENTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.648047,
+          -43.659451,
+          148.425887,
+          -39.416742
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:49:38Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Transport"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Transport Segments documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_transport_segments%2Fstatewide%2Flist_transport_segments_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_BREAK_O_DAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_BRIGHTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_BURNIE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_CENTRAL_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_CIRCULAR_HEAD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_CLARENCE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_DERWENT_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_DEVONPORT.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_DORSET.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_FLINDERS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_GEORGE_TOWN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_GLENORCHY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_HOBART.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_HUON_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_KENTISH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_KING_ISLAND.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_KINGBOROUGH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_LATROBE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_LAUNCESTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_MEANDER_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_SORELL.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_TASMAN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_WARATAH_WYNYARD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_WEST_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_SEGMENTS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_SEGMENTS_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_transport_segments_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_transport_segments/statewide/list_transport_segments_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_transport_segments_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 55235357,
+      "file:checksum": "1220c664a6e395e47e030d3b3a68ae3a49e83ff2714d19af90fe4674ad696439e518",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229499.622,
+        5165950.071,
+        614988.638,
+        5632263.363
+      ],
+      "table:row_count": 284831,
+      "table:columns": [
+        {
+          "name": "TRANSEG_ID",
+          "type": "int32"
+        },
+        {
+          "name": "TRANS_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "TSEG_FEAT",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "TRAFF_DIR",
+          "type": "string"
+        },
+        {
+          "name": "TRAN_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "USER_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "TOUR_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SURFACE_TY",
+          "type": "string"
+        },
+        {
+          "name": "PRI_NAME",
+          "type": "string"
+        },
+        {
+          "name": "PRI_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "BRIDGE_TUNNEL_NAME",
+          "type": "string"
+        },
+        {
+          "name": "BRIDGE_TUNNEL_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "AUTHORITY",
+          "type": "string"
+        },
+        {
+          "name": "FOREIGN_ID",
+          "type": "string"
+        },
+        {
+          "name": "COMP_LEN",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "TC_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "QTR_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "QTR_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Transport Segments (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 47242,
+      "file:checksum": "12202b57da6467789b1da4db596fbd72eef8bd9088efe1a1c801e04f2473013ea6d4"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "harvest_tonnages_macrocystis_pyrifera_1970_1971",
+  "title": "Harvest Tonnages Macrocystis Pyrifera 1970 1971",
+  "description": "Harvest Tonnages Macrocystis Pyrifera 1970 1971: LIST product `HARVEST_TONNAGES_MACROCYSTIS_PYRIFERA_1970_1971`, statewide. 58 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-01-14. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Harvest Tonnages Macrocystis Pyrifera 1970 1971\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "HARVEST_TONNAGES_MACROCYSTIS_PYRIFERA_1970_1971",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.90236,
+          -43.570923,
+          148.365869,
+          -41.065125
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-14T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Giant kelp"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Harvest Tonnages Macrocystis Pyrifera 1970 1971 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fharvest_tonnages_macrocystis_pyrifera_1970_1971%2Fstatewide%2Fharvest_tonnages_macrocystis_pyrifera_1970_1971_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/HARVEST_TONNAGES_MACROCYSTIS_PYRIFERA_1970_1971_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: HARVEST_TONNAGES_MACROCYSTIS_PYRIFERA_1970_1971_STATEWIDE.zip (LIST, released 2021-01-14)"
+    }
+  ],
+  "assets": {
+    "harvest_tonnages_macrocystis_pyrifera_1970_1971_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/harvest_tonnages_macrocystis_pyrifera_1970_1971/statewide/harvest_tonnages_macrocystis_pyrifera_1970_1971_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "harvest_tonnages_macrocystis_pyrifera_1970_1971_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14094,
+      "file:checksum": "12207e6028059703311e493d79b111499ca7c29163603a7b6db92d459cf8f50eea87",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        492115.635,
+        5175781.6719,
+        610308.829,
+        5453183.0659
+      ],
+      "table:row_count": 58,
+      "table:columns": [
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "TONS",
+          "type": "double"
+        },
+        {
+          "name": "XCOORD",
+          "type": "double"
+        },
+        {
+          "name": "YCOORD",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Harvest Tonnages Macrocystis Pyrifera 1970 1971 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4014,
+      "file:checksum": "1220d557c03dda2d2aa214daea793a9f790030f12604f5817e9b73cf1dbd295dbfbf"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

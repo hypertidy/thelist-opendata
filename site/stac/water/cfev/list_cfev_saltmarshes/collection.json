@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_saltmarshes",
+  "title": "LIST CFEV Saltmarshes",
+  "description": "LIST CFEV Saltmarshes: LIST product `LIST_CFEV_SALTMARSHES`, statewide. 336 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Saltmarshes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_SALTMARSHES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.698403,
+          -43.521945,
+          148.577531,
+          -39.694074
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:55Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Saltmarshes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_saltmarshes%2Fstatewide%2Flist_cfev_saltmarshes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_SALTMARSHES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_SALTMARSHES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_saltmarshes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_saltmarshes/statewide/list_cfev_saltmarshes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_saltmarshes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 530092,
+      "file:checksum": "12206ee56922c64864b1464c8b712e41c20155ca9184a68fbc3b21ee8cf0b0b9f6ad",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        232963.412,
+        5181215.2482,
+        627511.8649,
+        5601559.0699
+      ],
+      "table:row_count": 336,
+      "table:columns": [
+        {
+          "name": "SM_ID",
+          "type": "double"
+        },
+        {
+          "name": "SM_AREA",
+          "type": "double"
+        },
+        {
+          "name": "SM_MAP",
+          "type": "string"
+        },
+        {
+          "name": "SM_DIVPOLY",
+          "type": "double"
+        },
+        {
+          "name": "SM_LOCAT",
+          "type": "string"
+        },
+        {
+          "name": "SM_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "SM_ICV",
+          "type": "string"
+        },
+        {
+          "name": "SM_RCV",
+          "type": "string"
+        },
+        {
+          "name": "SM_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "SM_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "SM_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "SM_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "SM_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "SUBCAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "SM_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "SM_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "SM_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Saltmarshes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12284,
+      "file:checksum": "1220625d8ee5f400108cc7ead0d2d2655e0321322e3c620f3752c851b1c1396db20d"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,100 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "boundaries-names",
+  "title": "Boundaries and place names",
+  "description": "Local government areas, localities and postcodes, electoral divisions, land districts and parishes, and place names. 11 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Boundaries and place names documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./municipality/collection.json",
+      "type": "application/json",
+      "title": "LGA boundaries (municipalities)"
+    },
+    {
+      "rel": "child",
+      "href": "./list_doe_school_intake_areas/collection.json",
+      "type": "application/json",
+      "title": "LIST Doe School Intake Areas"
+    },
+    {
+      "rel": "child",
+      "href": "./list_electoral_divs/collection.json",
+      "type": "application/json",
+      "title": "LIST Electoral Divs"
+    },
+    {
+      "rel": "child",
+      "href": "./list_fmac_boundaries/collection.json",
+      "type": "application/json",
+      "title": "LIST Fmac Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_districts/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Districts"
+    },
+    {
+      "rel": "child",
+      "href": "./list_legislative_council_divs/collection.json",
+      "type": "application/json",
+      "title": "LIST Legislative Council Divs"
+    },
+    {
+      "rel": "child",
+      "href": "./list_local_govt_areas/collection.json",
+      "type": "application/json",
+      "title": "LIST Local Govt Areas"
+    },
+    {
+      "rel": "child",
+      "href": "./list_locality_postcode/collection.json",
+      "type": "application/json",
+      "title": "LIST Locality Postcode"
+    },
+    {
+      "rel": "child",
+      "href": "./list_named_feature_extent/collection.json",
+      "type": "application/json",
+      "title": "LIST Named Feature Extent"
+    },
+    {
+      "rel": "child",
+      "href": "./list_nomenclature_csv/collection.json",
+      "type": "application/json",
+      "title": "LIST Nomenclature Csv"
+    },
+    {
+      "rel": "child",
+      "href": "./list_parish_town_bdys/collection.json",
+      "type": "application/json",
+      "title": "LIST Parish Town Bdys"
+    }
+  ]
+}

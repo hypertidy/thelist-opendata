@@ -1,0 +1,228 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "tsfm_calibration_data_hazard",
+  "title": "TSFM Calibration Data Hazard",
+  "description": "TSFM Calibration Data Hazard: LIST product `TSFM_CALIBRATION_DATA_HAZARD`, statewide. Byte grid, 10 x 10 cells, EPSG:28355; 16 grids. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-04-29. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TSFM Calibration Data Hazard\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TSFM_CALIBRATION_DATA_HAZARD",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.504087,
+          -43.624425,
+          148.411708,
+          -40.568194
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-04-29T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TSFM Calibration Data Hazard documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_hazard%2Fstatewide%2Ftsfm_cal_event_1969_05_hazard_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TSFM_CALIBRATION_DATA_HAZARD_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TSFM_CALIBRATION_DATA_HAZARD_STATEWIDE.zip (LIST, released 2026-04-29)"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_1969_05_hazard_cog/tsfm_cal_event_1969_05_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_1969_05_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_1970_08_hazard_cog/tsfm_cal_event_1970_08_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_1970_08_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2000_07_hazard_cog/tsfm_cal_event_2000_07_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2000_07_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2004_01_hazard_cog/tsfm_cal_event_2004_01_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2004_01_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2005_08_hazard_cog/tsfm_cal_event_2005_08_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2005_08_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2005_09_hazard_cog/tsfm_cal_event_2005_09_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2005_09_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2007_08_hazard_cog/tsfm_cal_event_2007_08_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2007_08_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2009_09_hazard_cog/tsfm_cal_event_2009_09_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2009_09_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2011_01_hazard_cog/tsfm_cal_event_2011_01_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2011_01_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2011_03_hazard_cog/tsfm_cal_event_2011_03_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2011_03_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2013_08_hazard_cog/tsfm_cal_event_2013_08_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2013_08_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2013_09_hazard_cog/tsfm_cal_event_2013_09_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2013_09_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2016_01_hazard_cog/tsfm_cal_event_2016_01_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2016_01_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2016_06_hazard_cog/tsfm_cal_event_2016_06_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2016_06_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2016_07_hazard_cog/tsfm_cal_event_2016_07_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2016_07_hazard_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./tsfm_cal_event_2018_05_hazard_cog/tsfm_cal_event_2018_05_hazard_cog.json",
+      "type": "application/geo+json",
+      "title": "tsfm_cal_event_2018_05_hazard_cog"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TSFM Calibration Data Hazard (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5195,
+      "file:checksum": "122059638d5a1802e171359161e87ca4dcd50e4c773f0b4fa16dd1a5abf0efdf42ef"
+    },
+    "geoparquet-items": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "STAC items as GeoParquet",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 22270,
+      "file:checksum": "1220613ee53a12da4eb3bb50bcd90037cfbd7348f69cf18a0beac39b351e21a4ea2a"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "infrastructure-services-services",
+  "title": "Services and regulated sites",
+  "description": "Infrastructure, utilities and services: Services and regulated sites. 10 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Infrastructure, utilities and services"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Services and regulated sites documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./built_infrastructure_line/collection.json",
+      "type": "application/json",
+      "title": "Built Infrastructure Line"
+    },
+    {
+      "rel": "child",
+      "href": "./built_infrastructure_point/collection.json",
+      "type": "application/json",
+      "title": "Built Infrastructure Point"
+    },
+    {
+      "rel": "child",
+      "href": "./built_infrastructure_poly/collection.json",
+      "type": "application/json",
+      "title": "Built Infrastructure Poly"
+    },
+    {
+      "rel": "child",
+      "href": "./dhhs_ambulance_stations/collection.json",
+      "type": "application/json",
+      "title": "DHHS Ambulance Stations"
+    },
+    {
+      "rel": "child",
+      "href": "./epa_underground_petroleum_storage_systems/collection.json",
+      "type": "application/json",
+      "title": "EPA Underground Petroleum Storage Systems"
+    },
+    {
+      "rel": "child",
+      "href": "./ft_emergency_meeting_points/collection.json",
+      "type": "application/json",
+      "title": "FT Emergency Meeting Points"
+    },
+    {
+      "rel": "child",
+      "href": "./list_community_facilities/collection.json",
+      "type": "application/json",
+      "title": "LIST Community Facilities"
+    },
+    {
+      "rel": "child",
+      "href": "./list_dhhs_ambulance_station_locations/collection.json",
+      "type": "application/json",
+      "title": "LIST DHHS Ambulance Station Locations"
+    },
+    {
+      "rel": "child",
+      "href": "./list_epa_regulated_sites/collection.json",
+      "type": "application/json",
+      "title": "LIST EPA Regulated Sites"
+    },
+    {
+      "rel": "child",
+      "href": "./list_liquor_licences/collection.json",
+      "type": "application/json",
+      "title": "LIST Liquor Licences"
+    }
+  ]
+}

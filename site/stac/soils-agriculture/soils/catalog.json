@@ -1,0 +1,130 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "soils-agriculture-soils",
+  "title": "Soils",
+  "description": "Soils, land use and agriculture: Soils. 16 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils, land use and agriculture"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Soils documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_correlated_reconnaissance_soils_soil_types/collection.json",
+      "type": "application/json",
+      "title": "LIST Correlated Reconnaissance Soils Soil Types"
+    },
+    {
+      "rel": "child",
+      "href": "./list_reconnaissance_soils_map_extents_100k/collection.json",
+      "type": "application/json",
+      "title": "LIST Reconnaissance Soils Map Extents 100K"
+    },
+    {
+      "rel": "child",
+      "href": "./list_soil_boundaries/collection.json",
+      "type": "application/json",
+      "title": "LIST Soil Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "./list_soil_sample_sites/collection.json",
+      "type": "application/json",
+      "title": "LIST Soil Sample Sites"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_landform_classification/collection.json",
+      "type": "application/json",
+      "title": "NCH Landform Classification"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_organic_extent_class/collection.json",
+      "type": "application/json",
+      "title": "NCH Organic Extent Class"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_organic_soil_map/collection.json",
+      "type": "application/json",
+      "title": "NCH Organic Soil Map"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_osm_depth/collection.json",
+      "type": "application/json",
+      "title": "NCH OSM Depth"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_osm_drainage/collection.json",
+      "type": "application/json",
+      "title": "NCH OSM Drainage"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_osm_humification/collection.json",
+      "type": "application/json",
+      "title": "NCH OSM Humification"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_osm_pa_sites/collection.json",
+      "type": "application/json",
+      "title": "NCH OSM Pa Sites"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_soil_drainage/collection.json",
+      "type": "application/json",
+      "title": "NCH Soil Drainage"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_soil_permeability/collection.json",
+      "type": "application/json",
+      "title": "NCH Soil Permeability"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_soil_ph_to_15cm/collection.json",
+      "type": "application/json",
+      "title": "NCH Soil Ph To 15CM"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_soil_rooting_depth/collection.json",
+      "type": "application/json",
+      "title": "NCH Soil Rooting Depth"
+    },
+    {
+      "rel": "child",
+      "href": "./reconnaissance_soils_map_extents_100k/collection.json",
+      "type": "application/json",
+      "title": "Reconnaissance Soils Map Extents 100K"
+    }
+  ]
+}

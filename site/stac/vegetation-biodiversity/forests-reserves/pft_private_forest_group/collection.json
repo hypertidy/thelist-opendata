@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "pft_private_forest_group",
+  "title": "Pft Private Forest Group",
+  "description": "Pft Private Forest Group: LIST product `PFT_PRIVATE_FOREST_GROUP`, statewide. 126,488 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Pft Private Forest Group\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "PFT_PRIVATE_FOREST_GROUP",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618682,
+          -43.666006,
+          148.576293,
+          -39.575872
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forests and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Pft Private Forest Group documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fpft_private_forest_group%2Fstatewide%2Fpft_private_forest_group_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/PFT_PRIVATE_FOREST_GROUP_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: PFT_PRIVATE_FOREST_GROUP_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "pft_private_forest_group_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/pft_private_forest_group/statewide/pft_private_forest_group_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "pft_private_forest_group_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 351861650,
+      "file:checksum": "122091955e6849314dc18a6fa0c8003b94ba071c277b4c809dc2f3e4fb7e4c4ac481",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227155.6702,
+        5165218.308,
+        627108.3293,
+        5614493.816
+      ],
+      "table:row_count": 126488,
+      "table:columns": [
+        {
+          "name": "FORGROUP",
+          "type": "string"
+        },
+        {
+          "name": "FORGROUP_DESC",
+          "type": "string"
+        },
+        {
+          "name": "CURRENCY",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Pft Private Forest Group (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17152,
+      "file:checksum": "1220655ab00ef6c9136c2d122fd83795f3c2403f75b8d60fc436651338c22f589b0b"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

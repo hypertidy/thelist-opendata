@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "tsfm_cal_event_2013_08_hazard_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [146.895332, -41.32053],
+        [147.346502, -41.32053],
+        [147.346502, -40.936994],
+        [146.895332, -40.936994],
+        [146.895332, -41.32053]
+      ]
+    ]
+  },
+  "bbox": [146.895332, -41.32053, 147.346502, -40.936994],
+  "properties": {
+    "title": "tsfm_cal_event_2013_08_hazard_cog",
+    "datetime": "2026-04-29T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Hazard"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Hazard"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_hazard%2Fstatewide%2Ftsfm_cal_event_2013_08_hazard_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_calibration_data_hazard/statewide/tsfm_cal_event_2013_08_hazard_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tsfm_cal_event_2013_08_hazard_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 153778,
+      "file:checksum": "12202133d00815115c5eeb4c0906f8ed029db3f0aeb92372b00953d0d8c49f06b2e7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [491240, 5425660, 529000, 5468180],
+      "proj:shape": [4252, 3776],
+      "proj:transform": [10, 0, 491240, 0, -10, 5468180]
+    }
+  },
+  "collection": "tsfm_calibration_data_hazard"
+}

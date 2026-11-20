@@ -1,0 +1,434 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_authority_land",
+  "title": "LIST Authority Land",
+  "description": "LIST Authority Land: LIST product `LIST_AUTHORITY_LAND`, statewide. 37,411 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Authority Land\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_AUTHORITY_LAND",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606919,
+          -43.861131,
+          148.564123,
+          -39.149169
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:53:22Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Authority Land documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_authority_land%2Fstatewide%2Flist_authority_land_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_BREAK_O_DAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_BRIGHTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_BURNIE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_CENTRAL_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_CIRCULAR_HEAD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_CLARENCE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_DERWENT_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_DEVONPORT.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_DORSET.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_FLINDERS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_GEORGE_TOWN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_GLENORCHY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_HOBART.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_HUON_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_KENTISH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_KING_ISLAND.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_KINGBOROUGH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_LATROBE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_LAUNCESTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_MEANDER_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_SORELL.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_TASMAN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_WARATAH_WYNYARD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_WEST_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AUTHORITY_LAND_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_authority_land_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_authority_land/statewide/list_authority_land_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_authority_land_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 64916253,
+      "file:checksum": "12200324ed8bf14ab7ca6408b0c5eaf3a81a8162de3c1b1c7139576b0bb4bfdbd6ee",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        5143548.018,
+        625717.415,
+        5661918.782
+      ],
+      "table:row_count": 37411,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "double"
+        },
+        {
+          "name": "VOLUME",
+          "type": "string"
+        },
+        {
+          "name": "FOLIO",
+          "type": "int32"
+        },
+        {
+          "name": "PID",
+          "type": "double"
+        },
+        {
+          "name": "POT_PID",
+          "type": "double"
+        },
+        {
+          "name": "AUTH_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "FOREIGN_ID",
+          "type": "string"
+        },
+        {
+          "name": "TENURE_TY",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "MAP_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_AUTH",
+          "type": "string"
+        },
+        {
+          "name": "INST_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "INST_NO",
+          "type": "string"
+        },
+        {
+          "name": "GOVERN_ACT",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "string"
+        },
+        {
+          "name": "EFFEC_DATE",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Authority Land (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 31250,
+      "file:checksum": "12204be515fb9fa886a096a78f90ad4f89a40781dfaa3a476da26cc0918807258934"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

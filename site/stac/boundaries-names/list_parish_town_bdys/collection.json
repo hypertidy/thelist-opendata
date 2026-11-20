@@ -1,0 +1,182 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_parish_town_bdys",
+  "title": "LIST Parish Town Bdys",
+  "description": "LIST Parish Town Bdys: LIST product `LIST_PARISH_TOWN_BDYS`, statewide. 707 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Parish Town Bdys\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_PARISH_TOWN_BDYS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.646939,
+          -43.643339,
+          148.557509,
+          -39.576005
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Parish Town Bdys documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_parish_town_bdys%2Fstatewide%2Flist_parish_town_bdys_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PARISH_TOWN_BDYS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PARISH_TOWN_BDYS_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_parish_town_bdys_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_parish_town_bdys/statewide/list_parish_town_bdys_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_parish_town_bdys_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4859033,
+      "file:checksum": "1220a6a6667390fba47ae3ee2b81dc97a0ca2c863f2b4cff5e07d96bbb8a102afbf7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229337.91,
+        5167736.034,
+        625640.316,
+        5614555.817
+      ],
+      "table:row_count": 707,
+      "table:columns": [
+        {
+          "name": "PT_ID",
+          "type": "double"
+        },
+        {
+          "name": "PARISH",
+          "type": "string"
+        },
+        {
+          "name": "TOWN_CITY",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Parish Town Bdys (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 20652,
+      "file:checksum": "122047b7ad9ed008368fea97ecb717557aab80a4bc2838e38032da476f5bd76b652e"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

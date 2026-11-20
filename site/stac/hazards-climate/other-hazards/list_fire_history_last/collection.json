@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_fire_history_last",
+  "title": "LIST Fire History Last",
+  "description": "LIST Fire History Last: LIST product `LIST_FIRE_HISTORY_LAST`, statewide. 9,562 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-09-04. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Fire History Last\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_FIRE_HISTORY_LAST",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.698726,
+          -43.633953,
+          148.556732,
+          -39.16702
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-09-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Landslide, fire and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Fire History Last documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_fire_history_last%2Fstatewide%2Flist_fire_history_last_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FIRE_HISTORY_LAST_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FIRE_HISTORY_LAST_STATEWIDE.zip (LIST, released 2026-09-04)"
+    }
+  ],
+  "assets": {
+    "list_fire_history_last_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_fire_history_last/statewide/list_fire_history_last_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_fire_history_last_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 34568558,
+      "file:checksum": "12208fe7367c8a93cec65b35d6e04edd2e7376e5b2ed50a28e8e08eb05be48fb240f",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        233483.7116,
+        5168777.133,
+        625597.0969,
+        5660155.0001
+      ],
+      "table:row_count": 9562,
+      "table:columns": [
+        {
+          "name": "INCD_NO",
+          "type": "string"
+        },
+        {
+          "name": "INCD_START",
+          "type": "datetime"
+        },
+        {
+          "name": "INCD_END",
+          "type": "datetime"
+        },
+        {
+          "name": "FIRE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "FIRE_AR_HA",
+          "type": "double"
+        },
+        {
+          "name": "FIRE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "IGN_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "IGN_SEASON",
+          "type": "double"
+        },
+        {
+          "name": "IGN_CAUSE1",
+          "type": "string"
+        },
+        {
+          "name": "IGN_CAUSE2",
+          "type": "string"
+        },
+        {
+          "name": "SEVERITY",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "FIRE_ID",
+          "type": "int32"
+        },
+        {
+          "name": "REVISION",
+          "type": "int16"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Fire History Last (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 41363,
+      "file:checksum": "122012dd161416a7f0ef42f0629cdf0b120132c957201c38b4e407906c70c49bd79f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

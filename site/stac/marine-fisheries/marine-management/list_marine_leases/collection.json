@@ -1,0 +1,202 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_marine_leases",
+  "title": "LIST Marine Leases",
+  "description": "LIST Marine Leases: LIST product `LIST_MARINE_LEASES`, statewide. 212 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Marine Leases\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_MARINE_LEASES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.944839,
+          -43.533775,
+          148.397553,
+          -39.80931
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Marine Leases documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_marine_leases%2Fstatewide%2Flist_marine_leases_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_MARINE_LEASES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_MARINE_LEASES_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_marine_leases_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_marine_leases/statewide/list_marine_leases_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_marine_leases_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 60341,
+      "file:checksum": "1220eda4bf214749a3b175501eb5395ea551af012ff51d2637261b110b37ce26e131",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        252972.484,
+        5179905.849,
+        612937.749,
+        5589422.558
+      ],
+      "table:row_count": 212,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "int32"
+        },
+        {
+          "name": "M_LEASE_NO",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Marine Leases (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11515,
+      "file:checksum": "12200059a4a33d8e1d07034ab3d1eff31e5ce53a04f5c215ae9620215804b3e72e75"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

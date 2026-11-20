@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_soil_sample_sites",
+  "title": "LIST Soil Sample Sites",
+  "description": "LIST Soil Sample Sites: LIST product `LIST_SOIL_SAMPLE_SITES`, statewide. 181 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Soil Sample Sites\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_SOIL_SAMPLE_SITES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.488855,
+          -42.976571,
+          147.879886,
+          -40.933724
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Soil Sample Sites documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_soil_sample_sites%2Fstatewide%2Flist_soil_sample_sites_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_SOIL_SAMPLE_SITES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_SOIL_SAMPLE_SITES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_soil_sample_sites_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_soil_sample_sites/statewide/list_soil_sample_sites_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_soil_sample_sites_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 26465,
+      "file:checksum": "12200606fc0a2ca720c6e3d74ae490795dbf1b9feadff68793abde32197857fa696e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        376761.371,
+        5241786.0549,
+        571749.447,
+        5467568.5929
+      ],
+      "table:row_count": 181,
+      "table:columns": [
+        {
+          "name": "SOILSAM_ID",
+          "type": "double"
+        },
+        {
+          "name": "SOILSAM_CD",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "SLSAM_DESC",
+          "type": "string"
+        },
+        {
+          "name": "SLSAM_PHOT",
+          "type": "string"
+        },
+        {
+          "name": "SLSAM_USE",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "RETIRED_ON",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Soil Sample Sites (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3596,
+      "file:checksum": "122054e862c3eecf6c2388b6e04fe94a3977553a25b1b2949862b728e451bb98ac87"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,222 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "reconnaissance_soils_map_extents_100k",
+  "title": "Reconnaissance Soils Map Extents 100K",
+  "description": "Reconnaissance Soils Map Extents 100K: LIST product `RECONNAISSANCE_SOILS_MAP_EXTENTS_100K`, statewide. 67 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Reconnaissance Soils Map Extents 100K\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "RECONNAISSANCE_SOILS_MAP_EXTENTS_100K",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.682906,
+          -43.002583,
+          148.384033,
+          -39.577151
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Reconnaissance Soils Map Extents 100K documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Freconnaissance_soils_map_extents_100k%2Fstatewide%2Freconnaissance_soils_map_extents_100k_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/RECONNAISSANCE_SOILS_MAP_EXTENTS_100K_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: RECONNAISSANCE_SOILS_MAP_EXTENTS_100K_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "reconnaissance_soils_map_extents_100k_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/reconnaissance_soils_map_extents_100k/statewide/reconnaissance_soils_map_extents_100k_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "reconnaissance_soils_map_extents_100k_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 345281,
+      "file:checksum": "122035998803e678dfb72f285ce10dd7a458c1908732b343d8dad923097d0f1eedc7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229418.706,
+        5238898.061,
+        612821.636,
+        5614431.316
+      ],
+      "table:row_count": 67,
+      "table:columns": [
+        {
+          "name": "SOIL_MAP",
+          "type": "string"
+        },
+        {
+          "name": "SCALE",
+          "type": "int32"
+        },
+        {
+          "name": "EDITION",
+          "type": "int32"
+        },
+        {
+          "name": "PROD_YEAR",
+          "type": "int32"
+        },
+        {
+          "name": "REF",
+          "type": "string"
+        },
+        {
+          "name": "MINOR_SOIL",
+          "type": "string"
+        },
+        {
+          "name": "HOR_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "VER_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "MAP_PROJ",
+          "type": "int32"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "RETIRED_ON",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Reconnaissance Soils Map Extents 100K (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14718,
+      "file:checksum": "1220914709df349c9f108c230c9420b3ac8bbd20542aad7988acb3050c465a0dab21"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

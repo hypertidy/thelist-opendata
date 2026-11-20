@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_coastal_erosion_hazard_bands_20161201",
+  "title": "LIST Coastal Erosion Hazard Bands 20161201",
+  "description": "LIST Coastal Erosion Hazard Bands 20161201: LIST product `LIST_COASTAL_EROSION_HAZARD_BANDS_20161201`, statewide. 19,479 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-10-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Coastal Erosion Hazard Bands 20161201\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_COASTAL_EROSION_HAZARD_BANDS_20161201",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618593,
+          -43.661296,
+          148.558583,
+          -39.575863
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-10-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:55Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Coastal hazards"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_coastal_erosion_hazard_bands_20161201%2Fstatewide%2Flist_coastal_erosion_hazard_bands_20161201_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_EROSION_HAZARD_BANDS_20161201_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_COASTAL_EROSION_HAZARD_BANDS_20161201_STATEWIDE.zip (LIST, released 2019-10-16)"
+    }
+  ],
+  "assets": {
+    "list_coastal_erosion_hazard_bands_20161201_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_coastal_erosion_hazard_bands_20161201/statewide/list_coastal_erosion_hazard_bands_20161201_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_coastal_erosion_hazard_bands_20161201_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 32793390,
+      "file:checksum": "1220f5afebf0846e645e0f20b3f1535f3f580de08d5f1a4e8c2bd775e01881dfc991",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227127.1023,
+        5165742.2992,
+        625689.5163,
+        5614493.8166
+      ],
+      "table:row_count": 19479,
+      "table:columns": [
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "HAZARD_BAND",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT_1",
+          "type": "string"
+        },
+        {
+          "name": "VERSION",
+          "type": "string"
+        },
+        {
+          "name": "DATE_",
+          "type": "string"
+        },
+        {
+          "name": "LINK",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16633,
+      "file:checksum": "1220a2d69b11d8789a2889546cc21e39c8315fbd188428421e5cc37fe06aa2ad198b"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_water_management_area",
+  "title": "LIST Water Management Area",
+  "description": "LIST Water Management Area: LIST product `LIST_WATER_MANAGEMENT_AREA`, statewide. 206 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Water Management Area\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_WATER_MANAGEMENT_AREA",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.614304,
+          -43.742204,
+          148.560679,
+          -39.575869
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:02Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water management and irrigation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Water Management Area documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_water_management_area%2Fstatewide%2Flist_water_management_area_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_WATER_MANAGEMENT_AREA_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_WATER_MANAGEMENT_AREA_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_water_management_area_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_water_management_area/statewide/list_water_management_area_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_water_management_area_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5429633,
+      "file:checksum": "1220b1bc8a24d699644e4eb23cd824e09b3a1abe99d5c39ebaeaa4037719f474c702",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227147.408,
+        5156756.524,
+        625689.515999999,
+        5614493.816
+      ],
+      "table:row_count": 206,
+      "table:columns": [
+        {
+          "name": "PROC_PLAN",
+          "type": "string"
+        },
+        {
+          "name": "REGION_NO",
+          "type": "int16"
+        },
+        {
+          "name": "INDEX_PLAN",
+          "type": "string"
+        },
+        {
+          "name": "CATCH_NO",
+          "type": "int32"
+        },
+        {
+          "name": "CATCH_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ID",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Water Management Area (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17074,
+      "file:checksum": "12209062075fe104229bbea704f81208bd6a25f3128c6f07a5fa46b12ec81e760717"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

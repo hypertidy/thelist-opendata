@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "tasveg_5_release",
+  "title": "TASVEG 5 Release",
+  "description": "TASVEG 5 Release: LIST product `TASVEG_5_RELEASE`, statewide. 482,138 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released . Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TASVEG 5 Release\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASVEG_5_RELEASE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618291,
+          -43.666425,
+          148.582844,
+          -39.154996
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:47:49Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TASVEG 5 Release documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasveg_5_release%2Fstatewide%2Ftasveg_5_release.gdb.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_50_STATEWIDE/TASVEG_5_release.gdb/",
+      "type": "text/html",
+      "title": "Source: TASVEG_5_release.gdb (LIST, released )"
+    }
+  ],
+  "assets": {
+    "tasveg_5_release.gdb": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasveg_5_release/statewide/tasveg_5_release.gdb.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasveg_5_release.gdb.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 488562866,
+      "file:checksum": "122058566b36da339adf1c94419eff2ea66520be16df4cbb851ea6dfeeefb593c0aa",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227125.956,
+        5165171.32,
+        627635.83,
+        5661272.38
+      ],
+      "table:row_count": 482138,
+      "table:columns": [
+        {
+          "name": "VEG_GRP_CODE",
+          "type": "int16"
+        },
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "FOREST_STRUCT",
+          "type": "string"
+        },
+        {
+          "name": "NOTABLE_TREE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "FIELD_CHECK",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_IRS",
+          "type": "float"
+        },
+        {
+          "name": "PROJECT",
+          "type": "string"
+        },
+        {
+          "name": "WEED_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE",
+          "type": "binary"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TASVEG 5 Release (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11992,
+      "file:checksum": "12202a7f08c8784acff864be634288380b7c65607907295bbf8b5f783450548106a4"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

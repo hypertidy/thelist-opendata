@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "nch_osm_pa_sites",
+  "title": "NCH OSM Pa Sites",
+  "description": "NCH OSM Pa Sites: LIST product `NCH_OSM_PA_SITES`, statewide. 2,096 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2023-10-03. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH OSM Pa Sites\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_OSM_PA_SITES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.585028,
+          -43.593678,
+          148.36506,
+          -39.785048
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-03T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH OSM Pa Sites documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fnch_osm_pa_sites%2Fstatewide%2Fosm_pa_sites.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_OSM_PA_SITES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_OSM_PA_SITES_STATEWIDE.zip (LIST, released 2023-10-03)"
+    }
+  ],
+  "assets": {
+    "osm_pa_sites": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/nch_osm_pa_sites/statewide/osm_pa_sites.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "osm_pa_sites.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 84752,
+      "file:checksum": "1220c0ba77f0093869c54529a90cf01e9b485ddf6240a43b7e4d870ba4695f2f1a34",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        304980,
+        5173254,
+        610202,
+        5593619
+      ],
+      "table:row_count": 2096,
+      "table:columns": [
+        {
+          "name": "Easting",
+          "type": "int32"
+        },
+        {
+          "name": "Northing",
+          "type": "int32"
+        },
+        {
+          "name": "Organic_So",
+          "type": "string"
+        },
+        {
+          "name": "Site_ID",
+          "type": "string"
+        },
+        {
+          "name": "Source",
+          "type": "string"
+        },
+        {
+          "name": "Site_Facts",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH OSM Pa Sites (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6623,
+      "file:checksum": "1220addc674873e42b0851c108fe70dad4e794bbc5d28d3aac193ff70a17290f96c2"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

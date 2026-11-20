@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_coastline",
+  "title": "LIST Coastline",
+  "description": "LIST Coastline: LIST product `LIST_COASTLINE`, statewide. 173,058 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Coastline\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_COASTLINE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606182,
+          -43.860873,
+          148.587432,
+          -39.14915
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation and coastline"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Coastline documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_coastline%2Fstatewide%2Flist_coastline_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTLINE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_COASTLINE_STATEWIDE.zip (LIST, released 2025-07-09)"
+    }
+  ],
+  "assets": {
+    "list_coastline_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_coastline/statewide/list_coastline_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_coastline_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 47299768,
+      "file:checksum": "1220df86c3f7b97312e6b6c28fc404ccdb5bc954c8bd76e04e68aee88a591b634b49",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227032.242,
+        5143575.403,
+        627592.119,
+        5661918.782
+      ],
+      "table:row_count": 173058,
+      "table:columns": [
+        {
+          "name": "HYDLINE_ID",
+          "type": "double"
+        },
+        {
+          "name": "HYDLNTY1",
+          "type": "string"
+        },
+        {
+          "name": "HYDLNTY2",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "MHWM_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "HYD_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "EXISTING",
+          "type": "string"
+        },
+        {
+          "name": "RELGRND",
+          "type": "string"
+        },
+        {
+          "name": "INUSE",
+          "type": "string"
+        },
+        {
+          "name": "HYDCNTR_TY",
+          "type": "string"
+        },
+        {
+          "name": "ADJ_FEAT_1",
+          "type": "string"
+        },
+        {
+          "name": "ADJ_FEAT_2",
+          "type": "string"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "double"
+        },
+        {
+          "name": "COMP_LEN",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Coastline (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13907,
+      "file:checksum": "1220c35d819e4ab6a4b38c8c6e63c6ae8a9106f837fe679b00a309e5ef6655a31961"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

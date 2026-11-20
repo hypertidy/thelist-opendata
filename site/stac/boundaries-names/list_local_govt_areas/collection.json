@@ -1,0 +1,198 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_local_govt_areas",
+  "title": "LIST Local Govt Areas",
+  "description": "LIST Local Govt Areas: LIST product `LIST_LOCAL_GOVT_AREAS`, statewide. 29 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Local Govt Areas\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LOCAL_GOVT_AREAS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606919,
+          -43.861131,
+          148.564254,
+          -39.149082
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Local Govt Areas documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_local_govt_areas%2Fstatewide%2Flist_local_govt_areas_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCAL_GOVT_AREAS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCAL_GOVT_AREAS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_local_govt_areas_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_local_govt_areas/statewide/list_local_govt_areas_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_local_govt_areas_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15500580,
+      "file:checksum": "122084f90ae057a8ef211823702274375155ee8e2632da6eeccef9f66417429a1fa8",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        5143548.006,
+        625727.885,
+        5661928.533
+      ],
+      "table:row_count": 29,
+      "table:columns": [
+        {
+          "name": "LGA_ID",
+          "type": "int32"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "LGA_CODE",
+          "type": "int16"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Local Govt Areas (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13100,
+      "file:checksum": "122078e522ef471c5fe6aecb6bde6ca5eaad9d3e060e740c0252367c2e5ec96373ae"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

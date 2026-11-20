@@ -1,0 +1,24 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-11-20T10:56:14.573398Z",
+      "breaking": false,
+      "assets": {
+        "items.parquet": {
+          "sha256": "ef55b0a6c03c7a27ad116964c6eade5034c03dd6485e3bbfcacea08ed1ad5175",
+          "size_bytes": 19860,
+          "href": "hazards-climate/flood/tsfm_1_percent_aep_climate_change/items.parquet",
+          "mtime": 1795172174.5689187,
+          "source_fingerprint": "c290c75ce23f27b56c191512d93ba49701dea5852942ee07c4cbbf2bcf370ad2"
+        }
+      },
+      "changes": [
+        "items.parquet"
+      ],
+      "message": "Generated items.parquet for STAC GeoParquet queries"
+    }
+  ]
+}

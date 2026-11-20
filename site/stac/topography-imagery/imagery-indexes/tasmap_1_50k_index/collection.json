@@ -1,0 +1,210 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "tasmap_1_50k_index",
+  "title": "Tasmap 1 50K Index",
+  "description": "Tasmap 1 50K Index: LIST product `TASMAP_1_50K_INDEX`, statewide. 95 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Tasmap 1 50K Index\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASMAP_1_50K_INDEX",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.518606,
+          -43.866069,
+          148.592643,
+          -39.146187
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Tasmap 1 50K Index documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasmap_1_50k_index%2Fstatewide%2Ftasmap_1_50k_index_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMAP_1_50K_INDEX_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASMAP_1_50K_INDEX_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "tasmap_1_50k_index_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmap_1_50k_index/statewide/tasmap_1_50k_index_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasmap_1_50k_index_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 22122,
+      "file:checksum": "12201e4571d59b5cc95446946e0cd87db87e798420a2698d6ace4dcb04456186bbff",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        220000,
+        5143000,
+        628000,
+        5662000
+      ],
+      "table:row_count": 95,
+      "table:columns": [
+        {
+          "name": "MAP_NAME",
+          "type": "string"
+        },
+        {
+          "name": "MAP_NO",
+          "type": "string"
+        },
+        {
+          "name": "EDITION",
+          "type": "int16"
+        },
+        {
+          "name": "PROD_YEAR",
+          "type": "int16"
+        },
+        {
+          "name": "BAR_NUM",
+          "type": "double"
+        },
+        {
+          "name": "HOR_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "PUBLISH_METHOD",
+          "type": "string"
+        },
+        {
+          "name": "MAP_URL",
+          "type": "string"
+        },
+        {
+          "name": "DIG_MAP_URL",
+          "type": "string"
+        },
+        {
+          "name": "SCALE",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Tasmap 1 50K Index (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10346,
+      "file:checksum": "1220b48b2139c7f0e04ec752110e21e7a8b0bb4bb872fad26649f017f1a2fe551350"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

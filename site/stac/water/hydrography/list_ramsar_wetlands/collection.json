@@ -1,0 +1,214 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_ramsar_wetlands",
+  "title": "LIST Ramsar Wetlands",
+  "description": "LIST Ramsar Wetlands: LIST product `LIST_RAMSAR_WETLANDS`, statewide. 10 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Ramsar Wetlands\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_RAMSAR_WETLANDS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.860826,
+          -42.82983,
+          148.522273,
+          -39.635006
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Ramsar Wetlands documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_ramsar_wetlands%2Fstatewide%2Flist_ramsar_wetlands_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_RAMSAR_WETLANDS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_RAMSAR_WETLANDS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_ramsar_wetlands_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_ramsar_wetlands/statewide/list_ramsar_wetlands_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_ramsar_wetlands_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 255392,
+      "file:checksum": "122016eadda4e0fe5470ca615beebcf3b8e2f85e58b13d8f29d9a4dbd900e90b56ac",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        243238.231,
+        5258076.11,
+        624441.165,
+        5608473.834
+      ],
+      "table:row_count": 10,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "int32"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "REFCODE3",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_AUTH",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Ramsar Wetlands (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9966,
+      "file:checksum": "122085e7efda73b8b2fb5c775df0a43cae97e0d67356c784969ce0d56a28562bbfb1"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,266 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_groundwater_boreholes",
+  "title": "LIST Groundwater Boreholes",
+  "description": "LIST Groundwater Boreholes: LIST product `LIST_GROUNDWATER_BOREHOLES`, statewide. 11,856 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Groundwater Boreholes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_GROUNDWATER_BOREHOLES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.663027,
+          -43.439015,
+          148.387988,
+          -39.624403
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:57Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Groundwater Boreholes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_groundwater_boreholes%2Fstatewide%2Flist_groundwater_boreholes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_GROUNDWATER_BOREHOLES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_GROUNDWATER_BOREHOLES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_groundwater_boreholes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_groundwater_boreholes/statewide/list_groundwater_boreholes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_groundwater_boreholes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 808962,
+      "file:checksum": "122050bc1f26182a36b5143b595bbb3774799860c6fe7401fb8e966a983fb8fc8f31",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229728,
+        5190431,
+        612340,
+        5609190
+      ],
+      "table:row_count": 11856,
+      "table:columns": [
+        {
+          "name": "FEATURE_ID",
+          "type": "int32"
+        },
+        {
+          "name": "FEATURE_PURPOSE",
+          "type": "string"
+        },
+        {
+          "name": "FEATURE_ACCESS_STATUS",
+          "type": "string"
+        },
+        {
+          "name": "FEATURE_TYPE_CODE",
+          "type": "string"
+        },
+        {
+          "name": "BASE_FEATURE_TYPE_CODE",
+          "type": "string"
+        },
+        {
+          "name": "FEATURE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "BASE_FEATURE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "LOCALITY_NAME",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "DATUM",
+          "type": "string"
+        },
+        {
+          "name": "COORD_ACCURACY",
+          "type": "string"
+        },
+        {
+          "name": "COORD_ACCURACY_NUM",
+          "type": "double"
+        },
+        {
+          "name": "DRILLED_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "DRILLING_COMPANY",
+          "type": "string"
+        },
+        {
+          "name": "DEPTH",
+          "type": "double"
+        },
+        {
+          "name": "INITIAL_YIELD",
+          "type": "double"
+        },
+        {
+          "name": "DRY_BORE",
+          "type": "string"
+        },
+        {
+          "name": "DTWS_LIST",
+          "type": "string"
+        },
+        {
+          "name": "SWL_LIST",
+          "type": "string"
+        },
+        {
+          "name": "LAST_SWL",
+          "type": "double"
+        },
+        {
+          "name": "LAST_SWL_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "FINAL_TDS",
+          "type": "int32"
+        },
+        {
+          "name": "MAIN_AQUIFER_GEOLOGY",
+          "type": "string"
+        },
+        {
+          "name": "LAST_OPERATING_STATUS",
+          "type": "string"
+        },
+        {
+          "name": "LAST_OP_STATUS_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "X",
+          "type": "double"
+        },
+        {
+          "name": "Y",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Groundwater Boreholes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 20679,
+      "file:checksum": "122042ede3a28e6a0ad444c6ad3fedcca3f1f7fc476e800153b47bb8927ecdda945f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

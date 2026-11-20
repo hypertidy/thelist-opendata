@@ -1,0 +1,342 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "wedgetailed_eagle_nesting_habitat_high",
+  "title": "Wedgetailed Eagle Nesting Habitat High",
+  "description": "Wedgetailed Eagle Nesting Habitat High: LIST product `WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH`, statewide. 714,628 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `ID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2021-03-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Wedgetailed Eagle Nesting Habitat High\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.890297,
+          -43.547527,
+          148.290058,
+          -41.126548
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-03-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:05:18Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fauna"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Wedgetailed Eagle Nesting Habitat High documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fwedgetailed_eagle_nesting_habitat_high%2Fstatewide%2Fwedgetailed_eagle_nesting_habitat_high_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BREAK_O_DAY.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BRIGHTON.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_BURNIE.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CENTRAL_COAST.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CENTRAL_HIGHLANDS.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CIRCULAR_HEAD.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_CLARENCE.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DERWENT_VALLEY.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DEVONPORT.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_DORSET.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_FLINDERS.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GEORGE_TOWN.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GLAMORGAN_SPRING_BAY.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_GLENORCHY.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_HOBART.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_HUON_VALLEY.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KENTISH.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KING_ISLAND.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_KINGBOROUGH.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_LATROBE.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_LAUNCESTON.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_MEANDER_VALLEY.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_NORTHERN_MIDLANDS.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_SORELL.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_SOUTHERN_MIDLANDS.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_TASMAN.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WARATAH_WYNYARD.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_COAST.zip (LIST, released 2021-03-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_TAMAR.zip (LIST, released 2021-03-18)"
+    }
+  ],
+  "assets": {
+    "wedgetailed_eagle_nesting_habitat_high_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/wedgetailed_eagle_nesting_habitat_high/statewide/wedgetailed_eagle_nesting_habitat_high_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "wedgetailed_eagle_nesting_habitat_high_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 32414522,
+      "file:checksum": "12205eb0cbbad0ad41b983702e782e257cb635395bc9a28c95973f4091f79cbbb7d1",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        329519.519,
+        5178377.9297,
+        604225,
+        5445207.0068
+      ],
+      "table:row_count": 714628,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "GRIDCODE",
+          "type": "int32"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Wedgetailed Eagle Nesting Habitat High (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 40840,
+      "file:checksum": "122007a3422a914f9f9583d9459f4f41fcf9b9dc6eb12e1ae418af609578870cb9a5"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

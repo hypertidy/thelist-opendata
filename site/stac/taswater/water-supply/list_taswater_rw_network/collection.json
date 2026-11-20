@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_taswater_rw_network",
+  "title": "LIST TASWATER Rw Network",
+  "description": "LIST TASWATER Rw Network: LIST product `LIST_TASWATER_RW_NETWORK`, statewide. 44 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASWATER Rw Network\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASWATER_RW_NETWORK",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.907983,
+          -42.907105,
+          148.339228,
+          -40.979346
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water supply"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASWATER Rw Network documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_taswater_rw_network%2Fstatewide%2Flist_taswater_rw_network_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_RW_NETWORK_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASWATER_RW_NETWORK_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_taswater_rw_network_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_taswater_rw_network/statewide/list_taswater_rw_network_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_taswater_rw_network_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 13642,
+      "file:checksum": "12201e390a8ded34f992d00538d25614f4229f9a8dd7130d680d6b9d656819efa030",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        410849.6164,
+        5249500.9095,
+        609337.1821,
+        5462722.4506
+      ],
+      "table:row_count": 44,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "LOCATIONID",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "SUBTYPECD",
+          "type": "double"
+        },
+        {
+          "name": "D_SUBTYPEC",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASWATER Rw Network (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3957,
+      "file:checksum": "1220dd39f1e8865c9ac603d89603a789890b934168b2a44944477a4249cc635ef20f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

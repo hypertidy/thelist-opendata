@@ -1,0 +1,166 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_deer_management_zones",
+  "title": "LIST Deer Management Zones",
+  "description": "LIST Deer Management Zones: LIST product `LIST_DEER_MANAGEMENT_ZONES`, statewide. 14 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-11-25. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Deer Management Zones\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_DEER_MANAGEMENT_ZONES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.393709,
+          -42.778234,
+          148.32252,
+          -41.252171
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-11-25T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fauna"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Deer Management Zones documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_deer_management_zones%2Fstatewide%2Flist_deer_management_zones_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEER_MANAGEMENT_ZONES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEER_MANAGEMENT_ZONES_STATEWIDE.zip (LIST, released 2025-11-25)"
+    }
+  ],
+  "assets": {
+    "list_deer_management_zones_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_deer_management_zones/statewide/list_deer_management_zones_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_deer_management_zones_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 481495,
+      "file:checksum": "122070503bcb437e20bb85dedc597e353bd9e5792a3464142028caec18cd0d2eaff7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        450403.4753,
+        5263811.11,
+        608197.3031,
+        5432444.8699
+      ],
+      "table:row_count": 14,
+      "table:columns": [
+        {
+          "name": "ZONE",
+          "type": "int32"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Deer Management Zones (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16568,
+      "file:checksum": "12200db7c8f2cef2464a68076aeea0a389868d8f4b1250938bf6d75cfb2767526174"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

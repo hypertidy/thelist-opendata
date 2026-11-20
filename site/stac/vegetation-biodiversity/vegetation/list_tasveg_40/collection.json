@@ -1,0 +1,378 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasveg_40",
+  "title": "LIST TASVEG 40",
+  "description": "LIST TASVEG 40: LIST product `LIST_TASVEG_40`, statewide. 468,084 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips by stacking them, with an `lga` column: this layer has no feature id, so features crossing an LGA boundary stay cut there. Source released 2020-09-23. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASVEG 40\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASVEG_40",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618582,
+          -43.665964,
+          148.559179,
+          -39.155002
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-09-23T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:02:52Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASVEG 40 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasveg_40%2Fstatewide%2Flist_tasveg_40_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_BREAK_O_DAY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_BRIGHTON.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_BURNIE.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_CENTRAL_COAST.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_CENTRAL_HIGHLANDS.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_CIRCULAR_HEAD.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_CLARENCE.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_DERWENT_VALLEY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_DEVONPORT.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_DORSET.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FLINDERS.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_GEORGE_TOWN.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_GLAMORGAN_SPRING_BAY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_GLENORCHY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_HOBART.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_HUON_VALLEY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_KENTISH.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_KING_ISLAND.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_KINGBOROUGH.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_LATROBE.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_LAUNCESTON.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_MEANDER_VALLEY.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_NORTHERN_MIDLANDS.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_SORELL.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_SOUTHERN_MIDLANDS.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_TASMAN.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_WARATAH_WYNYARD.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_WEST_COAST.zip (LIST, released 2020-09-23)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_WEST_TAMAR.zip (LIST, released 2020-09-23)"
+    }
+  ],
+  "assets": {
+    "list_tasveg_40_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasveg_40/statewide/list_tasveg_40_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasveg_40_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 384443490,
+      "file:checksum": "1220d85e1617c7b434580bc2c5bd8028110c41ef692212c0d2b71eddd26798a57fc4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227147.38,
+        5165223.883,
+        625727.885,
+        5661272.38
+      ],
+      "table:row_count": 468084,
+      "table:columns": [
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "FOREST_STR",
+          "type": "string"
+        },
+        {
+          "name": "CANOPY_TRE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DAT",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_IRS",
+          "type": "string"
+        },
+        {
+          "name": "FIELD_CHEC",
+          "type": "datetime"
+        },
+        {
+          "name": "PROJECT",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "double"
+        },
+        {
+          "name": "VEG_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE_D",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASVEG 40 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12313,
+      "file:checksum": "1220fc44a2d3241cccd13b11da74692ea3798a8eedd08ceb48e70d41ca1a28b1c192"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

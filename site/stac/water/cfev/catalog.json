@@ -1,0 +1,94 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "water-cfev",
+  "title": "Freshwater ecosystem values (CFEV)",
+  "description": "Water and hydrography: Freshwater ecosystem values (CFEV). 10 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water and hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Freshwater ecosystem values (CFEV) documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_catchments/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Catchments"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_estuaries/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Estuaries"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_groundwater/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Groundwater"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_karst/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Karst"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_river_sec_catch/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV River Sec Catch"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_rivers/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Rivers"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_saltmarshes/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Saltmarshes"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_subcatchments/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Subcatchments"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_waterbodies/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Waterbodies"
+    },
+    {
+      "rel": "child",
+      "href": "./list_cfev_wetlands/collection.json",
+      "type": "application/json",
+      "title": "LIST CFEV Wetlands"
+    }
+  ]
+}

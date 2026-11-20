@@ -1,0 +1,418 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_public_land_class",
+  "title": "LIST Public Land Class",
+  "description": "LIST Public Land Class: LIST product `LIST_PUBLIC_LAND_CLASS`, statewide. 5,990 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Public Land Class\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_PUBLIC_LAND_CLASS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606919,
+          -43.861156,
+          148.45091,
+          -39.154903
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:01:43Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Public Land Class documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_public_land_class%2Fstatewide%2Flist_public_land_class_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_BREAK_O_DAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_BRIGHTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_BURNIE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_CENTRAL_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_CIRCULAR_HEAD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_CLARENCE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_DERWENT_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_DEVONPORT.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_DORSET.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_FLINDERS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_GEORGE_TOWN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_GLENORCHY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_HOBART.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_HUON_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_KENTISH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_KING_ISLAND.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_KINGBOROUGH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_LATROBE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_LAUNCESTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_MEANDER_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_SORELL.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_TASMAN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_WARATAH_WYNYARD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_WEST_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_public_land_class_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_public_land_class/statewide/list_public_land_class_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_public_land_class_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 33372441,
+      "file:checksum": "122038d56ed8796efc60600ea185ea169f5d853716d4df547d1981c48836f5155a9e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        5143548.018,
+        616614.8,
+        5661281.549
+      ],
+      "table:row_count": 5990,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "int32"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_AUTH",
+          "type": "string"
+        },
+        {
+          "name": "INST_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "INST_NO",
+          "type": "string"
+        },
+        {
+          "name": "GOVERN_ACT",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "string"
+        },
+        {
+          "name": "EFFEC_DATE",
+          "type": "string"
+        },
+        {
+          "name": "PRIOR_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "PRIOR_MTOD",
+          "type": "string"
+        },
+        {
+          "name": "PRIOR_INST",
+          "type": "string"
+        },
+        {
+          "name": "PRIOR_GAZ",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Public Land Class (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 32917,
+      "file:checksum": "1220ec095bb1f22d5f5b41d15e45ae05c46b23a79bd6d803c7cf9de3468e41af5dea"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

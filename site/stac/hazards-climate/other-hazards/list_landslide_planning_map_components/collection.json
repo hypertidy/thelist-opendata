@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_landslide_planning_map_components",
+  "title": "LIST Landslide Planning Map Components",
+  "description": "LIST Landslide Planning Map Components: LIST product `LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS`, statewide. 1,388,657 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-10-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Landslide Planning Map Components\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618624,
+          -43.666018,
+          148.55048,
+          -39.576579
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-10-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:58Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Landslide, fire and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Landslide Planning Map Components documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_landslide_planning_map_components%2Fstatewide%2Flist_landslide_planning_map_components_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS_STATEWIDE.zip (LIST, released 2019-10-16)"
+    }
+  ],
+  "assets": {
+    "list_landslide_planning_map_components_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_landslide_planning_map_components/statewide/list_landslide_planning_map_components_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_landslide_planning_map_components_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 130337386,
+      "file:checksum": "1220ba9fed2da24f111684d144990336276d4396860918aa1c8a7eee0c0da6196666",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227151.0187,
+        5165218.3079,
+        625026.0187,
+        5614415.0226
+      ],
+      "table:row_count": 1388657,
+      "table:columns": [
+        {
+          "name": "HAZARD_BAND_1",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "NAME_1",
+          "type": "string"
+        },
+        {
+          "name": "REGION",
+          "type": "string"
+        },
+        {
+          "name": "HAZARD_EXPOSURE",
+          "type": "string"
+        },
+        {
+          "name": "VERSION",
+          "type": "string"
+        },
+        {
+          "name": "VERSION_DATE",
+          "type": "string"
+        },
+        {
+          "name": "FURTHER_INFORMATION",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Landslide Planning Map Components (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 56063,
+      "file:checksum": "12204fe9492cc7bc4e52cf0da0afcd5541abf9444249ebfd81d6edec54a6d6d8feba"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

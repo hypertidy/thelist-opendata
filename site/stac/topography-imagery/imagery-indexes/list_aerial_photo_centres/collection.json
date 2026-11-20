@@ -1,0 +1,302 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_aerial_photo_centres",
+  "title": "LIST Aerial Photo Centres",
+  "description": "LIST Aerial Photo Centres: LIST product `LIST_AERIAL_PHOTO_CENTRES`, statewide. 213,980 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Aerial Photo Centres\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_AERIAL_PHOTO_CENTRES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.594656,
+          -43.86178,
+          148.647541,
+          -38.945877
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Aerial Photo Centres documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_aerial_photo_centres%2Fstatewide%2Flist_aerial_photo_centres_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AERIAL_PHOTO_CENTRES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_AERIAL_PHOTO_CENTRES_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_aerial_photo_centres_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_aerial_photo_centres/statewide/list_aerial_photo_centres_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_aerial_photo_centres_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 20307926,
+      "file:checksum": "1220336599a4be16a323850d957ca1fa821fd020eb8811acb562b9be1dca94b0d446",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        226107.848,
+        5143471.596,
+        632423.285,
+        5684478.706
+      ],
+      "table:row_count": 213980,
+      "table:columns": [
+        {
+          "name": "PHOTO_ID",
+          "type": "int32"
+        },
+        {
+          "name": "FILM_NO",
+          "type": "string"
+        },
+        {
+          "name": "FRAME",
+          "type": "string"
+        },
+        {
+          "name": "RUN_NO",
+          "type": "string"
+        },
+        {
+          "name": "FLY_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "FLY_SEASON",
+          "type": "string"
+        },
+        {
+          "name": "ALTITUDE",
+          "type": "int32"
+        },
+        {
+          "name": "TRACK",
+          "type": "double"
+        },
+        {
+          "name": "IP_OWNER",
+          "type": "int16"
+        },
+        {
+          "name": "IP_OWNER_T",
+          "type": "string"
+        },
+        {
+          "name": "NEG_CHECK",
+          "type": "int16"
+        },
+        {
+          "name": "NEG_CHCK_T",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "int32"
+        },
+        {
+          "name": "NORTHING",
+          "type": "int32"
+        },
+        {
+          "name": "AP_SOURCE",
+          "type": "int16"
+        },
+        {
+          "name": "AP_SRC_T",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_RES",
+          "type": "double"
+        },
+        {
+          "name": "AP_PATH",
+          "type": "string"
+        },
+        {
+          "name": "AP_THUMB_PATH",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "PROJECT_ID",
+          "type": "int32"
+        },
+        {
+          "name": "PROJECT_NO",
+          "type": "string"
+        },
+        {
+          "name": "PROJ_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CLIENT",
+          "type": "string"
+        },
+        {
+          "name": "CAMERA",
+          "type": "string"
+        },
+        {
+          "name": "CAMERA_NO",
+          "type": "string"
+        },
+        {
+          "name": "LENS_FL",
+          "type": "double"
+        },
+        {
+          "name": "LENS_NO",
+          "type": "string"
+        },
+        {
+          "name": "FORMAT",
+          "type": "string"
+        },
+        {
+          "name": "IMAGE_TYPE",
+          "type": "int16"
+        },
+        {
+          "name": "FLOWN_BY",
+          "type": "string"
+        },
+        {
+          "name": "PROJ_GUID",
+          "type": "string"
+        },
+        {
+          "name": "FLY_YEAR",
+          "type": "string"
+        },
+        {
+          "name": "IMG_TYP_T",
+          "type": "string"
+        },
+        {
+          "name": "SCALE",
+          "type": "string"
+        },
+        {
+          "name": "IMAGE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Aerial Photo Centres (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 36496,
+      "file:checksum": "1220ac357603e8d9243097357866d68f4f7c2d58a3fc86c64335455e04ce7a289221"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

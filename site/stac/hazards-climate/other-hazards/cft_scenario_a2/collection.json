@@ -1,0 +1,258 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "cft_scenario_a2",
+  "title": "CFT Scenario A2",
+  "description": "CFT Scenario A2: LIST product `CFT_SCENARIO_A2`, statewide. 721 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"CFT Scenario A2\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "CFT_SCENARIO_A2",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.600775,
+          -43.693463,
+          148.57078,
+          -39.607311
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Landslide, fire and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "CFT Scenario A2 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fcft_scenario_a2%2Fstatewide%2Fcft_scenario_a2_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/CFT_SCENARIO_A2_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: CFT_SCENARIO_A2_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "cft_scenario_a2_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/cft_scenario_a2/statewide/cft_scenario_a2_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "cft_scenario_a2_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 167636,
+      "file:checksum": "12209fbf5b0560abf478dd2de7ee1006c094b823c209a7909873a8b24ff0c53abf8b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        225833.175,
+        5162169.559,
+        626605.838,
+        5610952.321
+      ],
+      "table:row_count": 721,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "PE_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "PE_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "PE_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "RF_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "RF_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "RF_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "RH_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "RH_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "RH_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "TM_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "TM_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "TM_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "FROM_A2_0",
+          "type": "double"
+        },
+        {
+          "name": "FROM_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "FROM_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "FROM_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "SPIM_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "SPIM_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "SPIM_A2_3",
+          "type": "double"
+        },
+        {
+          "name": "SPIC_A2_1",
+          "type": "double"
+        },
+        {
+          "name": "SPIC_A2_2",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "CFT Scenario A2 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13329,
+      "file:checksum": "1220c12fb961a0edba6808dd04385430e5ab82e531f2cf32c32e3ad8626270cb698a"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

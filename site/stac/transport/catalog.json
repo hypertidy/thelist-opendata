@@ -1,0 +1,46 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "transport",
+  "title": "Transport",
+  "description": "The road, rail, ferry and track network: segments and nodes. 2 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Transport documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_transport_nodes/collection.json",
+      "type": "application/json",
+      "title": "LIST Transport Nodes"
+    },
+    {
+      "rel": "child",
+      "href": "./list_transport_segments/collection.json",
+      "type": "application/json",
+      "title": "LIST Transport Segments"
+    }
+  ]
+}

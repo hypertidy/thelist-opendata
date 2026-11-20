@@ -1,0 +1,124 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "topography-imagery-imagery-indexes",
+  "title": "Imagery and map indexes",
+  "description": "Elevation, imagery and map indexes: Imagery and map indexes. 15 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation, imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Imagery and map indexes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_aerial_photo_centres/collection.json",
+      "type": "application/json",
+      "title": "LIST Aerial Photo Centres"
+    },
+    {
+      "rel": "child",
+      "href": "./list_aerial_photo_coverages/collection.json",
+      "type": "application/json",
+      "title": "LIST Aerial Photo Coverages"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_2009_2010/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic 2009 2010"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_2013_2014/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic 2013 2014"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_2014_2015/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic 2014 2015"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_dc_2009_2010/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic Dc 2009 2010"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_dc_2013_2014/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic Dc 2013 2014"
+    },
+    {
+      "rel": "child",
+      "href": "./tas_landsat_mosaic_dc_2014_2015/collection.json",
+      "type": "application/json",
+      "title": "TAS Landsat Mosaic Dc 2014 2015"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_1_100k_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap 1 100K Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_1_250k_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap 1 250K Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_1_25k_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap 1 25K Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_1_50k_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap 1 50K Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_national_park_map_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap National Park Map Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_ortho_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap Ortho Index"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmap_ttsa_index/collection.json",
+      "type": "application/json",
+      "title": "Tasmap Ttsa Index"
+    }
+  ]
+}

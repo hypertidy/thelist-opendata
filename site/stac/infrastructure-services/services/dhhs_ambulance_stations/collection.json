@@ -1,0 +1,264 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "dhhs_ambulance_stations",
+  "title": "DHHS Ambulance Stations",
+  "description": "DHHS Ambulance Stations: LIST product `DHHS_AMBULANCE_STATIONS`, statewide. 45 features, multi-point z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2016-07-28. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"DHHS Ambulance Stations\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "DHHS_AMBULANCE_STATIONS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.685666,
+          -43.314514,
+          148.334675,
+          -39.929731
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-07-28T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "DHHS Ambulance Stations documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fdhhs_ambulance_stations%2Fstatewide%2Fdhhs_ambulance_stations_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/DHHS_AMBULANCE_STATIONS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: DHHS_AMBULANCE_STATIONS_STATEWIDE.zip (LIST, released 2016-07-28)"
+    }
+  ],
+  "assets": {
+    "dhhs_ambulance_stations_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/dhhs_ambulance_stations/statewide/dhhs_ambulance_stations_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "dhhs_ambulance_stations_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15764,
+      "file:checksum": "12207aff3d4296216e71f0bfb4c5ad59ca093d87d6477d17a8bf328ad281125747b5",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        231015.182,
+        5204256.181,
+        608245,
+        5575296.845
+      ],
+      "table:row_count": 45,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        },
+        {
+          "name": "ID",
+          "type": "int64"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "MAJOR_CATE",
+          "type": "string"
+        },
+        {
+          "name": "MINOR_CATE",
+          "type": "string"
+        },
+        {
+          "name": "PROP_ADD",
+          "type": "string"
+        },
+        {
+          "name": "SUBURB",
+          "type": "string"
+        },
+        {
+          "name": "MUNICIPALI",
+          "type": "string"
+        },
+        {
+          "name": "EASTING_GD",
+          "type": "int64"
+        },
+        {
+          "name": "NORTHING_G",
+          "type": "int64"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "dhhs_ambulance_stations": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/dhhs_ambulance_stations/statewide/dhhs_ambulance_stations.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "dhhs_ambulance_stations.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15547,
+      "file:checksum": "122049e4196df2adb5ad1b5aca552d18d1b0ef26aa1e6f22a8c47e9b6c84e4ba2be4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        231015.182,
+        5204256.181,
+        608245,
+        5575296.845
+      ],
+      "table:row_count": 45,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int32"
+        },
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "MAJOR_CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "MINOR_CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "PROP_ADD",
+          "type": "string"
+        },
+        {
+          "name": "SUBURB",
+          "type": "string"
+        },
+        {
+          "name": "MUNICIPALITY",
+          "type": "string"
+        },
+        {
+          "name": "EASTING_GDA",
+          "type": "int32"
+        },
+        {
+          "name": "NORTHING_GDA",
+          "type": "int32"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "DHHS Ambulance Stations (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5879,
+      "file:checksum": "12207e47df95b813c5b34b8d853a179b76a0e5acd0bfc309782921aeb17a448621c1"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

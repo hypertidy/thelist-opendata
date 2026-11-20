@@ -1,0 +1,64 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "topography-imagery-elevation",
+  "title": "Elevation and coastline",
+  "description": "Elevation, imagery and map indexes: Elevation and coastline. 5 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation, imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Elevation and coastline documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_10m_contours/collection.json",
+      "type": "application/json",
+      "title": "LIST 10 m Contours"
+    },
+    {
+      "rel": "child",
+      "href": "./list_5m_contours/collection.json",
+      "type": "application/json",
+      "title": "LIST 5 m Contours"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastline/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastline"
+    },
+    {
+      "rel": "child",
+      "href": "./list_dem_25m/collection.json",
+      "type": "application/json",
+      "title": "LIST DEM 25 m"
+    },
+    {
+      "rel": "child",
+      "href": "./list_spot_heights/collection.json",
+      "type": "application/json",
+      "title": "LIST Spot Heights"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "enterprise-suitability-table-wine-grapes",
+  "title": "Table wine grapes",
+  "description": "Enterprise suitability for table wine grapes: current and scenario grids or layers. 8 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Enterprise suitability (crops)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Table wine grapes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_t_wine_2030_a2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES T Wine 2030 A2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_t_wine_2030_b1/collection.json",
+      "type": "application/json",
+      "title": "NCH ES T Wine 2030 B1"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_t_wine_2050_a2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES T Wine 2050 A2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_t_wine_2050_b1/collection.json",
+      "type": "application/json",
+      "title": "NCH ES T Wine 2050 B1"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_table_wine_grapes/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Table Wine Grapes"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_tablewine_2030_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Tablewine 2030 V2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_tablewine_2050_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Tablewine 2050 V2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_tablewine_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Tablewine V2"
+    }
+  ]
+}

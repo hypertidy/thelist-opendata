@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "macrocystis_pyrifera_l_c_agardh_stocks_1999",
+  "title": "Macrocystis Pyrifera L C Agardh Stocks 1999",
+  "description": "Macrocystis Pyrifera L C Agardh Stocks 1999: LIST product `MACROCYSTIS_PYRIFERA_L_C_AGARDH_STOCKS_1999`, statewide. 167 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-01-14. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Macrocystis Pyrifera L C Agardh Stocks 1999\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "MACROCYSTIS_PYRIFERA_L_C_AGARDH_STOCKS_1999",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.886987,
+          -43.579342,
+          148.411479,
+          -40.910587
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-14T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:02Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Giant kelp"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1999 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fmacrocystis_pyrifera_l_c_agardh_stocks_1999%2Fstatewide%2Fmacrocystis_pyrifera_l_c_agardh_stocks_1999_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/MACROCYSTIS_PYRIFERA_L_C_AGARDH_STOCKS_1999_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: MACROCYSTIS_PYRIFERA_L_C_AGARDH_STOCKS_1999_STATEWIDE.zip (LIST, released 2021-01-14)"
+    }
+  ],
+  "assets": {
+    "macrocystis_pyrifera_l_c_agardh_stocks_1999_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/macrocystis_pyrifera_l_c_agardh_stocks_1999/statewide/macrocystis_pyrifera_l_c_agardh_stocks_1999_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "macrocystis_pyrifera_l_c_agardh_stocks_1999_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 48187,
+      "file:checksum": "12203f2e7970d6929959d043aeeaa9d8fa071caf264cc5ae719fc39bca61b114aab4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        490875.492,
+        5174846.2989,
+        613977.56,
+        5470286.9089
+      ],
+      "table:row_count": 167,
+      "table:columns": [
+        {
+          "name": "SPECIES",
+          "type": "string"
+        },
+        {
+          "name": "RELIABILIT",
+          "type": "string"
+        },
+        {
+          "name": "DENSITY",
+          "type": "string"
+        },
+        {
+          "name": "LOCATION",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "ID",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1999 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8098,
+      "file:checksum": "1220f413a1bdb3d729afd5dca3949c460016ec370017f133cc1a2503f137500c1549"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

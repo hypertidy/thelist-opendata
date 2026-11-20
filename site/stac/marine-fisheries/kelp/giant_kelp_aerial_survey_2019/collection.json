@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "giant_kelp_aerial_survey_2019",
+  "title": "Giant Kelp Aerial Survey 2019",
+  "description": "Giant Kelp Aerial Survey 2019: LIST product `GIANT_KELP_AERIAL_SURVEY_2019`, statewide. 186 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-06-04. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Giant Kelp Aerial Survey 2019\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "GIANT_KELP_AERIAL_SURVEY_2019",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.888612,
+          -43.594543,
+          148.40461,
+          -40.842629
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-06-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Giant kelp"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Giant Kelp Aerial Survey 2019 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fgiant_kelp_aerial_survey_2019%2Fstatewide%2Fgiant_kelp_aerial_survey_2019_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/GIANT_KELP_AERIAL_SURVEY_2019_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: GIANT_KELP_AERIAL_SURVEY_2019_STATEWIDE.zip (LIST, released 2020-06-04)"
+    }
+  ],
+  "assets": {
+    "giant_kelp_aerial_survey_2019_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/giant_kelp_aerial_survey_2019/statewide/giant_kelp_aerial_survey_2019_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "giant_kelp_aerial_survey_2019_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 136997,
+      "file:checksum": "12208fe5ba8b1d76a2b3863ed1ed383bdaf3c9a1b8f2ebdbfc56a4d0d6a4328865da",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        491008.9746,
+        5173158.1557,
+        613394.2081,
+        5477841.8188
+      ],
+      "table:row_count": 186,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "LOCATION",
+          "type": "string"
+        },
+        {
+          "name": "DENSITY",
+          "type": "string"
+        },
+        {
+          "name": "RELIABILIT",
+          "type": "string"
+        },
+        {
+          "name": "IMCRA_MESO",
+          "type": "string"
+        },
+        {
+          "name": "AREA_M2",
+          "type": "double"
+        },
+        {
+          "name": "REGION",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Giant Kelp Aerial Survey 2019 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7728,
+      "file:checksum": "1220379caf1bfbfc9c497984b69638dea27b9a6901e471d8d2d3b5b20ca5a754bb30"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

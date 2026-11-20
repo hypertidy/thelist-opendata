@@ -1,0 +1,230 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_public_land_class_revoked",
+  "title": "LIST Public Land Class Revoked",
+  "description": "LIST Public Land Class Revoked: LIST product `LIST_PUBLIC_LAND_CLASS_REVOKED`, statewide. 1,215 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Public Land Class Revoked\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_PUBLIC_LAND_CLASS_REVOKED",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.649484,
+          -43.596669,
+          148.398592,
+          -39.576562
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Public Land Class Revoked documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_public_land_class_revoked%2Fstatewide%2Flist_public_land_class_revoked_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_PUBLIC_LAND_CLASS_REVOKED_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_PUBLIC_LAND_CLASS_REVOKED_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_public_land_class_revoked_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_public_land_class_revoked/statewide/list_public_land_class_revoked_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_public_land_class_revoked_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1333561,
+      "file:checksum": "12208c0fe96656e692d200bbc8b9304206cbc138208329b574adfd303329d359acc6",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229334.413,
+        5172922.362,
+        612904.263,
+        5614493.816
+      ],
+      "table:row_count": 1215,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "int32"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_AUTH",
+          "type": "string"
+        },
+        {
+          "name": "INST_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "INST_NO",
+          "type": "string"
+        },
+        {
+          "name": "GOVERN_ACT",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "string"
+        },
+        {
+          "name": "EFFEC_DATE",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Public Land Class Revoked (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14879,
+      "file:checksum": "12205f6d2cc0e80283143046e73b412a1dadfff79d099bfd91366cea17f6781b5a97"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

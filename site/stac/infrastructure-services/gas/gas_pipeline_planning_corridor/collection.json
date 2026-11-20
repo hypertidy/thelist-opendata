@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "gas_pipeline_planning_corridor",
+  "title": "Gas Pipeline Planning Corridor",
+  "description": "Gas Pipeline Planning Corridor: LIST product `GAS_PIPELINE_PLANNING_CORRIDOR`, statewide. 1 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Gas Pipeline Planning Corridor\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "GAS_PIPELINE_PLANNING_CORRIDOR",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.329064,
+          -42.723843,
+          147.399445,
+          -40.851725
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Gas pipelines"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Gas Pipeline Planning Corridor documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fgas_pipeline_planning_corridor%2Fstatewide%2Fgas_pipeline_planning_corridor_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/GAS_PIPELINE_PLANNING_CORRIDOR_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: GAS_PIPELINE_PLANNING_CORRIDOR_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "gas_pipeline_planning_corridor_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/gas_pipeline_planning_corridor/statewide/gas_pipeline_planning_corridor_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "gas_pipeline_planning_corridor_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 363346,
+      "file:checksum": "12204da42244884dcc0e67c35e17459792091b8fd97cd9851b03b3c20e756a4c4749",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        363168.0145,
+        5269851.1481,
+        532703.9008,
+        5476434.5887
+      ],
+      "table:row_count": 1,
+      "table:columns": [
+        {
+          "name": "GEODB_OID",
+          "type": "int32"
+        },
+        {
+          "name": "EXTERNAL_STAGING_GAS_PIPELINE_PLAN_CORRIDOR_LIST_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PERIMETER",
+          "type": "double"
+        },
+        {
+          "name": "VERSION",
+          "type": "string"
+        },
+        {
+          "name": "DATE_",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Gas Pipeline Planning Corridor (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7741,
+      "file:checksum": "122000b6e88533cf5715e377e31f511cfffa90a7e1160de7313aa33c2a1867185ffa"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

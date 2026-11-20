@@ -1,0 +1,9 @@
+# Agents: Wedgetailed Eagle Nesting Habitat High (`WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH`)
+General guidance for this catalogue: [AGENTS.md](../../../AGENTS.md).
+- Read in place; the data files are listed under `assets` in `collection.json`
+- Each asset gives `file:size`, `file:checksum` (sha2-256 multihash) and, where spatial, `proj:code` and `proj:bbox`.
+- `table:columns` lists the columns and types; `table:row_count` = 714,628.
+- Filter on the `geometry_bbox` column to read only the row groups you need.
+- Native CRS: EPSG:28355. 
+- Built from the per-LGA LIST zips; the `lga` column names the source LGA(s). See the collection description.
+- Attribution required: "Wedgetailed Eagle Nesting Habitat High" from theLIST (c) State of Tasmania (CC BY 3.0 AU).

@@ -1,0 +1,166 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_taswater_sw_maintenance",
+  "title": "LIST TASWATER SW Maintenance",
+  "description": "LIST TASWATER SW Maintenance: LIST product `LIST_TASWATER_SW_MAINTENANCE`, statewide. 1,160 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASWATER SW Maintenance\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASWATER_SW_MAINTENANCE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.644819,
+          -43.042649,
+          148.283012,
+          -41.32569
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sewer and other networks"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASWATER SW Maintenance documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_taswater_sw_maintenance%2Fstatewide%2Flist_taswater_sw_maintenance_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_SW_MAINTENANCE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASWATER_SW_MAINTENANCE_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_taswater_sw_maintenance_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_taswater_sw_maintenance/statewide/list_taswater_sw_maintenance_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_taswater_sw_maintenance_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 86385,
+      "file:checksum": "122064d85f39fb94c7addb21d678036fc5c9212b553b99fdd1de2cdb86f5d71bb207",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        471069.5816,
+        5234448.703,
+        604516.6359,
+        5424334.9407
+      ],
+      "table:row_count": 1160,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "ASSETID",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASWATER SW Maintenance (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3846,
+      "file:checksum": "12204812e2f4fd100c6d1f2fbc0ea725cd8690806e48245ad5ac756cbf4a0019182d"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

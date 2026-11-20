@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "taswater_sewer_systems",
+  "title": "TASWATER Sewer Systems",
+  "description": "TASWATER Sewer Systems: LIST product `TASWATER_SEWER_SYSTEMS`, statewide. 116 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-09-25. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TASWATER Sewer Systems\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASWATER_SEWER_SYSTEMS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.664021,
+          -43.439972,
+          148.366985,
+          -39.904483
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-09-25T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sewer and other networks"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TASWATER Sewer Systems documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftaswater_sewer_systems%2Fstatewide%2Ftaswater_sewer_systems_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASWATER_SEWER_SYSTEMS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASWATER_SEWER_SYSTEMS_STATEWIDE.zip (LIST, released 2020-09-25)"
+    }
+  ],
+  "assets": {
+    "taswater_sewer_systems_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/taswater_sewer_systems/statewide/taswater_sewer_systems_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "taswater_sewer_systems_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 91036,
+      "file:checksum": "1220f9a8edfaa3a3b478017e9a2670c2076a215c13c3052364c399d65876181b177d",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229812.8758,
+        5190324.1689,
+        610637.8868,
+        5578060.8245
+      ],
+      "table:row_count": 116,
+      "table:columns": [
+        {
+          "name": "TPASSETNO",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "AREAID",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TASWATER Sewer Systems (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14510,
+      "file:checksum": "1220424bc285b3a60f32729d17168096fc1cbc02d6eeb89382d2fe66808c2b22729a"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

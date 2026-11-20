@@ -1,0 +1,258 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasmanian_reserve_estate",
+  "title": "LIST Tasmanian Reserve Estate",
+  "description": "LIST Tasmanian Reserve Estate: LIST product `LIST_TASMANIAN_RESERVE_ESTATE`, statewide. 25,548 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-01-29. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Tasmanian Reserve Estate\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASMANIAN_RESERVE_ESTATE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.660957,
+          -55.734545,
+          159.315328,
+          -38.847439
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-01-29T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forests and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Tasmanian Reserve Estate documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasmanian_reserve_estate%2Fstatewide%2Flist_tasmanian_reserve_estate_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASMANIAN_RESERVE_ESTATE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASMANIAN_RESERVE_ESTATE_STATEWIDE.zip (LIST, released 2026-01-29)"
+    }
+  ],
+  "assets": {
+    "list_tasmanian_reserve_estate_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasmanian_reserve_estate/statewide/list_tasmanian_reserve_estate_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasmanian_reserve_estate_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 99671201,
+      "file:checksum": "122053ef05694159e185080a4cbe5bdea38fb6ceed80abb47b0c0ef2357bf8399903",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        3823455.2629,
+        1283508.3403,
+        5661285.001
+      ],
+      "table:row_count": 25548,
+      "table:columns": [
+        {
+          "name": "FOREIGN_ID",
+          "type": "double"
+        },
+        {
+          "name": "RES_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "RES_STATUS",
+          "type": "string"
+        },
+        {
+          "name": "RES_NAME",
+          "type": "string"
+        },
+        {
+          "name": "NAME_SHORT",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE",
+          "type": "string"
+        },
+        {
+          "name": "MINING",
+          "type": "string"
+        },
+        {
+          "name": "ACT",
+          "type": "string"
+        },
+        {
+          "name": "CREATED",
+          "type": "int32"
+        },
+        {
+          "name": "EXPIRY",
+          "type": "int32"
+        },
+        {
+          "name": "IUCN",
+          "type": "string"
+        },
+        {
+          "name": "FOR_ID2",
+          "type": "int32"
+        },
+        {
+          "name": "CREATED2",
+          "type": "int32"
+        },
+        {
+          "name": "PROJECT",
+          "type": "string"
+        },
+        {
+          "name": "AS_AT_DATE",
+          "type": "int32"
+        },
+        {
+          "name": "ENVIRON",
+          "type": "string"
+        },
+        {
+          "name": "FISHING",
+          "type": "string"
+        },
+        {
+          "name": "TERM",
+          "type": "string"
+        },
+        {
+          "name": "REG",
+          "type": "string"
+        },
+        {
+          "name": "NRS",
+          "type": "string"
+        },
+        {
+          "name": "MGT_PLAN",
+          "type": "string"
+        },
+        {
+          "name": "DATA_SRC",
+          "type": "string"
+        },
+        {
+          "name": "AUTHORITY",
+          "type": "string"
+        },
+        {
+          "name": "AREA_HA",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Tasmanian Reserve Estate (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5364,
+      "file:checksum": "1220b93006c56c54c84e73309cc0b465908ebbcdb75e83a898ecc2925967b5e2eb15"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

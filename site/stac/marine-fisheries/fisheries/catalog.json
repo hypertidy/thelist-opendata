@@ -1,0 +1,88 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "marine-fisheries-fisheries",
+  "title": "Fisheries",
+  "description": "Marine and fisheries: Fisheries. 9 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine and fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fisheries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./abalone_commercial_dive_blocks/collection.json",
+      "type": "application/json",
+      "title": "Abalone Commercial Dive Blocks"
+    },
+    {
+      "rel": "child",
+      "href": "./abalone_commercial_dive_sub_blocks/collection.json",
+      "type": "application/json",
+      "title": "Abalone Commercial Dive Sub Blocks"
+    },
+    {
+      "rel": "child",
+      "href": "./list_danish_seine/collection.json",
+      "type": "application/json",
+      "title": "LIST Danish Seine"
+    },
+    {
+      "rel": "child",
+      "href": "./list_danish_seine_fishing/collection.json",
+      "type": "application/json",
+      "title": "LIST Danish Seine Fishing"
+    },
+    {
+      "rel": "child",
+      "href": "./list_lobster_blocks/collection.json",
+      "type": "application/json",
+      "title": "LIST Lobster Blocks"
+    },
+    {
+      "rel": "child",
+      "href": "./list_lobster_sub_blocks/collection.json",
+      "type": "application/json",
+      "title": "LIST Lobster Sub Blocks"
+    },
+    {
+      "rel": "child",
+      "href": "./list_scalefish_blocks/collection.json",
+      "type": "application/json",
+      "title": "LIST Scalefish Blocks"
+    },
+    {
+      "rel": "child",
+      "href": "./recreational_fishing_abalone_zones/collection.json",
+      "type": "application/json",
+      "title": "Recreational Fishing Abalone Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./recreational_fishing_restrictions/collection.json",
+      "type": "application/json",
+      "title": "Recreational Fishing Restrictions"
+    }
+  ]
+}

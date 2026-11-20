@@ -1,0 +1,350 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "water_management_plan_areas",
+  "title": "Water Management Plan Areas",
+  "description": "Water Management Plan Areas: LIST product `WATER_MANAGEMENT_PLAN_AREAS`, statewide. 39 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Water Management Plan Areas\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "WATER_MANAGEMENT_PLAN_AREAS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.142742,
+          -42.577678,
+          148.292581,
+          -40.772829
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water management and irrigation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Management Plan Areas documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fwater_management_plan_areas%2Fstatewide%2Flyr_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WATER_MANAGEMENT_PLAN_AREAS.LYR_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: WATER_MANAGEMENT_PLAN_AREAS.LYR_STATEWIDE.zip (LIST, released 2017-09-06)"
+    }
+  ],
+  "assets": {
+    "lyr_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/water_management_plan_areas/statewide/lyr_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "lyr_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1233820,
+      "file:checksum": "1220838255f75d7d9a39bb81ea967700f0ae9b1420bbf98bd4ad1d773f24a625a208",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        429645.8215,
+        5286081.6345,
+        606087.9818,
+        5485700.4426
+      ],
+      "table:row_count": 39,
+      "table:columns": [
+        {
+          "name": "AREA_ID",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHORT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "AREA_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "ZONE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "DRAFT_DATE",
+          "type": "string"
+        },
+        {
+          "name": "ADOPTED",
+          "type": "string"
+        },
+        {
+          "name": "EFFECTIVE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "water_management_plan_areas_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/water_management_plan_areas/statewide/water_management_plan_areas_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "water_management_plan_areas_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1264022,
+      "file:checksum": "1220f3059c89c7ebdcc0caa08beff343b26822c43eaadfd46035eab85df47a89258c",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        429645.8215,
+        5286081.6345,
+        606087.9818,
+        5485700.4426
+      ],
+      "table:row_count": 39,
+      "table:columns": [
+        {
+          "name": "AREA_ID",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHORT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "AREA_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "ZONE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "DRAFT_PLAN",
+          "type": "datetime"
+        },
+        {
+          "name": "ADOPTED",
+          "type": "datetime"
+        },
+        {
+          "name": "EFFECT",
+          "type": "datetime"
+        },
+        {
+          "name": "EFFECTIVE",
+          "type": "datetime"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "water_management_plan_areas": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/water_management_plan_areas/statewide/water_management_plan_areas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "water_management_plan_areas.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1234021,
+      "file:checksum": "12203f18e01c128b01541fc5a0d450456387de8091ecf044c1eb8591fd77c16c1c6b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        429645.8215,
+        5286081.6345,
+        606087.9818,
+        5485700.4426
+      ],
+      "table:row_count": 39,
+      "table:columns": [
+        {
+          "name": "AREA_ID",
+          "type": "decimal"
+        },
+        {
+          "name": "PLAN_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHORT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "AREA_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "ZONE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "DRAFT_DATE",
+          "type": "string"
+        },
+        {
+          "name": "ADOPTED",
+          "type": "string"
+        },
+        {
+          "name": "EFFECTIVE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "decimal"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "decimal"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Management Plan Areas (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17972,
+      "file:checksum": "122033e0a464da21b19c61d41dd30d22e2cdfa4683264e500bc6d17674897b65cf5f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

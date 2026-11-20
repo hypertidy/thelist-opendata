@@ -1,0 +1,202 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_local_govt_reserves",
+  "title": "LIST Local Govt Reserves",
+  "description": "LIST Local Govt Reserves: LIST product `LIST_LOCAL_GOVT_RESERVES`, statewide. 1,619 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Local Govt Reserves\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LOCAL_GOVT_RESERVES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.683916,
+          -43.460982,
+          148.351845,
+          -39.723185
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forests and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Local Govt Reserves documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_local_govt_reserves%2Fstatewide%2Flist_local_govt_reserves_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCAL_GOVT_RESERVES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCAL_GOVT_RESERVES_STATEWIDE.zip (LIST, released 2025-07-09)"
+    }
+  ],
+  "assets": {
+    "list_local_govt_reserves_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_local_govt_reserves/statewide/list_local_govt_reserves_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_local_govt_reserves_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 485481,
+      "file:checksum": "1220c59c4fe149290b15c30ba04852da8a2e7bcb71c616a2f48202b532f0e81a7825",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        231519.783,
+        5187990.669,
+        609374.312,
+        5598273.047
+      ],
+      "table:row_count": 1619,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "double"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Local Govt Reserves (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12746,
+      "file:checksum": "12207cd75bc2206e4adf0744fc8e93f91f750496197cd84985ba7d4cc1a703f187de"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

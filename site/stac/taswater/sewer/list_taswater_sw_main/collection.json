@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_taswater_sw_main",
+  "title": "LIST TASWATER SW Main",
+  "description": "LIST TASWATER SW Main: LIST product `LIST_TASWATER_SW_MAIN`, statewide. 3,709 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASWATER SW Main\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASWATER_SW_MAIN",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          147.000423,
+          -43.023407,
+          147.521572,
+          -41.408951
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sewer and other networks"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASWATER SW Main documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_taswater_sw_main%2Fstatewide%2Flist_taswater_sw_main_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_SW_MAIN_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASWATER_SW_MAIN_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_taswater_sw_main_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_taswater_sw_main/statewide/list_taswater_sw_main_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_taswater_sw_main_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 321236,
+      "file:checksum": "12202df2f10c41a17c38e05431f9605c169c89576ebffbc6def7dd0a4288e73bf3e7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        500035.3498,
+        5236585.8644,
+        542497.2176,
+        5415719.1869
+      ],
+      "table:row_count": 3709,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "ASSETID",
+          "type": "string"
+        },
+        {
+          "name": "SUBTYPECD",
+          "type": "double"
+        },
+        {
+          "name": "MATERIAL",
+          "type": "string"
+        },
+        {
+          "name": "DIAMETER",
+          "type": "double"
+        },
+        {
+          "name": "D_SUBTYPEC",
+          "type": "string"
+        },
+        {
+          "name": "D_MATERIAL",
+          "type": "string"
+        },
+        {
+          "name": "D_DIAMETER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASWATER SW Main (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1450,
+      "file:checksum": "1220ac3a2b3a0429ca0ac0cad11a899b8e374bdfb6c3afa3e4d018f88feee423c7d6"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

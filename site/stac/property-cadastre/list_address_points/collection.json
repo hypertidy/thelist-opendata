@@ -1,0 +1,294 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_address_points",
+  "title": "LIST Address Points",
+  "description": "LIST Address Points: LIST product `LIST_ADDRESS_POINTS`, statewide. 301,619 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Address Points\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_ADDRESS_POINTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.652747,
+          -43.583694,
+          148.402911,
+          -39.591039
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Address Points documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_address_points%2Fstatewide%2Flist_address_points_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_ADDRESS_POINTS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_ADDRESS_POINTS_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_address_points_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_address_points/statewide/list_address_points_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_address_points_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 29991380,
+      "file:checksum": "12203ce8eb9441dc3f16b4b4607de1b567b3c5ee3868122550bbd5a6fe8c7390fa0e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229540.3757,
+        5174363.397,
+        613277.3654,
+        5612891.8855
+      ],
+      "table:row_count": 301619,
+      "table:columns": [
+        {
+          "name": "GEOCODE_ID",
+          "type": "int32"
+        },
+        {
+          "name": "GEO_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "ACCURACY",
+          "type": "string"
+        },
+        {
+          "name": "RELIABILIT",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "SITE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SITE_DESC",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "FUND_GCODE",
+          "type": "double"
+        },
+        {
+          "name": "PID",
+          "type": "double"
+        },
+        {
+          "name": "RA_ADJUST",
+          "type": "double"
+        },
+        {
+          "name": "UNIT_CODE",
+          "type": "string"
+        },
+        {
+          "name": "UNIT_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "UNIT_NUMB",
+          "type": "string"
+        },
+        {
+          "name": "PROP_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ST_NO_FROM",
+          "type": "double"
+        },
+        {
+          "name": "NO1_SUFFIX",
+          "type": "string"
+        },
+        {
+          "name": "ST_NO_TO",
+          "type": "int32"
+        },
+        {
+          "name": "NO2_SUFFIX",
+          "type": "string"
+        },
+        {
+          "name": "STREET",
+          "type": "string"
+        },
+        {
+          "name": "ST_TY_CODE",
+          "type": "string"
+        },
+        {
+          "name": "ST_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "ST_SU_CODE",
+          "type": "string"
+        },
+        {
+          "name": "ST_SUFFIX",
+          "type": "string"
+        },
+        {
+          "name": "LOCALITY",
+          "type": "string"
+        },
+        {
+          "name": "STATE",
+          "type": "string"
+        },
+        {
+          "name": "POSTCODE",
+          "type": "int32"
+        },
+        {
+          "name": "RURAL_ADD",
+          "type": "string"
+        },
+        {
+          "name": "ALTERED_ON",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Address Points (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 23678,
+      "file:checksum": "1220782f46a92aaae37fc7f8bc96f993c1f537e0e03b39ce49cecac15ff0edca6e99"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

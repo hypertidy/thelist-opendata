@@ -1,0 +1,70 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "vegetation-biodiversity-forests-reserves",
+  "title": "Forests and reserves",
+  "description": "Vegetation, biodiversity and reserves: Forests and reserves. 6 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation, biodiversity and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Forests and reserves documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_future_potential_production_forest/collection.json",
+      "type": "application/json",
+      "title": "LIST Future Potential Production Forest"
+    },
+    {
+      "rel": "child",
+      "href": "./list_local_govt_reserves/collection.json",
+      "type": "application/json",
+      "title": "LIST Local Govt Reserves"
+    },
+    {
+      "rel": "child",
+      "href": "./list_private_reserves/collection.json",
+      "type": "application/json",
+      "title": "LIST Private Reserves"
+    },
+    {
+      "rel": "child",
+      "href": "./list_private_timber_reserves/collection.json",
+      "type": "application/json",
+      "title": "LIST Private Timber Reserves"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasmanian_reserve_estate/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasmanian Reserve Estate"
+    },
+    {
+      "rel": "child",
+      "href": "./pft_private_forest_group/collection.json",
+      "type": "application/json",
+      "title": "Pft Private Forest Group"
+    }
+  ]
+}

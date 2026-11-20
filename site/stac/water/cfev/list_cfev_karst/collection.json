@@ -1,0 +1,222 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_karst",
+  "title": "LIST CFEV Karst",
+  "description": "LIST CFEV Karst: LIST product `LIST_CFEV_KARST`, statewide. 334 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Karst\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_KARST",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.649423,
+          -43.605512,
+          148.407947,
+          -39.576316
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Karst documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_karst%2Fstatewide%2Flist_cfev_karst_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_KARST_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_KARST_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_karst_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_karst/statewide/list_cfev_karst_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_karst_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 910477,
+      "file:checksum": "1220e651691e748f8582e759886707d05ccbc3119c0890bd8a43d926eb975d5dce74",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229369.0935,
+        5171940.3479,
+        613643.0227,
+        5614522.3767
+      ],
+      "table:row_count": 334,
+      "table:columns": [
+        {
+          "name": "KT_ID",
+          "type": "double"
+        },
+        {
+          "name": "KT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "KT_AREA",
+          "type": "double"
+        },
+        {
+          "name": "KT_MAP",
+          "type": "string"
+        },
+        {
+          "name": "KT_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "KT_ICV",
+          "type": "string"
+        },
+        {
+          "name": "KT_RCV",
+          "type": "string"
+        },
+        {
+          "name": "KT_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "KT_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "KT_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "KT_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "KT_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "KT_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "KT_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "KT_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Karst (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 22519,
+      "file:checksum": "12203f14582e071b9cda638419851b21108066eb64c7909ee7b51ca5df5f4e4fa949"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

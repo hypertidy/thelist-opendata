@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "taswater_water_customer_connection_point",
+  "title": "TASWATER Water Customer Connection Point",
+  "description": "TASWATER Water Customer Connection Point: LIST product `TASWATER_WATER_CUSTOMER_CONNECTION_POINT`, statewide. 223,755 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TASWATER Water Customer Connection Point\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASWATER_WATER_CUSTOMER_CONNECTION_POINT",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.6745,
+          -43.361546,
+          148.361103,
+          -39.908589
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water supply"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TASWATER Water Customer Connection Point documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftaswater_water_customer_connection_point%2Fstatewide%2Ftaswater_water_customer_connection_point_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASWATER_WATER_CUSTOMER_CONNECTION_POINT_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASWATER_WATER_CUSTOMER_CONNECTION_POINT_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "taswater_water_customer_connection_point_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/taswater_water_customer_connection_point/statewide/taswater_water_customer_connection_point_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "taswater_water_customer_connection_point_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15206771,
+      "file:checksum": "1220b26c792b908ee705ac95e72b6552a79526b567500f6f4f4c15605246e4c60f29",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230315.616,
+        5199033.8063,
+        610303.8707,
+        5577622.2404
+      ],
+      "table:row_count": 223755,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "DIAMETER",
+          "type": "double"
+        },
+        {
+          "name": "MXLOCATION",
+          "type": "string"
+        },
+        {
+          "name": "D_DIAMETER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TASWATER Water Customer Connection Point (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15056,
+      "file:checksum": "12201eb75e163cc8d89a45531c72c037fd29db6ff5b84e82581f0bfd317b68332530"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

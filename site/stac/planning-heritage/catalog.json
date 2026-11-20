@@ -1,0 +1,88 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "planning-heritage",
+  "title": "Planning and heritage",
+  "description": "Planning scheme zones and overlays, and heritage registers. 9 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Planning and heritage documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./heritage_tasmania_hms_features/collection.json",
+      "type": "application/json",
+      "title": "Heritage Tasmania HMS Features"
+    },
+    {
+      "rel": "child",
+      "href": "./interim_planning_scheme_overlay/collection.json",
+      "type": "application/json",
+      "title": "Interim Planning Scheme Overlay"
+    },
+    {
+      "rel": "child",
+      "href": "./interim_planning_scheme_zone_boundaries/collection.json",
+      "type": "application/json",
+      "title": "Interim Planning Scheme Zone Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "./interim_planning_scheme_zoning/collection.json",
+      "type": "application/json",
+      "title": "Interim Planning Scheme Zoning"
+    },
+    {
+      "rel": "child",
+      "href": "./list_heritage_register/collection.json",
+      "type": "application/json",
+      "title": "LIST Heritage Register"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmanian_planning_scheme_code_overlay/collection.json",
+      "type": "application/json",
+      "title": "Tasmanian Planning Scheme Code Overlay"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmanian_planning_scheme_general_overlay/collection.json",
+      "type": "application/json",
+      "title": "Tasmanian Planning Scheme General Overlay"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmanian_planning_scheme_zone_boundaries/collection.json",
+      "type": "application/json",
+      "title": "Tasmanian Planning Scheme Zone Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "./tasmanian_planning_scheme_zones/collection.json",
+      "type": "application/json",
+      "title": "Tasmanian Planning Scheme Zones"
+    }
+  ]
+}

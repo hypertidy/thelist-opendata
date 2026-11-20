@@ -1,0 +1,225 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "nch_es_blueb_shighbush_v2",
+  "title": "NCH ES Blueb Shighbush V2",
+  "description": "NCH ES Blueb Shighbush V2: LIST product `NCH_ES_BLUEB_SHIGHBUSH_V2`, statewide. Attribute table, 62,493 rows. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-06-24. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH ES Blueb Shighbush V2\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ES_BLUEB_SHIGHBUSH_V2",
+    "table"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.5,
+          -44,
+          148.6,
+          -39.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-06-24T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Blueberries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH ES Blueb Shighbush V2 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#parquet%2Fnch_es_blueb_shighbush_v2%2Fstatewide%2Fnch_es_blueb_shighbush_lut_v2.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ES_BLUEB_SHIGHBUSH_V2_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ES_BLUEB_SHIGHBUSH_V2_STATEWIDE.zip (LIST, released 2020-06-24)"
+    }
+  ],
+  "assets": {
+    "nch_es_blueb_shighbush_lut_v2": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/nch_es_blueb_shighbush_v2/statewide/nch_es_blueb_shighbush_lut_v2.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "nch_es_blueb_shighbush_lut_v2.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 722916,
+      "file:checksum": "12209ac6be3825b0e0b6290892e7d4d707f081e0e28c6a04d9683bb09c6601cc0ce0",
+      "table:row_count": 62493,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        },
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "SUITABILITY",
+          "type": "string"
+        },
+        {
+          "name": "CONTRAINTS",
+          "type": "string"
+        },
+        {
+          "name": "MANAGEABLE_CONSTRAINTS",
+          "type": "string"
+        },
+        {
+          "name": "SOILDEPTH",
+          "type": "string"
+        },
+        {
+          "name": "DEPTH2SOD",
+          "type": "string"
+        },
+        {
+          "name": "PH",
+          "type": "string"
+        },
+        {
+          "name": "DRAINAGE",
+          "type": "string"
+        },
+        {
+          "name": "STONINESS",
+          "type": "string"
+        },
+        {
+          "name": "SLOPE",
+          "type": "string"
+        },
+        {
+          "name": "FROST",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_OCT",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_NOV",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_DEC",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_JAN",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_FEB",
+          "type": "string"
+        },
+        {
+          "name": "TMAX_MAR",
+          "type": "string"
+        },
+        {
+          "name": "CHILL_HOURS",
+          "type": "string"
+        },
+        {
+          "name": "SODICHAZARD",
+          "type": "string"
+        },
+        {
+          "name": "SALINITYHAZARD",
+          "type": "string"
+        },
+        {
+          "name": "WATEREROSION",
+          "type": "string"
+        },
+        {
+          "name": "WATERLOGGING",
+          "type": "string"
+        },
+        {
+          "name": "WINDEROSION",
+          "type": "string"
+        },
+        {
+          "name": "FLOODING",
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

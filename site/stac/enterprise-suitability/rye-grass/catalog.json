@@ -1,0 +1,46 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "enterprise-suitability-rye-grass",
+  "title": "Rye grass",
+  "description": "Enterprise suitability for rye grass: current and scenario grids or layers. 2 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Enterprise suitability (crops)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Rye grass documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_rye_grass/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Rye Grass"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_rye_grass_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Rye Grass V2"
+    }
+  ]
+}

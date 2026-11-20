@@ -1,0 +1,214 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_crown_licences",
+  "title": "LIST Crown Licences",
+  "description": "LIST Crown Licences: LIST product `LIST_CROWN_LICENCES`, statewide. 4,943 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Crown Licences\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CROWN_LICENCES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.651389,
+          -43.580747,
+          148.404695,
+          -39.596985
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Crown Licences documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_crown_licences%2Fstatewide%2Flist_crown_licences_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CROWN_LICENCES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CROWN_LICENCES_STATEWIDE.zip (LIST, released 2025-07-09)"
+    }
+  ],
+  "assets": {
+    "list_crown_licences_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_crown_licences/statewide/list_crown_licences_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_crown_licences_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3776985,
+      "file:checksum": "1220a2509284667366f2dbb22c9fe57384894572f04033111b13132efabd68145f0c",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229417.325,
+        5174690.752,
+        613426.987,
+        5612226.681
+      ],
+      "table:row_count": 4943,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "double"
+        },
+        {
+          "name": "PID",
+          "type": "double"
+        },
+        {
+          "name": "LICENCE_TY",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "AGR_ID",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Crown Licences (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 19422,
+      "file:checksum": "122015e831a67d10a1109129a2b7b952d45f7f9b6b818a2f4bed8b8c8d158cfacd0e"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

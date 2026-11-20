@@ -1,0 +1,242 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_survey_control",
+  "title": "LIST Survey Control",
+  "description": "LIST Survey Control: LIST product `LIST_SURVEY_CONTROL`, statewide. 12,465 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Survey Control\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_SURVEY_CONTROL",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.636687,
+          -43.860029,
+          148.559102,
+          -39.176628
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Survey Control documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_survey_control%2Fstatewide%2Flist_survey_control_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_SURVEY_CONTROL_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_SURVEY_CONTROL_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_survey_control_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_survey_control/statewide/list_survey_control_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_survey_control_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1415606,
+      "file:checksum": "12206ae4d4866e324e13d13fcf62c2496f15ea748c88a8a424105925b170be1897aa",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229486.152,
+        5143670,
+        625316,
+        5658950.07
+      ],
+      "table:row_count": 12465,
+      "table:columns": [
+        {
+          "name": "PACK_ID",
+          "type": "string"
+        },
+        {
+          "name": "SITE_PK_ID",
+          "type": "string"
+        },
+        {
+          "name": "SCS_NAME",
+          "type": "string"
+        },
+        {
+          "name": "MGA_ZONE",
+          "type": "int16"
+        },
+        {
+          "name": "GDA2020_E",
+          "type": "double"
+        },
+        {
+          "name": "GDA2020_N",
+          "type": "double"
+        },
+        {
+          "name": "GDA2020_PU",
+          "type": "double"
+        },
+        {
+          "name": "PU_METHOD",
+          "type": "string"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "double"
+        },
+        {
+          "name": "HGT_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "HGT_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "HGT_ORDER",
+          "type": "string"
+        },
+        {
+          "name": "GDA94_E",
+          "type": "double"
+        },
+        {
+          "name": "GDA94_N",
+          "type": "double"
+        },
+        {
+          "name": "HOR_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "HOR_ORDER",
+          "type": "string"
+        },
+        {
+          "name": "TARGET_STR",
+          "type": "string"
+        },
+        {
+          "name": "MARKSTATUS",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPT",
+          "type": "string"
+        },
+        {
+          "name": "ORDER_SYMB",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Survey Control (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16738,
+      "file:checksum": "1220b846aa43c9690d6894dacd7c5998528f043342d306c03bd1441f4eaa20f53e3c"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

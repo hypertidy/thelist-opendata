@@ -1,0 +1,162 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasnetworks_high_voltage_conductors",
+  "title": "LIST Tasnetworks High Voltage Conductors",
+  "description": "LIST Tasnetworks High Voltage Conductors: LIST product `LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS`, statewide. 67,101 features, multi-linestring z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Tasnetworks High Voltage Conductors\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.528019,
+          -43.446165,
+          148.398314,
+          -40.67914
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Electricity (TasNetworks)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Tasnetworks High Voltage Conductors documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasnetworks_high_voltage_conductors%2Fstatewide%2Flist_tasnetworks_high_voltage_conductors_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "list_tasnetworks_high_voltage_conductors_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasnetworks_high_voltage_conductors/statewide/list_tasnetworks_high_voltage_conductors_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasnetworks_high_voltage_conductors_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5322995,
+      "file:checksum": "12203992fe68019196505934537f4f8414bcda93726649211797d2c23b1e03df767b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        299885.364,
+        5189636.5,
+        613162.725,
+        5494164.295
+      ],
+      "table:row_count": 67101,
+      "table:columns": [
+        {
+          "name": "FEATURE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Tasnetworks High Voltage Conductors (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 46740,
+      "file:checksum": "1220cb73f605e6f96eecdced642e4e90e0d9f1de7ff3cafcd3d6a42c8923111ae0b3"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

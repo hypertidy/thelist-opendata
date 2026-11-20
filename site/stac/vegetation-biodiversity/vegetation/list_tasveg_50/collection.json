@@ -1,0 +1,255 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasveg_50",
+  "title": "LIST TASVEG 50",
+  "description": "LIST TASVEG 50: LIST product `LIST_TASVEG_50`, statewide. 482,138 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-12-04. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASVEG 50\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASVEG_50",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618291,
+          -43.666425,
+          148.582844,
+          -39.154996
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-12-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASVEG 50 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasveg_50%2Fstatewide%2Ftasveg_5_0.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_50_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_50_STATEWIDE.zip (LIST, released 2025-12-04)"
+    }
+  ],
+  "assets": {
+    "tasveg_5_0": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasveg_50/statewide/tasveg_5_0.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasveg_5_0.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 488563068,
+      "file:checksum": "12203faf797593bb45b4049bf86a163673cc2938122265e92e09e836347d3995f72b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227125.956,
+        5165171.32,
+        627635.83,
+        5661272.38
+      ],
+      "table:row_count": 482138,
+      "table:columns": [
+        {
+          "name": "VEG_GRP_CODE",
+          "type": "int16"
+        },
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "FOREST_STRUCT",
+          "type": "string"
+        },
+        {
+          "name": "NOTABLE_TREE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "FIELD_CHECK",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_IRS",
+          "type": "float"
+        },
+        {
+          "name": "PROJECT",
+          "type": "string"
+        },
+        {
+          "name": "WEED_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "tasveg_5_0_fire_attributes_lut": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/list_tasveg_50/statewide/tasveg_5_0_fire_attributes_lut.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasveg_5_0_fire_attributes_lut.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 9022,
+      "file:checksum": "122042f0ef7e46347ee1b937c3c4d657666ad6376a2e494afff2fac7ac7672e07669",
+      "table:row_count": 159,
+      "table:columns": [
+        {
+          "name": "FIREATT",
+          "type": "string"
+        },
+        {
+          "name": "VEG_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE_D",
+          "type": "string"
+        },
+        {
+          "name": "FIRESENS",
+          "type": "string"
+        },
+        {
+          "name": "FLAMMAB",
+          "type": "string"
+        },
+        {
+          "name": "FRB_TREAT",
+          "type": "string"
+        },
+        {
+          "name": "TFI_LS",
+          "type": "decimal"
+        },
+        {
+          "name": "TFI_HS",
+          "type": "decimal"
+        },
+        {
+          "name": "TFI_MAX",
+          "type": "decimal"
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASVEG 50 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11992,
+      "file:checksum": "12202a7f08c8784acff864be634288380b7c65607907295bbf8b5f783450548106a4"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,182 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_danish_seine_fishing",
+  "title": "LIST Danish Seine Fishing",
+  "description": "LIST Danish Seine Fishing: LIST product `LIST_DANISH_SEINE_FISHING`, statewide. 42 features, multi-polygon z (EPSG:3857). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Danish Seine Fishing\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_DANISH_SEINE_FISHING",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.811642,
+          -43.659881,
+          148.503731,
+          -39.562579
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Danish Seine Fishing documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_danish_seine_fishing%2Fstatewide%2Flist_danish_seine_fishing_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DANISH_SEINE_FISHING_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DANISH_SEINE_FISHING_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "list_danish_seine_fishing_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_danish_seine_fishing/statewide/list_danish_seine_fishing_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_danish_seine_fishing_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 12367902,
+      "file:checksum": "12209635e848c9e58da9b10c9a02680186bc57388c5146f21a346b6333652c3b8928",
+      "proj:code": "EPSG:3857",
+      "proj:bbox": [
+        16009038.7713,
+        -5412957.9576,
+        16531359.7264,
+        -4802579.5478
+      ],
+      "table:row_count": 42,
+      "table:columns": [
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "RESTRICTION",
+          "type": "string"
+        },
+        {
+          "name": "SYMBOL_ORDER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Danish Seine Fishing (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17963,
+      "file:checksum": "12201f34d59b41e055c9efcca2a218c47d201791765e360029a75ec8fcb7af582351"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "riv_peak_flood_hazard_0pt5pc_aep_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [144.502098, -43.606589],
+        [148.413756, -43.606589],
+        [148.413756, -40.568085],
+        [144.502098, -40.568085],
+        [144.502098, -43.606589]
+      ]
+    ]
+  },
+  "bbox": [144.502098, -43.606589, 148.413756, -40.568085],
+  "properties": {
+    "title": "riv_peak_flood_hazard_0pt5pc_aep_cog",
+    "datetime": "2026-02-18T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 0 Point 5 Percent AEP"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 0 Point 5 Percent AEP"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_0_point_5_percent_aep%2Fstatewide%2Friv_peak_flood_hazard_0pt5pc_aep_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_0_point_5_percent_aep/statewide/riv_peak_flood_hazard_0pt5pc_aep_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "riv_peak_flood_hazard_0pt5pc_aep_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 9918348,
+      "file:checksum": "1220a3f31f58d9eb002dca456ed20af9fc8581a060b768ea1568a9bc89c59df2c2c8",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [298320, 5171820, 614110, 5506460],
+      "proj:shape": [33464, 31579],
+      "proj:transform": [10, 0, 298320, 0, -10, 5506460]
+    }
+  },
+  "collection": "tsfm_0_point_5_percent_aep"
+}

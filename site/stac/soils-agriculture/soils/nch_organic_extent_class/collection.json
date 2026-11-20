@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_organic_extent_class",
+  "title": "NCH Organic Extent Class",
+  "description": "NCH Organic Extent Class: LIST product `NCH_ORGANIC_EXTENT_CLASS`, statewide. Float32 grid, 30 x 30 cells, EPSG:32755. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2023-10-03. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH Organic Extent Class\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ORGANIC_EXTENT_CLASS",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.679915,
+          -44.070258,
+          149.161999,
+          -38.931662
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-03T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH Organic Extent Class documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_organic_extent_class%2Fstatewide%2Forganic_extent_class.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ORGANIC_EXTENT_CLASS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ORGANIC_EXTENT_CLASS_STATEWIDE.zip (LIST, released 2023-10-03)"
+    }
+  ],
+  "assets": {
+    "organic_extent_class": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_organic_extent_class/statewide/organic_extent_class.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "organic_extent_class.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 54113476,
+      "file:checksum": "122005126aeaafb256f964f70d05da906435c49e99fc20e090e70512cd346fba1ac6",
+      "proj:code": "EPSG:32755",
+      "proj:bbox": [
+        153562.6052,
+        5120318.0041,
+        673192.6052,
+        5683208.0041
+      ],
+      "proj:shape": [
+        18763,
+        17321
+      ],
+      "proj:transform": [
+        30,
+        0,
+        153562.6052,
+        0,
+        -30,
+        5683208.0041
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH Organic Extent Class (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9410,
+      "file:checksum": "1220a5d8df799117d7720b9e9306dcc57af8ede45fdc8489fb0379129cde1803702e"
+    }
+  }
+}

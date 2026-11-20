@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_hydpnt",
+  "title": "LIST Hydpnt",
+  "description": "LIST Hydpnt: LIST product `LIST_HYDPNT`, statewide. 48,799 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-01-12. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Hydpnt\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_HYDPNT",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.610018,
+          -43.90705,
+          148.588294,
+          -39.155972
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-12T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:57Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Hydpnt documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_hydpnt%2Fstatewide%2Flist_hydpnt_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDPNT_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDPNT_STATEWIDE.zip (LIST, released 2021-01-12)"
+    }
+  ],
+  "assets": {
+    "list_hydpnt_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_hydpnt/statewide/list_hydpnt_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_hydpnt_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3986977,
+      "file:checksum": "1220715e25307e9fae242f94830a8d1cca7695025ece6f6a355c8a1b390e5d98dbfe",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227551.733,
+        5138446.559,
+        627562.802,
+        5661178.684
+      ],
+      "table:row_count": 48799,
+      "table:columns": [
+        {
+          "name": "HYDPNT_ID",
+          "type": "int32"
+        },
+        {
+          "name": "HYDPNTTY",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "DAM_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "EXISTING",
+          "type": "string"
+        },
+        {
+          "name": "INUSE",
+          "type": "string"
+        },
+        {
+          "name": "ISLANDTYPE",
+          "type": "string"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NAME",
+          "type": "string"
+        },
+        {
+          "name": "TER_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "TER_NAME",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Hydpnt (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14034,
+      "file:checksum": "1220f4e17dd4bb29b22290839a7414c96166b4c960581e64b4c9028695407445f6f8"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

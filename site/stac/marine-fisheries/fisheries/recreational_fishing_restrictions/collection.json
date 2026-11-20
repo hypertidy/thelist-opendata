@@ -1,0 +1,282 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "recreational_fishing_restrictions",
+  "title": "Recreational Fishing Restrictions",
+  "description": "Recreational Fishing Restrictions: LIST product `RECREATIONAL_FISHING_RESTRICTIONS`, statewide. 209 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Recreational Fishing Restrictions\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "RECREATIONAL_FISHING_RESTRICTIONS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.943389,
+          -44.500759,
+          154.373309,
+          -38.952959
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Recreational Fishing Restrictions documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Frecreational_fishing_restrictions%2Fstatewide%2Frecreational_fishing_restrictions_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/RECREATIONAL_FISHING_RESTRICTIONS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: RECREATIONAL_FISHING_RESTRICTIONS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "recreational_fishing_restrictions_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/recreational_fishing_restrictions/statewide/recreational_fishing_restrictions_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "recreational_fishing_restrictions_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3258685,
+      "file:checksum": "12208ace85718b50b5c6427ac08d0174c47dcba6addb26686b521daecd9c86068cc9",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        177109.9585,
+        5072505.4027,
+        1088580.2739,
+        5666462.6771
+      ],
+      "table:row_count": 209,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "double"
+        },
+        {
+          "name": "AREA_NAME",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "MARINE_NATURE_RESERVE_NO_FISH",
+          "type": "string"
+        },
+        {
+          "name": "MARINE_NATURE_RESERVE_RESTRICT",
+          "type": "string"
+        },
+        {
+          "name": "SHARK_REFUGE_AREA",
+          "type": "string"
+        },
+        {
+          "name": "RESEARCH_AREA",
+          "type": "string"
+        },
+        {
+          "name": "NO_GRABALL_NET",
+          "type": "string"
+        },
+        {
+          "name": "NO_MULLET_NET",
+          "type": "string"
+        },
+        {
+          "name": "NO_BEACH_SEINE",
+          "type": "string"
+        },
+        {
+          "name": "NO_SET_LINE",
+          "type": "string"
+        },
+        {
+          "name": "NO_BAIT_NET",
+          "type": "string"
+        },
+        {
+          "name": "NO_BAIT_TRAP",
+          "type": "string"
+        },
+        {
+          "name": "NO_SPEARS",
+          "type": "string"
+        },
+        {
+          "name": "INLAND_WATERS",
+          "type": "string"
+        },
+        {
+          "name": "MARINE_FISH_ZONE",
+          "type": "string"
+        },
+        {
+          "name": "BREAM_FISH_AREA",
+          "type": "string"
+        },
+        {
+          "name": "NO_ANCHORING_OR_DIVING",
+          "type": "string"
+        },
+        {
+          "name": "NO_TAKE_BY_DIVING",
+          "type": "string"
+        },
+        {
+          "name": "ABALONE_NO_TAKE",
+          "type": "string"
+        },
+        {
+          "name": "ABALONE_NO_TAKE_AND_POSSESSION",
+          "type": "string"
+        },
+        {
+          "name": "NO_ROCK_LOBSTER_FISHING",
+          "type": "string"
+        },
+        {
+          "name": "ROCK_LOBSTER_NO_POSSESSION",
+          "type": "string"
+        },
+        {
+          "name": "NO_ROCK_LOBSTER_POTS",
+          "type": "string"
+        },
+        {
+          "name": "SCALLOP_MANAGED_AREA",
+          "type": "string"
+        },
+        {
+          "name": "SQUID_SEASONAL_CLOSURE",
+          "type": "string"
+        },
+        {
+          "name": "HEALTH_WARNING",
+          "type": "string"
+        },
+        {
+          "name": "NO_CAST_NET",
+          "type": "string"
+        },
+        {
+          "name": "NO_ROCK_LOBSTER_RINGS",
+          "type": "string"
+        },
+        {
+          "name": "SCALLOP_NO_TAKE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Recreational Fishing Restrictions (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10442,
+      "file:checksum": "12206f31913bd829e5946bc8d8244c0363489d7466270b7f94455f4edf6a2f863c20"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

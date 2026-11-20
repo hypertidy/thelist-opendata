@@ -1,0 +1,76 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "infrastructure-services-electricity",
+  "title": "Electricity (TasNetworks)",
+  "description": "Infrastructure, utilities and services: Electricity (TasNetworks). 7 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Infrastructure, utilities and services"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Electricity (TasNetworks) documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_high_voltage_conductors/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks High Voltage Conductors"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_low_voltage_conductors/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Low Voltage Conductors"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_poles/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Poles"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_substation_locations/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Substation Locations"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_tower_line_network/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Tower Line Network"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_tower_locations/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Tower Locations"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasnetworks_tower_ocations/collection.json",
+      "type": "application/json",
+      "title": "LIST Tasnetworks Tower Ocations"
+    }
+  ]
+}

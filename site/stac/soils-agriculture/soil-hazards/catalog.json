@@ -1,0 +1,64 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "soils-agriculture-soil-hazards",
+  "title": "Soil and land hazards",
+  "description": "Soils, land use and agriculture: Soil and land hazards. 5 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils, land use and agriculture"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Soil and land hazards documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_hillslope_erosivity/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Hillslope Erosivity"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_salinity_hazard/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Salinity Hazard"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_sodicity_hazard/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Sodicity Hazard"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_water_logging_hazard/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Water Logging Hazard"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_wind_erosion_hazard/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Wind Erosion Hazard"
+    }
+  ]
+}

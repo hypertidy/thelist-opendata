@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "epa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people",
+  "title": "EPA Disinfected Sewage Discharge Vessels Carrying Less Than 16 People",
+  "description": "EPA Disinfected Sewage Discharge Vessels Carrying Less Than 16 People: LIST product `EPA_DISINFECTED_SEWAGE_DISCHARGE_VESSELS_CARRYING_LESS_THAN_16_PEOPLE`, statewide. 500 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"EPA Disinfected Sewage Discharge Vessels Carrying Less Than 16 People\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "EPA_DISINFECTED_SEWAGE_DISCHARGE_VESSELS_CARRYING_LESS_THAN_16_PEOPLE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.607353,
+          -43.860871,
+          148.581701,
+          -39.14812
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "EPA Disinfected Sewage Discharge Vessels Carrying Less Than 16 People documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fepa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people%2Fstatewide%2Fepa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/EPA_DISINFECTED_SEWAGE_DISCHARGE_VESSELS_CARRYING_LESS_THAN_16_PEOPLE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: EPA_DISINFECTED_SEWAGE_DISCHARGE_VESSELS_CARRYING_LESS_THAN_16_PEOPLE_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "epa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/epa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people/statewide/epa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_disinfected_sewage_discharge_vessels_carrying_less_than_16_people_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 6187318,
+      "file:checksum": "12203c13f29f3105db9fd21bf27e4feb83def69b14f9894a0529acff603084a9c9fe",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227126.558,
+        5143575.8647,
+        627131.314,
+        5662036.5948
+      ],
+      "table:row_count": 500,
+      "table:columns": [
+        {
+          "name": "DIRECTIVE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTOR",
+          "type": "string"
+        },
+        {
+          "name": "PART1",
+          "type": "string"
+        },
+        {
+          "name": "PART",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "EPA Disinfected Sewage Discharge Vessels Carrying Less Than 16 People (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12305,
+      "file:checksum": "12204d1109503c56e9082ae30f8fbf6948624c6334db6530f548c8fc541e6eadaba6"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

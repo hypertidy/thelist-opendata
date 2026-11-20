@@ -1,0 +1,422 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_hydarea",
+  "title": "LIST Hydarea",
+  "description": "LIST Hydarea: LIST product `LIST_HYDAREA`, statewide. 248,641 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Hydarea\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_HYDAREA",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606919,
+          -43.861131,
+          148.564254,
+          -39.149082
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:57:34Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Hydarea documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_hydarea%2Fstatewide%2Flist_hydarea_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_BREAK_O_DAY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_BRIGHTON.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_BURNIE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_CENTRAL_COAST.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_CIRCULAR_HEAD.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_CLARENCE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_DERWENT_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_DEVONPORT.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_DORSET.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_FLINDERS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_GEORGE_TOWN.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_GLENORCHY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_HOBART.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_HUON_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_KENTISH.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_KING_ISLAND.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_KINGBOROUGH.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_LATROBE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_LAUNCESTON.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_MEANDER_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_SORELL.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_TASMAN.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_WARATAH_WYNYARD.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_WEST_COAST.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_HYDAREA_WEST_TAMAR.zip (LIST, released 2025-07-09)"
+    }
+  ],
+  "assets": {
+    "list_hydarea_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_hydarea/statewide/list_hydarea_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_hydarea_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 209124013,
+      "file:checksum": "1220db4d00dc278b778ef47eaf13ad11850e84f5cdfc37383d1e7068b93265b3a5d4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        5143548.006,
+        625727.885,
+        5661928.533
+      ],
+      "table:row_count": 248641,
+      "table:columns": [
+        {
+          "name": "HYDAREA_ID",
+          "type": "double"
+        },
+        {
+          "name": "HYDARTY1",
+          "type": "string"
+        },
+        {
+          "name": "HYDARTY2",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "TER_NAME",
+          "type": "string"
+        },
+        {
+          "name": "TER_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "HYD_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "PERENNIAL",
+          "type": "string"
+        },
+        {
+          "name": "EXISTING",
+          "type": "string"
+        },
+        {
+          "name": "WC_BED_TY",
+          "type": "string"
+        },
+        {
+          "name": "RELGRND",
+          "type": "string"
+        },
+        {
+          "name": "INUSE",
+          "type": "string"
+        },
+        {
+          "name": "ISLANDTYPE",
+          "type": "string"
+        },
+        {
+          "name": "ELEVATION",
+          "type": "double"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Hydarea (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 33841,
+      "file:checksum": "12209858ab4f34a34b4bdc7594842d3c4e4abd12188bb115d240bb8c04b673c0fabd"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

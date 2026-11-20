@@ -1,0 +1,76 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "marine-fisheries-kelp",
+  "title": "Giant kelp",
+  "description": "Marine and fisheries: Giant kelp. 7 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine and fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Giant kelp documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./giant_kelp_aerial_survey_2019/collection.json",
+      "type": "application/json",
+      "title": "Giant Kelp Aerial Survey 2019"
+    },
+    {
+      "rel": "child",
+      "href": "./harvest_tonnages_macrocystis_pyrifera_1970_1971/collection.json",
+      "type": "application/json",
+      "title": "Harvest Tonnages Macrocystis Pyrifera 1970 1971"
+    },
+    {
+      "rel": "child",
+      "href": "./macrocystis_pyrifera_l_c_agardh_stocks_1954/collection.json",
+      "type": "application/json",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1954"
+    },
+    {
+      "rel": "child",
+      "href": "./macrocystis_pyrifera_l_c_agardh_stocks_1965/collection.json",
+      "type": "application/json",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1965"
+    },
+    {
+      "rel": "child",
+      "href": "./macrocystis_pyrifera_l_c_agardh_stocks_1986/collection.json",
+      "type": "application/json",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1986"
+    },
+    {
+      "rel": "child",
+      "href": "./macrocystis_pyrifera_l_c_agardh_stocks_1988/collection.json",
+      "type": "application/json",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1988"
+    },
+    {
+      "rel": "child",
+      "href": "./macrocystis_pyrifera_l_c_agardh_stocks_1999/collection.json",
+      "type": "application/json",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1999"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_threatened_native_vegetation_communities_2025",
+  "title": "LIST Threatened Native Vegetation Communities 2025",
+  "description": "LIST Threatened Native Vegetation Communities 2025: LIST product `LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025`, statewide. 50,187 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-05-28. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Threatened Native Vegetation Communities 2025\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.619215,
+          -43.660601,
+          148.539305,
+          -39.157389
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-05-28T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:02Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Threatened Native Vegetation Communities 2025 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_threatened_native_vegetation_communities_2025%2Fstatewide%2Flist_threatened_native_vegetation_communities_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025_STATEWIDE.zip (LIST, released 2026-05-28)"
+    }
+  ],
+  "assets": {
+    "list_threatened_native_vegetation_communities_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_threatened_native_vegetation_communities_2025/statewide/list_threatened_native_vegetation_communities_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_threatened_native_vegetation_communities_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 48664501,
+      "file:checksum": "1220e54cddbce5e18408aa6664f439b8f3e7da548a0ff8cc1b5bb4dd37025975445f",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227174.2124,
+        5165820.46,
+        624135.82,
+        5661008.05
+      ],
+      "table:row_count": 50187,
+      "table:columns": [
+        {
+          "name": "SCHED_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SCHED_ID",
+          "type": "string"
+        },
+        {
+          "name": "AREA_HA",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Threatened Native Vegetation Communities 2025 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 36204,
+      "file:checksum": "12202d16aeabe95e41c0ac6cd841ecdce1cbcc87818fb20cc30ee11eded36941f080"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

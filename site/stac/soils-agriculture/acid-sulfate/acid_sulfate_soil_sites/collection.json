@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "acid_sulfate_soil_sites",
+  "title": "Acid Sulfate Soil Sites",
+  "description": "Acid Sulfate Soil Sites: LIST product `ACID_SULFATE_SOIL_SITES`, statewide. 266 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Acid Sulfate Soil Sites\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "ACID_SULFATE_SOIL_SITES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.698466,
+          -43.30183,
+          148.365984,
+          -39.649301
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Acid sulfate soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Acid Sulfate Soil Sites documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Facid_sulfate_soil_sites%2Fstatewide%2Facid_sulfate_soil_sites_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/ACID_SULFATE_SOIL_SITES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: ACID_SULFATE_SOIL_SITES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "acid_sulfate_soil_sites_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/acid_sulfate_soil_sites/statewide/acid_sulfate_soil_sites_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "acid_sulfate_soil_sites_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 21565,
+      "file:checksum": "1220f118a932e316753473a025ceba2dd0c3053b7781881c4e1f8a6d4d55431c0e4a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        232000,
+        5205666,
+        610808,
+        5606502
+      ],
+      "table:row_count": 266,
+      "table:columns": [
+        {
+          "name": "SITE_ID",
+          "type": "string"
+        },
+        {
+          "name": "URLNAME",
+          "type": "string"
+        },
+        {
+          "name": "URL",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "ASS_CLASSI",
+          "type": "string"
+        },
+        {
+          "name": "PROJECT_NA",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Acid Sulfate Soil Sites (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6098,
+      "file:checksum": "1220564f764d9559794dd55f69d3ecca724973d365a02bb12f9d106c2e9b5ce6cba0"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

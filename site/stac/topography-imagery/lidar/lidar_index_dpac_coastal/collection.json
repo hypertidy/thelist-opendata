@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "lidar_index_dpac_coastal",
+  "title": "LIDAR Index DPAC Coastal",
+  "description": "LIDAR Index DPAC Coastal: LIST product `LIDAR_INDEX_DPAC_COASTAL`, statewide. 557 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIDAR Index DPAC Coastal\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIDAR_INDEX_DPAC_COASTAL",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.65285,
+          -43.460896,
+          148.359575,
+          -39.904771
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "LiDAR coverage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIDAR Index DPAC Coastal documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flidar_index_dpac_coastal%2Fstatewide%2Flidar_index_dpac_coastal_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIDAR_INDEX_DPAC_COASTAL_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIDAR_INDEX_DPAC_COASTAL_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "lidar_index_dpac_coastal_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/lidar_index_dpac_coastal/statewide/lidar_index_dpac_coastal_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "lidar_index_dpac_coastal_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 27704,
+      "file:checksum": "1220341739f3724fda908ad0a5dc0332e25b01a19fe0395b6871b9b5945f4c650f4d",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229000,
+        5188000,
+        610000,
+        5578000
+      ],
+      "table:row_count": 557,
+      "table:columns": [
+        {
+          "name": "TILE_ID",
+          "type": "string"
+        },
+        {
+          "name": "XMIN",
+          "type": "double"
+        },
+        {
+          "name": "YMIN",
+          "type": "double"
+        },
+        {
+          "name": "XMAX",
+          "type": "double"
+        },
+        {
+          "name": "YMAX",
+          "type": "double"
+        },
+        {
+          "name": "TILE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIDAR Index DPAC Coastal (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12207,
+      "file:checksum": "1220b307ce18621a35aefd355f62d90aa40e68beba3eb823e535b08f0b702f06f0f1"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_doe_school_intake_areas",
+  "title": "LIST Doe School Intake Areas",
+  "description": "LIST Doe School Intake Areas: LIST product `LIST_DOE_SCHOOL_INTAKE_AREAS`, statewide. 149 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Doe School Intake Areas\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_DOE_SCHOOL_INTAKE_AREAS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618872,
+          -43.660791,
+          148.55857,
+          -39.160856
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Doe School Intake Areas documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_doe_school_intake_areas%2Fstatewide%2Flist_doe_school_intake_areas_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DOE_SCHOOL_INTAKE_AREAS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DOE_SCHOOL_INTAKE_AREAS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "list_doe_school_intake_areas_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_doe_school_intake_areas/statewide/list_doe_school_intake_areas_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_doe_school_intake_areas_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14363032,
+      "file:checksum": "1220b884396d40d40f7874547f14ac196d125d5598a31c63f151bef127839c00b547",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227147.408,
+        5165798.4499,
+        625689.516,
+        5660621.8219
+      ],
+      "table:row_count": 149,
+      "table:columns": [
+        {
+          "name": "SCHOOL_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SCHOOL_SECTOR_NAME",
+          "type": "string"
+        },
+        {
+          "name": "LEARNING_SERVICE",
+          "type": "string"
+        },
+        {
+          "name": "SCHOOL_NUMBER",
+          "type": "string"
+        },
+        {
+          "name": "ASSOCIATE_FEEDER",
+          "type": "string"
+        },
+        {
+          "name": "LABEL",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Doe School Intake Areas (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16005,
+      "file:checksum": "12205705a2867901035867fa5410c9f25a87ffc906455c4414670b55d0be5b4d4669"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "tas_landsat_mosaic_dc_2009_2010",
+  "title": "TAS Landsat Mosaic Dc 2009 2010",
+  "description": "TAS Landsat Mosaic Dc 2009 2010: LIST product `TAS_LANDSAT_MOSAIC_DC_2009_2010`, statewide. Byte grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2017-11-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TAS Landsat Mosaic Dc 2009 2010\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TAS_LANDSAT_MOSAIC_DC_2009_2010",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.569506,
+          -43.888597,
+          148.620181,
+          -39.124721
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-11-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TAS Landsat Mosaic Dc 2009 2010 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftas_landsat_mosaic_dc_2009_2010%2Fstatewide%2Ftas_landsat_mosaic_datecodes_0910_mga55.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TAS_LANDSAT_MOSAIC_DC_2009_2010_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TAS_LANDSAT_MOSAIC_DC_2009_2010_STATEWIDE.zip (LIST, released 2017-11-09)"
+    }
+  ],
+  "assets": {
+    "tas_landsat_mosaic_datecodes_0910_mga55": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tas_landsat_mosaic_dc_2009_2010/statewide/tas_landsat_mosaic_datecodes_0910_mga55.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tas_landsat_mosaic_datecodes_0910_mga55.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2368779,
+      "file:checksum": "12209e3afdf0614ab73268cad235f01c361d2285f48b83b7992ac0e479ac5f959bec",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        224205,
+        5140495,
+        630165,
+        5664535
+      ],
+      "proj:shape": [
+        17468,
+        13532
+      ],
+      "proj:transform": [
+        30,
+        0,
+        224205,
+        0,
+        -30,
+        5664535
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TAS Landsat Mosaic Dc 2009 2010 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4717,
+      "file:checksum": "1220de0af77d4cf756fcfb5d36a0867511241f153de7035628824247ed28e61305e5"
+    }
+  }
+}

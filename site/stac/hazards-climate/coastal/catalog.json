@@ -1,0 +1,112 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "hazards-climate-coastal",
+  "title": "Coastal hazards",
+  "description": "Natural hazards and climate: Coastal hazards. 13 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Natural hazards and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Coastal hazards documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./coastal_vulnerability_derwent_estuary_values/collection.json",
+      "type": "application/json",
+      "title": "Coastal Vulnerability Derwent Estuary Values"
+    },
+    {
+      "rel": "child",
+      "href": "./coastal_vulnerability_derwent_estuary_weeds/collection.json",
+      "type": "application/json",
+      "title": "Coastal Vulnerability Derwent Estuary Weeds"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_erosion_component_20161201/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Erosion Component 20161201"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_erosion_hazard_bands_20161201/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_inundation_hazard_bands_20161201/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_projected_sea_level_rise_20161201/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Projected Sea Level Rise 20161201"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_projected_storm_tide_20161201_1pct_aep_2010/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_projected_storm_tide_20161201_1pct_aep_2050/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2050"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_projected_storm_tide_20161201_1pct_aep_2100/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2100"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_vulnerability_clayey_shores/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Vulnerability Clayey Shores"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_vulnerability_rocky_shores/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Vulnerability Rocky Shores"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_vulnerability_soft_shores/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Vulnerability Soft Shores"
+    },
+    {
+      "rel": "child",
+      "href": "./list_coastal_vulnerability_unclassified/collection.json",
+      "type": "application/json",
+      "title": "LIST Coastal Vulnerability Unclassified"
+    }
+  ]
+}

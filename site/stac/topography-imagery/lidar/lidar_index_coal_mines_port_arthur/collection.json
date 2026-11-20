@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "lidar_index_coal_mines_port_arthur",
+  "title": "LIDAR Index Coal Mines Port Arthur",
+  "description": "LIDAR Index Coal Mines Port Arthur: LIST product `LIDAR_INDEX_COAL_MINES_PORT_ARTHUR`, statewide. 22 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIDAR Index Coal Mines Port Arthur\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIDAR_INDEX_COAL_MINES_PORT_ARTHUR",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          147.6989,
+          -43.170613,
+          147.873478,
+          -42.962337
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "LiDAR coverage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIDAR Index Coal Mines Port Arthur documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flidar_index_coal_mines_port_arthur%2Fstatewide%2Flidar_index_coal_mines_port_arthur_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIDAR_INDEX_COAL_MINES_PORT_ARTHUR_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIDAR_INDEX_COAL_MINES_PORT_ARTHUR_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "lidar_index_coal_mines_port_arthur_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/lidar_index_coal_mines_port_arthur/statewide/lidar_index_coal_mines_port_arthur_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "lidar_index_coal_mines_port_arthur_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 11237,
+      "file:checksum": "1220833901da539e5b7408d31735be12b507ba655906e5711a04d404461dcf97df4c",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        557000,
+        5220000,
+        571000,
+        5243000
+      ],
+      "table:row_count": 22,
+      "table:columns": [
+        {
+          "name": "TILE_NUM",
+          "type": "string"
+        },
+        {
+          "name": "TILE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "XMIN",
+          "type": "double"
+        },
+        {
+          "name": "YMIN",
+          "type": "double"
+        },
+        {
+          "name": "XMAX",
+          "type": "double"
+        },
+        {
+          "name": "YMAX",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIDAR Index Coal Mines Port Arthur (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6009,
+      "file:checksum": "122038c70eb640f13f380e3fb1ee33892c885c1ec63809fd0aa47d7face6dea9c9cc"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

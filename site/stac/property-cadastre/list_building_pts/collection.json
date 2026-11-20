@@ -1,0 +1,382 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_building_pts",
+  "title": "LIST Building Pts",
+  "description": "LIST Building Pts: LIST product `LIST_BUILDING_PTS`, statewide. 179,989 features, multi-point (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2023-06-08. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Building Pts\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_BUILDING_PTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.648923,
+          -43.659482,
+          148.417294,
+          -39.170884
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-06-08T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:54:05Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Building Pts documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_building_pts%2Fstatewide%2Flist_building_pts_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_BREAK_O_DAY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_BRIGHTON.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_BURNIE.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_CENTRAL_COAST.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_CENTRAL_HIGHLANDS.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_CIRCULAR_HEAD.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_CLARENCE.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_DERWENT_VALLEY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_DEVONPORT.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_DORSET.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_FLINDERS.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_GEORGE_TOWN.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_GLENORCHY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_HOBART.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_HUON_VALLEY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_KENTISH.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_KING_ISLAND.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_KINGBOROUGH.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_LATROBE.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_LAUNCESTON.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_MEANDER_VALLEY.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_NORTHERN_MIDLANDS.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_SORELL.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_SOUTHERN_MIDLANDS.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_TASMAN.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_WARATAH_WYNYARD.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_WEST_COAST.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_BUILDING_PTS_WEST_TAMAR.zip (LIST, released 2023-06-08)"
+    }
+  ],
+  "assets": {
+    "list_building_pts_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_building_pts/statewide/list_building_pts_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_building_pts_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14495085,
+      "file:checksum": "122080114a8fa7892f6dbca2f946e1078ca58c6b4de2303c74377225c8529b7b2911",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229570.631,
+        5165946.512,
+        614295.374,
+        5659591.378
+      ],
+      "table:row_count": 179989,
+      "table:columns": [
+        {
+          "name": "BUILD_ID",
+          "type": "int32"
+        },
+        {
+          "name": "BUILD_TY",
+          "type": "string"
+        },
+        {
+          "name": "BUILD_NAME",
+          "type": "string"
+        },
+        {
+          "name": "BLD_PUR",
+          "type": "string"
+        },
+        {
+          "name": "MEAN_HGT",
+          "type": "float"
+        },
+        {
+          "name": "ROTATION",
+          "type": "int16"
+        },
+        {
+          "name": "OFFSET_X",
+          "type": "int16"
+        },
+        {
+          "name": "OFFSET_Y",
+          "type": "int16"
+        },
+        {
+          "name": "OFF_SCALE",
+          "type": "int32"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_REL",
+          "type": "datetime"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Building Pts (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 26114,
+      "file:checksum": "1220bc8967c461cfe60f8bd2199109b24caa924db8a4e8d3304ecd7a2e2ad647819a"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}
