@@ -60,7 +60,7 @@ jobs:
       - name: Tools
         run: |
           gdal --version
-          Rscript -e 'for (p in c("httr2", "jsonlite", "gdalraster", "duckdb", "geos", "wk", "blob")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")'
+          Rscript -e 'for (p in c("httr2", "jsonlite", "gdalraster", "duckdb", "geos", "wk", "blob", "PROJ")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")'
 
       - name: Fetch conversion log from the store
         run: curl -fsSL -o manifest/converted.csv "$PUBLIC/manifest/converted.csv"
@@ -88,6 +88,10 @@ jobs:
           if [ -d out ]; then gdal vsi sync -r out/ "$STORE/"; fi
           for f in manifest/*.csv; do gdal vsi copy "$f" "$STORE/$f"; done
 
+      - name: Rebuild the site catalogue from the store
+        if: env.DRY != '1'
+        run: make catalog
+
       - name: Open a PR with the updated manifest
         if: env.DRY != '1'
         env:
@@ -99,8 +103,8 @@ jobs:
           if git diff --quiet -- manifest; then echo "manifest unchanged"; exit 0; fi
           b="refresh/$(date -u +%Y-%m-%d)"
           git checkout -b "$b"
-          git add manifest
+          git add manifest site/catalog.json
           git commit -m "Refresh manifest $(date -u +%Y-%m-%d)"
           git push -u origin "$b"
           gh pr create --title "Refresh manifest $(date -u +%Y-%m-%d)" \
-            --body "Automated monthly refresh. Outputs and manifest already synced to the store."
+            --body "Automated monthly refresh. Outputs and manifest already synced to the store; merging updates the site catalogue."

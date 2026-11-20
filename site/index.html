@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasmania LIST open data, cloud-ready</title>
+<meta name="description" content="Every statewide dataset from the LIST (Tasmania) open data bulk downloads as GeoParquet and Cloud Optimized GeoTIFF, read in place with DuckDB, GDAL, R, Python or QGIS.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Tasmania LIST open data, <span class="accent">cloud-ready</span></h1>
+    <p class="lede">Every statewide dataset from the
+      <a href="https://listdata.thelist.tas.gov.au/opendata/data/">LIST open data bulk downloads</a>,
+      as GeoParquet and Cloud Optimized GeoTIFF on
+      <a href="https://source.coop/mdsumner/thelist-opendata">Source Cooperative</a>.
+      Nothing to download first: read any of it in place over HTTPS or S3, with
+      DuckDB, GDAL, R, Python or QGIS.</p>
+    <p class="stats" id="stats" aria-live="polite"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Filter datasets">
+    <label class="search">
+      <span class="visually-hidden">Search</span>
+      <input id="q" type="search" placeholder="Search datasets, columns, product codes" autocomplete="off">
+    </label>
+    <div class="filters">
+      <div class="seg" role="group" aria-label="Kind" id="kind">
+        <button type="button" data-v="" aria-pressed="true">All</button>
+        <button type="button" data-v="vector" aria-pressed="false">Vector</button>
+        <button type="button" data-v="raster" aria-pressed="false">Raster</button>
+        <button type="button" data-v="table" aria-pressed="false">Table</button>
+      </div>
+      <div class="seg" role="group" aria-label="Source" id="src">
+        <button type="button" data-v="" aria-pressed="true">Any source</button>
+        <button type="button" data-v="list" aria-pressed="false">LIST statewide</button>
+        <button type="button" data-v="lga" aria-pressed="false">Built from LGAs</button>
+      </div>
+      <label class="sort">Sort
+        <select id="sort">
+          <option value="title">Name</option>
+          <option value="bytes">Size</option>
+          <option value="rows">Rows</option>
+          <option value="released">Source release</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <div class="list" role="list" id="list" aria-label="Datasets">
+    <p class="empty">Loading the catalogue...</p>
+  </div>
+</main>
+
+<footer class="wrap site">
+  <p><strong>Attribution.</strong> Data &copy; State of Tasmania, licensed
+    <a href="https://creativecommons.org/licenses/by/3.0/au/">CC BY 3.0 AU</a>. Cite each dataset as
+    <q>&lt;dataset name&gt;</q> from theLIST &copy; State of Tasmania. Land Tasmania does not endorse this mirror.
+    Some datasets are published through the LIST for other custodians; the <code>readme.txt</code> in each
+    source zip names them.</p>
+  <p><strong>Built from LGAs.</strong> Where LIST ships a product only as 29 per-LGA zips, the statewide file here
+    is built from them: features LIST clipped at LGA boundaries are rejoined to one row per feature id, and an
+    <code>lga</code> column names the source LGAs. The per-LGA files are in the store too, under
+    <code>&lt;product&gt;/&lt;lga&gt;/</code>. Details in the
+    <a href="https://source.coop/mdsumner/thelist-opendata">store README</a>.</p>
+  <p class="meta" id="meta"></p>
+  <p class="meta">Code: <a href="https://github.com/hypertidy/thelist-opendata">hypertidy/thelist-opendata</a> (MIT).
+    A broader, national approach is under way in <a href="https://github.com/mdsumner/banksia">banksia</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
