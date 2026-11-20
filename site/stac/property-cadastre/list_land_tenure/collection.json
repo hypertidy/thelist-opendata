@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_land_tenure",
   "title": "LIST Land Tenure",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_TENURE_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LAND_TENURE_STATEWIDE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_tenure/statewide/list_land_tenure_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Tenure (vector tiles)",
+      "pmtiles:layers": [
+        "list_land_tenure"
+      ]
     }
   ],
   "assets": {
@@ -180,6 +190,27 @@
       ],
       "file:size": 14901,
       "file:checksum": "1220d17d1f79f7d8f19124777d126eca40f087ef57cbc52a4f7be45027ff3ff8e96b"
+    },
+    "list_land_tenure_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_tenure/statewide/list_land_tenure_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Tenure (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 42200992,
+      "file:checksum": "1220979ba832eae2ba138a16ee8c9686b05b25f2861bdfdda25328cda40c755ae105"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Land Tenure",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1076,
+      "file:checksum": "1220a06548a704a4103d03eb4aa47767e54023e3da4f075be43b87276e362e0544c9"
     }
   },
   "table:primary_geometry": "geometry"

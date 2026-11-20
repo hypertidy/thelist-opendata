@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_cfev_wetlands",
   "title": "LIST CFEV Wetlands",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_CFEV_WETLANDS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_wetlands/statewide/list_cfev_wetlands_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV Wetlands (vector tiles)",
+      "pmtiles:layers": [
+        "list_cfev_wetlands"
+      ]
     }
   ],
   "assets": {
@@ -408,6 +418,27 @@
       ],
       "file:size": 39591,
       "file:checksum": "1220e7d8ba2626235e2ff381bfe9669aa459d46f6e6057a1b96301b20d9144be7960"
+    },
+    "list_cfev_wetlands_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_wetlands/statewide/list_cfev_wetlands_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV Wetlands (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 18999052,
+      "file:checksum": "122052c8118ecebb6af8ed29d8f964ca2f6e515c9aaaa5f31eeb3badbb5929b5830e"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST CFEV Wetlands",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1090,
+      "file:checksum": "12201d3d4454538e399de7c4a3a1fd1b87e1dbc0b8e6e6b9a51c7298d1bdd5c1a022"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_survey_control",
   "title": "LIST Survey Control",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_SURVEY_CONTROL_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_SURVEY_CONTROL_STATEWIDE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_survey_control/statewide/list_survey_control_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Survey Control (vector tiles)",
+      "pmtiles:layers": [
+        "list_survey_control"
+      ]
     }
   ],
   "assets": {
@@ -236,6 +246,27 @@
       ],
       "file:size": 16738,
       "file:checksum": "1220b846aa43c9690d6894dacd7c5998528f043342d306c03bd1441f4eaa20f53e3c"
+    },
+    "list_survey_control_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_survey_control/statewide/list_survey_control_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Survey Control (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 4631213,
+      "file:checksum": "12204702e24093ae412d46104bd7009bb15d03d8173201a755e70cf1f107e5888239"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Survey Control",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1160,
+      "file:checksum": "1220af7ee48f63135a1afdf1d7f68a7941d2c181199c6c1a57919ef51f25de6a56ee"
     }
   },
   "table:primary_geometry": "geometry"

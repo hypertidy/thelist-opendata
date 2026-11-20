@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_taswater_water_serviced_land",
   "title": "LIST TASWATER Water Serviced Land",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_WATER_SERVICED_LAND_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASWATER_WATER_SERVICED_LAND_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_water_serviced_land/statewide/list_taswater_water_serviced_land_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER Water Serviced Land (vector tiles)",
+      "pmtiles:layers": [
+        "list_taswater_water_serviced_land"
+      ]
     }
   ],
   "assets": {
@@ -188,6 +198,27 @@
       ],
       "file:size": 19729,
       "file:checksum": "12208e34b388e4ea781332eeeb2166ca46974899e7bcaa55f44c2c1827d248bdd0bb"
+    },
+    "list_taswater_water_serviced_land_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_water_serviced_land/statewide/list_taswater_water_serviced_land_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER Water Serviced Land (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 5454791,
+      "file:checksum": "1220183c0c37cb7cd72321b4c985e98af5348c574875a82896d23764ce44941e9a5b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASWATER Water Serviced Land",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1195,
+      "file:checksum": "1220e87d993428a7b06c367e03c694604084c9b6aac96f9240f8aec332c9e849f80b"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_taswater_w_hydrant",
   "title": "LIST TASWATER W Hydrant",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_W_HYDRANT_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASWATER_W_HYDRANT_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_w_hydrant/statewide/list_taswater_w_hydrant_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER W Hydrant (vector tiles)",
+      "pmtiles:layers": [
+        "list_taswater_w_hydrant"
+      ]
     }
   ],
   "assets": {
@@ -160,6 +170,27 @@
       ],
       "file:size": 14096,
       "file:checksum": "1220bf79bd58ea4566e0b870908bff06be8829b51702e7e17d02287f1499dc9ae3ab"
+    },
+    "list_taswater_w_hydrant_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_w_hydrant/statewide/list_taswater_w_hydrant_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER W Hydrant (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 3200765,
+      "file:checksum": "1220a843e5442d07a845a2170572ddd0fc57dc717f49c8b65d894a8a181460144f54"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASWATER W Hydrant",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1180,
+      "file:checksum": "12206ade2e23e460c6efbe343a8c8084151629fce3b624644ed79ee5b240d0ad49a8"
     }
   },
   "table:primary_geometry": "geometry"

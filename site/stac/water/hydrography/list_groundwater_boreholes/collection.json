@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_groundwater_boreholes",
   "title": "LIST Groundwater Boreholes",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_GROUNDWATER_BOREHOLES_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_GROUNDWATER_BOREHOLES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_groundwater_boreholes/statewide/list_groundwater_boreholes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Groundwater Boreholes (vector tiles)",
+      "pmtiles:layers": [
+        "list_groundwater_boreholes"
+      ]
     }
   ],
   "assets": {
@@ -260,6 +270,27 @@
       ],
       "file:size": 20679,
       "file:checksum": "122042ede3a28e6a0ad444c6ad3fedcca3f1f7fc476e800153b47bb8927ecdda945f"
+    },
+    "list_groundwater_boreholes_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_groundwater_boreholes/statewide/list_groundwater_boreholes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Groundwater Boreholes (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 2415308,
+      "file:checksum": "1220d156d92c89805e239292c76c57dd71316eb21f53eeb6ce0766816a7e052bb3f9"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Groundwater Boreholes",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1195,
+      "file:checksum": "1220057e40ddc0e088b234f1585aaf703631b556b7089120e60550c420d60a4ddcca"
     }
   },
   "table:primary_geometry": "geometry"

@@ -4,15 +4,15 @@
   "versions": [
     {
       "version": "1.0.0",
-      "created": "2026-11-20T12:29:21.828090Z",
+      "created": "2026-11-20T20:02:10.271463Z",
       "breaking": false,
       "assets": {
         "items.parquet": {
           "sha256": "0870837fa80d3a345b73322aa0a0abbf065d0f4ab4be9fb7bbf60e546f38bce0",
           "size_bytes": 22360,
           "href": "hazards-climate/flood/tsfm_calibration_data_velocity/items.parquet",
-          "mtime": 1795177761.822496,
-          "source_fingerprint": "5cb9b169a16266594b078b249ba425a6231757303d1dd1b883e75ff5ffbe930c"
+          "mtime": 1795204930.2665787,
+          "source_fingerprint": "f8c5404d84f86effca2c76272ad68978e85ff82848c8e9dc82763515f1c12fc9"
         }
       },
       "changes": [

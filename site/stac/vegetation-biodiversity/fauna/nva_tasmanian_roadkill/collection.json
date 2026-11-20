@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "nva_tasmanian_roadkill",
   "title": "NVA Tasmanian Roadkill",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/NVA_TASMANIAN_ROADKILL_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: NVA_TASMANIAN_ROADKILL_STATEWIDE.zip (LIST, released 2025-07-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/nva_tasmanian_roadkill/statewide/nva_tasmanian_roadkill_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "NVA Tasmanian Roadkill (vector tiles)",
+      "pmtiles:layers": [
+        "nva_tasmanian_roadkill"
+      ]
     }
   ],
   "assets": {
@@ -228,6 +238,27 @@
       ],
       "file:size": 23055,
       "file:checksum": "12203f937da14edfa6b33584d02be7c79d6f5137b63839e5909faf800ff3e2b9fc71"
+    },
+    "nva_tasmanian_roadkill_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/nva_tasmanian_roadkill/statewide/nva_tasmanian_roadkill_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "NVA Tasmanian Roadkill (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 12573409,
+      "file:checksum": "12203e236964bd56e885f2d943efa0289542d287bd16c1ba134019a988f8383dde32"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "NVA Tasmanian Roadkill",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1175,
+      "file:checksum": "12202dded913ef32851fd0e03fda36844a20c774d5a4a97e2e3112c6fecaf119915f"
     }
   },
   "table:primary_geometry": "geometry"

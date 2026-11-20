@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastal_erosion_hazard_bands_20161201",
   "title": "LIST Coastal Erosion Hazard Bands 20161201",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_EROSION_HAZARD_BANDS_20161201_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTAL_EROSION_HAZARD_BANDS_20161201_STATEWIDE.zip (LIST, released 2019-10-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_erosion_hazard_bands_20161201/statewide/list_coastal_erosion_hazard_bands_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201 (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastal_erosion_hazard_bands_20161201"
+      ]
     }
   ],
   "assets": {
@@ -180,6 +190,27 @@
       ],
       "file:size": 16633,
       "file:checksum": "1220a2d69b11d8789a2889546cc21e39c8315fbd188428421e5cc37fe06aa2ad198b"
+    },
+    "list_coastal_erosion_hazard_bands_20161201_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_erosion_hazard_bands_20161201/statewide/list_coastal_erosion_hazard_bands_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201 (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 15097672,
+      "file:checksum": "122013b2aef7b09aebb518deb98a5bd0efa901281e83289097d5c1f104c755b53c5a"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1258,
+      "file:checksum": "12206e15e10c599468599546ce2aa89f6a71717d85d572a8f557c3c8b3a34484a87d"
     }
   },
   "table:primary_geometry": "geometry"

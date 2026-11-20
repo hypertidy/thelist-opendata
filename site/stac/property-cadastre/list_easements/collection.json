@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_easements",
   "title": "LIST Easements",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_EASEMENTS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_EASEMENTS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_easements/statewide/list_easements_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Easements (vector tiles)",
+      "pmtiles:layers": [
+        "list_easements"
+      ]
     }
   ],
   "assets": {
@@ -376,6 +386,27 @@
       ],
       "file:size": 22441,
       "file:checksum": "12202af6d60bacd9596c2f1936399a24cacfb979df36ecc54d41fba8eba2d2f3b963"
+    },
+    "list_easements_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_easements/statewide/list_easements_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Easements (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 4359053,
+      "file:checksum": "122093df48539b79e5f76e7e3e5578a7dfaab2dff79a0121bc4167f526a6b849786f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Easements",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1062,
+      "file:checksum": "12204ca3d91ddf862a01b02d20e463d34556c24763cf711494f310ff6c7b2187ae01"
     }
   },
   "table:primary_geometry": "geometry"

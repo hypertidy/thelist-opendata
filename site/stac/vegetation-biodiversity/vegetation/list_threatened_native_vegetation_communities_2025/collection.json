@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_threatened_native_vegetation_communities_2025",
   "title": "LIST Threatened Native Vegetation Communities 2025",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_THREATENED_NATIVE_VEGETATION_COMMUNITIES_2025_STATEWIDE.zip (LIST, released 2026-05-28)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_threatened_native_vegetation_communities_2025/statewide/list_threatened_native_vegetation_communities_2025_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Threatened Native Vegetation Communities 2025 (vector tiles)",
+      "pmtiles:layers": [
+        "list_threatened_native_vegetation_communities_2025"
+      ]
     }
   ],
   "assets": {
@@ -168,6 +178,27 @@
       ],
       "file:size": 36204,
       "file:checksum": "12202d16aeabe95e41c0ac6cd841ecdce1cbcc87818fb20cc30ee11eded36941f080"
+    },
+    "list_threatened_native_vegetation_communities_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_threatened_native_vegetation_communities_2025/statewide/list_threatened_native_vegetation_communities_2025_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Threatened Native Vegetation Communities 2025 (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 29873651,
+      "file:checksum": "1220649b6b520a3e43197c7f03333ba9f15f81e42d8f96fe8e836e8fc8df60867dac"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Threatened Native Vegetation Communities 2025",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1314,
+      "file:checksum": "1220aff61dccc8ed4e919619cf2826f785ef2c5ed85dbcc390b7e09686d6d43a2e69"
     }
   },
   "table:primary_geometry": "geometry"

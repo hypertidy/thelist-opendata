@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "built_infrastructure_point",
   "title": "Built Infrastructure Point",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/BUILT_INFRASTRUCTURE_POINT_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: BUILT_INFRASTRUCTURE_POINT_STATEWIDE.zip (LIST, released 2025-07-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/built_infrastructure_point/statewide/built_infrastructure_point_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Built Infrastructure Point (vector tiles)",
+      "pmtiles:layers": [
+        "built_infrastructure_point"
+      ]
     }
   ],
   "assets": {
@@ -192,6 +202,27 @@
       ],
       "file:size": 16425,
       "file:checksum": "1220517f6786af0658d85ec7f83ed2597b827ac5b3407eb5c3b41c4becbac35ebc86"
+    },
+    "built_infrastructure_point_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/built_infrastructure_point/statewide/built_infrastructure_point_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Built Infrastructure Point (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 1819652,
+      "file:checksum": "12202c4f9dfd4ca7ba22a6ba2e4aca498528af78efcdf45a1991ad2e4457fa276d63"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Built Infrastructure Point",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1195,
+      "file:checksum": "122024e04415cba754d6fd3731588764069f4257fe3a74f8ee3878ea8afcf1e236d1"
     }
   },
   "table:primary_geometry": "geometry"

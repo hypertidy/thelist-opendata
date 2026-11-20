@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "tasmanian_planning_scheme_zones",
   "title": "Tasmanian Planning Scheme Zones",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMANIAN_PLANNING_SCHEME_ZONES_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: TASMANIAN_PLANNING_SCHEME_ZONES_STATEWIDE.zip (LIST, released 2026-08-20)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/tasmanian_planning_scheme_zones/statewide/tasmanian_planning_scheme_zones_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Tasmanian Planning Scheme Zones (vector tiles)",
+      "pmtiles:layers": [
+        "tasmanian_planning_scheme_zones"
+      ]
     }
   ],
   "assets": {
@@ -208,6 +218,27 @@
       ],
       "file:size": 14805,
       "file:checksum": "1220a2d6af9824feffe16e1c05bb4c4c0edaaed266562f0bb726ea7d9c7970d4525d"
+    },
+    "tasmanian_planning_scheme_zones_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/tasmanian_planning_scheme_zones/statewide/tasmanian_planning_scheme_zones_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Tasmanian Planning Scheme Zones (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 23185529,
+      "file:checksum": "122032dbe3d5453a6bb6e9496ab78c26e4f4be91a274201a092af95c441060d46efb"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Tasmanian Planning Scheme Zones",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1181,
+      "file:checksum": "12204e3092b9ed02ab9a9d2872fad3d8c8ae68145172ac5569d2375ae9f4eac7ce57"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_land_use_2021",
   "title": "LIST Land Use 2021",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2021_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LAND_USE_2021_STATEWIDE.zip (LIST, released 2023-06-07)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2021/statewide/list_land_use_2021_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Use 2021 (vector tiles)",
+      "pmtiles:layers": [
+        "list_land_use_2021"
+      ]
     }
   ],
   "assets": {
@@ -212,6 +222,27 @@
       ],
       "file:size": 12958,
       "file:checksum": "1220ab3694a8e4e97c59957730e8b1d96355686bdbb02b26227658ab6ffcef27effd"
+    },
+    "list_land_use_2021_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2021/statewide/list_land_use_2021_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Use 2021 (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 122515071,
+      "file:checksum": "12209543d3297b527f096c1028c68ea2aa58552cf58fe338c82734c4f75b8e077226"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Land Use 2021",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1090,
+      "file:checksum": "1220892c3007d0085cc6688e67ed865d95e3cfdf100fadf1ea932fa2a4ca615416a3"
     }
   },
   "table:primary_geometry": "geometry"

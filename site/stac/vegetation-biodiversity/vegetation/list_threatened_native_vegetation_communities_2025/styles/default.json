@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Threatened Native Vegetation Communities 2025",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_threatened_native_vegetation_communities_2025/statewide/list_threatened_native_vegetation_communities_2025_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_threatened_native_vegetation_communities_2025-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_threatened_native_vegetation_communities_2025",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_threatened_native_vegetation_communities_2025-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_threatened_native_vegetation_communities_2025",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2100",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_projected_storm_tide_20161201_1pct_aep_2100/statewide/list_coastal_projected_storm_tide_20161201_1pct_aep_2100_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_coastal_projected_storm_tide_20161201_1pct_aep_2100-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_coastal_projected_storm_tide_20161201_1pct_aep_2100",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_coastal_projected_storm_tide_20161201_1pct_aep_2100-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_coastal_projected_storm_tide_20161201_1pct_aep_2100",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

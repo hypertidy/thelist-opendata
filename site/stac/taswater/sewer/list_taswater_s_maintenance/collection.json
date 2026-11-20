@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_taswater_s_maintenance",
   "title": "LIST TASWATER S Maintenance",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_S_MAINTENANCE_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASWATER_S_MAINTENANCE_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_s_maintenance/statewide/list_taswater_s_maintenance_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER S Maintenance (vector tiles)",
+      "pmtiles:layers": [
+        "list_taswater_s_maintenance"
+      ]
     }
   ],
   "assets": {
@@ -176,6 +186,27 @@
       ],
       "file:size": 13186,
       "file:checksum": "12207c5bb53ac7117b2883b0d0bca53c984207276ee3304bfae44ec3075620d95568"
+    },
+    "list_taswater_s_maintenance_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_s_maintenance/statewide/list_taswater_s_maintenance_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER S Maintenance (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 15207451,
+      "file:checksum": "1220b94b32bf90ccd81154859269228ec3b115751fc73013df6c557932b48d653522"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASWATER S Maintenance",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1200,
+      "file:checksum": "1220655cb968e3365b11ba212eba427fb591aa0fdbbf7a700c1928888bbaa6fafb3c"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_5m_contours",
   "title": "LIST 5 m Contours",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_5M_CONTOURS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_5M_CONTOURS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_5m_contours/statewide/list_5m_contours_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 5 m Contours (vector tiles)",
+      "pmtiles:layers": [
+        "list_5m_contours"
+      ]
     }
   ],
   "assets": {
@@ -356,6 +366,27 @@
       ],
       "file:size": 16883,
       "file:checksum": "12209f226b3af53d2f45fc695f90ac339096d46882473703077d3442630d50ff7286"
+    },
+    "list_5m_contours_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_5m_contours/statewide/list_5m_contours_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 5 m Contours (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 44221295,
+      "file:checksum": "1220b345e3ea18576d6b234bc230b9561bac8e449dd05591160c393f9a58c066c244"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST 5 m Contours",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 849,
+      "file:checksum": "1220009b669e6dfa2561c9fcac240cbdad021f0ead3270383d999b333c1551c1caf0"
     }
   },
   "table:primary_geometry": "geometry"

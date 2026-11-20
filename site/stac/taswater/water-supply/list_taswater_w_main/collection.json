@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_taswater_w_main",
   "title": "LIST TASWATER W Main",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_W_MAIN_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASWATER_W_MAIN_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_w_main/statewide/list_taswater_w_main_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER W Main (vector tiles)",
+      "pmtiles:layers": [
+        "list_taswater_w_main"
+      ]
     }
   ],
   "assets": {
@@ -196,6 +206,27 @@
       ],
       "file:size": 16402,
       "file:checksum": "12202e031ea1013a59dfb8d277e1dde8b6ae72ab05168c2744565290001a7725e12f"
+    },
+    "list_taswater_w_main_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_taswater_w_main/statewide/list_taswater_w_main_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASWATER W Main (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 10329924,
+      "file:checksum": "1220f1bb2574fa3932ebfd308e81472af5ab4816639ec14dd2cc6c88c76ac30fc4e7"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASWATER W Main",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 868,
+      "file:checksum": "122035c5df91c4ccc4f59d18c8f41df2e4074be943f6104d3952cbc50e6468237654"
     }
   },
   "table:primary_geometry": "geometry"

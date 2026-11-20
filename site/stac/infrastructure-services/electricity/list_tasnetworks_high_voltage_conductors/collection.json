@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasnetworks_high_voltage_conductors",
   "title": "LIST Tasnetworks High Voltage Conductors",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASNETWORKS_HIGH_VOLTAGE_CONDUCTORS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasnetworks_high_voltage_conductors/statewide/list_tasnetworks_high_voltage_conductors_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasnetworks High Voltage Conductors (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasnetworks_high_voltage_conductors"
+      ]
     }
   ],
   "assets": {
@@ -156,6 +166,27 @@
       ],
       "file:size": 46740,
       "file:checksum": "1220cb73f605e6f96eecdced642e4e90e0d9f1de7ff3cafcd3d6a42c8923111ae0b3"
+    },
+    "list_tasnetworks_high_voltage_conductors_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasnetworks_high_voltage_conductors/statewide/list_tasnetworks_high_voltage_conductors_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasnetworks High Voltage Conductors (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 6352660,
+      "file:checksum": "12200a9849b7baa1b61cc602deae4bff71c8bbcec1262f3292a7e1e6630e86514e3e"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Tasnetworks High Voltage Conductors",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 968,
+      "file:checksum": "1220ad6b485c34331a27ed074e8e2e93be5368603bb837f6451d6721c42facaf3ddf"
     }
   },
   "table:primary_geometry": "geometry"

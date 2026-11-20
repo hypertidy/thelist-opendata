@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_fire_history",
   "title": "LIST Fire History",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FIRE_HISTORY_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_FIRE_HISTORY_STATEWIDE.zip (LIST, released 2026-09-04)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_fire_history/statewide/list_fire_history_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Fire History (vector tiles)",
+      "pmtiles:layers": [
+        "list_fire_history"
+      ]
     }
   ],
   "assets": {
@@ -212,6 +222,27 @@
       ],
       "file:size": 41081,
       "file:checksum": "12200cc54cb9b12a06c7374107cdf6f7ebd6654502583edeb9f4e1b5ecd94833e029"
+    },
+    "list_fire_history_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_fire_history/statewide/list_fire_history_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Fire History (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 25556331,
+      "file:checksum": "1220e2bffd5ef63029f39c643be1be962f77eceda91a4a95f4618b3e24fdc69ef063"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Fire History",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1083,
+      "file:checksum": "122026fed22f82341e459494847728dfcd296125b813aa9804d28779959e20e1c3b5"
     }
   },
   "table:primary_geometry": "geometry"

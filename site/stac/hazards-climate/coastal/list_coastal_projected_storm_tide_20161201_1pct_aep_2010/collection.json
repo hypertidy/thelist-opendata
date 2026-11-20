@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastal_projected_storm_tide_20161201_1pct_aep_2010",
   "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010_STATEWIDE.zip (LIST, released 2019-10-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_projected_storm_tide_20161201_1pct_aep_2010/statewide/list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010 (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastal_projected_storm_tide_20161201_1pct_aep_2010"
+      ]
     }
   ],
   "assets": {
@@ -168,6 +178,27 @@
       ],
       "file:size": 13747,
       "file:checksum": "12209c9a13e9a78897387dfa62a2a1d70233ea1a9567628620169acf478797176a13"
+    },
+    "list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_projected_storm_tide_20161201_1pct_aep_2010/statewide/list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010 (vector tiles, zoom 8-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 13508321,
+      "file:checksum": "12204f9a5ca8d9416e6941cb800d5727a0e0cb4e46f97d08c53a87ba9d95e2b80dc8"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1356,
+      "file:checksum": "12209de618d342105b7d7782788e48308107bd0eb81ddc607f2bae64ae17791db8e6"
     }
   },
   "table:primary_geometry": "geometry"

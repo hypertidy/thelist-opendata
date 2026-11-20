@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_land_capability",
   "title": "LIST Land Capability",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND%20CAPABILITY_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LAND%20CAPABILITY_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_capability/statewide/list_land_capability_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Capability (vector tiles)",
+      "pmtiles:layers": [
+        "list_land_capability"
+      ]
     }
   ],
   "assets": {
@@ -237,6 +247,27 @@
       ],
       "file:size": 14862,
       "file:checksum": "122044d1c4fa848faf501596b9861e936471ae71e5d82c86c8a743119d7c92c112fc"
+    },
+    "list_land_capability_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_capability/statewide/list_land_capability_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Capability (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 34854346,
+      "file:checksum": "1220dd9a8eec7b75bebac5208b8a7ed56fe02acb8b36ea9f4291deb8ace567ed3e94"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Land Capability",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1104,
+      "file:checksum": "1220be069273fe25f401ac10270125526ad2b783db72f99bfb54d879cfded9288d40"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_authority_land",
   "title": "LIST Authority Land",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AUTHORITY_LAND_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_AUTHORITY_LAND_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_authority_land/statewide/list_authority_land_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Authority Land (vector tiles)",
+      "pmtiles:layers": [
+        "list_authority_land"
+      ]
     }
   ],
   "assets": {
@@ -428,6 +438,27 @@
       ],
       "file:size": 31250,
       "file:checksum": "12204be515fb9fa886a096a78f90ad4f89a40781dfaa3a476da26cc0918807258934"
+    },
+    "list_authority_land_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_authority_land/statewide/list_authority_land_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Authority Land (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 34701032,
+      "file:checksum": "1220a1718abdc5fd7afa2adbcf769238708f00508e88a1ad095ced4b948cfeece60a"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Authority Land",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1097,
+      "file:checksum": "12209e33705e0b3a32e8a036032a464813826fe0df63f9e863f7a826ce179d34a27d"
     }
   },
   "table:primary_geometry": "geometry"

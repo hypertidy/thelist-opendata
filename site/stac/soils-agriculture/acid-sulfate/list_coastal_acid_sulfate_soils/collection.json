@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastal_acid_sulfate_soils",
   "title": "LIST Coastal Acid Sulfate Soils",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_ACID_SULFATE_SOILS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTAL_ACID_SULFATE_SOILS_STATEWIDE.zip (LIST, released 2019-01-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_acid_sulfate_soils/statewide/list_coastal_acid_sulfate_soils_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Acid Sulfate Soils (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastal_acid_sulfate_soils"
+      ]
     }
   ],
   "assets": {
@@ -324,6 +334,27 @@
       ],
       "file:size": 17396,
       "file:checksum": "1220b0d1369ec34a42acdba26710d6aa680662275c70d0873452f3c4b3e408027d67"
+    },
+    "list_coastal_acid_sulfate_soils_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_acid_sulfate_soils/statewide/list_coastal_acid_sulfate_soils_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Acid Sulfate Soils (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 15828394,
+      "file:checksum": "122016d274401a4108cd730e5778af0a13cc86d8fd02a579f8af82cc1415f4302206"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastal Acid Sulfate Soils",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1181,
+      "file:checksum": "12204131ebad0b43df9c505f8768e4465ee5fcd6bc2c4e9ea0392719360182168268"
     }
   },
   "table:primary_geometry": "geometry"
