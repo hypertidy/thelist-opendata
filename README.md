@@ -9,6 +9,11 @@ NOTE: new approach taken for entire nation here: https://github.com/mdsumner/ban
 
 Published on Source Cooperative: https://source.coop/mdsumner/thelist-opendata
 
+Browse it: https://hypertidy.github.io/thelist-opendata/ (every statewide
+dataset with its columns, extent, source zips and read-in-place snippets for
+DuckDB, GDAL, R, Python and QGIS; built from the store by `R/20_catalog.R`
+into `site/catalog.json`, published by `.github/workflows/pages.yml`).
+
     https://data.source.coop/mdsumner/thelist-opendata/<path>                 (HTTP, CORS open, range requests)
     s3://us-west-2.opendata.source.coop/mdsumner/thelist-opendata/<path>      (anonymous S3, AWS_NO_SIGN_REQUEST=YES)
 
@@ -37,6 +42,9 @@ Statewide layers for the 25 LGA-split products added 2026-11-20 (3.3 GB).
   statewide); reconverted and re-uploaded 2026-11-20.
 - `LIST_PUBLIC_LAND_CLASS-REVOKED` and `LIST_PUBLIC_LAND_CLASS_REVOKED` slug to
   the same folder; the second (which LIST also ships statewide) is what is there.
+- `geoparquet/list_tasveg_20/statewide/list_tasveg_20_statewide.parquet` has no CRS
+  in its GeoParquet metadata (so readers assume lon/lat); its coordinates are
+  MGA zone 55. Needs reconverting with EPSG:28355 assigned.
 - Three stray `*.gdb.parquet` files (Clarence building polygons, Brighton and
   Circular Head municipality) sit beside the real LGA files; they are not used.
 - 14 source zips are not converted: the 2 m CHM and slope rasters (need
