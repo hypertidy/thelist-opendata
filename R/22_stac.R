@@ -157,7 +157,15 @@ to_lonlat <- function(bbox, crs) {
   y <- c(rep(b[2], 21), b[2] + t * (b[4] - b[2]), rep(b[4], 21), b[4] - t * (b[4] - b[2]))
   ll <- wk_coords(wk_transform(xy(x, y), proj_trans_create(src, "OGC:CRS84")))
   if (!all(is.finite(c(ll$x, ll$y)))) return(NULL)
-  round(c(min(ll$x), min(ll$y), max(ll$x), max(ll$y)), 6)
+  r <- c(min(ll$x), min(ll$y), max(ll$x), max(ll$y))
+  ## a pole inside the native bbox is not on its edges (polar stereographic, e.g. EPSG:3031): the edges
+  ## alone give a ring of latitudes that misses the cap, so widen to all longitudes and the pole
+  for (pl in c(-90, 90)) {
+    p <- tryCatch(wk_coords(wk_transform(xy(0, pl), proj_trans_create("OGC:CRS84", src))), error = function(e) NULL)
+    if (!is.null(p) && all(is.finite(c(p$x, p$y))) && p$x > b[1] && p$x < b[3] && p$y > b[2] && p$y < b[4])
+      r <- c(-180, if (pl < 0) -90 else r[2], 180, if (pl > 0) 90 else r[4])
+  }
+  round(r, 6)
 }
 TAS <- c(143.5, -44.0, 148.6, -39.4)   # extent for tables with no geometry
 bbox_poly <- function(b) list(type = "Polygon", coordinates = list(list(c(b[1], b[2]), c(b[3], b[2]), c(b[3], b[4]), c(b[1], b[4]), c(b[1], b[2]))))
