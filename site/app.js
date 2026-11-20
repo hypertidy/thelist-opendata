@@ -251,8 +251,14 @@ gdal vector convert ${u.vsicurl} ${it.path.split("/").pop().replace(/\.parquet$/
 v <- new(GDALVector, "${u.vsicurl}")
 v$getFeatureCount()
 ${w ? `v$setSpatialFilterRect(c(${wl}))   # 10 km window, MGA zone 55
-` : ""}d <- v$fetch(-1)   # data frame, geometry as WKB
+` : ""}d <- v$fetch(-1)                    # data frame, geometry as WKB
+g <- wk::wkb(d$geometry, crs = v$getSpatialRef())
 v$close()
+
+plot(g)                             # wk plots it directly
+${/Polygon/.test(it.geometry || "") ? "geos::geos_area(g)                  # and geos works on it as is"
+  : /Line/.test(it.geometry || "") ? "geos::geos_length(g)                # and geos works on it as is"
+  : "wk::wk_coords(g)                    # coordinates as a data frame"}
 
 # or with sf
 x <- sf::read_sf("${u.vsicurl}")` },
