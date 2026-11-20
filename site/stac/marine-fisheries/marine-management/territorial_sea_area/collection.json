@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Territorial Sea Area (preview)",
+      "title": "Territorial Sea Area (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

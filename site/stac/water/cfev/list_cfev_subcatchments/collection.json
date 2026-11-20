@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Subcatchments (preview)",
+      "title": "LIST CFEV Subcatchments (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

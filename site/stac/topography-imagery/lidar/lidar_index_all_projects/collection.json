@@ -230,7 +230,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIDAR Index All Projects (preview)",
+      "title": "LIDAR Index All Projects (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

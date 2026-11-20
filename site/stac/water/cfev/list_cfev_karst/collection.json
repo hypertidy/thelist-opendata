@@ -210,7 +210,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Karst (preview)",
+      "title": "LIST CFEV Karst (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

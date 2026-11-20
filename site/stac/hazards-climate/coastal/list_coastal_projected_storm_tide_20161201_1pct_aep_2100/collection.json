@@ -162,7 +162,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2100 (preview)",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2100 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

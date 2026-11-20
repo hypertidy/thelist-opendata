@@ -318,7 +318,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Coastal Acid Sulfate Soils (preview)",
+      "title": "LIST Coastal Acid Sulfate Soils (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

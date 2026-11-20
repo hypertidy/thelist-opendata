@@ -158,7 +158,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Private Timber Reserves (preview)",
+      "title": "LIST Private Timber Reserves (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

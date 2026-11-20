@@ -330,7 +330,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Wedgetailed Eagle Nesting Habitat High (preview)",
+      "title": "Wedgetailed Eagle Nesting Habitat High (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

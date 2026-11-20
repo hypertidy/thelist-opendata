@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Doe School Intake Areas (preview)",
+      "title": "LIST Doe School Intake Areas (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

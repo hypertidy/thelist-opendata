@@ -246,7 +246,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Tasmanian Reserve Estate (preview)",
+      "title": "LIST Tasmanian Reserve Estate (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

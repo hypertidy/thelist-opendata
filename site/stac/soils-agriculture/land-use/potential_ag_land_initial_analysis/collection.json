@@ -154,7 +154,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Potential Ag Land Initial Analysis (preview)",
+      "title": "Potential Ag Land Initial Analysis (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

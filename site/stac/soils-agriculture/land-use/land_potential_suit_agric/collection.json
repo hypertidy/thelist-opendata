@@ -262,7 +262,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Land Potential Suit Agric (preview)",
+      "title": "Land Potential Suit Agric (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

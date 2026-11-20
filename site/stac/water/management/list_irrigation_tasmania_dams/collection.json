@@ -190,7 +190,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Irrigation Tasmania Dams (preview)",
+      "title": "LIST Irrigation Tasmania Dams (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

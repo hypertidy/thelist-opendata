@@ -158,7 +158,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Abalone Commercial Dive Blocks (preview)",
+      "title": "Abalone Commercial Dive Blocks (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

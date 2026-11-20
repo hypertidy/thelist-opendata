@@ -210,7 +210,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Reconnaissance Soils Map Extents 100K (preview)",
+      "title": "Reconnaissance Soils Map Extents 100K (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -210,7 +210,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmanian Planning Scheme Code Overlay (preview)",
+      "title": "Tasmanian Planning Scheme Code Overlay (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

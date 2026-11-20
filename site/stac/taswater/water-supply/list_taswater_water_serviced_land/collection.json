@@ -182,7 +182,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST TASWATER Water Serviced Land (preview)",
+      "title": "LIST TASWATER Water Serviced Land (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

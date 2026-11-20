@@ -270,7 +270,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Recreational Fishing Restrictions (preview)",
+      "title": "Recreational Fishing Restrictions (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -162,7 +162,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments (preview)",
+      "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

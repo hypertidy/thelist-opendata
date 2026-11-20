@@ -198,7 +198,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmap Ttsa Index (preview)",
+      "title": "Tasmap Ttsa Index (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

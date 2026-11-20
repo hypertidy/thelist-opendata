@@ -182,7 +182,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Water Management Area (preview)",
+      "title": "LIST Water Management Area (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

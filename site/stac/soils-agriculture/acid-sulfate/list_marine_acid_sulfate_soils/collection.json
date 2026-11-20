@@ -222,7 +222,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Marine Acid Sulfate Soils (preview)",
+      "title": "LIST Marine Acid Sulfate Soils (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Enwave Gas Declared Pipeline Corridor (preview)",
+      "title": "Enwave Gas Declared Pipeline Corridor (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

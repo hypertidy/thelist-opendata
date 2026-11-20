@@ -194,7 +194,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmap Ortho Index (preview)",
+      "title": "Tasmap Ortho Index (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

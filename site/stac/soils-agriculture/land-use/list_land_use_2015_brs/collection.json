@@ -222,12 +222,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2015 BRS (preview)",
+      "title": "LIST Land Use 2015 BRS (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 13053,
-      "file:checksum": "1220e74c1a59a09fef4c02e29fc0ce9e243dcd796d80e17d733a7fcedb6a750dea41"
+      "file:size": 40197,
+      "file:checksum": "1220c7a760486ddd2c44d5ef3a8103ef87dfb6ad9b1fad5d436e381f524441c69fc5"
     }
   },
   "table:primary_geometry": "geometry"

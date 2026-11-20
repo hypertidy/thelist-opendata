@@ -302,7 +302,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Aerial Photo Coverages (preview)",
+      "title": "LIST Aerial Photo Coverages (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

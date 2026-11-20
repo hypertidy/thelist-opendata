@@ -366,7 +366,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Landslide Planning Map Hazard Bands (preview)",
+      "title": "LIST Landslide Planning Map Hazard Bands (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -358,7 +358,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Locality Postcode (preview)",
+      "title": "LIST Locality Postcode (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

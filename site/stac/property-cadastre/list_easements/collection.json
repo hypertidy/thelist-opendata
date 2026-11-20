@@ -370,7 +370,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Easements (preview)",
+      "title": "LIST Easements (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

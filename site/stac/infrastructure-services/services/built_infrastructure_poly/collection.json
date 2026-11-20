@@ -194,7 +194,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Built Infrastructure Poly (preview)",
+      "title": "Built Infrastructure Poly (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

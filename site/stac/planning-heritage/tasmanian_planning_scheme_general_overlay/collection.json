@@ -206,7 +206,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmanian Planning Scheme General Overlay (preview)",
+      "title": "Tasmanian Planning Scheme General Overlay (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

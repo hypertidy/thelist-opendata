@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Shellmap Harvest Area Boundaries (preview)",
+      "title": "LIST Shellmap Harvest Area Boundaries (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

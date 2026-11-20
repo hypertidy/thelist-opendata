@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "EPA Underground Petroleum Storage Systems (preview)",
+      "title": "EPA Underground Petroleum Storage Systems (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

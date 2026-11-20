@@ -162,7 +162,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Threatened Native Vegetation Communities 2025 (preview)",
+      "title": "LIST Threatened Native Vegetation Communities 2025 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -222,7 +222,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Private Reserves (preview)",
+      "title": "LIST Private Reserves (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

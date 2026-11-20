@@ -202,7 +202,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmanian Planning Scheme Zones (preview)",
+      "title": "Tasmanian Planning Scheme Zones (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

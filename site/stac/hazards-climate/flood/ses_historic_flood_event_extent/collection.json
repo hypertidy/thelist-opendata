@@ -606,7 +606,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "SES Historic Flood Event Extent (preview)",
+      "title": "SES Historic Flood Event Extent (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

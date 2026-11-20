@@ -194,12 +194,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST TASVEG 50 Fire Attributes (preview)",
+      "title": "LIST TASVEG 50 Fire Attributes (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 11983,
-      "file:checksum": "1220d9f7b3b214963b63ece0cc4772528cae8a46b223dcaa00894d3de255ae3e7afb"
+      "file:size": 48379,
+      "file:checksum": "122004ad4a2ba1bc592f96f48744d4a13825111fdb423a953f169a39c8edf542eff8"
     }
   },
   "table:primary_geometry": "geometry"

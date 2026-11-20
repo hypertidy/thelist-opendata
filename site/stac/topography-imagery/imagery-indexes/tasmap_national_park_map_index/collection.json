@@ -206,7 +206,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmap National Park Map Index (preview)",
+      "title": "Tasmap National Park Map Index (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

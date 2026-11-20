@@ -174,12 +174,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Correlated Reconnaissance Soils Soil Types (preview)",
+      "title": "LIST Correlated Reconnaissance Soils Soil Types (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 11636,
-      "file:checksum": "1220b93518e92a495dd0fadc377289ebb501352a818fe45d22cf46d650befe311b0c"
+      "file:size": 30732,
+      "file:checksum": "12200dfc135342a119eb5c77237a70e6479b022c45837d5d25d273c38335b13fd86c"
     }
   },
   "table:primary_geometry": "geometry"

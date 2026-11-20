@@ -338,7 +338,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Water Management Plan Areas (preview)",
+      "title": "Water Management Plan Areas (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

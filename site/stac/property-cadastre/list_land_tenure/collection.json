@@ -174,12 +174,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Tenure (preview)",
+      "title": "LIST Land Tenure (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 14901,
-      "file:checksum": "1220d17d1f79f7d8f19124777d126eca40f087ef57cbc52a4f7be45027ff3ff8e96b"
+      "file:size": 36608,
+      "file:checksum": "1220f15f291c3d45df2396c5a2f19ecb4014c1f8ec90e81b27d647cd8142b5f42953"
     }
   },
   "table:primary_geometry": "geometry"

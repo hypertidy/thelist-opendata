@@ -120,6 +120,8 @@ theme_by_id <- setNames(THEMES, vapply(THEMES, `[[`, "", "id"))
 cat_json <- fromJSON("site/catalog.json", simplifyVector = FALSE)
 sums <- read.csv(Sys.getenv("CHECKSUMS", "manifest/checksums.csv"), colClasses = "character")
 sha <- setNames(sums$sha256, sums$path)
+tidx <- if (file.exists(file.path(THUMBS, "index.csv"))) read.csv(file.path(THUMBS, "index.csv"), colClasses = "character") else NULL
+thumb_style <- if (!is.null(tidx) && "style" %in% names(tidx)) setNames(tidx$style, tidx$product) else character()
 items <- cat_json$items
 nosum <- vapply(items, function(it) is.na(sha[it$path]), TRUE)
 if (any(nosum)) stop(sum(nosum), " files have no checksum; run R/21_checksums.R first")
@@ -211,7 +213,10 @@ make_collection <- function(prod, its) {
   assets <- setNames(lapply(others, data_asset), vapply(others, function(it) sub("\\.(parquet|tif)$", "", basename(it$path)), ""))
   thumb <- file.path(THUMBS, paste0(prod, ".png"))
   has_thumb <- file.exists(thumb)
-  if (has_thumb) assets$thumbnail <- list(href = "./thumbnail.png", type = "image/png", title = paste(title, "(preview)"),
+  st <- thumb_style[prod]
+  thumb_title <- if (!is.na(st) && st == "bbox outlines") paste(title, "(preview: outlines of each feature's bounding box, shaded by density)")
+                 else if (!is.na(st) && st %in% c("polygons", "density")) paste(title, "(preview: shaded by density of features)") else paste(title, "(preview)")
+  if (has_thumb) assets$thumbnail <- list(href = "./thumbnail.png", type = "image/png", title = thumb_title,
                                           roles = I("thumbnail"), `file:size` = file.size(thumb),
                                           `file:checksum` = paste0("1220", digest_sha256(thumb)))
   item_objs <- lapply(rasters, function(it) {

@@ -194,12 +194,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2013 BRS (preview)",
+      "title": "LIST Land Use 2013 BRS (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 13012,
-      "file:checksum": "12200163f44be4db3330ed46469e4829b5c5e05803742f62e5db2fcafa4c2050d006"
+      "file:size": 39919,
+      "file:checksum": "12209455ea494ae87621bc78f0fda3befdc0d953e17036d23f63d372f871f3da9157"
     }
   },
   "table:primary_geometry": "geometry"

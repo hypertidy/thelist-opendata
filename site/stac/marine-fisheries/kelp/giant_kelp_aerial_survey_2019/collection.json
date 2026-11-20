@@ -178,7 +178,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Giant Kelp Aerial Survey 2019 (preview)",
+      "title": "Giant Kelp Aerial Survey 2019 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

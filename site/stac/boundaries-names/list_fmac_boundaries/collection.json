@@ -170,7 +170,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Fmac Boundaries (preview)",
+      "title": "LIST Fmac Boundaries (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

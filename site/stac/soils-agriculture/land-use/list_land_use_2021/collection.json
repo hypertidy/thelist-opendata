@@ -206,12 +206,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2021 (preview)",
+      "title": "LIST Land Use 2021 (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 12958,
-      "file:checksum": "1220ab3694a8e4e97c59957730e8b1d96355686bdbb02b26227658ab6ffcef27effd"
+      "file:size": 40141,
+      "file:checksum": "12201b39ba2f71d6567e270c59963c03ecf1612b2e7db9b399a6774b73b6e9ce5cb9"
     }
   },
   "table:primary_geometry": "geometry"

@@ -182,7 +182,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Electoral Divs (preview)",
+      "title": "LIST Electoral Divs (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Marine Farming Zones (preview)",
+      "title": "LIST Marine Farming Zones (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

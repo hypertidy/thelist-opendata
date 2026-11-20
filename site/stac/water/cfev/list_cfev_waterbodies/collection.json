@@ -234,7 +234,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Waterbodies (preview)",
+      "title": "LIST CFEV Waterbodies (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

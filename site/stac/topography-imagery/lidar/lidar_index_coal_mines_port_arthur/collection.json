@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIDAR Index Coal Mines Port Arthur (preview)",
+      "title": "LIDAR Index Coal Mines Port Arthur (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

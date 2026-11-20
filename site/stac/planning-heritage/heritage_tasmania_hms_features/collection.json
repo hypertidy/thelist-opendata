@@ -194,7 +194,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Heritage Tasmania HMS Features (preview)",
+      "title": "Heritage Tasmania HMS Features (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

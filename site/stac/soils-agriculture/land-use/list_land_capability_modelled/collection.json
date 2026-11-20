@@ -252,7 +252,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Capability Modelled (preview)",
+      "title": "LIST Land Capability Modelled (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

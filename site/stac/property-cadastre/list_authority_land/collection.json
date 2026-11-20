@@ -422,7 +422,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Authority Land (preview)",
+      "title": "LIST Authority Land (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

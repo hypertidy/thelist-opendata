@@ -186,7 +186,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Local Govt Areas (preview)",
+      "title": "LIST Local Govt Areas (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

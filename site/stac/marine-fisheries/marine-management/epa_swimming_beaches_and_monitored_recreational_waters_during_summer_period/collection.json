@@ -162,7 +162,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period (preview)",
+      "title": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

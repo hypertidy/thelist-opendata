@@ -190,7 +190,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Local Govt Reserves (preview)",
+      "title": "LIST Local Govt Reserves (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -202,7 +202,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Irrigation Tasmania Irrigation Districts (preview)",
+      "title": "LIST Irrigation Tasmania Irrigation Districts (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -194,12 +194,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2009 2010 BRS (preview)",
+      "title": "LIST Land Use 2009 2010 BRS (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 15524,
-      "file:checksum": "1220b89f20156001208b7aabbbf20e8171807d146527713f636184d7c5182157b0d5"
+      "file:size": 48589,
+      "file:checksum": "12200359f1ad7ee77c30e7e1ec58465e424c9783099af5b1cce3178d1ad6fc63886e"
     }
   },
   "table:primary_geometry": "geometry"

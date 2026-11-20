@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Districts (preview)",
+      "title": "LIST Land Districts (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

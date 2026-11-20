@@ -386,7 +386,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Future Potential Production Forest (preview)",
+      "title": "LIST Future Potential Production Forest (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

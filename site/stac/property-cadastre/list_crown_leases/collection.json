@@ -210,7 +210,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Crown Leases (preview)",
+      "title": "LIST Crown Leases (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -194,12 +194,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2019 BRS (preview)",
+      "title": "LIST Land Use 2019 BRS (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 13001,
-      "file:checksum": "12203b7369151a0714905c290dbea75e83e081a942336aa254cb9fa05df2d0c248ef"
+      "file:size": 40236,
+      "file:checksum": "122025794cd5267d1cb81595128ab58ae983654d850fd84cfc9d13f8a9926000939b"
     }
   },
   "table:primary_geometry": "geometry"

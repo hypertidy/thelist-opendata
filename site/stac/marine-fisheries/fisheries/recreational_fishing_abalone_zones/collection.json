@@ -170,7 +170,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Recreational Fishing Abalone Zones (preview)",
+      "title": "Recreational Fishing Abalone Zones (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

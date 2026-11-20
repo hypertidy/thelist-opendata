@@ -358,7 +358,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LGA boundaries (municipalities) (preview)",
+      "title": "LGA boundaries (municipalities) (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

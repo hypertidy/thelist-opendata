@@ -222,7 +222,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Estuaries (preview)",
+      "title": "LIST CFEV Estuaries (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

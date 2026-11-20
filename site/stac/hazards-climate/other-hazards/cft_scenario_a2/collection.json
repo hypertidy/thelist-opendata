@@ -246,7 +246,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "CFT Scenario A2 (preview)",
+      "title": "CFT Scenario A2 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

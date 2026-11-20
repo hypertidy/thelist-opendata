@@ -206,7 +206,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Fire History (preview)",
+      "title": "LIST Fire History (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

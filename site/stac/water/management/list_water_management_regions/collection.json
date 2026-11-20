@@ -182,7 +182,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Water Management Regions (preview)",
+      "title": "LIST Water Management Regions (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

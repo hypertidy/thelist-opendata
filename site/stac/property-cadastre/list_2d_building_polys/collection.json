@@ -366,7 +366,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST 2D Building Polys (preview)",
+      "title": "LIST 2D Building Polys (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

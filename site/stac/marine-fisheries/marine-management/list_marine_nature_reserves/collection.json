@@ -214,7 +214,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Marine Nature Reserves (preview)",
+      "title": "LIST Marine Nature Reserves (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

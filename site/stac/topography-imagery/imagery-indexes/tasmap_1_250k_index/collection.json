@@ -210,7 +210,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Tasmap 1 250K Index (preview)",
+      "title": "Tasmap 1 250K Index (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

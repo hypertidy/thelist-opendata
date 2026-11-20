@@ -178,7 +178,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Coastal Projected Sea Level Rise 20161201 (preview)",
+      "title": "LIST Coastal Projected Sea Level Rise 20161201 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

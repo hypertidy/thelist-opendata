@@ -402,7 +402,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Wetlands (preview)",
+      "title": "LIST CFEV Wetlands (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

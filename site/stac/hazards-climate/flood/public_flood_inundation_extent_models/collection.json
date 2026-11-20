@@ -206,7 +206,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Public Flood Inundation Extent Models (preview)",
+      "title": "Public Flood Inundation Extent Models (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

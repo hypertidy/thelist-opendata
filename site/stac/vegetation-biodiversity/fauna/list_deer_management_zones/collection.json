@@ -154,7 +154,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Deer Management Zones (preview)",
+      "title": "LIST Deer Management Zones (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

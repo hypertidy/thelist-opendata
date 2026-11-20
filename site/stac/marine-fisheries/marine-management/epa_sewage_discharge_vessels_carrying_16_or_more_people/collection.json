@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "EPA Sewage Discharge Vessels Carrying 16 Or More People (preview)",
+      "title": "EPA Sewage Discharge Vessels Carrying 16 Or More People (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

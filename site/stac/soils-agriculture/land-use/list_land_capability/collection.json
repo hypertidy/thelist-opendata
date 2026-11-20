@@ -231,7 +231,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Capability (preview)",
+      "title": "LIST Land Capability (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

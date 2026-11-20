@@ -190,12 +190,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV River Sec Catch (preview)",
+      "title": "LIST CFEV River Sec Catch (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 11134,
-      "file:checksum": "1220a6708d368b6c57a5317587ebf19cacf4682f8c8c574428f5c52504f4bccfe6bf"
+      "file:size": 43322,
+      "file:checksum": "12204c88df4c8aeebb862a7c432ea195eccd1c105f961113d3c0836e502d602e999c"
     }
   },
   "table:primary_geometry": "geometry"

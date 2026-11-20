@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Coastal Erosion Hazard Bands 20161201 (preview)",
+      "title": "LIST Coastal Erosion Hazard Bands 20161201 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

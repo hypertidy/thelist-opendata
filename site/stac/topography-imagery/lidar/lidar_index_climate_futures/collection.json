@@ -198,7 +198,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIDAR Index Climate Futures (preview)",
+      "title": "LIDAR Index Climate Futures (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

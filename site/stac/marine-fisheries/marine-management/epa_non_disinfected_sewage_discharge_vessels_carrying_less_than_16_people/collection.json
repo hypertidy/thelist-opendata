@@ -166,7 +166,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "EPA Non Disinfected Sewage Discharge Vessels Carrying Less Than 16 People (preview)",
+      "title": "EPA Non Disinfected Sewage Discharge Vessels Carrying Less Than 16 People (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

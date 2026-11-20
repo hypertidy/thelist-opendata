@@ -390,12 +390,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Parcels (preview)",
+      "title": "LIST Parcels (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 13967,
-      "file:checksum": "1220f4449236c5f9f009f6eeefb48a0e41db59b83abf30e972e0e6383f9fc433749c"
+      "file:size": 37041,
+      "file:checksum": "1220005f6f3b2baf908b7c2dc9ae864d338b8ee3d5fe82f1d079c64a5d742e59cd7e"
     }
   },
   "table:primary_geometry": "geometry"

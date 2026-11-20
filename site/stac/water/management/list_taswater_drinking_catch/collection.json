@@ -178,7 +178,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST TASWATER Drinking Catch (preview)",
+      "title": "LIST TASWATER Drinking Catch (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

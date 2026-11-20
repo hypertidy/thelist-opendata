@@ -186,7 +186,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Interim Planning Scheme Zoning (preview)",
+      "title": "Interim Planning Scheme Zoning (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

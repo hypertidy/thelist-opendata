@@ -230,7 +230,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIDAR Index Latest (preview)",
+      "title": "LIDAR Index Latest (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -186,7 +186,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Scalefish Blocks (preview)",
+      "title": "LIST Scalefish Blocks (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -272,7 +272,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Interim Planning Scheme Overlay (preview)",
+      "title": "Interim Planning Scheme Overlay (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

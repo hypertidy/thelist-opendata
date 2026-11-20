@@ -178,7 +178,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIDAR Forestry Tasmania Index (preview)",
+      "title": "LIDAR Forestry Tasmania Index (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

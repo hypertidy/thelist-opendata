@@ -166,12 +166,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Pft Private Forest Group (preview)",
+      "title": "Pft Private Forest Group (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 17152,
-      "file:checksum": "1220655ab00ef6c9136c2d122fd83795f3c2403f75b8d60fc436651338c22f589b0b"
+      "file:size": 55583,
+      "file:checksum": "1220ce45484edc75ee195d7181f0b1851044525052a3d717d3e47707247bcbc2feb2"
     }
   },
   "table:primary_geometry": "geometry"

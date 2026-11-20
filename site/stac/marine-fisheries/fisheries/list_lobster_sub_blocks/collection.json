@@ -170,7 +170,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Lobster Sub Blocks (preview)",
+      "title": "LIST Lobster Sub Blocks (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

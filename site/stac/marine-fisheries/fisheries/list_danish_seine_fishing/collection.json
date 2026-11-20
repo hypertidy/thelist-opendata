@@ -170,7 +170,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Danish Seine Fishing (preview)",
+      "title": "LIST Danish Seine Fishing (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

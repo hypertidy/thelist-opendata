@@ -174,7 +174,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "TASWATER Sewer Operational Areas (preview)",
+      "title": "TASWATER Sewer Operational Areas (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

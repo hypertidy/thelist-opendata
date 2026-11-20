@@ -194,12 +194,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST TASVEG 30 (preview)",
+      "title": "LIST TASVEG 30 (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 12694,
-      "file:checksum": "1220ce217978c2f75b98140350aa67b1ee08a9ae17259cda81db8fdce4338b22d098"
+      "file:size": 53094,
+      "file:checksum": "12209589eefc55abae30aaf9cf41ce663774f11baa65b19fb1591e39d29b3877b9dc"
     }
   },
   "table:primary_geometry": "geometry"

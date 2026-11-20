@@ -190,7 +190,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Marine Leases (preview)",
+      "title": "LIST Marine Leases (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

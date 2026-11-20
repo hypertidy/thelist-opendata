@@ -162,7 +162,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "Macrocystis Pyrifera L C Agardh Stocks 1965 (preview)",
+      "title": "Macrocystis Pyrifera L C Agardh Stocks 1965 (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

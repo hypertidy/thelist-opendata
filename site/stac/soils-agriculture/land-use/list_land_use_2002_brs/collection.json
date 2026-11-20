@@ -198,12 +198,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Land Use 2002 BRS (preview)",
+      "title": "LIST Land Use 2002 BRS (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 16667,
-      "file:checksum": "12204ce3c5948ff523731dc2572e4c935002f46aae8e1575cd456beaddcb9c321b66"
+      "file:size": 47587,
+      "file:checksum": "12206d16c2f2ca18fb973d3589fdfe2c11dae139d52ee767b05d4c65355569f9c4da"
     }
   },
   "table:primary_geometry": "geometry"

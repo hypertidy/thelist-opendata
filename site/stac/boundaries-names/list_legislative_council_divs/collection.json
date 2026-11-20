@@ -182,7 +182,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Legislative Council Divs (preview)",
+      "title": "LIST Legislative Council Divs (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

@@ -8,7 +8,12 @@
 ##
 ## Vectors: the geometry column only (DuckDB column projection over HTTPS),
 ## burned with controlledburn (exact coverage for polygons, cells touched for
-## lines and points; no pixel grid until the small one we draw). Rasters: one
+## lines and points; no pixel grid until the small one we draw), shaded by
+## density against the layer's own 95th percentile. Polygons: interiors pale,
+## boundaries by density; a coverage with a boundary in nearly every cell
+## (TASVEG, land use) would read as a solid block, so it is drawn instead as
+## the outlines of each feature's bounding box, which shows where features are
+## small and many. index.csv records the style used. Rasters: one
 ## decimated read, served from the COG overviews. A faint Tasmania outline sits
 ## behind data in MGA zone 55. Redrawn only when the file's sha256 changes.
 ##
@@ -28,7 +33,8 @@ sums <- read.csv("manifest/checksums.csv", colClasses = "character")
 sha <- setNames(sums$sha256, sums$path)
 dir.create(OUT, showWarnings = FALSE)
 idxf <- file.path(OUT, "index.csv")
-idx <- if (file.exists(idxf)) read.csv(idxf, colClasses = "character") else data.frame(product = character(), path = character(), sha256 = character())
+idx <- if (file.exists(idxf)) read.csv(idxf, colClasses = "character") else data.frame(product = character(), path = character(), sha256 = character(), style = character())
+if (!"style" %in% names(idx)) idx$style <- rep(NA_character_, nrow(idx))   # index from before styles: polygons get redrawn
 
 ## one file per product: the vector layer if there is one, else the first raster
 items <- Filter(function(it) it$kind != "table", cat_json$items)
@@ -37,7 +43,8 @@ by_prod <- split(items, vapply(items, prod_of, ""))
 pick <- lapply(by_prod, function(its) { k <- vapply(its, `[[`, "", "kind"); its[order(k != "vector", vapply(its, `[[`, "", "path"))][[1]] })
 todo <- Filter(function(it) {
   p <- prod_of(it); r <- idx[idx$product == p, ]
-  !(nrow(r) && r$path[1] == it$path && r$sha256[1] == sha[[it$path]] && file.exists(file.path(OUT, paste0(p, ".png"))))
+  stale_style <- nrow(r) && is.na(r$style[1]) && grepl("Polygon", it$geometry %||% "")
+  !(nrow(r) && r$path[1] == it$path && r$sha256[1] == sha[[it$path]] && file.exists(file.path(OUT, paste0(p, ".png"))) && !stale_style)
 }, pick)
 if (nzchar(Sys.getenv("PRODUCT"))) todo <- todo[grepl(Sys.getenv("PRODUCT"), names(todo), ignore.case = TRUE)]
 message(length(pick), " geospatial products; ", length(todo), " thumbnails to draw")
@@ -79,21 +86,38 @@ thumb_vector <- function(it, f) {
   g <- wk::wkb(unclass(lapply(d$g, as.raw))); rm(d)
   fr <- frame(it)
   x <- burn(g, extent = fr$ext, dimension = fr$dim)
-  open_png(f, fr); draw_land(it)
-  img <- function(m, alpha) {
-    ## density relative to the layer's own 95th percentile, so dense networks still show texture
+  ## density relative to the layer's own 95th percentile, so dense networks still show texture
+  alpha_of <- function(m, alpha = NULL) {
     q <- if (any(m > 0, na.rm = TRUE)) quantile(m[m > 0], 0.95, na.rm = TRUE) else 1
     a <- if (is.null(alpha)) pmin(1, 0.15 + 0.85 * m / q) else ifelse(m > 0, alpha, 0); a[is.na(a) | is.na(m) | m <= 0] <- 0
-    k <- col2rgb(INK) / 255; out <- matrix(rgb(k[1], k[2], k[3], alpha = a), nrow(m)); out[a == 0] <- NA
+    dim(a) <- dim(m); a                                          # pmin() drops the matrix dims
+  }
+  img <- function(a) {
+    k <- col2rgb(INK) / 255; out <- matrix(rgb(k[1], k[2], k[3], alpha = a), nrow(a)); out[a == 0] <- NA
     rasterImage(as.raster(out), fr$ext[1], fr$ext[3], fr$ext[2], fr$ext[4], interpolate = FALSE)
   }
+  style <- "density"
   if (grepl("Polygon", it$geometry %||% "")) {
-    ## polygons: interiors pale, boundaries full ink, so coverages (parcels, TASVEG) show their texture
+    ## polygons: interiors pale, boundaries by density, so coverages (parcels, land use) show their texture
     xi <- x; xi$edges <- x$edges[0, ]; xe <- x; xe$runs <- x$runs[0, ]
-    img(materialise_chunk(xi, "sum"), 0.22)
-    img(materialise_chunk(xe, "sum"), NULL)
-  } else img(materialise_chunk(x, "sum"), NULL)
-  dev.off()
+    ai <- alpha_of(materialise_chunk(xi, "sum"), 0.22); ae <- alpha_of(materialise_chunk(xe, "sum"))
+    comp <- 1 - (1 - ai) * (1 - ae)
+    if (mean(comp[comp > 0] >= 0.9) > 0.6) {
+      ## a coverage with a boundary in nearly every cell (TASVEG, land use) reads as a solid block: draw
+      ## each feature's bounding box as an outline instead, so the density of features shows through
+      ## (dark where features are small and many). Envelopes of the geometry already read, no new I/O.
+      e <- unclass(wk::wk_envelope(g)); n <- length(e$xmin)
+      ls <- wk::wk_linestring(wk::xy(c(rbind(e$xmin, e$xmax, e$xmax, e$xmin, e$xmin)), c(rbind(e$ymin, e$ymin, e$ymax, e$ymax, e$ymin))),
+                              feature_id = rep(seq_len(n), each = 5L))
+      ab <- alpha_of(materialise_chunk(burn(wk::as_wkb(ls), extent = fr$ext, dimension = fr$dim), "sum"))
+      open_png(f, fr); draw_land(it); img(ab); dev.off()
+      return("bbox outlines")
+    }
+    open_png(f, fr); draw_land(it); img(ai); img(ae); dev.off()
+    return("polygons")
+  }
+  open_png(f, fr); draw_land(it); img(alpha_of(materialise_chunk(x, "sum"))); dev.off()
+  style
 }
 thumb_raster <- function(it, f) {
   r <- new(GDALRaster, paste0("/vsicurl/", PUBLIC, "/", it$path)); on.exit(r$close())
@@ -130,9 +154,9 @@ thumb_raster <- function(it, f) {
 
 res <- mclapply(todo, function(it) {
   p <- prod_of(it); f <- file.path(OUT, paste0(p, ".png"))
-  ok <- tryCatch({ if (it$kind == "vector") thumb_vector(it, f) else thumb_raster(it, f); TRUE },
-                 error = function(e) { message(p, ": ", conditionMessage(e)); FALSE })
-  data.frame(product = p, path = it$path, sha256 = if (ok) sha[[it$path]] else NA_character_)
+  style <- tryCatch(if (it$kind == "vector") thumb_vector(it, f) else { thumb_raster(it, f); "raster" },
+                    error = function(e) { message(p, ": ", conditionMessage(e)); NA_character_ })
+  data.frame(product = p, path = it$path, sha256 = if (!is.na(style)) sha[[it$path]] else NA_character_, style = style)
 }, mc.cores = CORES, mc.preschedule = FALSE)
 res <- do.call(rbind, res)
 if (!is.null(res)) {

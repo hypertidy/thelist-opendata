@@ -222,7 +222,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST CFEV Saltmarshes (preview)",
+      "title": "LIST CFEV Saltmarshes (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

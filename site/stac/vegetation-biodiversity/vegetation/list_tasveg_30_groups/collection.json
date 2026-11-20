@@ -158,12 +158,12 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST TASVEG 30 Groups (preview)",
+      "title": "LIST TASVEG 30 Groups (preview: outlines of each feature's bounding box, shaded by density)",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 13151,
-      "file:checksum": "1220fe903ebb4ba162f58590c3b3994582687d3b48623f1ba25711b6f1c498a8a07a"
+      "file:size": 53928,
+      "file:checksum": "1220526c4c4677aeffdd0ab65ea5e2cbf4c17f55445a1854ad0222000680fda2ac06"
     }
   },
   "table:primary_geometry": "geometry"

@@ -190,7 +190,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "SES Flood History Cal Studies (preview)",
+      "title": "SES Flood History Cal Studies (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],

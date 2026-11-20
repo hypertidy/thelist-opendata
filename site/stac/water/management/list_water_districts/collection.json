@@ -198,7 +198,7 @@
     "thumbnail": {
       "href": "./thumbnail.png",
       "type": "image/png",
-      "title": "LIST Water Districts (preview)",
+      "title": "LIST Water Districts (preview: shaded by density of features)",
       "roles": [
         "thumbnail"
       ],
