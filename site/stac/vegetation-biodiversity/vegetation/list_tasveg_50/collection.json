@@ -267,8 +267,8 @@
       "roles": [
         "visual"
       ],
-      "file:size": 208684488,
-      "file:checksum": "122025db81439d7c94b2661f490efb3784505d54451f9dbc963c2c5a0a4caad9ca72"
+      "file:size": 210592688,
+      "file:checksum": "1220e67a3f14ba6ea1bd47ee5e652e15bb5bf2daa2d83955fc46b71c3d6eefc6adf1"
     },
     "style-default": {
       "href": "./styles/default.json",
@@ -278,8 +278,8 @@
         "style",
         "default"
       ],
-      "file:size": 2409,
-      "file:checksum": "1220c6efca8301718cef916d99bf8aa8b6ccfc75861ff7d101d658420ad4f3643bb9"
+      "file:size": 3016,
+      "file:checksum": "122081e6af24dca974b67a2d230f4f5183b218848aa4773dd67e664530fae616c12f"
     }
   },
   "table:primary_geometry": "geometry"

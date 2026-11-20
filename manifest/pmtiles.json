@@ -17,7 +17,8 @@
     "source": "geoparquet/list_parcels/statewide/list_parcels_statewide.parquet",
     "source_sha256": "2bee0920e4b3c2f23c63e22e27b54b9d72b9cf43313a775906bcd8b830625232",
     "center": null,
-    "built": "2026-11-20T11:49:50Z"
+    "built": "2026-11-20T11:49:50Z",
+    "config_md5": "01e3cd66725b80c30d52a332088f228d"
   },
   "list_tasveg_40": {
     "path": "pmtiles/list_tasveg_40/statewide/list_tasveg_40_statewide.pmtiles",
@@ -36,7 +37,8 @@
     "source": "geoparquet/list_tasveg_40/statewide/list_tasveg_40_statewide.parquet",
     "source_sha256": "d85e1617c7b434580bc2c5bd8028110c41ef692212c0d2b71eddd26798a57fc4",
     "center": null,
-    "built": "2026-11-20T11:51:09Z"
+    "built": "2026-11-20T11:51:09Z",
+    "config_md5": "581c1cc3113b5ecc63b1978a575872ee"
   },
   "list_transport_segments": {
     "path": "pmtiles/list_transport_segments/statewide/list_transport_segments_statewide.pmtiles",
@@ -56,7 +58,8 @@
     "source": "geoparquet/list_transport_segments/statewide/list_transport_segments_statewide.parquet",
     "source_sha256": "c664a6e395e47e030d3b3a68ae3a49e83ff2714d19af90fe4674ad696439e518",
     "center": null,
-    "built": "2026-11-20T11:47:55Z"
+    "built": "2026-11-20T11:47:55Z",
+    "config_md5": "852a5cbf54018f89a636f051175ed40a"
   },
   "list_landslide_planning_map_hazard_bands": {
     "path": "pmtiles/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.pmtiles",
@@ -74,24 +77,23 @@
     "source": "geoparquet/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.parquet",
     "source_sha256": "cca72101122f8f45ec1cfa7be19a68589f2ccc31f7b96b9c2682524c233e6517",
     "center": null,
-    "built": "2026-11-20T11:57:38Z"
+    "built": "2026-11-20T11:57:38Z",
+    "config_md5": "3dc41635bbc33e2c69a2847444c97d45"
   },
   "list_tasveg_50": {
     "path": "pmtiles/list_tasveg_50/statewide/list_tasveg_50_statewide.pmtiles",
     "layer": "list_tasveg_50",
     "minzoom": 7,
     "maxzoom": 13,
-    "fields": [
-      "VEG_GRP_CODE",
-      "VEGCODE"
-    ],
-    "color_by": "VEG_GRP_CODE",
+    "fields": ["VEG_GRP_CODE", "VEGCODE"],
+    "color_by": "VEG_GROUP",
     "geometry": "MultiPolygon",
-    "bytes": 208684488,
-    "sha256": "25db81439d7c94b2661f490efb3784505d54451f9dbc963c2c5a0a4caad9ca72",
+    "bytes": 210592688,
+    "sha256": "e67a3f14ba6ea1bd47ee5e652e15bb5bf2daa2d83955fc46b71c3d6eefc6adf1",
     "source": "geoparquet/list_tasveg_50/statewide/tasveg_5_0.parquet",
     "source_sha256": "3faf797593bb45b4049bf86a163673cc2938122265e92e09e836347d3995f72b",
+    "config_md5": "c3285aeda2d8d3f61d225a7cf630e7dc",
     "center": null,
-    "built": "2026-11-20T12:17:36Z"
+    "built": "2026-11-20T12:28:04Z"
   }
 }

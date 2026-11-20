@@ -47,8 +47,10 @@ TILESETS <- list(
                       outline = TRUE, opacity = 0.35),
   list_tasveg_40 = list(fields = c("VEG_GROUP", "VEGCODE", "VEGCODE_D"), type = "fill", by = "VEG_GROUP", minzoom = 7, maxzoom = 13, opacity = 0.75,
                         palette = "tasveg"),
-  list_tasveg_50 = list(fields = c("VEG_GRP_CODE", "VEGCODE"), type = "fill", by = "VEG_GRP_CODE", minzoom = 7, maxzoom = 13, opacity = 0.75,
-                        palette = "tasveg", labels = TASVEG5_GROUPS),
+  ## 5.0 carries only the code: a VEG_GROUP name column is derived in the tiles, so the map legend
+  ## (read from the style's match values) and feature popups show names
+  list_tasveg_50 = list(fields = c("VEG_GRP_CODE", "VEGCODE"), type = "fill", by = "VEG_GROUP", minzoom = 7, maxzoom = 13, opacity = 0.75,
+                        palette = "tasveg", derive = list(name = "VEG_GROUP", from = "VEG_GRP_CODE", map = TASVEG5_GROUPS)),
   list_transport_segments = list(fields = c("TRANSEG_ID", "TRAN_CLASS", "TRANS_TYPE", "PRI_NAME"), type = "line", by = "TRAN_CLASS", minzoom = 7, maxzoom = 14),
   list_landslide_planning_map_hazard_bands = list(fields = c("HAZARD_BAND_1", "COMPONENT"), type = "fill", by = "HAZARD_BAND_1", minzoom = 8, maxzoom = 13,
                                                   opacity = 0.7, order = c("Low", "Medium", "Medium - Active", "High"),
@@ -113,13 +115,27 @@ build <- function(prod) {
   store_url <- paste0(PUBLIC, "/", rel)
   write_style <- function() {                                   # styles are cheap: always rewritten
     dir.create(STYLES, showWarnings = FALSE)
-    writeLines(toJSON(style_for(prod, cfg, it, categories(url, cfg$by, cfg$order), store_url), auto_unbox = TRUE, pretty = TRUE),
+    cats <- if (is.null(cfg$derive)) categories(url, cfg$by, cfg$order) else {
+      d <- categories(url, cfg$derive$from); d$v <- unname(cfg$derive$map[as.character(d$v)]); d }
+    writeLines(toJSON(style_for(prod, cfg, it, cats, store_url), auto_unbox = TRUE, pretty = TRUE),
                file.path(STYLES, paste0(prod, ".json")))
   }
-  if (!is.null(prev) && identical(prev$source_sha256, src_sha) && file.exists(out)) { write_style(); return(prev) }
+  cfg_hash <- { f <- tempfile(); writeLines(as.character(toJSON(cfg, auto_unbox = TRUE)), f); h <- unname(tools::md5sum(f)); unlink(f); h }
+  ## unchanged source and config: keep the tiles (an entry from before config hashes counts as unchanged); FORCE=regex rebuilds
+  force <- nzchar(Sys.getenv("FORCE")) && grepl(Sys.getenv("FORCE"), prod)
+  if (!force && !is.null(prev) && identical(prev$source_sha256, src_sha) && identical(prev$config_md5 %||% cfg_hash, cfg_hash) && file.exists(out)) {
+    write_style(); prev$config_md5 <- cfg_hash; return(prev)
+  }
+  src_layer <- sub("\\.parquet$", "", basename(it$path))
+  pick <- if (is.null(cfg$derive)) paste("! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field geometry")   # keep the geometry (a bare field list drops it)
+          else {                                                 # add a derived name column with a CASE over the code
+            dv <- cfg$derive
+            case <- paste0("CASE ", dv$from, " ", paste(sprintf("WHEN %s THEN '%s'", names(dv$map), gsub("'", "''", dv$map)), collapse = " "), " END AS ", dv$name)
+            paste("! sql --dialect SQLite", shQuote(sprintf("SELECT %s, %s, geometry FROM \"%s\"", paste(cfg$fields, collapse = ", "), case, src_layer)))
+          }
   args <- c("vector", "pipeline", paste(
     "read", shQuote(paste0("/vsicurl/", url)),
-    "! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field geometry",   # keep the geometry (a bare field list drops it)
+    pick,
     "! write --of PMTiles --overwrite",
     sprintf("--co MINZOOM=%d --co MAXZOOM=%d", cfg$minzoom, cfg$maxzoom),
     "--co SIMPLIFICATION=2 --co SIMPLIFICATION_MAX_ZOOM=1",
@@ -133,7 +149,7 @@ build <- function(prod) {
   write_style()
   message(prod, ": ", round(file.size(out) / 1e6, 1), " MB in ", round(as.numeric(difftime(Sys.time(), t0, units = "mins")), 1), " min")
   list(path = rel, layer = prod, minzoom = cfg$minzoom, maxzoom = cfg$maxzoom, fields = cfg$fields, color_by = cfg$by,
-       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha,
+       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha, config_md5 = cfg_hash,
        center = NULL, built = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"))
 }
 
