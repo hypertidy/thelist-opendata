@@ -1,0 +1,100 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "soils-agriculture-land-use",
+  "title": "Land use and capability",
+  "description": "Soils, land use and agriculture: Land use and capability. 11 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils, land use and agriculture"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Land use and capability documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./land_potential_suit_agric/collection.json",
+      "type": "application/json",
+      "title": "Land Potential Suit Agric"
+    },
+    {
+      "rel": "child",
+      "href": "./land_potentially_suitable_for_agriculture/collection.json",
+      "type": "application/json",
+      "title": "Land Potentially Suitable For Agriculture"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_capability/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Capability"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_capability_modelled/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Capability Modelled"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2002_brs/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2002 BRS"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2009_2010_brs/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2009 2010 BRS"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2013_brs/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2013 BRS"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2015_brs/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2015 BRS"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2019_brs/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2019 BRS"
+    },
+    {
+      "rel": "child",
+      "href": "./list_land_use_2021/collection.json",
+      "type": "application/json",
+      "title": "LIST Land Use 2021"
+    },
+    {
+      "rel": "child",
+      "href": "./potential_ag_land_initial_analysis/collection.json",
+      "type": "application/json",
+      "title": "Potential Ag Land Initial Analysis"
+    }
+  ]
+}

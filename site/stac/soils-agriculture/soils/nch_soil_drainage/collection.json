@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_soil_drainage",
+  "title": "NCH Soil Drainage",
+  "description": "NCH Soil Drainage: LIST product `NCH_SOIL_DRAINAGE`, statewide. Byte grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-07-08. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH Soil Drainage\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_SOIL_DRAINAGE",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.523666,
+          -44.140532,
+          149.313382,
+          -38.985852
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-07-08T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH Soil Drainage documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_soil_drainage%2Fstatewide%2Fnch_soil_drainage.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_SOIL_DRAINAGE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_SOIL_DRAINAGE_STATEWIDE.zip (LIST, released 2020-07-08)"
+    }
+  ],
+  "assets": {
+    "nch_soil_drainage": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_soil_drainage/statewide/nch_soil_drainage.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "nch_soil_drainage.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5218692,
+      "file:checksum": "1220a35d4429d517d87d39b393d2d7b404a2ca36f8e2bf46bd0b0f3878aba0fdd354",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        141419.726136001,
+        5112516.32285968,
+        685109.726136001,
+        5676636.32285968
+      ],
+      "proj:shape": [
+        18804,
+        18123
+      ],
+      "proj:transform": [
+        30,
+        0,
+        141419.726136001,
+        0,
+        -30,
+        5676636.32285968
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH Soil Drainage (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6835,
+      "file:checksum": "12202035a70cb475cdb33d1ad5cad28f0a957a89dc90de2916cf0afc104eccce6293"
+    }
+  }
+}

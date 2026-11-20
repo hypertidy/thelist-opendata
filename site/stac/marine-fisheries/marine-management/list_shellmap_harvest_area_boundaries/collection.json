@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_shellmap_harvest_area_boundaries",
+  "title": "LIST Shellmap Harvest Area Boundaries",
+  "description": "LIST Shellmap Harvest Area Boundaries: LIST product `LIST_SHELLMAP_HARVEST_AREA_BOUNDARIES`, statewide. 58 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Shellmap Harvest Area Boundaries\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_SHELLMAP_HARVEST_AREA_BOUNDARIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.944017,
+          -43.534599,
+          148.377492,
+          -39.809082
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Shellmap Harvest Area Boundaries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_shellmap_harvest_area_boundaries%2Fstatewide%2Flist_shellmap_harvest_area_boundaries_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_SHELLMAP_HARVEST_AREA_BOUNDARIES_STATEWIDe_old.zip",
+      "type": "text/html",
+      "title": "Source: LIST_SHELLMAP_HARVEST_AREA_BOUNDARIES_STATEWIDe_old.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "list_shellmap_harvest_area_boundaries_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_shellmap_harvest_area_boundaries/statewide/list_shellmap_harvest_area_boundaries_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_shellmap_harvest_area_boundaries_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 463790,
+      "file:checksum": "12207ceb42a56c780bc074e046fed9ba5c3eac87ed605513a57b631009d80a34791a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        252909.305,
+        5179814.989,
+        611314.585,
+        5589445.822
+      ],
+      "table:row_count": 58,
+      "table:columns": [
+        {
+          "name": "HA_NAME",
+          "type": "string"
+        },
+        {
+          "name": "GA_NAME",
+          "type": "string"
+        },
+        {
+          "name": "AREA_HA",
+          "type": "double"
+        },
+        {
+          "name": "LINK",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Shellmap Harvest Area Boundaries (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11128,
+      "file:checksum": "1220588615561758c23d65b86e156b04432cc105e0acd7769b5856102c62d481a609"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

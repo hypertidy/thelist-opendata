@@ -1,0 +1,182 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "recreational_fishing_abalone_zones",
+  "title": "Recreational Fishing Abalone Zones",
+  "description": "Recreational Fishing Abalone Zones: LIST product `RECREATIONAL_FISHING_ABALONE_ZONES`, statewide. 8 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-08-14. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Recreational Fishing Abalone Zones\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "RECREATIONAL_FISHING_ABALONE_ZONES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.882043,
+          -41.52897,
+          150.336193,
+          -39.478951
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-08-14T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Recreational Fishing Abalone Zones documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Frecreational_fishing_abalone_zones%2Fstatewide%2Frecreational_fishing_abalone_zones_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/RECREATIONAL_FISHING_ABALONE_ZONES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: RECREATIONAL_FISHING_ABALONE_ZONES_STATEWIDE.zip (LIST, released 2025-08-14)"
+    }
+  ],
+  "assets": {
+    "recreational_fishing_abalone_zones_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/recreational_fishing_abalone_zones/statewide/recreational_fishing_abalone_zones_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "recreational_fishing_abalone_zones_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1262284,
+      "file:checksum": "1220980b23469f28c002b17af06f9ea281a476a41e9739d878c28b8257a7c9edd633",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        156030.1382,
+        5402519.3247,
+        778550.6826,
+        5622433.164
+      ],
+      "table:row_count": 8,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "double"
+        },
+        {
+          "name": "AREA_NAME",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "GREENLIP_ABALONE_132MM",
+          "type": "string"
+        },
+        {
+          "name": "GREENLIP_ABALONE_145MM",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Recreational Fishing Abalone Zones (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6608,
+      "file:checksum": "1220770f6a92ab9640f118515489e6a26e67e52aaab1fa842ae1d6efe67d5238991b"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

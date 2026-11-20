@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_osm_humification",
+  "title": "NCH OSM Humification",
+  "description": "NCH OSM Humification: LIST product `NCH_OSM_HUMIFICATION`, statewide. Float32 grid, 30 x 30 cells, EPSG:32755. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2023-10-03. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH OSM Humification\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_OSM_HUMIFICATION",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.679915,
+          -44.070258,
+          149.161999,
+          -38.931662
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-03T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH OSM Humification documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_osm_humification%2Fstatewide%2Fosm_humification.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_OSM_HUMIFICATION_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_OSM_HUMIFICATION_STATEWIDE.zip (LIST, released 2023-10-03)"
+    }
+  ],
+  "assets": {
+    "osm_humification": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_osm_humification/statewide/osm_humification.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "osm_humification.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 60987589,
+      "file:checksum": "12202e0be0f94c8194d45ff644f65a6ef5bb5e8aeb9fd277fc757eb3cbbcc3178642",
+      "proj:code": "EPSG:32755",
+      "proj:bbox": [
+        153562.605245917,
+        5120318.00414296,
+        673192.605245917,
+        5683208.00414296
+      ],
+      "proj:shape": [
+        18763,
+        17321
+      ],
+      "proj:transform": [
+        30,
+        0,
+        153562.605245917,
+        0,
+        -30,
+        5683208.00414296
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH OSM Humification (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9772,
+      "file:checksum": "12200322a982ba8bb6dd0822c6058f1021b279f0ee3421785e663544f559acdefa86"
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_estuaries",
+  "title": "LIST CFEV Estuaries",
+  "description": "LIST CFEV Estuaries: LIST product `LIST_CFEV_ESTUARIES`, statewide. 113 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Estuaries\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_ESTUARIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.694349,
+          -43.600534,
+          148.521715,
+          -39.691274
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Estuaries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_estuaries%2Fstatewide%2Flist_cfev_estuaries_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_ESTUARIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_ESTUARIES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_estuaries_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_estuaries/statewide/list_cfev_estuaries_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_estuaries_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1436343,
+      "file:checksum": "122086d51ca2142b7ac7749447b8f9832a237b5dc8bbefaa8647733346f7630a9346",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        232981.948,
+        5172490.804,
+        622839,
+        5601870.903
+      ],
+      "table:row_count": 113,
+      "table:columns": [
+        {
+          "name": "ES_ID",
+          "type": "double"
+        },
+        {
+          "name": "ES_AREA",
+          "type": "double"
+        },
+        {
+          "name": "RSC_ID",
+          "type": "double"
+        },
+        {
+          "name": "SUBCAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "ES_MAP",
+          "type": "string"
+        },
+        {
+          "name": "ES_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "ES_ICV",
+          "type": "string"
+        },
+        {
+          "name": "ES_RCV",
+          "type": "string"
+        },
+        {
+          "name": "ES_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "ES_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "ES_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "ES_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "ES_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "ES_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ES_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "ES_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "ES_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Estuaries (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13801,
+      "file:checksum": "12200c0cf1da8384fbef4c394b8f85cf3d1a8794c811189c78796c29a7f8afe1e995"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

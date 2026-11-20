@@ -1,0 +1,274 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "land_potential_suit_agric",
+  "title": "Land Potential Suit Agric",
+  "description": "Land Potential Suit Agric: LIST product `LAND_POTENTIAL_SUIT_AGRIC`, statewide. 47,462 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Land Potential Suit Agric\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LAND_POTENTIAL_SUIT_AGRIC",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.599116,
+          -43.862412,
+          148.5815,
+          -39.154913
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Land Potential Suit Agric documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fland_potential_suit_agric%2Fstatewide%2Fland_potential_suit_agric_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LAND_POTENTIAL_SUIT_AGRIC_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LAND_POTENTIAL_SUIT_AGRIC_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "land_potential_suit_agric_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/land_potential_suit_agric/statewide/land_potential_suit_agric_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "land_potential_suit_agric_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 25337774,
+      "file:checksum": "1220371d91ca010e49a3d3c4746d4cca6da54fdb7eaeebb0d9705a5e0278e11c9800",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        226469.937,
+        5143404.952,
+        627111.828,
+        5661258.733
+      ],
+      "table:row_count": 47462,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "double"
+        },
+        {
+          "name": "VOLUME",
+          "type": "string"
+        },
+        {
+          "name": "FOLIO",
+          "type": "int32"
+        },
+        {
+          "name": "PID",
+          "type": "double"
+        },
+        {
+          "name": "POT_PID",
+          "type": "double"
+        },
+        {
+          "name": "LPI",
+          "type": "string"
+        },
+        {
+          "name": "CAD_TYPE1",
+          "type": "string"
+        },
+        {
+          "name": "CAD_TYPE2",
+          "type": "string"
+        },
+        {
+          "name": "TENURE_TY",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "GIS_HA",
+          "type": "double"
+        },
+        {
+          "name": "CAP_VAL_HA",
+          "type": "int32"
+        },
+        {
+          "name": "CAP_VALUE",
+          "type": "int32"
+        },
+        {
+          "name": "EC1_HA",
+          "type": "double"
+        },
+        {
+          "name": "EC2_HA",
+          "type": "double"
+        },
+        {
+          "name": "EC3_HA",
+          "type": "double"
+        },
+        {
+          "name": "EC4_HA",
+          "type": "double"
+        },
+        {
+          "name": "EC5_HA",
+          "type": "double"
+        },
+        {
+          "name": "SUM_EC_HA",
+          "type": "double"
+        },
+        {
+          "name": "EC_PERCENT",
+          "type": "double"
+        },
+        {
+          "name": "EC_OVER50",
+          "type": "string"
+        },
+        {
+          "name": "CRITERIA1",
+          "type": "string"
+        },
+        {
+          "name": "CRITERIA2",
+          "type": "string"
+        },
+        {
+          "name": "CRITERIA3",
+          "type": "string"
+        },
+        {
+          "name": "RESULT",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Land Potential Suit Agric (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 33947,
+      "file:checksum": "1220858fdccb508131d145f35154634d4031d4eb5b1b5bb12f39a7df3396749659c3"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

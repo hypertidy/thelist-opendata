@@ -1,0 +1,362 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_10m_contours",
+  "title": "LIST 10 m Contours",
+  "description": "LIST 10 m Contours: LIST product `LIST_10M_CONTOURS`, statewide. 527,009 features, multi-linestring (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST 10 m Contours\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_10M_CONTOURS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618778,
+          -43.665812,
+          148.556994,
+          -39.15517
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:51:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation and coastline"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST 10 m Contours documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_10m_contours%2Fstatewide%2Flist_10m_contours_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_BREAK_O_DAY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_BRIGHTON.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_BURNIE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_CENTRAL_COAST.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_CIRCULAR_HEAD.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_CLARENCE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_DERWENT_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_DEVONPORT.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_DORSET.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_FLINDERS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_GEORGE_TOWN.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_GLENORCHY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_HOBART.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_HUON_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_KENTISH.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_KING_ISLAND.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_KINGBOROUGH.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_LATROBE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_LAUNCESTON.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_MEANDER_VALLEY.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_SORELL.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_TASMAN.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_WARATAH_WYNYARD.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_WEST_COAST.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_10M_CONTOURS_WEST_TAMAR.zip (LIST, released 2025-07-09)"
+    }
+  ],
+  "assets": {
+    "list_10m_contours_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_10m_contours/statewide/list_10m_contours_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_10m_contours_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 542893621,
+      "file:checksum": "1220bc4d61b31076994cceca01b034e719a9428975fe8f642309d61200dce88146e6",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227162.506,
+        5165240.922,
+        625551.915,
+        5661254.261
+      ],
+      "table:row_count": 527009,
+      "table:columns": [
+        {
+          "name": "CONTOUR_ID",
+          "type": "double"
+        },
+        {
+          "name": "CONTOUR_TY",
+          "type": "string"
+        },
+        {
+          "name": "ELEVATION",
+          "type": "int32"
+        },
+        {
+          "name": "COMP_LEN",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST 10 m Contours (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 45862,
+      "file:checksum": "1220b5448174fce43724469090a0c1bfa4e52ab833f6bf7d0eb57175b3002012d290"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,162 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasnetworks_low_voltage_conductors",
+  "title": "LIST Tasnetworks Low Voltage Conductors",
+  "description": "LIST Tasnetworks Low Voltage Conductors: LIST product `LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS`, statewide. 360,513 features, multi-linestring z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Tasnetworks Low Voltage Conductors\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.526255,
+          -43.446617,
+          148.398473,
+          -40.680764
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Electricity (TasNetworks)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Tasnetworks Low Voltage Conductors documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasnetworks_low_voltage_conductors%2Fstatewide%2Flist_tasnetworks_low_voltage_conductors_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "list_tasnetworks_low_voltage_conductors_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasnetworks_low_voltage_conductors/statewide/list_tasnetworks_low_voltage_conductors_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasnetworks_low_voltage_conductors_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16674022,
+      "file:checksum": "12206127123f50708d873388a71fb0e19f532421681cd0b144035517264f64a75ab4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        299743.945,
+        5189586.2846,
+        613174.7424,
+        5493980.021
+      ],
+      "table:row_count": 360513,
+      "table:columns": [
+        {
+          "name": "FEATURE_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Tasnetworks Low Voltage Conductors (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 35213,
+      "file:checksum": "1220e07e41b764889ebb3575a9d17969682e050e2d57c73e494e95eedd3905b8a144"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasveg_50_fire_attributes",
+  "title": "LIST TASVEG 50 Fire Attributes",
+  "description": "LIST TASVEG 50 Fire Attributes: LIST product `LIST_TASVEG_50_FIRE_ATTRIBUTES`, statewide. 482,138 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-11-25. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASVEG 50 Fire Attributes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASVEG_50_FIRE_ATTRIBUTES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618284,
+          -43.666438,
+          148.582838,
+          -39.155009
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-11-25T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASVEG 50 Fire Attributes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasveg_50_fire_attributes%2Fstatewide%2Flist_tasveg_50_fire_attributes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_50_FIRE_ATTRIBUTES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_50_FIRE_ATTRIBUTES_STATEWIDE.zip (LIST, released 2025-11-25)"
+    }
+  ],
+  "assets": {
+    "list_tasveg_50_fire_attributes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasveg_50_fire_attributes/statewide/list_tasveg_50_fire_attributes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasveg_50_fire_attributes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 514051090,
+      "file:checksum": "1220bf9b94ec7ba8ee801993472543d1a3cce053e6d2aa312a7a0d5ad7e0ca145b18",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227125.4983,
+        5165169.8683,
+        627635.3841,
+        5661270.9368
+      ],
+      "table:row_count": 482138,
+      "table:columns": [
+        {
+          "name": "VEG_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE_D",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DAT",
+          "type": "string"
+        },
+        {
+          "name": "FIREATT",
+          "type": "string"
+        },
+        {
+          "name": "FIRESENS",
+          "type": "string"
+        },
+        {
+          "name": "FLAMMAB",
+          "type": "string"
+        },
+        {
+          "name": "FRB_TREAT",
+          "type": "string"
+        },
+        {
+          "name": "TFI_LS",
+          "type": "double"
+        },
+        {
+          "name": "TFI_HS",
+          "type": "double"
+        },
+        {
+          "name": "TFI_MAX",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASVEG 50 Fire Attributes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11983,
+      "file:checksum": "1220d9f7b3b214963b63ece0cc4772528cae8a46b223dcaa00894d3de255ae3e7afb"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

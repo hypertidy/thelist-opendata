@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_taswater_w_lateralline",
+  "title": "LIST TASWATER W Lateralline",
+  "description": "LIST TASWATER W Lateralline: LIST product `LIST_TASWATER_W_LATERALLINE`, statewide. 212,914 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASWATER W Lateralline\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASWATER_W_LATERALLINE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.67446,
+          -43.36229,
+          148.361157,
+          -39.908589
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:02Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water supply"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASWATER W Lateralline documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_taswater_w_lateralline%2Fstatewide%2Flist_taswater_w_lateralline_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_W_LATERALLINE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASWATER_W_LATERALLINE_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_taswater_w_lateralline_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_taswater_w_lateralline/statewide/list_taswater_w_lateralline_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_taswater_w_lateralline_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 19170582,
+      "file:checksum": "122006cf44aadf83e0459dd27dc587ea541425afc6c0d10f8c22f21a8eafbec08fa2",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230315.616,
+        5198951.2432,
+        610306.8927,
+        5577622.2404
+      ],
+      "table:row_count": 212914,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "MATERIAL",
+          "type": "string"
+        },
+        {
+          "name": "DIAMETER",
+          "type": "double"
+        },
+        {
+          "name": "QUAL_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "ASSETID",
+          "type": "string"
+        },
+        {
+          "name": "D_MATERIAL",
+          "type": "string"
+        },
+        {
+          "name": "D_DIAMETER",
+          "type": "string"
+        },
+        {
+          "name": "ACCURACY",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASWATER W Lateralline (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15039,
+      "file:checksum": "12208e6e69be4ebea0a16271db8edeac3c17adbf003626113aa113fbac0a61d6d907"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

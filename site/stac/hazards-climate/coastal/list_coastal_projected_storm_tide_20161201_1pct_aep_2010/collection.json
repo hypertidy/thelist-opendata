@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_coastal_projected_storm_tide_20161201_1pct_aep_2010",
+  "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010",
+  "description": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010: LIST product `LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010`, statewide. 64,387 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-10-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618742,
+          -43.666323,
+          148.576347,
+          -39.158061
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-10-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:55Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Coastal hazards"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_coastal_projected_storm_tide_20161201_1pct_aep_2010%2Fstatewide%2Flist_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_COASTAL_PROJECTED_STORM_TIDE_20161201_1PCT_AEP_2010_STATEWIDE.zip (LIST, released 2019-10-16)"
+    }
+  ],
+  "assets": {
+    "list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_coastal_projected_storm_tide_20161201_1pct_aep_2010/statewide/list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_coastal_projected_storm_tide_20161201_1pct_aep_2010_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 29345163,
+      "file:checksum": "1220f3d193fa02c06bc2d09a1d3d97216547dc5ac1969ff13b206ebfa0551b3eb770",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227162,
+        5165183,
+        627112,
+        5660933
+      ],
+      "table:row_count": 64387,
+      "table:columns": [
+        {
+          "name": "IC1PCT_RU",
+          "type": "int16"
+        },
+        {
+          "name": "SLR",
+          "type": "string"
+        },
+        {
+          "name": "DEM_REF",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Coastal Projected Storm Tide 20161201 1PCT AEP 2010 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13747,
+      "file:checksum": "12209c9a13e9a78897387dfa62a2a1d70233ea1a9567628620169acf478797176a13"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

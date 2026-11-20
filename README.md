@@ -14,6 +14,25 @@ dataset with its columns, extent, source zips and read-in-place snippets for
 DuckDB, GDAL, R, Python and QGIS; built from the store by `R/20_catalog.R`
 into `site/catalog.json`, published by `.github/workflows/pages.yml`).
 
+STAC: https://hypertidy.github.io/thelist-opendata/stac/catalog.json, a STAC
+1.1 catalogue in the [Portolan](https://cloudnativegeo.org/blog/2026/09/introducing-portolan/)
+profile (passes `portolan check`). Browse it on a map in the
+[Portolan Browser](https://browser.portolan-sdi.org/#/external/hypertidy.github.io/thelist-opendata/stac/catalog.json).
+Themed subcatalogs, one collection per product, one item per COG where a
+product has several; every asset points into the store with its size and
+sha256. Built by `make checksums thumbnails stac`:
+
+- `R/21_checksums.R`: sha256 of every statewide file (`manifest/checksums.csv`,
+  re-hashed only when a file changes)
+- `R/23_thumbnails.R`: a preview per geospatial product (`stac-thumbs/`);
+  vectors are burned with [controlledburn](https://github.com/hypertidy/controlledburn)
+  from the geometry column alone, rasters read from COG overviews
+- `R/22_stac.R` then `portolan stac-geoparquet`: the catalogue in `site/stac/`
+  (with `items.parquet` mirrors for multi-COG collections)
+
+It is staged on GitHub Pages with absolute asset hrefs into the store; it can
+move to the store root later unchanged.
+
     https://data.source.coop/mdsumner/thelist-opendata/<path>                 (HTTP, CORS open, range requests)
     s3://us-west-2.opendata.source.coop/mdsumner/thelist-opendata/<path>      (anonymous S3, AWS_NO_SIGN_REQUEST=YES)
 

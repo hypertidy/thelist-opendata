@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasveg_30",
+  "title": "LIST TASVEG 30",
+  "description": "LIST TASVEG 30: LIST product `LIST_TASVEG_30`, statewide. 446,694 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2018-01-19. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASVEG 30\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASVEG_30",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618556,
+          -43.666425,
+          148.582844,
+          -39.392472
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-19T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:00Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASVEG 30 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasveg_30%2Fstatewide%2Flist_tasveg_30_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_30_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_30_STATEWIDE.zip (LIST, released 2018-01-19)"
+    }
+  ],
+  "assets": {
+    "list_tasveg_30_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasveg_30/statewide/list_tasveg_30_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasveg_30_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 328639419,
+      "file:checksum": "12208ed7ea66a356d7a3dfbc41f7d315d764a7892350249c11e69d895c938f8376b2",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227147.38,
+        5165171.32,
+        627635.83,
+        5634878.56
+      ],
+      "table:row_count": 446694,
+      "table:columns": [
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "FOREST_STR",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DAT",
+          "type": "datetime"
+        },
+        {
+          "name": "FIELD_CHEC",
+          "type": "datetime"
+        },
+        {
+          "name": "PROJECT",
+          "type": "string"
+        },
+        {
+          "name": "EMERG_TREE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_IRS",
+          "type": "double"
+        },
+        {
+          "name": "VEGCODE_D",
+          "type": "string"
+        },
+        {
+          "name": "VEG_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASVEG 30 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12694,
+      "file:checksum": "1220ce217978c2f75b98140350aa67b1ee08a9ae17259cda81db8fdce4338b22d098"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

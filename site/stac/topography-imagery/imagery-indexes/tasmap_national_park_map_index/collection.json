@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "tasmap_national_park_map_index",
+  "title": "Tasmap National Park Map Index",
+  "description": "Tasmap National Park Map Index: LIST product `TASMAP_NATIONAL_PARK_MAP_INDEX`, statewide. 19 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Tasmap National Park Map Index\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASMAP_NATIONAL_PARK_MAP_INDEX",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.598566,
+          -43.668005,
+          148.397156,
+          -41.498659
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imagery and map indexes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Tasmap National Park Map Index documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasmap_national_park_map_index%2Fstatewide%2Ftasmap_national_park_map_index_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMAP_NATIONAL_PARK_MAP_INDEX_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASMAP_NATIONAL_PARK_MAP_INDEX_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "tasmap_national_park_map_index_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmap_national_park_map_index/statewide/tasmap_national_park_map_index_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasmap_national_park_map_index_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17270,
+      "file:checksum": "12207884d92429546e9206ebe335f8e34d38e826278a77889b938e4f6da31579b3c2",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        387000,
+        5165000,
+        612655,
+        5405000
+      ],
+      "table:row_count": 19,
+      "table:columns": [
+        {
+          "name": "MAP_NAME",
+          "type": "string"
+        },
+        {
+          "name": "MAP_NO",
+          "type": "string"
+        },
+        {
+          "name": "SCALE",
+          "type": "int32"
+        },
+        {
+          "name": "EDITION",
+          "type": "int16"
+        },
+        {
+          "name": "PROD_YEAR",
+          "type": "int16"
+        },
+        {
+          "name": "PRINT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "REMARKS",
+          "type": "string"
+        },
+        {
+          "name": "PROD_CODE",
+          "type": "double"
+        },
+        {
+          "name": "HOR_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "VER_DATUM",
+          "type": "string"
+        },
+        {
+          "name": "PROJECTION",
+          "type": "string"
+        },
+        {
+          "name": "MAP_URL",
+          "type": "string"
+        },
+        {
+          "name": "DIG_MAP_URL",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Tasmap National Park Map Index (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10688,
+      "file:checksum": "122068690552dcf192d22f54a2300eeffb33bf0c89f2a86ffff36c7cd6818da761a3"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

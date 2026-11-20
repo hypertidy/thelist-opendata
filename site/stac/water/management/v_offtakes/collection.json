@@ -1,0 +1,210 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "v_offtakes",
+  "title": "V Offtakes",
+  "description": "V Offtakes: LIST product `V_OFFTAKES`, statewide. 9,580 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"V Offtakes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "V_OFFTAKES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.677191,
+          -43.428162,
+          148.338206,
+          -39.621673
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water management and irrigation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "V Offtakes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fv_offtakes%2Fstatewide%2Fv_offtakes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/V_OFFTAKES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: V_OFFTAKES_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "v_offtakes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/v_offtakes/statewide/v_offtakes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "v_offtakes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 458043,
+      "file:checksum": "1220f80cb142978a213525038e9706b0bd19771c1e4af3c3c1d582e370435eda678a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230829,
+        5191635,
+        608329,
+        5609532
+      ],
+      "table:row_count": 9580,
+      "table:columns": [
+        {
+          "name": "OFFTAKE_ID",
+          "type": "double"
+        },
+        {
+          "name": "ORGANISATION",
+          "type": "string"
+        },
+        {
+          "name": "WE_NUMBER",
+          "type": "int32"
+        },
+        {
+          "name": "ALLOCATION_ID",
+          "type": "double"
+        },
+        {
+          "name": "EASTING",
+          "type": "int32"
+        },
+        {
+          "name": "NORTHING",
+          "type": "int32"
+        },
+        {
+          "name": "STREAM_NAME",
+          "type": "string"
+        },
+        {
+          "name": "PURPOSE",
+          "type": "string"
+        },
+        {
+          "name": "PERIOD_AMOUNT",
+          "type": "double"
+        },
+        {
+          "name": "START_DATE",
+          "type": "string"
+        },
+        {
+          "name": "END_DATE",
+          "type": "string"
+        },
+        {
+          "name": "SURETY",
+          "type": "int32"
+        },
+        {
+          "name": "ALLOCATION_STATUS",
+          "type": "string"
+        },
+        {
+          "name": "FINANCIAL_INTEREST",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "V Offtakes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 18871,
+      "file:checksum": "1220b4088cc938e5b0f7457792aa9236ca9754ba9a1da74131176ff94b11083feea2"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

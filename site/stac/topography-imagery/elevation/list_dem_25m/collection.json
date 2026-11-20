@@ -1,0 +1,319 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "list_dem_25m",
+  "title": "LIST DEM 25 m",
+  "description": "LIST DEM 25 m: LIST product `LIST_DEM_25M`, statewide. Float32 grid, 25 x 25 cells, EPSG:28355. Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per feature id, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2021-01-13. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST DEM 25 m\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_DEM_25M",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.615049,
+          -43.713,
+          148.560362,
+          -39.148883
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-13T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:28:50Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Elevation and coastline"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST DEM 25 m documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Flist_dem_25m%2Fstatewide%2Flist_dem_25m_statewide.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_BRIGHTON.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_BURNIE.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_CENTRAL_COAST.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_CENTRAL_HIGHLANDS.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_CIRCULAR_HEAD.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_CLARENCE.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_DERWENT_VALLEY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_DEVONPORT.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_DORSET.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_GEORGE_TOWN.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_GLENORCHY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_HOBART.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_HUON_VALLEY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_KENTISH.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_KING_ISLAND.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_KINGBOROUGH.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_LATROBE.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_LAUNCESTON.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_MEANDER_VALLEY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_NORTHERN_MIDLANDS.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_SORELL.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_SOUTHERN_MIDLANDS.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_WARATAH_WYNYARD.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_WEST_COAST.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_WEST_TAMAR.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_GLAMORGAN_SPRING_BAY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_BREAK_O_DAY.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_FLINDERS.zip (LIST, released 2021-01-13)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DEM_25M_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DEM_25M_TASMAN.zip (LIST, released 2021-01-13)"
+    }
+  ],
+  "assets": {
+    "list_dem_25m_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/list_dem_25m/statewide/list_dem_25m_statewide.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "list_dem_25m_statewide.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 335967369,
+      "file:checksum": "122065dce946053e862f5bc2e336814102fe0dc984d5fadf3164d283f56c03bb7914",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227075,
+        5159999.9999998,
+        625725,
+        5661949.9999998
+      ],
+      "proj:shape": [
+        20078,
+        15946
+      ],
+      "proj:transform": [
+        25,
+        0,
+        227075,
+        0,
+        -25,
+        5661949.9999998
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST DEM 25 m (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14650,
+      "file:checksum": "1220b2c580caad3b63dfe17a1825320faaeac231393cc20f5807fc54ff3785f8600c"
+    }
+  }
+}

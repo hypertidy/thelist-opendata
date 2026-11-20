@@ -1,0 +1,202 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "built_infrastructure_line",
+  "title": "Built Infrastructure Line",
+  "description": "Built Infrastructure Line: LIST product `BUILT_INFRASTRUCTURE_LINE`, statewide. 625 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Built Infrastructure Line\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "BUILT_INFRASTRUCTURE_LINE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.66187,
+          -43.649197,
+          148.341101,
+          -39.906127
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Built Infrastructure Line documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fbuilt_infrastructure_line%2Fstatewide%2Fbuilt_infrastructure_line_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/BUILT_INFRASTRUCTURE_LINE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: BUILT_INFRASTRUCTURE_LINE_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "built_infrastructure_line_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/built_infrastructure_line/statewide/built_infrastructure_line_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "built_infrastructure_line_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 408595,
+      "file:checksum": "1220df0ae7d31b7f559d51c123c8ec0cb634539998c01d53e6fe8447d375045c6c03",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230571.296,
+        5167086.903,
+        608167.65,
+        5577904.964
+      ],
+      "table:row_count": 625,
+      "table:columns": [
+        {
+          "name": "INFRA_ID",
+          "type": "int32"
+        },
+        {
+          "name": "INFRA_TY1",
+          "type": "int32"
+        },
+        {
+          "name": "INFRA_TY2",
+          "type": "int32"
+        },
+        {
+          "name": "INFTY1_TXT",
+          "type": "string"
+        },
+        {
+          "name": "INFTY2_TXT",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPT",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Built Infrastructure Line (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 18848,
+      "file:checksum": "122094c2cbec6b73d3dfd117de3dc7d9acea3a1aeef7209c5cc3dc46896b8b3529bf"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

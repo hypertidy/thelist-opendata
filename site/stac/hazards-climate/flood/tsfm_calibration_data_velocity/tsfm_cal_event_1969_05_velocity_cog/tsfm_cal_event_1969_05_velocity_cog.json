@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "tsfm_cal_event_1969_05_velocity_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [146.477399, -42.74924],
+        [148.37177, -42.74924],
+        [148.37177, -41.008868],
+        [146.477399, -41.008868],
+        [146.477399, -42.74924]
+      ]
+    ]
+  },
+  "bbox": [146.477399, -42.74924, 148.37177, -41.008868],
+  "properties": {
+    "title": "tsfm_cal_event_1969_05_velocity_cog",
+    "datetime": "2026-04-29T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Velocity"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Velocity"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_velocity%2Fstatewide%2Ftsfm_cal_event_1969_05_velocity_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_calibration_data_velocity/statewide/tsfm_cal_event_1969_05_velocity_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tsfm_cal_event_1969_05_velocity_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 38140561,
+      "file:checksum": "1220ec4aa512549b32ed799cdb89e3030219865f121bafb1e80b6887770edb7ba686",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [457230, 5267030, 612280, 5459400],
+      "proj:shape": [19237, 15505],
+      "proj:transform": [10, 0, 457230, 0, -10, 5459400]
+    }
+  },
+  "collection": "tsfm_calibration_data_velocity"
+}

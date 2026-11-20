@@ -1,0 +1,34 @@
+# Tasmanian Planning Scheme Zones
+
+Tasmanian Planning Scheme Zones: LIST product `TASMANIAN_PLANNING_SCHEME_ZONES`, statewide. 12,773 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-08-20. Data (c) State of Tasmania, CC BY 3.0 AU: cite as "Tasmanian Planning Scheme Zones" from theLIST (c) State of Tasmania.
+
+## Files
+
+| file | kind | size | bytes |
+|---|---|---|---|
+| `tasmanian_planning_scheme_zones_statewide.parquet` | vector | 12,773 | 50.9 MB |
+
+## Read it in place
+
+```sql
+INSTALL spatial; LOAD spatial;
+SELECT * FROM read_parquet('https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmanian_planning_scheme_zones/statewide/tasmanian_planning_scheme_zones_statewide.parquet') LIMIT 10;
+```
+
+```sh
+gdal vector info --summary /vsicurl/https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmanian_planning_scheme_zones/statewide/tasmanian_planning_scheme_zones_statewide.parquet
+```
+
+More examples (R, Python, QGIS) and column types: https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasmanian_planning_scheme_zones%2Fstatewide%2Ftasmanian_planning_scheme_zones_statewide.parquet
+
+## Columns
+
+`LPS_NO` (int16), `LPS` (string), `ZONE_NO` (int16), `ZONE` (string), `ZONE_SUBNO` (int16), `ZONESUBGRP` (string), `ZONE_ABB` (string), `LPSDATE` (datetime), `AMEND_REF` (string), `NOTES` (string), `CREATED_ON` (string), `LIST_GUID` (string), `CRC_ID` (string), `SHAPE_Length` (double), `SHAPE_Area` (double)
+
+## Source
+
+- [TASMANIAN_PLANNING_SCHEME_ZONES_STATEWIDE.zip](https://listdata.thelist.tas.gov.au/opendata/data/TASMANIAN_PLANNING_SCHEME_ZONES_STATEWIDE.zip), released 2026-08-20
+
+## Attribution
+
+"Tasmanian Planning Scheme Zones" from theLIST (c) State of Tasmania, licensed CC BY 3.0 AU. Land Tasmania does not endorse this mirror.

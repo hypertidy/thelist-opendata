@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "tsfm_cal_event_2000_07_depth_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [144.586115, -41.485374],
+        [146.755842, -41.485374],
+        [146.755842, -40.568194],
+        [144.586115, -40.568194],
+        [144.586115, -41.485374]
+      ]
+    ]
+  },
+  "bbox": [144.586115, -41.485374, 146.755842, -40.568194],
+  "properties": {
+    "title": "tsfm_cal_event_2000_07_depth_cog",
+    "datetime": "2026-04-29T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Depth"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Depth"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_depth%2Fstatewide%2Ftsfm_cal_event_2000_07_depth_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_calibration_data_depth/statewide/tsfm_cal_event_2000_07_depth_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tsfm_cal_event_2000_07_depth_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 9242986,
+      "file:checksum": "1220fb23eef3869dfa050f9dd3677c2b26f735f1a99c4a9f69c035b208b06dd6db58",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [298400, 5407330, 479340, 5506450],
+      "proj:shape": [9912, 18094],
+      "proj:transform": [10, 0, 298400, 0, -10, 5506450]
+    }
+  },
+  "collection": "tsfm_calibration_data_depth"
+}

@@ -1,0 +1,64 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "vegetation-biodiversity-fauna",
+  "title": "Fauna",
+  "description": "Vegetation, biodiversity and reserves: Fauna. 5 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation, biodiversity and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fauna documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_deer_management_zones/collection.json",
+      "type": "application/json",
+      "title": "LIST Deer Management Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./nva_tasmanian_roadkill/collection.json",
+      "type": "application/json",
+      "title": "NVA Tasmanian Roadkill"
+    },
+    {
+      "rel": "child",
+      "href": "./wedgetailed_eagle_nesting_habitat_high/collection.json",
+      "type": "application/json",
+      "title": "Wedgetailed Eagle Nesting Habitat High"
+    },
+    {
+      "rel": "child",
+      "href": "./wedgetailed_eagle_nesting_habitat_low/collection.json",
+      "type": "application/json",
+      "title": "Wedgetailed Eagle Nesting Habitat Low"
+    },
+    {
+      "rel": "child",
+      "href": "./wedgetailed_eagle_nesting_habitat_nw/collection.json",
+      "type": "application/json",
+      "title": "Wedgetailed Eagle Nesting Habitat NW"
+    }
+  ]
+}

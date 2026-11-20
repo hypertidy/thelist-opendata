@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_marine_farming_zones",
+  "title": "LIST Marine Farming Zones",
+  "description": "LIST Marine Farming Zones: LIST product `LIST_MARINE_FARMING_ZONES`, statewide. 200 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-01-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Marine Farming Zones\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_MARINE_FARMING_ZONES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.674582,
+          -43.534009,
+          148.397604,
+          -39.825012
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-01-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Marine Farming Zones documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_marine_farming_zones%2Fstatewide%2Flist_marine_farming_zones_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_MARINE_FARMING_ZONES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_MARINE_FARMING_ZONES_STATEWIDE.zip (LIST, released 2019-01-10)"
+    }
+  ],
+  "assets": {
+    "list_marine_farming_zones_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_marine_farming_zones/statewide/list_marine_farming_zones_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_marine_farming_zones_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 62803,
+      "file:checksum": "12207c7c390b6c27ede3e3ae3d3c2fdd16e7c58c2e0ea156524f8204fd188d9888e6",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        312032.6052,
+        5179877.5627,
+        612941.3749,
+        5589356.4147
+      ],
+      "table:row_count": 200,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "string"
+        },
+        {
+          "name": "ZONE_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MLA",
+          "type": "double"
+        },
+        {
+          "name": "MFDP",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Marine Farming Zones (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11417,
+      "file:checksum": "12202c2d57024a30148bc7696749dc9a89630bf74b72f2794350c4b08e9a9ca2e948"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

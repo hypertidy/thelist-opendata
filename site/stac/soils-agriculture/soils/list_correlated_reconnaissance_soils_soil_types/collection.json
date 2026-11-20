@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_correlated_reconnaissance_soils_soil_types",
+  "title": "LIST Correlated Reconnaissance Soils Soil Types",
+  "description": "LIST Correlated Reconnaissance Soils Soil Types: LIST product `LIST_CORRELATED_RECONNAISSANCE_SOILS_SOIL_TYPES`, statewide. 2,478 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Correlated Reconnaissance Soils Soil Types\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CORRELATED_RECONNAISSANCE_SOILS_SOIL_TYPES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.449299,
+          -43.002882,
+          148.009433,
+          -40.851016
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Correlated Reconnaissance Soils Soil Types documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_correlated_reconnaissance_soils_soil_types%2Fstatewide%2Flist_correlated_reconnaissance_soils_soil_types_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CORRELATED_RECONNAISSANCE_SOILS_SOIL_TYPES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CORRELATED_RECONNAISSANCE_SOILS_SOIL_TYPES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_correlated_reconnaissance_soils_soil_types_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_correlated_reconnaissance_soils_soil_types/statewide/list_correlated_reconnaissance_soils_soil_types_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_correlated_reconnaissance_soils_soil_types_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3269557,
+      "file:checksum": "12203c388e1d00b3cacd3db23082c70b556b731fa88bdd4f6a92c8300e635bd6be79",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        373588.155,
+        5238865.0634,
+        582279.6093,
+        5476699.065
+      ],
+      "table:row_count": 2478,
+      "table:columns": [
+        {
+          "name": "CODE",
+          "type": "string"
+        },
+        {
+          "name": "MAP_UNIT_N",
+          "type": "string"
+        },
+        {
+          "name": "MAP_UNIT_C",
+          "type": "string"
+        },
+        {
+          "name": "AUSTRALIAN",
+          "type": "string"
+        },
+        {
+          "name": "SOIL_PROF",
+          "type": "string"
+        },
+        {
+          "name": "REPORT",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Correlated Reconnaissance Soils Soil Types (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11636,
+      "file:checksum": "1220b93518e92a495dd0fadc377289ebb501352a818fe45d22cf46d650befe311b0c"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

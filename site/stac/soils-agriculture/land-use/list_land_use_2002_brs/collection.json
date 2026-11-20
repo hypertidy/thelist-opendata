@@ -1,0 +1,210 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_land_use_2002_brs",
+  "title": "LIST Land Use 2002 BRS",
+  "description": "LIST Land Use 2002 BRS: LIST product `LIST_LAND_USE_2002_BRS`, statewide. 23,992 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-01-15. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Land Use 2002 BRS\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LAND_USE_2002_BRS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618981,
+          -43.660954,
+          148.576179,
+          -39.575467
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-15T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:57Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Land Use 2002 BRS documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_land_use_2002_brs%2Fstatewide%2Flist_land_use_2002_brs_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2002_BRS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LAND_USE_2002_BRS_STATEWIDE.zip (LIST, released 2021-01-15)"
+    }
+  ],
+  "assets": {
+    "list_land_use_2002_brs_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_use_2002_brs/statewide/list_land_use_2002_brs_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land_use_2002_brs_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 36337129,
+      "file:checksum": "12207a31c3689068281f9fe5ca64ba5cdcbf2f6c6334de5f7d6394fb7acf97e2ba97",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227156.9933,
+        5165779.3284,
+        627109.7515,
+        5614538.8767
+      ],
+      "table:row_count": 23992,
+      "table:columns": [
+        {
+          "name": "LUAGD_",
+          "type": "double"
+        },
+        {
+          "name": "LUAGD_ID",
+          "type": "double"
+        },
+        {
+          "name": "TAG",
+          "type": "string"
+        },
+        {
+          "name": "CODE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_SCA",
+          "type": "double"
+        },
+        {
+          "name": "SOURCE_DAT",
+          "type": "string"
+        },
+        {
+          "name": "RELIABILIT",
+          "type": "string"
+        },
+        {
+          "name": "CODING_DAT",
+          "type": "string"
+        },
+        {
+          "name": "MAPNAME",
+          "type": "string"
+        },
+        {
+          "name": "NOTES",
+          "type": "string"
+        },
+        {
+          "name": "NUTR_SCORE",
+          "type": "double"
+        },
+        {
+          "name": "FIRST_CODE",
+          "type": "int16"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Land Use 2002 BRS (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16667,
+      "file:checksum": "12204ce3c5948ff523731dc2572e4c935002f46aae8e1575cd456beaddcb9c321b66"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

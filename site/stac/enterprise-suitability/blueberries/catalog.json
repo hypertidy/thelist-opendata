@@ -1,0 +1,52 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "enterprise-suitability-blueberries",
+  "title": "Blueberries",
+  "description": "Enterprise suitability for blueberries: current and scenario grids or layers. 3 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Enterprise suitability (crops)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Blueberries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_blueb_nhighbush_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Blueb Nhighbush V2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_blueb_shighbush_v2/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Blueb Shighbush V2"
+    },
+    {
+      "rel": "child",
+      "href": "./nch_es_blueberries/collection.json",
+      "type": "application/json",
+      "title": "NCH ES Blueberries"
+    }
+  ]
+}

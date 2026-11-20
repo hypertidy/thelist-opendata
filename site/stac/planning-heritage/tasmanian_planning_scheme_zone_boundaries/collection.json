@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "tasmanian_planning_scheme_zone_boundaries",
+  "title": "Tasmanian Planning Scheme Zone Boundaries",
+  "description": "Tasmanian Planning Scheme Zone Boundaries: LIST product `TASMANIAN_PLANNING_SCHEME_ZONE_BOUNDARIES`, statewide. 4,031 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-08-20. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Tasmanian Planning Scheme Zone Boundaries\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASMANIAN_PLANNING_SCHEME_ZONE_BOUNDARIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.666005,
+          -43.49033,
+          148.353732,
+          -39.719318
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-08-20T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Planning and heritage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Tasmanian Planning Scheme Zone Boundaries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasmanian_planning_scheme_zone_boundaries%2Fstatewide%2Ftasmanian_planning_scheme_zone_boundaries_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMANIAN_PLANNING_SCHEME_ZONE_BOUNDARIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASMANIAN_PLANNING_SCHEME_ZONE_BOUNDARIES_STATEWIDE.zip (LIST, released 2026-08-20)"
+    }
+  ],
+  "assets": {
+    "tasmanian_planning_scheme_zone_boundaries_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmanian_planning_scheme_zone_boundaries/statewide/tasmanian_planning_scheme_zone_boundaries_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasmanian_planning_scheme_zone_boundaries_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1414703,
+      "file:checksum": "1220b4ad6bb24924612e6c6a8251975b04179662fb6e577ad90d916f2ae08e887f89",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230197.805,
+        5184731.21,
+        609474.058,
+        5598656.525
+      ],
+      "table:row_count": 4031,
+      "table:columns": [
+        {
+          "name": "LPS_NO",
+          "type": "int16"
+        },
+        {
+          "name": "LPS",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPT",
+          "type": "string"
+        },
+        {
+          "name": "CAD_DEP",
+          "type": "string"
+        },
+        {
+          "name": "AMENDREF",
+          "type": "string"
+        },
+        {
+          "name": "NOTES",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Tasmanian Planning Scheme Zone Boundaries (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 20884,
+      "file:checksum": "12200508d3e4083eaecb3b0fba2c5939e87938ee9a921c81fd41b7628a105315396c"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

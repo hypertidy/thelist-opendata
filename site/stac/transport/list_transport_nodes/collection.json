@@ -1,0 +1,410 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_transport_nodes",
+  "title": "LIST Transport Nodes",
+  "description": "LIST Transport Nodes: LIST product `LIST_TRANSPORT_NODES`, statewide. 252,658 features, multi-point (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Transport Nodes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TRANSPORT_NODES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.648047,
+          -43.659451,
+          148.425887,
+          -39.416742
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:04:28Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Transport"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Transport Nodes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_transport_nodes%2Fstatewide%2Flist_transport_nodes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_BREAK_O_DAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_BRIGHTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_BURNIE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_CENTRAL_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_CIRCULAR_HEAD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_CLARENCE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_DERWENT_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_DEVONPORT.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_DORSET.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_FLINDERS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_GEORGE_TOWN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_GLENORCHY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_HOBART.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_HUON_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_KENTISH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_KING_ISLAND.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_KINGBOROUGH.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_LATROBE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_LAUNCESTON.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_MEANDER_VALLEY.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_SORELL.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_TASMAN.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_WARATAH_WYNYARD.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_WEST_COAST.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TRANSPORT_NODES_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "list_transport_nodes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_transport_nodes/statewide/list_transport_nodes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_transport_nodes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16565161,
+      "file:checksum": "1220a3b117e03cb12ad433f60d577ea13dfb942454dd5c1508740b0af0d11418c85a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229499.622,
+        5165950.071,
+        614988.638,
+        5632263.363
+      ],
+      "table:row_count": 252658,
+      "table:columns": [
+        {
+          "name": "TRANODE_ID",
+          "type": "int32"
+        },
+        {
+          "name": "TNODE_FEAT",
+          "type": "string"
+        },
+        {
+          "name": "BARRIER_TY",
+          "type": "string"
+        },
+        {
+          "name": "BRIDGE_TY",
+          "type": "string"
+        },
+        {
+          "name": "BRIDGE_NAM",
+          "type": "string"
+        },
+        {
+          "name": "TUNNEL_TY",
+          "type": "string"
+        },
+        {
+          "name": "TUNNEL_NAM",
+          "type": "string"
+        },
+        {
+          "name": "CARRIER_NA",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "TRAFF_DIR",
+          "type": "string"
+        },
+        {
+          "name": "JUNC_MOVE",
+          "type": "string"
+        },
+        {
+          "name": "AUTHORITY",
+          "type": "string"
+        },
+        {
+          "name": "FOREIGN_ID",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "PRI_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "PRI_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NOMREG",
+          "type": "string"
+        },
+        {
+          "name": "SEC_NAME",
+          "type": "string"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Transport Nodes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 41827,
+      "file:checksum": "122038f83028dab7e29878c7dbd6b6385e8fa02aba03a72a3c2da11214d1dd34f933"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,370 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_tasveg_40_fire_attributes",
+  "title": "LIST TASVEG 40 Fire Attributes",
+  "description": "LIST TASVEG 40 Fire Attributes: LIST product `LIST_TASVEG_40_FIRE_ATTRIBUTES`, statewide. 468,084 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips by stacking them, with an `lga` column: this layer has no feature id, so features crossing an LGA boundary stay cut there. Source released 2020-11-04. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASVEG 40 Fire Attributes\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASVEG_40_FIRE_ATTRIBUTES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618582,
+          -43.665964,
+          148.559179,
+          -39.155002
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-11-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:04:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation mapping (TASVEG)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASVEG 40 Fire Attributes documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_tasveg_40_fire_attributes%2Fstatewide%2Flist_tasveg_40_fire_attributes_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_BREAK_O_DAY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_BRIGHTON.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_BURNIE.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_CENTRAL_COAST.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_CENTRAL_HIGHLANDS.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_CIRCULAR_HEAD.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_CLARENCE.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_DERWENT_VALLEY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_DEVONPORT.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_DORSET.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_FLINDERS.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_GEORGE_TOWN.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_GLAMORGAN_SPRING_BAY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_GLENORCHY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_HOBART.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_HUON_VALLEY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_KENTISH.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_KING_ISLAND.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_KINGBOROUGH.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_LATROBE.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_LAUNCESTON.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_MEANDER_VALLEY.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_NORTHERN_MIDLANDS.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_SORELL.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_SOUTHERN_MIDLANDS.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_TASMAN.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_WARATAH_WYNYARD.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_COAST.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_TAMAR.zip (LIST, released 2020-11-04)"
+    }
+  ],
+  "assets": {
+    "list_tasveg_40_fire_attributes_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_tasveg_40_fire_attributes/statewide/list_tasveg_40_fire_attributes_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_tasveg_40_fire_attributes_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 380997819,
+      "file:checksum": "12206c1f6847f15993dd53e00dae5b8e1c5fc9a0b3d0a2393869ea879c02278eec1c",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227147.38,
+        5165223.883,
+        625727.885,
+        5661272.38
+      ],
+      "table:row_count": 468084,
+      "table:columns": [
+        {
+          "name": "VEGCODE",
+          "type": "string"
+        },
+        {
+          "name": "VEGCODE_D",
+          "type": "string"
+        },
+        {
+          "name": "VEG_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DAT",
+          "type": "datetime"
+        },
+        {
+          "name": "PHOENIX_ID",
+          "type": "double"
+        },
+        {
+          "name": "FIREATT",
+          "type": "string"
+        },
+        {
+          "name": "FIRESENS",
+          "type": "string"
+        },
+        {
+          "name": "FLAMMAB",
+          "type": "string"
+        },
+        {
+          "name": "FRB_TREAT",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASVEG 40 Fire Attributes (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12313,
+      "file:checksum": "1220fc44a2d3241cccd13b11da74692ea3798a8eedd08ceb48e70d41ca1a28b1c192"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

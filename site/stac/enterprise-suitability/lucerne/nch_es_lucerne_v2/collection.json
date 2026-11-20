@@ -1,0 +1,193 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "nch_es_lucerne_v2",
+  "title": "NCH ES Lucerne V2",
+  "description": "NCH ES Lucerne V2: LIST product `NCH_ES_LUCERNE_V2`, statewide. Attribute table, 18,999 rows. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-06-24. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH ES Lucerne V2\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ES_LUCERNE_V2",
+    "table"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.5,
+          -44,
+          148.6,
+          -39.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-06-24T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Lucerne"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH ES Lucerne V2 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#parquet%2Fnch_es_lucerne_v2%2Fstatewide%2Fnch_es_lucerne_lut_v2.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ES_LUCERNE_V2_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ES_LUCERNE_V2_STATEWIDE.zip (LIST, released 2020-06-24)"
+    }
+  ],
+  "assets": {
+    "nch_es_lucerne_lut_v2": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/nch_es_lucerne_v2/statewide/nch_es_lucerne_lut_v2.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "nch_es_lucerne_lut_v2.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 211358,
+      "file:checksum": "1220df4f295f85f494147bef14614a59f13f42a9b1e760fae1fb83f6653d34cf7913",
+      "table:row_count": 18999,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        },
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "SUITABILITY",
+          "type": "string"
+        },
+        {
+          "name": "CONTRAINTS",
+          "type": "string"
+        },
+        {
+          "name": "MANAGEABLE_CONSTRAINTS",
+          "type": "string"
+        },
+        {
+          "name": "SOILDEPTH",
+          "type": "string"
+        },
+        {
+          "name": "PH",
+          "type": "string"
+        },
+        {
+          "name": "EC",
+          "type": "string"
+        },
+        {
+          "name": "DRAINAGE",
+          "type": "string"
+        },
+        {
+          "name": "STONINESS",
+          "type": "string"
+        },
+        {
+          "name": "RAINFALL",
+          "type": "string"
+        },
+        {
+          "name": "SODICHAZARD",
+          "type": "string"
+        },
+        {
+          "name": "SALINITYHAZARD",
+          "type": "string"
+        },
+        {
+          "name": "WATEREROSION",
+          "type": "string"
+        },
+        {
+          "name": "WATERLOGGING",
+          "type": "string"
+        },
+        {
+          "name": "WINDEROSION",
+          "type": "string"
+        },
+        {
+          "name": "FLOODING",
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

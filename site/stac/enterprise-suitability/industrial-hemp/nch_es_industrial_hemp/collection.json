@@ -1,0 +1,161 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "nch_es_industrial_hemp",
+  "title": "NCH ES Industrial Hemp",
+  "description": "NCH ES Industrial Hemp: LIST product `NCH_ES_INDUSTRIAL_HEMP`, statewide. Attribute table, 243 rows. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2018-03-14. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH ES Industrial Hemp\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ES_INDUSTRIAL_HEMP",
+    "table"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.5,
+          -44,
+          148.6,
+          -39.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-03-14T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Industrial hemp"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH ES Industrial Hemp documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#parquet%2Fnch_es_industrial_hemp%2Fstatewide%2Fnch_es_industrial_hemp_lut.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ES_INDUSTRIAL_HEMP_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ES_INDUSTRIAL_HEMP_STATEWIDE.zip (LIST, released 2018-03-14)"
+    }
+  ],
+  "assets": {
+    "nch_es_industrial_hemp_lut": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/nch_es_industrial_hemp/statewide/nch_es_industrial_hemp_lut.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "nch_es_industrial_hemp_lut.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 7099,
+      "file:checksum": "122018c17469d024102a7ab8ea95948a7e63d526b61efc89250718a1691923d95f4e",
+      "table:row_count": 243,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        },
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "SUITABILITY_CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "LIMITING_FACTORS",
+          "type": "string"
+        },
+        {
+          "name": "DRAINAGE_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "COARSE_FRAGMENT_CLASS_0TO15CM",
+          "type": "string"
+        },
+        {
+          "name": "SLOPE_PERCENT",
+          "type": "string"
+        },
+        {
+          "name": "FROST_RISK",
+          "type": "string"
+        },
+        {
+          "name": "FLOOD_RISK",
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

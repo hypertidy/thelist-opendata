@@ -1,0 +1,166 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "lidar_index_mt_wellington",
+  "title": "LIDAR Index Mt Wellington",
+  "description": "LIDAR Index Mt Wellington: LIST product `LIDAR_INDEX_MT_WELLINGTON`, statewide. 360 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIDAR Index Mt Wellington\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIDAR_INDEX_MT_WELLINGTON",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          147.134528,
+          -43.037608,
+          147.368282,
+          -42.802965
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "LiDAR coverage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIDAR Index Mt Wellington documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flidar_index_mt_wellington%2Fstatewide%2Flidar_index_mt_wellington_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIDAR_INDEX_MT_WELLINGTON_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIDAR_INDEX_MT_WELLINGTON_STATEWIDE.zip (LIST, released 2025-07-10)"
+    }
+  ],
+  "assets": {
+    "lidar_index_mt_wellington_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/lidar_index_mt_wellington/statewide/lidar_index_mt_wellington_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "lidar_index_mt_wellington_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14790,
+      "file:checksum": "1220de8ce9a7f77c8069fba462dc88fd24510ceffd147bba2678cb5b93cb48cc7446",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        511000,
+        5235000,
+        530000,
+        5261000
+      ],
+      "table:row_count": 360,
+      "table:columns": [
+        {
+          "name": "TILENO",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIDAR Index Mt Wellington (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5284,
+      "file:checksum": "1220015aa196ce9d58c7fc788ebafe4246bbe48149e2cf191760ce20e07259890150"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

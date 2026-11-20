@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "heritage_tasmania_hms_features",
+  "title": "Heritage Tasmania HMS Features",
+  "description": "Heritage Tasmania HMS Features: LIST product `HERITAGE_TASMANIA_HMS_FEATURES`, statewide. 5,533 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Heritage Tasmania HMS Features\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "HERITAGE_TASMANIA_HMS_FEATURES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.65287,
+          -43.660814,
+          148.407808,
+          -39.407882
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Planning and heritage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Heritage Tasmania HMS Features documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fheritage_tasmania_hms_features%2Fstatewide%2Fheritage_tasmania_hms_features_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/HERITAGE_TASMANIA_HMS_FEATURES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: HERITAGE_TASMANIA_HMS_FEATURES_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "heritage_tasmania_hms_features_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/heritage_tasmania_hms_features/statewide/heritage_tasmania_hms_features_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "heritage_tasmania_hms_features_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2312847,
+      "file:checksum": "12207571379330c08c2c0e2ec0d55949f7a738bebba84ead590a53f8f53a2854a79a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229895.665,
+        5165798.45,
+        613527.663,
+        5633261.944
+      ],
+      "table:row_count": 5533,
+      "table:columns": [
+        {
+          "name": "THR_ID",
+          "type": "string"
+        },
+        {
+          "name": "THR_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CPR_REF",
+          "type": "string"
+        },
+        {
+          "name": "TITLE_REF",
+          "type": "string"
+        },
+        {
+          "name": "MUNICIPALITY",
+          "type": "string"
+        },
+        {
+          "name": "REG_STATUS",
+          "type": "string"
+        },
+        {
+          "name": "LOC_ADD",
+          "type": "string"
+        },
+        {
+          "name": "SUM_ADD",
+          "type": "string"
+        },
+        {
+          "name": "BDY_REF",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Heritage Tasmania HMS Features (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15172,
+      "file:checksum": "1220d330ed314471a82f9cff01cbc2dbc0d9485797121797272e1d18ba39d330bc1a"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

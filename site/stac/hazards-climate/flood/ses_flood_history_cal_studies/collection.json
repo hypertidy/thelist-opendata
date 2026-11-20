@@ -1,0 +1,202 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "ses_flood_history_cal_studies",
+  "title": "SES Flood History Cal Studies",
+  "description": "SES Flood History Cal Studies: LIST product `SES_FLOOD_HISTORY_CAL_STUDIES`, statewide. 30 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2022-09-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"SES Flood History Cal Studies\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "SES_FLOOD_HISTORY_CAL_STUDIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.607389,
+          -43.86034,
+          148.586144,
+          -39.149199
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-09-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "SES Flood History Cal Studies documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fses_flood_history_cal_studies%2Fstatewide%2Fcalibration_catchments.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/SES_FLOOD_HISTORY_CAL_STUDIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: SES_FLOOD_HISTORY_CAL_STUDIES_STATEWIDE.zip (LIST, released 2022-09-16)"
+    }
+  ],
+  "assets": {
+    "calibration_catchments": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_flood_history_cal_studies/statewide/calibration_catchments.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "calibration_catchments.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 9516182,
+      "file:checksum": "1220060d80f5d42bfc5b85f37227981b80993e9794442d0dce1383e9a6f9b5a79e22",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227127.099367653,
+        5143634.56052829,
+        627489.6315866,
+        5661916.64228129
+      ],
+      "table:row_count": 30,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CAT_AREA",
+          "type": "double"
+        },
+        {
+          "name": "CAT_INFO",
+          "type": "string"
+        },
+        {
+          "name": "layer",
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "type": "string"
+        },
+        {
+          "name": "Cat_areakm",
+          "type": "double"
+        },
+        {
+          "name": "CFEVcatIDs",
+          "type": "string"
+        },
+        {
+          "name": "Priority",
+          "type": "string"
+        },
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "SES Flood History Cal Studies (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13488,
+      "file:checksum": "1220b2c2cbab915347947da25cc8c12073e8e22076d55eef8d5adf7413564f1aa6b0"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

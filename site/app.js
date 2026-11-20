@@ -2,7 +2,9 @@
 // Listing of the statewide files in the LIST open data mirror. Data: catalog.json,
 // built by R/20_catalog.R from the store itself.
 
-const state = { items: [], q: "", kind: "", src: "", sort: "title", open: null, cat: null };
+const state = { items: [], q: "", kind: "", src: "", sort: "title", open: null, cat: null, stac: {} };
+const PORTOLAN = "https://browser.portolan-sdi.org/#/external/";
+fetch("stac-paths.json").then((r) => (r.ok ? r.json() : {})).then((p) => { state.stac = p || {}; if (state.open) render(); }).catch(() => {});
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmtInt = (n) => (n == null ? "" : Number(n).toLocaleString("en-AU"));
@@ -137,6 +139,11 @@ function detail(it) {
     ? `built from ${src.n} per-LGA zips (newest released ${esc(src.released)})`
     : `LIST statewide zip, released ${esc(src.released || "?")}`]);
   if (src.built) facts.push(["Converted", esc(src.built.slice(0, 10))]);
+  const sp = state.stac[it.path.split("/")[1]];
+  if (sp) {
+    const u = new URL("stac/" + sp, location.href);
+    facts.push(["STAC", `<a href="${esc(PORTOLAN + u.host + u.pathname)}">open in the Portolan Browser</a> · <a href="${esc(u.href)}">collection.json</a>`]);
+  }
   const zips = (src.zips || []);
   const zipList = zips.length === 1
     ? `<p class="zips-one"><a href="${esc(zips[0].url)}">${esc(zips[0].name)}</a> (${fmtBytes(zips[0].bytes)}, released ${esc(zips[0].released)})</p>`

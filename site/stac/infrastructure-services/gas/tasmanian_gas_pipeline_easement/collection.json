@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "tasmanian_gas_pipeline_easement",
+  "title": "Tasmanian Gas Pipeline Easement",
+  "description": "Tasmanian Gas Pipeline Easement: LIST product `TASMANIAN_GAS_PIPELINE_EASEMENT`, statewide. 185 features, multi-linestring (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Tasmanian Gas Pipeline Easement\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TASMANIAN_GAS_PIPELINE_EASEMENT",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.331043,
+          -42.722107,
+          147.396831,
+          -40.853207
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Gas pipelines"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Tasmanian Gas Pipeline Easement documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Ftasmanian_gas_pipeline_easement%2Fstatewide%2Ftasmanian_gas_pipeline_easement_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMANIAN_GAS_PIPELINE_EASEMENT_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TASMANIAN_GAS_PIPELINE_EASEMENT_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "tasmanian_gas_pipeline_easement_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/tasmanian_gas_pipeline_easement/statewide/tasmanian_gas_pipeline_easement_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "tasmanian_gas_pipeline_easement_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 68223,
+      "file:checksum": "1220545ea7066220b1118bb173ee8b93ebfe822e7ebbddc560e760b98a58994e1781",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        363326.4007,
+        5270043.8989,
+        532490.8117,
+        5476272.9416
+      ],
+      "table:row_count": 185,
+      "table:columns": [
+        {
+          "name": "GEODB_OID",
+          "type": "int32"
+        },
+        {
+          "name": "LAYER",
+          "type": "string"
+        },
+        {
+          "name": "VERSION",
+          "type": "string"
+        },
+        {
+          "name": "DATE_",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Tasmanian Gas Pipeline Easement (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7227,
+      "file:checksum": "12207f7c78597685db7383cd073dc2823825437fac65fd5ecf420b2fd1250f8cdc79"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "tsfm_cal_event_2005_08_level_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [146.380237, -41.485374],
+        [146.754001, -41.485374],
+        [146.754001, -41.091074],
+        [146.380237, -41.091074],
+        [146.380237, -41.485374]
+      ]
+    ]
+  },
+  "bbox": [146.380237, -41.485374, 146.754001, -41.091074],
+  "properties": {
+    "title": "tsfm_cal_event_2005_08_level_cog",
+    "datetime": "2026-04-29T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Waterlevel"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Waterlevel"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_waterlevel%2Fstatewide%2Ftsfm_cal_event_2005_08_level_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_calibration_data_waterlevel/statewide/tsfm_cal_event_2005_08_level_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tsfm_cal_event_2005_08_level_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 1064310,
+      "file:checksum": "1220d6ab6406301ad0bb2ac08e42a67e801bbb26ac1b23e3033560655884f93a98df",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [448260, 5407330, 479340, 5450950],
+      "proj:shape": [4362, 3108],
+      "proj:transform": [10, 0, 448260, 0, -10, 5450950]
+    }
+  },
+  "collection": "tsfm_calibration_data_waterlevel"
+}

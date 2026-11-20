@@ -1,0 +1,378 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_landslide_planning_map_hazard_bands",
+  "title": "LIST Landslide Planning Map Hazard Bands",
+  "description": "LIST Landslide Planning Map Hazard Bands: LIST product `LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS`, statewide. 1,387,572 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2021-01-19. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Landslide Planning Map Hazard Bands\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618627,
+          -43.665967,
+          148.550478,
+          -39.576579
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-19T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:00:05Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Landslide, fire and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Landslide Planning Map Hazard Bands documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_landslide_planning_map_hazard_bands%2Fstatewide%2Flist_landslide_planning_map_hazard_bands_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BREAK_O_DAY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BRIGHTON.zip (LIST, released 2021-01-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_BURNIE.zip (LIST, released 2021-01-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CENTRAL_COAST.zip (LIST, released 2021-01-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CENTRAL_HIGHLANDS.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CIRCULAR_HEAD.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_CLARENCE.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DERWENT_VALLEY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DEVONPORT.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_DORSET.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_FLINDERS.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GEORGE_TOWN.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_GLENORCHY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_HOBART.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_HUON_VALLEY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KENTISH.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KING_ISLAND.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_KINGBOROUGH.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_LATROBE.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_LAUNCESTON.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_MEANDER_VALLEY.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_NORTHERN_MIDLANDS.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_SORELL.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_SOUTHERN_MIDLANDS.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_TASMAN.zip (LIST, released 2021-01-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WARATAH_WYNYARD.zip (LIST, released 2021-01-18)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_COAST.zip (LIST, released 2021-01-19)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_HAZARD_BANDS_WEST_TAMAR.zip (LIST, released 2021-01-19)"
+    }
+  ],
+  "assets": {
+    "list_landslide_planning_map_hazard_bands_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_landslide_planning_map_hazard_bands/statewide/list_landslide_planning_map_hazard_bands_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_landslide_planning_map_hazard_bands_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 129562645,
+      "file:checksum": "1220cca72101122f8f45ec1cfa7be19a68589f2ccc31f7b96b9c2682524c233e6517",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227151.0187,
+        5165223.947,
+        625026.0187,
+        5614415.0226
+      ],
+      "table:row_count": 1387572,
+      "table:columns": [
+        {
+          "name": "HAZARD_BAND_1",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "NAME_1",
+          "type": "string"
+        },
+        {
+          "name": "REGION",
+          "type": "string"
+        },
+        {
+          "name": "HAZARD_EXPOSURE",
+          "type": "string"
+        },
+        {
+          "name": "VERSION",
+          "type": "string"
+        },
+        {
+          "name": "VERSION_DATE",
+          "type": "string"
+        },
+        {
+          "name": "FURTHER_INFORMATION",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Landslide Planning Map Hazard Bands (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 56059,
+      "file:checksum": "12202386375d3e8891dfd86b80b22e6cb84d8b9306d9c28f0f6bf0926e6d7c5cea06"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

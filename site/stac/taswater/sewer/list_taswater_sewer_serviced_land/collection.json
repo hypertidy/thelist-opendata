@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_taswater_sewer_serviced_land",
+  "title": "LIST TASWATER Sewer Serviced Land",
+  "description": "LIST TASWATER Sewer Serviced Land: LIST product `LIST_TASWATER_SEWER_SERVICED_LAND`, statewide. 9,958 features, multi-polygon (EPSG:28355+5711). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST TASWATER Sewer Serviced Land\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_TASWATER_SEWER_SERVICED_LAND",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.664898,
+          -43.442587,
+          148.362967,
+          -39.908494
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:01Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sewer and other networks"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST TASWATER Sewer Serviced Land documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_taswater_sewer_serviced_land%2Fstatewide%2Flist_taswater_sewer_serviced_land_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASWATER_SEWER_SERVICED_LAND_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_TASWATER_SEWER_SERVICED_LAND_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_taswater_sewer_serviced_land_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_taswater_sewer_serviced_land/statewide/list_taswater_sewer_serviced_land_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_taswater_sewer_serviced_land_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5365576,
+      "file:checksum": "122001fc369f6509d1b57dd75286ff7c9861588009ae7a76bef7f381e2c8d77506d7",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229895.665,
+        5190033.696,
+        610307.865,
+        5577617.958
+      ],
+      "table:row_count": 9958,
+      "table:columns": [
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SERVICETYPE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "DATEOFISSUE",
+          "type": "datetime"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "PHONE",
+          "type": "string"
+        },
+        {
+          "name": "EMAIL",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST TASWATER Sewer Serviced Land (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14813,
+      "file:checksum": "1220090a6ee9801c1cd64e587b6cf9bfe79943e9bedd3eba1735e764e3b1f6fdda3d"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,438 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_rivers",
+  "title": "LIST CFEV Rivers",
+  "description": "LIST CFEV Rivers: LIST product `LIST_CFEV_RIVERS`, statewide. 360,972 features, multi-linestring (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `RS_ID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Rivers\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_RIVERS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.651541,
+          -43.655202,
+          148.526505,
+          -39.399436
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:54:45Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Rivers documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_rivers%2Fstatewide%2Flist_cfev_rivers_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_BREAK_O_DAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_BRIGHTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_BURNIE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_CENTRAL_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_CIRCULAR_HEAD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_CLARENCE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_DERWENT_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_DEVONPORT.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_DORSET.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_FLINDERS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_GEORGE_TOWN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_GLENORCHY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_HOBART.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_HUON_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_KENTISH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_KING_ISLAND.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_KINGBOROUGH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_LATROBE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_LAUNCESTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_MEANDER_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_SORELL.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_TASMAN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_WARATAH_WYNYARD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_WEST_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_RIVERS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_rivers_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_rivers/statewide/list_cfev_rivers_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_rivers_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 107967410,
+      "file:checksum": "1220f607d8ed931e85b65e42d1d3a434832a70686baea532eefe2ebffa7a2815b822",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229763.115,
+        5166419.983,
+        623114.194,
+        5634196.042
+      ],
+      "table:row_count": 360972,
+      "table:columns": [
+        {
+          "name": "RS_ID",
+          "type": "double"
+        },
+        {
+          "name": "RS_LENGTH",
+          "type": "double"
+        },
+        {
+          "name": "RSC_ID",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "SUBCAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "RSC_AREA",
+          "type": "double"
+        },
+        {
+          "name": "RSC_ACAREA",
+          "type": "double"
+        },
+        {
+          "name": "RS_MAP",
+          "type": "string"
+        },
+        {
+          "name": "RS_PIPE",
+          "type": "double"
+        },
+        {
+          "name": "RS_SLOPE",
+          "type": "double"
+        },
+        {
+          "name": "RS_ELEVMAX",
+          "type": "double"
+        },
+        {
+          "name": "RS_ELEVMIN",
+          "type": "double"
+        },
+        {
+          "name": "RS_ORDER",
+          "type": "double"
+        },
+        {
+          "name": "RS_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "RS_ICV",
+          "type": "string"
+        },
+        {
+          "name": "RS_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "RS_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "RS_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "RS_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "RS_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "RS_WBODY",
+          "type": "double"
+        },
+        {
+          "name": "RS_RCV",
+          "type": "string"
+        },
+        {
+          "name": "RS_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "RS_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RS_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "RS_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Rivers (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 51976,
+      "file:checksum": "122098635cab55df24de956f03e0427297a983a82856024fbdb31d0d809efc889a98"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

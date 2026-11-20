@@ -1,0 +1,301 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_epa_regulated_sites",
+  "title": "LIST EPA Regulated Sites",
+  "description": "LIST EPA Regulated Sites: LIST product `LIST_EPA_REGULATED_SITES`, statewide. 700 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST EPA Regulated Sites\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_EPA_REGULATED_SITES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.668317,
+          -43.414429,
+          148.368585,
+          -39.765788
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST EPA Regulated Sites documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_epa_regulated_sites%2Fstatewide%2Fepa_premises_sites_public_list.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_EPA_REGULATED_SITES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_EPA_REGULATED_SITES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "epa_premises_sites_public_list": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_epa_regulated_sites/statewide/epa_premises_sites_public_list.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_premises_sites_public_list.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 51863,
+      "file:checksum": "1220fdd82050b301635cb7dab647071ca067f5d1aba8b43b9539c752de816695f402",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230048,
+        5193161,
+        610814,
+        5593486
+      ],
+      "table:row_count": 700,
+      "table:columns": [
+        {
+          "name": "SITEID",
+          "type": "int32"
+        },
+        {
+          "name": "PREMISES_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CLIENT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "COMPANY_OR_BUSINESS_NO",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "string"
+        },
+        {
+          "name": "NORTHING",
+          "type": "string"
+        },
+        {
+          "name": "ACTIVITY_CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "list_epa_regulated_sites_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_epa_regulated_sites/statewide/list_epa_regulated_sites_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_epa_regulated_sites_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 51806,
+      "file:checksum": "1220c71be50a66f8ee1f5e1114f398456d1774eb47f586868f906f42a54a6a819f27",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230048,
+        5193161,
+        610814,
+        5593486
+      ],
+      "table:row_count": 700,
+      "table:columns": [
+        {
+          "name": "SITEID",
+          "type": "int64"
+        },
+        {
+          "name": "PREMISES_N",
+          "type": "string"
+        },
+        {
+          "name": "CLIENT_NAM",
+          "type": "string"
+        },
+        {
+          "name": "COMPANY_OR",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "string"
+        },
+        {
+          "name": "NORTHING",
+          "type": "string"
+        },
+        {
+          "name": "ACTIVITY_C",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "epa_premises_docs_public_list": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/list_epa_regulated_sites/statewide/epa_premises_docs_public_list.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_premises_docs_public_list.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 64482,
+      "file:checksum": "122051aceee44d6d4b5bf82a9b68e615a83ba4b0da8f1464b9ac13a0476377c95f07",
+      "table:row_count": 1322,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        },
+        {
+          "name": "SITEID",
+          "type": "int32"
+        },
+        {
+          "name": "ACTIVITY_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "DOCUMENT_NO",
+          "type": "string"
+        },
+        {
+          "name": "DOCUMENT_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "PERMIT_EXTERNAL_IDENTIFIER",
+          "type": "string"
+        },
+        {
+          "name": "REGULATORY_LIMIT",
+          "type": "string"
+        },
+        {
+          "name": "SECTION_OF_THE_EMPC_ACT",
+          "type": "string"
+        },
+        {
+          "name": "SITEACTIVITYID",
+          "type": "int32"
+        },
+        {
+          "name": "ACTIVITY_CATEGORY_CODE",
+          "type": "string"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "URL",
+          "type": "string"
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST EPA Regulated Sites (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6794,
+      "file:checksum": "12203a40c7a5813a2133cb84a40eaf8fb319997de4bb1e411a41ffb6860129df2e14"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

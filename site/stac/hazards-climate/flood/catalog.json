@@ -1,0 +1,100 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "hazards-climate-flood",
+  "title": "Flood",
+  "description": "Natural hazards and climate: Flood. 11 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Natural hazards and climate"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Flood documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./public_flood_inundation_extent_models/collection.json",
+      "type": "application/json",
+      "title": "Public Flood Inundation Extent Models"
+    },
+    {
+      "rel": "child",
+      "href": "./ses_flood_history_cal_studies/collection.json",
+      "type": "application/json",
+      "title": "SES Flood History Cal Studies"
+    },
+    {
+      "rel": "child",
+      "href": "./ses_historic_flood_event_extent/collection.json",
+      "type": "application/json",
+      "title": "SES Historic Flood Event Extent"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_0_point_5_percent_aep/collection.json",
+      "type": "application/json",
+      "title": "TSFM 0 Point 5 Percent AEP"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_1_percent_aep/collection.json",
+      "type": "application/json",
+      "title": "TSFM 1 Percent AEP"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_1_percent_aep_climate_change/collection.json",
+      "type": "application/json",
+      "title": "TSFM 1 Percent AEP Climate Change"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_2_percent_aep/collection.json",
+      "type": "application/json",
+      "title": "TSFM 2 Percent AEP"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_calibration_data_depth/collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Depth"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_calibration_data_hazard/collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Hazard"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_calibration_data_velocity/collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Velocity"
+    },
+    {
+      "rel": "child",
+      "href": "./tsfm_calibration_data_waterlevel/collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Waterlevel"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "epa_swimming_beaches_and_monitored_recreational_waters_during_summer_period",
+  "title": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period",
+  "description": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period: LIST product `EPA_SWIMMING_BEACHES_AND_MONITORED_RECREATIONAL_WATERS_DURING_SUMMER_PERIOD`, statewide. 1 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"EPA Swimming Beaches And Monitored Recreational Waters During Summer Period\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "EPA_SWIMMING_BEACHES_AND_MONITORED_RECREATIONAL_WATERS_DURING_SUMMER_PERIOD",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.194642,
+          -43.37368,
+          148.341364,
+          -40.745135
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fepa_swimming_beaches_and_monitored_recreational_waters_during_summer_period%2Fstatewide%2Fepa_swimming_beaches_and_monitored_recreational_waters_during_summer_period_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/EPA_SWIMMING_BEACHES_AND_MONITORED_RECREATIONAL_WATERS_DURING_SUMMER_PERIOD_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: EPA_SWIMMING_BEACHES_AND_MONITORED_RECREATIONAL_WATERS_DURING_SUMMER_PERIOD_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "epa_swimming_beaches_and_monitored_recreational_waters_during_summer_period_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/epa_swimming_beaches_and_monitored_recreational_waters_during_summer_period/statewide/epa_swimming_beaches_and_monitored_recreational_waters_during_summer_period_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_swimming_beaches_and_monitored_recreational_waters_during_summer_period_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 387196,
+      "file:checksum": "12204e09cd97659544963ae6a814a47e51c1c5fe966adf78b8307c5427d54b915f0b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        353707.5055,
+        5197684.5561,
+        608682.0332,
+        5488090.6235
+      ],
+      "table:row_count": 1,
+      "table:columns": [
+        {
+          "name": "BEACH",
+          "type": "string"
+        },
+        {
+          "name": "DIRECTIVE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTOR",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "EPA Swimming Beaches And Monitored Recreational Waters During Summer Period (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10942,
+      "file:checksum": "1220defcd42884a2c7c13c0f13074ae2383d3e8bebdd23242bf57f63acf940e2931d"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

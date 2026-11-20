@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_land_use_2021",
+  "title": "LIST Land Use 2021",
+  "description": "LIST Land Use 2021: LIST product `LIST_LAND_USE_2021`, statewide. 138,337 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2023-06-07. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Land Use 2021\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LAND_USE_2021",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606933,
+          -43.860876,
+          148.581704,
+          -39.1559
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-06-07T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:31:53Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Land Use 2021 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_land_use_2021%2Fstatewide%2Flist_land_use_2021_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2021_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LAND_USE_2021_STATEWIDE.zip (LIST, released 2023-06-07)"
+    }
+  ],
+  "assets": {
+    "list_land_use_2021_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_use_2021/statewide/list_land_use_2021_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land_use_2021_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 310903185,
+      "file:checksum": "1220753245154b8a299cbd3d35b97a12c69fdbd222e46449c4bc8f766c78ee235aa8",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227092.711,
+        5143575.4063,
+        627131.497,
+        5661170.6806
+      ],
+      "table:row_count": 138337,
+      "table:columns": [
+        {
+          "name": "LU_PRIMARY_CODE",
+          "type": "int16"
+        },
+        {
+          "name": "LU_PRIMARY_DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "LU_CODEN",
+          "type": "int32"
+        },
+        {
+          "name": "LU_CODE_DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_DESC",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_DESC2",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_DESC",
+          "type": "string"
+        },
+        {
+          "name": "MANAGE_DESC2",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_SCALE",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_DATA",
+          "type": "string"
+        },
+        {
+          "name": "CONFIDENCE",
+          "type": "int16"
+        },
+        {
+          "name": "CONFIDENCE_DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Land Use 2021 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12958,
+      "file:checksum": "1220ab3694a8e4e97c59957730e8b1d96355686bdbb02b26227658ab6ffcef27effd"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

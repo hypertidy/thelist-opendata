@@ -1,0 +1,226 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_coastal_inundation_hazard_bands_20161201",
+  "title": "LIST Coastal Inundation Hazard Bands 20161201",
+  "description": "LIST Coastal Inundation Hazard Bands 20161201: LIST product `LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201`, statewide. 160,963 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-10-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Coastal Inundation Hazard Bands 20161201\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.613899,
+          -43.744684,
+          148.578643,
+          -39.154996
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-10-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:55Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Coastal hazards"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201 documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_coastal_inundation_hazard_bands_20161201%2Fstatewide%2Flist_coastal_inundation_hazard_bands_20161201_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201_STATEWIDE.zip (LIST, released 2019-10-16)"
+    }
+  ],
+  "assets": {
+    "list_coastal_inundation_hazard_bands_20161201_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_coastal_inundation_hazard_bands_20161201/statewide/list_coastal_inundation_hazard_bands_20161201_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_coastal_inundation_hazard_bands_20161201_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 79530358,
+      "file:checksum": "1220ab4e2ec2e4569a68425d39a6111e56db78c32c73ad12df9de6babbc6a2959492",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227125.982,
+        5156480.058,
+        627131.497,
+        5661272.373
+      ],
+      "table:row_count": 160963,
+      "table:columns": [
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "HAZARD_BAND",
+          "type": "string"
+        },
+        {
+          "name": "HAZARD_EXPOSURE",
+          "type": "string"
+        },
+        {
+          "name": "INLAND_FLOOD_RISK",
+          "type": "string"
+        },
+        {
+          "name": "HEIGHT_HIGH",
+          "type": "double"
+        },
+        {
+          "name": "HEIGHT_MEDIUM",
+          "type": "double"
+        },
+        {
+          "name": "HEIGHT_LOW",
+          "type": "double"
+        },
+        {
+          "name": "LL_POS_EN",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "BASE_HT",
+          "type": "double"
+        },
+        {
+          "name": "BASE_HT_REF",
+          "type": "string"
+        },
+        {
+          "name": "HAT",
+          "type": "double"
+        },
+        {
+          "name": "LOCAL_STORM_SURGE",
+          "type": "string"
+        },
+        {
+          "name": "WAVE_SETUP",
+          "type": "string"
+        },
+        {
+          "name": "WAVE_RUNUP",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201 (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14163,
+      "file:checksum": "1220c2eb210f502f8725a2297b08850547c855d9afd92026287acaf9a6c6504ab73f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

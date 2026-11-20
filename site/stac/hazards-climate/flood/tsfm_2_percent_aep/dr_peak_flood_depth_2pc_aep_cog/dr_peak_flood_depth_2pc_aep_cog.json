@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "dr_peak_flood_depth_2pc_aep_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [144.510211, -43.619916],
+        [148.406511, -43.619916],
+        [148.406511, -40.578066],
+        [144.510211, -40.578066],
+        [144.510211, -43.619916]
+      ]
+    ]
+  },
+  "bbox": [144.510211, -43.619916, 148.406511, -40.578066],
+  "properties": {
+    "title": "dr_peak_flood_depth_2pc_aep_cog",
+    "datetime": "2026-02-18T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 2 Percent AEP"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 2 Percent AEP"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_2_percent_aep%2Fstatewide%2Fdr_peak_flood_depth_2pc_aep_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_2_percent_aep/statewide/dr_peak_flood_depth_2pc_aep_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "dr_peak_flood_depth_2pc_aep_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 124227876,
+      "file:checksum": "12208c9dc8d2abd020e46c40d0725eadd3a97faafa7ec6731f194be9bf631ec86b5a",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [299020, 5170340, 613500, 5505370],
+      "proj:shape": [33503, 31448],
+      "proj:transform": [10, 0, 299020, 0, -10, 5505370]
+    }
+  },
+  "collection": "tsfm_2_percent_aep"
+}

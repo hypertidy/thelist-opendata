@@ -1,0 +1,398 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_future_potential_production_forest",
+  "title": "LIST Future Potential Production Forest",
+  "description": "LIST Future Potential Production Forest: LIST product `LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST`, statewide. 231 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Future Potential Production Forest\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.60901,
+          -43.461873,
+          148.360055,
+          -40.883842
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:55:58Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forests and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Future Potential Production Forest documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_future_potential_production_forest%2Fstatewide%2Flist_future_potential_production_forest_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BREAK_O_DAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BRIGHTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_BURNIE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CENTRAL_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CIRCULAR_HEAD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_CLARENCE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DERWENT_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DEVONPORT.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_DORSET.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_FLINDERS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GEORGE_TOWN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_GLENORCHY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_HOBART.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_HUON_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KENTISH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KING_ISLAND.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_KINGBOROUGH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_LATROBE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_LAUNCESTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_MEANDER_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_SORELL.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_TASMAN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WARATAH_WYNYARD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WEST_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FUTURE_POTENTIAL_PRODUCTION_FOREST_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_future_potential_production_forest_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_future_potential_production_forest/statewide/list_future_potential_production_forest_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_future_potential_production_forest_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1934566,
+      "file:checksum": "1220261055a69a202307056fca5ae7a57f30a606cea7d2abef30e78ff5b4aa0a6098",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        306497.655,
+        5187891.874,
+        610037.135,
+        5471598.306
+      ],
+      "table:row_count": 231,
+      "table:columns": [
+        {
+          "name": "CID",
+          "type": "int32"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "LOT_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMP_AREA",
+          "type": "double"
+        },
+        {
+          "name": "MEAS_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_AUTH",
+          "type": "string"
+        },
+        {
+          "name": "INST_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "INST_NO",
+          "type": "string"
+        },
+        {
+          "name": "GOVERN_ACT",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "string"
+        },
+        {
+          "name": "EFFEC_DATE",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "FMP",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Future Potential Production Forest (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 30117,
+      "file:checksum": "1220926427c27018de448e30f2ab48eca790955764e38e4f4ab4d90fc0277c0e5a2e"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

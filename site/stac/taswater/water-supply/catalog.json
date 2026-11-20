@@ -1,0 +1,88 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "taswater-water-supply",
+  "title": "Water supply",
+  "description": "TasWater water and sewer: Water supply. 9 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "TasWater water and sewer"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water supply documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_rw_main/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER Rw Main"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_rw_network/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER Rw Network"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_w_hydrant/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER W Hydrant"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_w_intake/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER W Intake"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_w_lateralline/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER W Lateralline"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_w_main/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER W Main"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_w_network/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER W Network"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_water_serviced_land/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER Water Serviced Land"
+    },
+    {
+      "rel": "child",
+      "href": "./taswater_water_customer_connection_point/collection.json",
+      "type": "application/json",
+      "title": "TASWATER Water Customer Connection Point"
+    }
+  ]
+}

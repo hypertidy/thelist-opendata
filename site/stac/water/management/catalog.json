@@ -1,0 +1,118 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "water-management",
+  "title": "Water management and irrigation",
+  "description": "Water and hydrography: Water management and irrigation. 14 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water and hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water management and irrigation documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./epa_aquatic_ecosystem_dgvs_for_surface_water_catchments/collection.json",
+      "type": "application/json",
+      "title": "EPA Aquatic Ecosystem DGVS For Surface Water Catchments"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_dams/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Dams"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_hydropower/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Hydropower"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_irrigation_districts/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Irrigation Districts"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_pipeline/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Pipeline"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_pumpstation/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Pumpstation"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_trade_zone/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Trade Zone"
+    },
+    {
+      "rel": "child",
+      "href": "./list_irrigation_tasmania_transmission_line/collection.json",
+      "type": "application/json",
+      "title": "LIST Irrigation Tasmania Transmission Line"
+    },
+    {
+      "rel": "child",
+      "href": "./list_taswater_drinking_catch/collection.json",
+      "type": "application/json",
+      "title": "LIST TASWATER Drinking Catch"
+    },
+    {
+      "rel": "child",
+      "href": "./list_water_districts/collection.json",
+      "type": "application/json",
+      "title": "LIST Water Districts"
+    },
+    {
+      "rel": "child",
+      "href": "./list_water_management_area/collection.json",
+      "type": "application/json",
+      "title": "LIST Water Management Area"
+    },
+    {
+      "rel": "child",
+      "href": "./list_water_management_regions/collection.json",
+      "type": "application/json",
+      "title": "LIST Water Management Regions"
+    },
+    {
+      "rel": "child",
+      "href": "./v_offtakes/collection.json",
+      "type": "application/json",
+      "title": "V Offtakes"
+    },
+    {
+      "rel": "child",
+      "href": "./water_management_plan_areas/collection.json",
+      "type": "application/json",
+      "title": "Water Management Plan Areas"
+    }
+  ]
+}

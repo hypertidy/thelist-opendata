@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "wedgetailed_eagle_nesting_habitat_nw",
+  "title": "Wedgetailed Eagle Nesting Habitat NW",
+  "description": "Wedgetailed Eagle Nesting Habitat NW: LIST product `WEDGETAILED_EAGLE_NESTING_HABITAT_NW`, statewide. 77,701 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-03-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Wedgetailed Eagle Nesting Habitat NW\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "WEDGETAILED_EAGLE_NESTING_HABITAT_NW",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.637156,
+          -41.448369,
+          145.738141,
+          -40.393669
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-03-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:04Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fauna"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Wedgetailed Eagle Nesting Habitat NW documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fwedgetailed_eagle_nesting_habitat_nw%2Fstatewide%2Fwedgetailed_eagle_nesting_habitat_nw_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_NW_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_NW_STATEWIDE.zip (LIST, released 2021-03-18)"
+    }
+  ],
+  "assets": {
+    "wedgetailed_eagle_nesting_habitat_nw_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/wedgetailed_eagle_nesting_habitat_nw/statewide/wedgetailed_eagle_nesting_habitat_nw_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "wedgetailed_eagle_nesting_habitat_nw_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5055127,
+      "file:checksum": "122066e03ac39a801ee70864890142b041f06b515714c8b69f3f9679cad0a3f92517",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        302575,
+        5410675,
+        392933.9844,
+        5525950
+      ],
+      "table:row_count": 77701,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "GRIDCODE",
+          "type": "int32"
+        },
+        {
+          "name": "ES_DATA_PWS_EAGLE_NW_HAB_AREA",
+          "type": "int32"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Wedgetailed Eagle Nesting Habitat NW (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 38434,
+      "file:checksum": "12205a5a07e4b5e42f0ab3aeb03311367690455556a7c353ad7ec9380e01e5a20974"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

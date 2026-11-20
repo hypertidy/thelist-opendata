@@ -1,0 +1,129 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "land_potentially_suitable_for_agriculture",
+  "title": "Land Potentially Suitable For Agriculture",
+  "description": "Land Potentially Suitable For Agriculture: LIST product `LAND_POTENTIALLY_SUITABLE_FOR_AGRICULTURE`, statewide. Attribute table, 0 rows. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2023-01-13. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Land Potentially Suitable For Agriculture\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LAND_POTENTIALLY_SUITABLE_FOR_AGRICULTURE",
+    "table"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.5,
+          -44,
+          148.6,
+          -39.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-01-13T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Land Potentially Suitable For Agriculture documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#parquet%2Fland_potentially_suitable_for_agriculture%2Fstatewide%2Fexternal_staging.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LAND_POTENTIALLY_SUITABLE_FOR_AGRICULTURE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LAND_POTENTIALLY_SUITABLE_FOR_AGRICULTURE_STATEWIDE.zip (LIST, released 2023-01-13)"
+    }
+  ],
+  "assets": {
+    "external_staging": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/parquet/land_potentially_suitable_for_agriculture/statewide/external_staging.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "external_staging.parquet (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 636,
+      "file:checksum": "12202e75c8e347394f5861fb69b321e8a08b3bbec1407ff8078e0e78313f94f2d0e2",
+      "table:row_count": 0,
+      "table:columns": [
+        {
+          "name": "OBJECTID",
+          "type": "int64"
+        }
+      ]
+    }
+  }
+}

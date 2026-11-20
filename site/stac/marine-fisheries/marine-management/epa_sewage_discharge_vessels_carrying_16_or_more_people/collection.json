@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "epa_sewage_discharge_vessels_carrying_16_or_more_people",
+  "title": "EPA Sewage Discharge Vessels Carrying 16 Or More People",
+  "description": "EPA Sewage Discharge Vessels Carrying 16 Or More People: LIST product `EPA_SEWAGE_DISCHARGE_VESSELS_CARRYING_16_OR_MORE_PEOPLE`, statewide. 1 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"EPA Sewage Discharge Vessels Carrying 16 Or More People\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "EPA_SEWAGE_DISCHARGE_VESSELS_CARRYING_16_OR_MORE_PEOPLE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.582291,
+          -43.87754,
+          148.610913,
+          -39.131906
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine farming, reserves and water quality"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "EPA Sewage Discharge Vessels Carrying 16 Or More People documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fepa_sewage_discharge_vessels_carrying_16_or_more_people%2Fstatewide%2Fepa_sewage_discharge_vessels_carrying_16_or_more_people_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/EPA_SEWAGE_DISCHARGE_VESSELS_CARRYING_16_OR_MORE_PEOPLE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: EPA_SEWAGE_DISCHARGE_VESSELS_CARRYING_16_OR_MORE_PEOPLE_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "epa_sewage_discharge_vessels_carrying_16_or_more_people_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/epa_sewage_discharge_vessels_carrying_16_or_more_people/statewide/epa_sewage_discharge_vessels_carrying_16_or_more_people_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_sewage_discharge_vessels_carrying_16_or_more_people_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 744087,
+      "file:checksum": "12203835322f8a64b324df1e5c982fd0f5c37e3a2dc4eb76aae921f7b093a09fc941",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        225183.849,
+        5141723.406,
+        629444.028,
+        5663770.77
+      ],
+      "table:row_count": 1,
+      "table:columns": [
+        {
+          "name": "DIRECTIVE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTOR",
+          "type": "string"
+        },
+        {
+          "name": "PART1",
+          "type": "string"
+        },
+        {
+          "name": "PART",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "EPA Sewage Discharge Vessels Carrying 16 Or More People (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14715,
+      "file:checksum": "12203e187d74dc26d26d6028913128bc8f1e463e32ce8ec18c16a8f41323b918f23b"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

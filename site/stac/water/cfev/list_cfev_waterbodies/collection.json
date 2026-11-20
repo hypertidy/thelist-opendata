@@ -1,0 +1,246 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_waterbodies",
+  "title": "LIST CFEV Waterbodies",
+  "description": "LIST CFEV Waterbodies: LIST product `LIST_CFEV_WATERBODIES`, statewide. 1,346 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Waterbodies\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_WATERBODIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.674825,
+          -43.532553,
+          148.529208,
+          -39.590373
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:55Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Waterbodies documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_waterbodies%2Fstatewide%2Flist_cfev_waterbodies_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WATERBODIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WATERBODIES_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_waterbodies_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_waterbodies/statewide/list_cfev_waterbodies_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_waterbodies_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5195686,
+      "file:checksum": "1220c2a4e9eed902e8109fe2112a7eadbb1572ce9ff5bfd8973a438914f1c9c09b9e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        231100.201,
+        5180040.834,
+        623582.996,
+        5613020.507
+      ],
+      "table:row_count": 1346,
+      "table:columns": [
+        {
+          "name": "WB_ID",
+          "type": "double"
+        },
+        {
+          "name": "WB_NAME",
+          "type": "string"
+        },
+        {
+          "name": "WB_AREA",
+          "type": "double"
+        },
+        {
+          "name": "WB_ELEV",
+          "type": "double"
+        },
+        {
+          "name": "RSC_ID",
+          "type": "double"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "SUBCAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "WB_MAP",
+          "type": "string"
+        },
+        {
+          "name": "WB_DEPTH",
+          "type": "string"
+        },
+        {
+          "name": "WB_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "WB_ICV",
+          "type": "string"
+        },
+        {
+          "name": "WB_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "WB_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "WB_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "WB_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "WB_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "WB_RCV",
+          "type": "string"
+        },
+        {
+          "name": "WB_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "WB_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "WB_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Waterbodies (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17282,
+      "file:checksum": "12207a86ac30714349fbd0c284d78dbdaeab0fcf2bef1567c7f8aa8208465bcf09d8"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

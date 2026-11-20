@@ -1,0 +1,94 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "vegetation-biodiversity-vegetation",
+  "title": "Vegetation mapping (TASVEG)",
+  "description": "Vegetation, biodiversity and reserves: Vegetation mapping (TASVEG). 10 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vegetation, biodiversity and reserves"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Vegetation mapping (TASVEG) documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_20/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 20"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_30/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 30"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_30_groups/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 30 Groups"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_40/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 40"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_40_fire_attributes/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 40 Fire Attributes"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_50/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 50"
+    },
+    {
+      "rel": "child",
+      "href": "./list_tasveg_50_fire_attributes/collection.json",
+      "type": "application/json",
+      "title": "LIST TASVEG 50 Fire Attributes"
+    },
+    {
+      "rel": "child",
+      "href": "./list_threatened_native_vegetation_communities_2020/collection.json",
+      "type": "application/json",
+      "title": "LIST Threatened Native Vegetation Communities 2020"
+    },
+    {
+      "rel": "child",
+      "href": "./list_threatened_native_vegetation_communities_2025/collection.json",
+      "type": "application/json",
+      "title": "LIST Threatened Native Vegetation Communities 2025"
+    },
+    {
+      "rel": "child",
+      "href": "./tasveg_5_release/collection.json",
+      "type": "application/json",
+      "title": "TASVEG 5 Release"
+    }
+  ]
+}

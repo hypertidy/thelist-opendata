@@ -1,0 +1,618 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "ses_historic_flood_event_extent",
+  "title": "SES Historic Flood Event Extent",
+  "description": "SES Historic Flood Event Extent: LIST product `SES_HISTORIC_FLOOD_EVENT_EXTENT`, statewide. 2,181 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2022-09-16. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"SES Historic Flood Event Extent\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "SES_HISTORIC_FLOOD_EVENT_EXTENT",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.519733,
+          -43.244971,
+          148.405369,
+          -40.570652
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-09-16T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "SES Historic Flood Event Extent documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fses_historic_flood_event_extent%2Fstatewide%2Fflood_extent_august_1970.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/SES_HISTORIC_FLOOD_EVENT_EXTENT_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: SES_HISTORIC_FLOOD_EVENT_EXTENT_STATEWIDE.zip (LIST, released 2022-09-16)"
+    }
+  ],
+  "assets": {
+    "flood_extent_august_1970": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_august_1970.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_august_1970.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 395447,
+      "file:checksum": "122004151edf6847252cb62b81f19c37ddf2d8423439514974f627c5f13b1583688e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        540725.358002782,
+        5267244.5748141,
+        595834.04376328,
+        5326489.46434047
+      ],
+      "table:row_count": 2181,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_august_2007": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_august_2007.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_august_2007.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1301706,
+      "file:checksum": "122087980098f9ece86f0b77d44e907c87d0433fa8407ac1dd8891d2e9c4589ebfb5",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        298547.241031277,
+        5385452.11919292,
+        588790.59811746,
+        5485928.58424648
+      ],
+      "table:row_count": 3543,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_august_2013": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_august_2013.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_august_2013.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 130388,
+      "file:checksum": "12203c3dec7085e49d032f0583e5bcd4fb1845ce9baa930146b640eb235c2732bfcd",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        491346.761226336,
+        5425675.2983,
+        529000.207123438,
+        5467929.78316328
+      ],
+      "table:row_count": 433,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_january_2004": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_january_2004.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_january_2004.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 169437,
+      "file:checksum": "122007cbf997b8aca570619f3483b4c255584666f7792ed9b6a461b8dbf4a9f43ead",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        579259.007740394,
+        5438531.55893125,
+        613540.19086875,
+        5489913.73163023
+      ],
+      "table:row_count": 738,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_january_2011": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_january_2011.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_january_2011.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1751180,
+      "file:checksum": "1220be0145070d8d0917cf8af1c63d1a8b708744605702128169fd84a1c458d6f44f",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        348717.003173827,
+        5368636.2109375,
+        614106.6796875,
+        5491722.19223023
+      ],
+      "table:row_count": 5745,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_july_2000": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_july_2000.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_july_2000.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 623374,
+      "file:checksum": "1220ff83ce51b7c8fb85bfa333a440c0f28ff6a1d7a1df69dcd2a4dd0dd4bded5f85",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        298827.003124953,
+        5449485.50292969,
+        378792.192382813,
+        5506188.46761107
+      ],
+      "table:row_count": 3965,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_july_2016": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_july_2016.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_july_2016.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 386846,
+      "file:checksum": "122059cf112e844d66a8dee7fc6419d1f9107865c26ca4c6720fa204ddd934c0776e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        457204.628906251,
+        5376363.33984375,
+        504750.000000001,
+        5419354.71862793
+      ],
+      "table:row_count": 1217,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_june_2016": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_june_2016.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_june_2016.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3052519,
+      "file:checksum": "1220701a3de0d492450b53f2c86aa333c62a324a6229a60b9c8c268c68e9803baa02",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        298550.000000001,
+        5211980,
+        614110.000000001,
+        5485930
+      ],
+      "table:row_count": 15197,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_march_2011": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_march_2011.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_march_2011.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 507123,
+      "file:checksum": "1220749d360289a576626d27224451f9d568eed5f07ccf1d2ec6ee81550d9eb832ce",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        541145.652957916,
+        5368635.78320313,
+        614102.674804688,
+        5485929.49706841
+      ],
+      "table:row_count": 694,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_may_1969": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_may_1969.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_may_1969.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 703661,
+      "file:checksum": "122003b01d08c09c6367c10dcd78e86ffdff8e89b0cd6b386dd78a1ee28e2cae7a71",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        540726.221710438,
+        5267245.18092505,
+        612083.747497792,
+        5373732.17799536
+      ],
+      "table:row_count": 3825,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_may_2018": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_may_2018.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_may_2018.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 473352,
+      "file:checksum": "122067ee856742d9f4d9effcaff6a2f250eaa53d9cab83860223af47a2344d0e6824",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        527600.000000002,
+        5211980,
+        582150.000000002,
+        5303150
+      ],
+      "table:row_count": 6603,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_september_2005": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_september_2005.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_september_2005.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 476994,
+      "file:checksum": "12206c3d2d7d40d9c9601844822450a4753e13dccbb644cb012e42eb5a15ce214068",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        527610.000000002,
+        5211980,
+        582150.000000002,
+        5303150
+      ],
+      "table:row_count": 6583,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "flood_extent_september_2009": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ses_historic_flood_event_extent/statewide/flood_extent_september_2009.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "flood_extent_september_2009.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 473254,
+      "file:checksum": "1220bf615d4dad5f355a8059c01011adfe2ed1a942352b6e0a6ae9d84c21b0a8a87b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        527600.000000002,
+        5211980,
+        582150.000000002,
+        5303150
+      ],
+      "table:row_count": 6555,
+      "table:columns": [
+        {
+          "name": "Shape_Length",
+          "type": "double"
+        },
+        {
+          "name": "Shape_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "SES Historic Flood Event Extent (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 21900,
+      "file:checksum": "12206c8182867b040d270b4a1f1940a26340b89d3ee12e59d91bac7c9c654b81c35e"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

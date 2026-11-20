@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "tsfm_cal_event_2016_06_hazard_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [144.508309, -43.518888],
+        [148.411708, -43.518888],
+        [148.411708, -40.752925],
+        [144.508309, -40.752925],
+        [144.508309, -43.518888]
+      ]
+    ]
+  },
+  "bbox": [144.508309, -43.518888, 148.411708, -40.752925],
+  "properties": {
+    "title": "tsfm_cal_event_2016_06_hazard_cog",
+    "datetime": "2026-04-29T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Hazard"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM Calibration Data Hazard"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_calibration_data_hazard%2Fstatewide%2Ftsfm_cal_event_2016_06_hazard_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_calibration_data_hazard/statewide/tsfm_cal_event_2016_06_hazard_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "tsfm_cal_event_2016_06_hazard_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 7885730,
+      "file:checksum": "1220b34e5b042ee8430b2c4fd3131d2e187c531c50fd5d60a896fcb21fe38c92dfe4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [298530, 5181560, 614110, 5485930],
+      "proj:shape": [30437, 31558],
+      "proj:transform": [10, 0, 298530, 0, -10, 5485930]
+    }
+  },
+  "collection": "tsfm_calibration_data_hazard"
+}

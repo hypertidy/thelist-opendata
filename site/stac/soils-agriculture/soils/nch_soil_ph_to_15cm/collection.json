@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_soil_ph_to_15cm",
+  "title": "NCH Soil Ph To 15CM",
+  "description": "NCH Soil Ph To 15CM: LIST product `NCH_SOIL_PH_TO_15CM`, statewide. Float64 grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-07-08. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH Soil Ph To 15CM\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_SOIL_PH_TO_15CM",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.523666,
+          -44.140532,
+          149.313382,
+          -38.985852
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-07-08T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH Soil Ph To 15CM documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_soil_ph_to_15cm%2Fstatewide%2Fnch_soil_ph_to_15cm.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_SOIL_PH_TO_15CM_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_SOIL_PH_TO_15CM_STATEWIDE.zip (LIST, released 2020-07-08)"
+    }
+  ],
+  "assets": {
+    "nch_soil_ph_to_15cm": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_soil_ph_to_15cm/statewide/nch_soil_ph_to_15cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "nch_soil_ph_to_15cm.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 282174774,
+      "file:checksum": "122098b6b866ba471d132eec7b9a800acc241b028dd86d65510d96a5f9d4a5342414",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        141419.726136001,
+        5112516.32285968,
+        685109.726136001,
+        5676636.32285968
+      ],
+      "proj:shape": [
+        18804,
+        18123
+      ],
+      "proj:transform": [
+        30,
+        0,
+        141419.726136001,
+        0,
+        -30,
+        5676636.32285968
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH Soil Ph To 15CM (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12715,
+      "file:checksum": "12206257901776f0a040542432e266652d23f18d4bb162b5f039d929855253b67724"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "epa_underground_petroleum_storage_systems",
+  "title": "EPA Underground Petroleum Storage Systems",
+  "description": "EPA Underground Petroleum Storage Systems: LIST product `EPA_UNDERGROUND_PETROLEUM_STORAGE_SYSTEMS`, statewide. 12 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-04-09. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"EPA Underground Petroleum Storage Systems\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "EPA_UNDERGROUND_PETROLEUM_STORAGE_SYSTEMS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          145.859659,
+          -42.903188,
+          147.333975,
+          -41.056028
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-04-09T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "EPA Underground Petroleum Storage Systems documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fepa_underground_petroleum_storage_systems%2Fstatewide%2Fepa_underground_petroleum_storage_systems_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/EPA_UNDERGROUND_PETROLEUM_STORAGE_SYSTEMS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: EPA_UNDERGROUND_PETROLEUM_STORAGE_SYSTEMS_STATEWIDE.zip (LIST, released 2020-04-09)"
+    }
+  ],
+  "assets": {
+    "epa_underground_petroleum_storage_systems_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/epa_underground_petroleum_storage_systems/statewide/epa_underground_petroleum_storage_systems_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "epa_underground_petroleum_storage_systems_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 287301,
+      "file:checksum": "12200963dca61eab0fc61d48b6845e5a69c21ee2e76682f5bfa34eb15707a521b444",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        406897.8872,
+        5249935.3119,
+        527264.7028,
+        5454431.9572
+      ],
+      "table:row_count": 12,
+      "table:columns": [
+        {
+          "name": "NETWORK",
+          "type": "string"
+        },
+        {
+          "name": "MATERIAL",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "CORRIDOR_W",
+          "type": "string"
+        },
+        {
+          "name": "CORRIDOR_WIDTH_EACHSIDE",
+          "type": "string"
+        },
+        {
+          "name": "FEATURE_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "EPA Underground Petroleum Storage Systems (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2416,
+      "file:checksum": "122034b40873fd799b92f5ee6d24c87dcf9c020053d2939c823f4a0882e4d1b635ba"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

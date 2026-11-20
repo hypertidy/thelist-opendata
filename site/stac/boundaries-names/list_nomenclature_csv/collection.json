@@ -1,0 +1,278 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_nomenclature_csv",
+  "title": "LIST Nomenclature Csv",
+  "description": "LIST Nomenclature Csv: LIST product `LIST_NOMENCLATURE_CSV`, statewide. 35,592 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2022-05-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Nomenclature Csv\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_NOMENCLATURE_CSV",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.599283,
+          -43.907052,
+          148.588382,
+          -39.155326
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-05-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Nomenclature Csv documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_nomenclature_csv%2Fstatewide%2Flist_nomenclature_csv_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_NOMENCLATURE_CSV_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_NOMENCLATURE_CSV_STATEWIDE.zip (LIST, released 2022-05-18)"
+    }
+  ],
+  "assets": {
+    "list_nomenclature_csv_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_nomenclature_csv/statewide/list_nomenclature_csv_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_nomenclature_csv_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4065377,
+      "file:checksum": "12209c15f320d1a200c8a74f75e514d2b467ebab68027fe5ff9d6adb196f807c9c63",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        226687.49,
+        5138446.559,
+        627569.8795,
+        5661220.3935
+      ],
+      "table:row_count": 35592,
+      "table:columns": [
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "DATASET",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_NAME",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_ID",
+          "type": "int32"
+        },
+        {
+          "name": "FEAT_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_CLASS",
+          "type": "string"
+        },
+        {
+          "name": "FEAT_GROUP",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_ID",
+          "type": "int32"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "DECN_NO",
+          "type": "double"
+        },
+        {
+          "name": "FORWD_REF",
+          "type": "string"
+        },
+        {
+          "name": "FORWD_NAME",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "MEETING_NO",
+          "type": "double"
+        },
+        {
+          "name": "NOMFILE_RF",
+          "type": "string"
+        },
+        {
+          "name": "OFFIC_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "DUALNAME",
+          "type": "string"
+        },
+        {
+          "name": "OFFICIAL",
+          "type": "string"
+        },
+        {
+          "name": "STAGE_ID",
+          "type": "int32"
+        },
+        {
+          "name": "STAGE",
+          "type": "string"
+        },
+        {
+          "name": "FINAL_M_ID",
+          "type": "int32"
+        },
+        {
+          "name": "FINAL_MTHD",
+          "type": "string"
+        },
+        {
+          "name": "NAMETYPE",
+          "type": "string"
+        },
+        {
+          "name": "MUNY",
+          "type": "string"
+        },
+        {
+          "name": "MGA_EAST",
+          "type": "int32"
+        },
+        {
+          "name": "MGA_NORTH",
+          "type": "int32"
+        },
+        {
+          "name": "LATITUDE",
+          "type": "double"
+        },
+        {
+          "name": "LONGITUDE",
+          "type": "double"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "DISP_STAT",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Nomenclature Csv (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29196,
+      "file:checksum": "1220bc376f128890c3a03948792778d550d109fb2e6f355e57cee3b407d5aceb572f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

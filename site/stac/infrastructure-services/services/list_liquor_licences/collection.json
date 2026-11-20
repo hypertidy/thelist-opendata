@@ -1,0 +1,186 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_liquor_licences",
+  "title": "LIST Liquor Licences",
+  "description": "LIST Liquor Licences: LIST product `LIST_LIQUOR_LICENCES`, statewide. 1,938 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-08-14. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Liquor Licences\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LIQUOR_LICENCES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          119.772743,
+          -85.29936,
+          158.813502,
+          -39.588129
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-08-14T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Liquor Licences documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_liquor_licences%2Fstatewide%2Flist_liquor_licences_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LIQUOR_LICENCES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LIQUOR_LICENCES_STATEWIDE.zip (LIST, released 2026-08-14)"
+    }
+  ],
+  "assets": {
+    "list_liquor_licences_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_liquor_licences/statewide/list_liquor_licences_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_liquor_licences_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 121012,
+      "file:checksum": "1220f4c42b83ca048f1ed115fea31c5ad353ec24a55d36bd08b0f1309facd89e1cd4",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230359,
+        526830,
+        609636,
+        5613244
+      ],
+      "table:row_count": 1938,
+      "table:columns": [
+        {
+          "name": "LICENCE_NO",
+          "type": "string"
+        },
+        {
+          "name": "CURRENCY",
+          "type": "datetime"
+        },
+        {
+          "name": "PREMISE_NA",
+          "type": "string"
+        },
+        {
+          "name": "PREMISE_AD",
+          "type": "string"
+        },
+        {
+          "name": "CATEGORY",
+          "type": "string"
+        },
+        {
+          "name": "SUB_CATEGO",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "WEB_LINK",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Liquor Licences (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 789,
+      "file:checksum": "122024ba194ad4244f1861138086bf70e2602c754140e581f2652b26c41e2a51fedc"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

@@ -1,0 +1,290 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "ft_emergency_meeting_points",
+  "title": "FT Emergency Meeting Points",
+  "description": "FT Emergency Meeting Points: LIST product `FT_EMERGENCY_MEETING_POINTS`, statewide. 271 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"FT Emergency Meeting Points\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "FT_EMERGENCY_MEETING_POINTS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.606814,
+          -43.427795,
+          148.336629,
+          -40.777895
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Services and regulated sites"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "FT Emergency Meeting Points documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fft_emergency_meeting_points%2Fstatewide%2Fft_emergency_meeting_points_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/FT_EMERGENCY_MEETING_POINTS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: FT_EMERGENCY_MEETING_POINTS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "ft_emergency_meeting_points_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/ft_emergency_meeting_points/statewide/ft_emergency_meeting_points_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "ft_emergency_meeting_points_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 51116,
+      "file:checksum": "1220f39ff0450ab67a3163b805e553ec78a1b7d76fd92b5a9951a08ff9c7f1cef711",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        306211,
+        5191677,
+        608202,
+        5483361
+      ],
+      "table:row_count": 271,
+      "table:columns": [
+        {
+          "name": "EMP_NO",
+          "type": "double"
+        },
+        {
+          "name": "ASSET_ID",
+          "type": "double"
+        },
+        {
+          "name": "ASSET_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ASSETLABEL",
+          "type": "double"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "LONGITUDE",
+          "type": "string"
+        },
+        {
+          "name": "LATITUDE",
+          "type": "string"
+        },
+        {
+          "name": "LOC_DESC",
+          "type": "string"
+        },
+        {
+          "name": "ASSET_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "BLOCK_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ASSETCLASS",
+          "type": "string"
+        },
+        {
+          "name": "ASSET_STAT",
+          "type": "string"
+        },
+        {
+          "name": "EMP_CODE_1",
+          "type": "string"
+        },
+        {
+          "name": "EMP_CODE_2",
+          "type": "string"
+        },
+        {
+          "name": "EMP_CODE_3",
+          "type": "string"
+        },
+        {
+          "name": "EASTING",
+          "type": "double"
+        },
+        {
+          "name": "NORTHING",
+          "type": "double"
+        },
+        {
+          "name": "SRCACC",
+          "type": "string"
+        },
+        {
+          "name": "SHEETNO25",
+          "type": "double"
+        },
+        {
+          "name": "SNAME25",
+          "type": "string"
+        },
+        {
+          "name": "SHEETNO100",
+          "type": "double"
+        },
+        {
+          "name": "SNAME100",
+          "type": "string"
+        },
+        {
+          "name": "SHEETNO75",
+          "type": "double"
+        },
+        {
+          "name": "SNAME75",
+          "type": "double"
+        },
+        {
+          "name": "DISTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LAST_REVIE",
+          "type": "string"
+        },
+        {
+          "name": "MAINTENANC",
+          "type": "string"
+        },
+        {
+          "name": "SIGN_MAINT",
+          "type": "string"
+        },
+        {
+          "name": "GSM",
+          "type": "string"
+        },
+        {
+          "name": "NEXTG",
+          "type": "string"
+        },
+        {
+          "name": "HELI_ACCES",
+          "type": "string"
+        },
+        {
+          "name": "HELI_AUTN",
+          "type": "string"
+        },
+        {
+          "name": "FOREST_REG",
+          "type": "string"
+        },
+        {
+          "name": "OWNER",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "FT Emergency Meeting Points (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6376,
+      "file:checksum": "12203ea403d1da0e941c3cdcdc70c37835fc7143b97135d06b9e602a6455a7d2b4c6"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

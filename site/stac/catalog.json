@@ -1,0 +1,131 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "thelist-opendata",
+  "title": "Tasmania LIST open data, cloud-ready",
+  "description": "Every statewide dataset from the LIST (Tasmania) open data bulk downloads, as GeoParquet and Cloud Optimized GeoTIFF on Source Cooperative, read in place over HTTPS or S3. Where LIST ships a product only as 29 per-LGA zips, the statewide file is built from them, with features clipped at LGA boundaries rejoined. 325 products in 14 themes. Data (c) State of Tasmania, CC BY 3.0 AU.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "About this catalogue"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/",
+      "type": "text/html",
+      "title": "LIST open data bulk downloads (the source)"
+    },
+    {
+      "rel": "child",
+      "href": "./enterprise-suitability/catalog.json",
+      "type": "application/json",
+      "title": "Enterprise suitability (crops)"
+    },
+    {
+      "rel": "child",
+      "href": "./soils-agriculture/catalog.json",
+      "type": "application/json",
+      "title": "Soils, land use and agriculture"
+    },
+    {
+      "rel": "child",
+      "href": "./hazards-climate/catalog.json",
+      "type": "application/json",
+      "title": "Natural hazards and climate"
+    },
+    {
+      "rel": "child",
+      "href": "./marine-fisheries/catalog.json",
+      "type": "application/json",
+      "title": "Marine and fisheries"
+    },
+    {
+      "rel": "child",
+      "href": "./water/catalog.json",
+      "type": "application/json",
+      "title": "Water and hydrography"
+    },
+    {
+      "rel": "child",
+      "href": "./taswater/catalog.json",
+      "type": "application/json",
+      "title": "TasWater water and sewer"
+    },
+    {
+      "rel": "child",
+      "href": "./infrastructure-services/catalog.json",
+      "type": "application/json",
+      "title": "Infrastructure, utilities and services"
+    },
+    {
+      "rel": "child",
+      "href": "./topography-imagery/catalog.json",
+      "type": "application/json",
+      "title": "Elevation, imagery and map indexes"
+    },
+    {
+      "rel": "child",
+      "href": "./vegetation-biodiversity/catalog.json",
+      "type": "application/json",
+      "title": "Vegetation, biodiversity and reserves"
+    },
+    {
+      "rel": "child",
+      "href": "./planning-heritage/catalog.json",
+      "type": "application/json",
+      "title": "Planning and heritage"
+    },
+    {
+      "rel": "child",
+      "href": "./boundaries-names/catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "child",
+      "href": "./property-cadastre/catalog.json",
+      "type": "application/json",
+      "title": "Cadastre, property and buildings"
+    },
+    {
+      "rel": "child",
+      "href": "./transport/catalog.json",
+      "type": "application/json",
+      "title": "Transport"
+    },
+    {
+      "rel": "child",
+      "href": "./other/catalog.json",
+      "type": "application/json",
+      "title": "Other"
+    }
+  ],
+  "updated": "2026-11-20T10:11:34Z"
+}

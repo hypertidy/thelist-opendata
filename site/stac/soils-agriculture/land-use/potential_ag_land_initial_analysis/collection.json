@@ -1,0 +1,166 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "potential_ag_land_initial_analysis",
+  "title": "Potential Ag Land Initial Analysis",
+  "description": "Potential Ag Land Initial Analysis: LIST product `POTENTIAL_AG_LAND_INITIAL_ANALYSIS`, statewide. 827 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Potential Ag Land Initial Analysis\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "POTENTIAL_AG_LAND_INITIAL_ANALYSIS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.599116,
+          -43.862412,
+          148.5815,
+          -39.154913
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T12:15:32Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Potential Ag Land Initial Analysis documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fpotential_ag_land_initial_analysis%2Fstatewide%2Fpotential_ag_land_initial_analysis_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/POTENTIAL_AG_LAND_INITIAL_ANALYSIS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: POTENTIAL_AG_LAND_INITIAL_ANALYSIS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "potential_ag_land_initial_analysis_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/potential_ag_land_initial_analysis/statewide/potential_ag_land_initial_analysis_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "potential_ag_land_initial_analysis_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 37550080,
+      "file:checksum": "12204cf228f8064481c1ebeabf0473f7e8ce3b1bf4da62870a730c76bc0b2429b912",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        226469.936978432,
+        5143404.95196109,
+        627111.828018803,
+        5661258.73299525
+      ],
+      "table:row_count": 827,
+      "table:columns": [
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Potential Ag Land Initial Analysis (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 36406,
+      "file:checksum": "122081e3ce60b6aa5e50c241dd288d0ce349759c1235139728105426f4fa4e6ff0cf"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

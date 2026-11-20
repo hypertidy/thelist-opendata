@@ -1,0 +1,178 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_danish_seine",
+  "title": "LIST Danish Seine",
+  "description": "LIST Danish Seine: LIST product `LIST_DANISH_SEINE`, statewide. 42 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2021-09-02. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Danish Seine\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_DANISH_SEINE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.623058,
+          -43.659974,
+          148.581521,
+          -39.559312
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-09-02T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fisheries"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Danish Seine documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_danish_seine%2Fstatewide%2Flist_danish_seine_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_DANISH_SEINE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_DANISH_SEINE_STATEWIDE.zip (LIST, released 2021-09-02)"
+    }
+  ],
+  "assets": {
+    "list_danish_seine_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_danish_seine/statewide/list_danish_seine_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_danish_seine_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 9623667,
+      "file:checksum": "12206ad581c516dd6016ebd57421a878450d81fc72d8d3518405fb8df715fa140d3e",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227482.1726,
+        5165887.7429,
+        627542.7639,
+        5616345.9626
+      ],
+      "table:row_count": 42,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int16"
+        },
+        {
+          "name": "RESTRICTION",
+          "type": "string"
+        },
+        {
+          "name": "SYMBOL_ORDER",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Danish Seine (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 18892,
+      "file:checksum": "122060b6686a32b3552d7dc288b1883c9907216eedfab141948d0de6b7623afaee69"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

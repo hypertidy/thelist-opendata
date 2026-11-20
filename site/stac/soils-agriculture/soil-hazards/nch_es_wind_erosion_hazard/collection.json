@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_es_wind_erosion_hazard",
+  "title": "NCH ES Wind Erosion Hazard",
+  "description": "NCH ES Wind Erosion Hazard: LIST product `NCH_ES_WIND_EROSION_HAZARD`, statewide. Float32 grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-06-24. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH ES Wind Erosion Hazard\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ES_WIND_EROSION_HAZARD",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.324416,
+          -44.152281,
+          149.34259,
+          -38.851851
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-06-24T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soil and land hazards"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH ES Wind Erosion Hazard documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_es_wind_erosion_hazard%2Fstatewide%2Fnch_es_wind_erosion_hazard.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ES_WIND_EROSION_HAZARD_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ES_WIND_EROSION_HAZARD_STATEWIDE.zip (LIST, released 2020-06-24)"
+    }
+  ],
+  "assets": {
+    "nch_es_wind_erosion_hazard": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_es_wind_erosion_hazard/statewide/nch_es_wind_erosion_hazard.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "nch_es_wind_erosion_hazard.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 64741233,
+      "file:checksum": "1220396c274d08482d975edbc0c511e67052f124622371deaf09c2c7a16cca87080b",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        125481.475920822,
+        5111206.92970602,
+        687411.475920822,
+        5690806.92970602
+      ],
+      "proj:shape": [
+        19320,
+        18731
+      ],
+      "proj:transform": [
+        30,
+        0,
+        125481.475920822,
+        0,
+        -30,
+        5690806.92970602
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH ES Wind Erosion Hazard (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11824,
+      "file:checksum": "1220ac25ca99a59dcfdd078744bbcef4be02600e602579fce20d6ccaf966cbf956ce"
+    }
+  }
+}

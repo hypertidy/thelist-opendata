@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_marine_acid_sulfate_soils",
+  "title": "LIST Marine Acid Sulfate Soils",
+  "description": "LIST Marine Acid Sulfate Soils: LIST product `LIST_MARINE_ACID_SULFATE_SOILS`, statewide. 4,218 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2019-01-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Marine Acid Sulfate Soils\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_MARINE_ACID_SULFATE_SOILS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.694937,
+          -43.590014,
+          148.521441,
+          -39.692003
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-01-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:59Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Acid sulfate soils"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Marine Acid Sulfate Soils documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_marine_acid_sulfate_soils%2Fstatewide%2Flist_marine_acid_sulfate_soils_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_MARINE_ACID_SULFATE_SOILS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_MARINE_ACID_SULFATE_SOILS_STATEWIDE.zip (LIST, released 2019-01-18)"
+    }
+  ],
+  "assets": {
+    "list_marine_acid_sulfate_soils_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_marine_acid_sulfate_soils/statewide/list_marine_acid_sulfate_soils_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_marine_acid_sulfate_soils_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 8848451,
+      "file:checksum": "122072c322e20716574c633c08a106f5effecacacf2ec647f878c8c2185596004461",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        232983.036,
+        5173659.153,
+        622838.287,
+        5601789.901
+      ],
+      "table:row_count": 4218,
+      "table:columns": [
+        {
+          "name": "ID",
+          "type": "int32"
+        },
+        {
+          "name": "DATASET_NA",
+          "type": "string"
+        },
+        {
+          "name": "ASS_PROBAB",
+          "type": "string"
+        },
+        {
+          "name": "ASS_ATLAS_",
+          "type": "string"
+        },
+        {
+          "name": "ASS_ATLAS1",
+          "type": "string"
+        },
+        {
+          "name": "DEPTHRANGE",
+          "type": "string"
+        },
+        {
+          "name": "DEPTHRAN_1",
+          "type": "string"
+        },
+        {
+          "name": "SUBSTRATET",
+          "type": "string"
+        },
+        {
+          "name": "SUBSTRATEI",
+          "type": "string"
+        },
+        {
+          "name": "OCEANOGRAP",
+          "type": "string"
+        },
+        {
+          "name": "WATERBODYT",
+          "type": "string"
+        },
+        {
+          "name": "WATERBODYN",
+          "type": "string"
+        },
+        {
+          "name": "SHELTEREDA",
+          "type": "string"
+        },
+        {
+          "name": "SHELTERE_1",
+          "type": "string"
+        },
+        {
+          "name": "POSITIONAL",
+          "type": "string"
+        },
+        {
+          "name": "HECTARES",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Marine Acid Sulfate Soils (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13306,
+      "file:checksum": "1220a512473aecbf6a8c13f905d0114362d7afc76a02db1c2095d7b413cb94c8ebbb"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

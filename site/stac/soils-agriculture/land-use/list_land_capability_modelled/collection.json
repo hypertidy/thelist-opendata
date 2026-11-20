@@ -1,0 +1,264 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_land_capability_modelled",
+  "title": "LIST Land Capability Modelled",
+  "description": "LIST Land Capability Modelled: LIST product `LIST_LAND CAPABILITY_MODELLED`, statewide. 13,004 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2018-07-05. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Land Capability Modelled\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LAND CAPABILITY_MODELLED",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.37479,
+          -43.537777,
+          148.554725,
+          -40.239979
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-07-05T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:57Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Land Capability Modelled documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_land_capability_modelled%2Fstatewide%2Flist_land_capability_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND%20CAPABILITY_MODELLED_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LAND%20CAPABILITY_MODELLED_STATEWIDE.zip (LIST, released 2018-07-05)"
+    }
+  ],
+  "assets": {
+    "list_land_capability_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_capability_modelled/statewide/list_land_capability_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land_capability_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17781512,
+      "file:checksum": "12206861b2af29d3407b988e015b6b6b830f18339b469322fe8b189ad22d7e4c8264",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        287789.514,
+        5179459.089,
+        625634.984,
+        5542621.485
+      ],
+      "table:row_count": 13004,
+      "table:columns": [
+        {
+          "name": "LANDCAP_ID",
+          "type": "int64"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTIO",
+          "type": "string"
+        },
+        {
+          "name": "PARKS_LAND",
+          "type": "decimal"
+        },
+        {
+          "name": "PERIMETER",
+          "type": "decimal"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int64"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "decimal"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "decimal"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "list_land": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_capability_modelled/statewide/list_land.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17815529,
+      "file:checksum": "1220171c869f584f31b8759df65a864f8699ec1f65bf067e8665eb803cf47dc2cf4d",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        287789.514,
+        5179459.089,
+        625634.984,
+        5542621.485
+      ],
+      "table:row_count": 13004,
+      "table:columns": [
+        {
+          "name": "LANDCAP_ID",
+          "type": "int32"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE",
+          "type": "string"
+        },
+        {
+          "name": "DESCRIPTIO",
+          "type": "string"
+        },
+        {
+          "name": "PARKS_LAND_CAPABILITY_AREA",
+          "type": "double"
+        },
+        {
+          "name": "PERIMETER",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_FID",
+          "type": "int32"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Land Capability Modelled (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14862,
+      "file:checksum": "122044d1c4fa848faf501596b9861e936471ae71e5d82c86c8a743119d7c92c112fc"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

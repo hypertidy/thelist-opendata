@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "nva_tasmanian_roadkill",
+  "title": "NVA Tasmanian Roadkill",
+  "description": "NVA Tasmanian Roadkill: LIST product `NVA_TASMANIAN_ROADKILL`, statewide. 74,738 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NVA Tasmanian Roadkill\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NVA_TASMANIAN_ROADKILL",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.698395,
+          -43.571853,
+          148.380356,
+          -39.588794
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fauna"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NVA Tasmanian Roadkill documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fnva_tasmanian_roadkill%2Fstatewide%2Fnva_tasmanian_roadkill_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NVA_TASMANIAN_ROADKILL_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NVA_TASMANIAN_ROADKILL_STATEWIDE.zip (LIST, released 2025-07-18)"
+    }
+  ],
+  "assets": {
+    "nva_tasmanian_roadkill_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/nva_tasmanian_roadkill/statewide/nva_tasmanian_roadkill_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "nva_tasmanian_roadkill_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5492173,
+      "file:checksum": "122055f7cf4ccc4e85e1444310c6d7be511e3425eda4aa35117c73a4f5c0a5abb5d6",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        233182.573,
+        5175678.443,
+        611477.431,
+        5613268.321
+      ],
+      "table:row_count": 74738,
+      "table:columns": [
+        {
+          "name": "SPECIES_OBSERVATION_ID",
+          "type": "double"
+        },
+        {
+          "name": "SPECIES_CODE",
+          "type": "string"
+        },
+        {
+          "name": "SPECIES_NAME",
+          "type": "string"
+        },
+        {
+          "name": "PREFERRED_COMMON_NAMES",
+          "type": "string"
+        },
+        {
+          "name": "OBSERVATION_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "OBSERVATION_YEAR",
+          "type": "string"
+        },
+        {
+          "name": "OBSERVATION_TIME",
+          "type": "string"
+        },
+        {
+          "name": "DATE_ACCURACY",
+          "type": "string"
+        },
+        {
+          "name": "OBSERVATION_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "OBSERVATION_STATE",
+          "type": "string"
+        },
+        {
+          "name": "POSITION_ACCURACY",
+          "type": "double"
+        },
+        {
+          "name": "THREATENED",
+          "type": "string"
+        },
+        {
+          "name": "CONSERVATION_SIGNIFICANCE",
+          "type": "string"
+        },
+        {
+          "name": "STATE_SCHEDULE",
+          "type": "string"
+        },
+        {
+          "name": "NATIONAL_SCHEDULE",
+          "type": "string"
+        },
+        {
+          "name": "INTRODUCED_WATCH_LIST",
+          "type": "string"
+        },
+        {
+          "name": "NOTES",
+          "type": "string"
+        },
+        {
+          "name": "LAST_UPDATE_DATE_TIME",
+          "type": "datetime"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NVA Tasmanian Roadkill (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 23055,
+      "file:checksum": "12203f937da14edfa6b33584d02be7c79d6f5137b63839e5909faf800ff3e2b9fc71"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

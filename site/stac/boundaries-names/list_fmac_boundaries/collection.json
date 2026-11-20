@@ -1,0 +1,182 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_fmac_boundaries",
+  "title": "LIST Fmac Boundaries",
+  "description": "LIST Fmac Boundaries: LIST product `LIST_FMAC_BOUNDARIES`, statewide. 10 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-09-04. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Fmac Boundaries\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_FMAC_BOUNDARIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.60839,
+          -43.742194,
+          148.583537,
+          -39.148896
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-09-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:56Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Fmac Boundaries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_fmac_boundaries%2Fstatewide%2Flist_fmac_boundaries_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_FMAC_BOUNDARIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_FMAC_BOUNDARIES_STATEWIDE.zip (LIST, released 2026-09-04)"
+    }
+  ],
+  "assets": {
+    "list_fmac_boundaries_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_fmac_boundaries/statewide/list_fmac_boundaries_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_fmac_boundaries_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4192395,
+      "file:checksum": "1220ad42d95300257d381c78447dfd591d825d16a5afbb77e6f6743494e6b7b0b342",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        226669.936,
+        5156756.528,
+        627531.036,
+        5661934.401
+      ],
+      "table:row_count": 10,
+      "table:columns": [
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "PLAN_NO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Fmac Boundaries (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12932,
+      "file:checksum": "122031f032e5e26990a60d3ef93866cad37241be652453b021ed06c4e8dadffd68e5"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

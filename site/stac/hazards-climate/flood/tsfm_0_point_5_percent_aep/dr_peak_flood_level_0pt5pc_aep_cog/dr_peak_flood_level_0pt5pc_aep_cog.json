@@ -1,0 +1,71 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json", "https://stac-extensions.github.io/file/v2.1.0/schema.json", "https://stac-extensions.github.io/projection/v2.0.0/schema.json"],
+  "id": "dr_peak_flood_level_0pt5pc_aep_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [144.510159, -43.621176],
+        [148.406541, -43.621176],
+        [148.406541, -40.578066],
+        [144.510159, -40.578066],
+        [144.510159, -43.621176]
+      ]
+    ]
+  },
+  "bbox": [144.510159, -43.621176, 148.406541, -40.578066],
+  "properties": {
+    "title": "dr_peak_flood_level_0pt5pc_aep_cog",
+    "datetime": "2026-02-18T00:00:00Z",
+    "updated": "2026-09-17T07:36:40Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 0 Point 5 Percent AEP"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TSFM 0 Point 5 Percent AEP"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_0_point_5_percent_aep%2Fstatewide%2Fdr_peak_flood_level_0pt5pc_aep_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/tsfm_0_point_5_percent_aep/statewide/dr_peak_flood_level_0pt5pc_aep_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "dr_peak_flood_level_0pt5pc_aep_cog.tif (COG)",
+      "roles": ["data"],
+      "file:size": 133065985,
+      "file:checksum": "1220499999bb13338fd6bc4000841faab42accb2a5119e96f7cb734b4d12da38ab64",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [299020, 5170200, 613500, 5505370],
+      "proj:shape": [33517, 31448],
+      "proj:transform": [10, 0, 299020, 0, -10, 5505370]
+    }
+  },
+  "collection": "tsfm_0_point_5_percent_aep"
+}

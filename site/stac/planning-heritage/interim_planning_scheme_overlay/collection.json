@@ -1,0 +1,284 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "interim_planning_scheme_overlay",
+  "title": "Interim Planning Scheme Overlay",
+  "description": "Interim Planning Scheme Overlay: LIST product `INTERIM_PLANNING_SCHEME_OVERLAY`, statewide. 1,577,557 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-12-21. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Interim Planning Scheme Overlay\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "INTERIM_PLANNING_SCHEME_OVERLAY",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.618311,
+          -43.666355,
+          148.413794,
+          -39.575863
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-12-21T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:46:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Planning and heritage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Interim Planning Scheme Overlay documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Finterim_planning_scheme_overlay%2Fstatewide%2Finterim_planning_scheme_overlay_statewide.gdb.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/interim_planning_scheme_overlay_statewide.gdb/",
+      "type": "text/html",
+      "title": "Source: interim_planning_scheme_overlay_statewide.gdb (LIST, released )"
+    }
+  ],
+  "assets": {
+    "interim_planning_scheme_overlay_statewide.gdb": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/interim_planning_scheme_overlay/statewide/interim_planning_scheme_overlay_statewide.gdb.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "interim_planning_scheme_overlay_statewide.gdb.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 317438828,
+      "file:checksum": "12207445485a5944ab9b06635e83b6d30af9964e67817e2cd4c64482402e6d97878d",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227127.099,
+        5165183.003,
+        614000.001,
+        5614493.816
+      ],
+      "table:row_count": 1577557,
+      "table:columns": [
+        {
+          "name": "O_CODE",
+          "type": "string"
+        },
+        {
+          "name": "O_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMECODE",
+          "type": "int16"
+        },
+        {
+          "name": "PLANSCHEME",
+          "type": "string"
+        },
+        {
+          "name": "DESC_",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMEDATE",
+          "type": "datetime"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE",
+          "type": "binary"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "interim_planning_scheme_overlay_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/interim_planning_scheme_overlay/statewide/interim_planning_scheme_overlay_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "interim_planning_scheme_overlay_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 316210865,
+      "file:checksum": "1220d4648062500a93f1e283b586ce92b55f6baa0e532fd3b82ffbf20ccb309c14c3",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227127.099,
+        5165183.003,
+        614000.001,
+        5614493.816
+      ],
+      "table:row_count": 1577557,
+      "table:columns": [
+        {
+          "name": "O_CODE",
+          "type": "string"
+        },
+        {
+          "name": "O_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMECODE",
+          "type": "int32"
+        },
+        {
+          "name": "PLANSCHEME",
+          "type": "string"
+        },
+        {
+          "name": "DESC_",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMEDATE",
+          "type": "date"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "decimal"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "decimal"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Interim Planning Scheme Overlay (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 53115,
+      "file:checksum": "12206f6d23a6b62e54caf29ce47267b9daa7ffcbaf9af2128581392d42520c5948e3"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

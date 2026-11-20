@@ -1,0 +1,414 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_cfev_wetlands",
+  "title": "LIST CFEV Wetlands",
+  "description": "LIST CFEV Wetlands: LIST product `LIST_CFEV_WETLANDS`, statewide. 20,597 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `WL_ID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST CFEV Wetlands\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_CFEV_WETLANDS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.658046,
+          -43.615791,
+          148.536074,
+          -39.589937
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T08:55:09Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Freshwater ecosystem values (CFEV)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST CFEV Wetlands documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_cfev_wetlands%2Fstatewide%2Flist_cfev_wetlands_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_BREAK_O_DAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_BRIGHTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_BURNIE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_CENTRAL_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_CIRCULAR_HEAD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_CLARENCE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_DERWENT_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_DEVONPORT.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_DORSET.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_FLINDERS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_GEORGE_TOWN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_GLENORCHY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_HOBART.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_HUON_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_KENTISH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_KING_ISLAND.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_KINGBOROUGH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_LATROBE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_LAUNCESTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_MEANDER_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_SORELL.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_TASMAN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_WARATAH_WYNYARD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_WEST_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_WETLANDS_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_CFEV_WETLANDS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_cfev_wetlands_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_cfev_wetlands/statewide/list_cfev_wetlands_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_cfev_wetlands_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 19491992,
+      "file:checksum": "122079b3ba22bc3f2ecdec21bfa4159da5347b8e19fe2834067d411ce00006896865",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        230112.763,
+        5170796.449,
+        623967.1613,
+        5613034.3935
+      ],
+      "table:row_count": 20597,
+      "table:columns": [
+        {
+          "name": "WL_ID",
+          "type": "double"
+        },
+        {
+          "name": "WL_AREA",
+          "type": "double"
+        },
+        {
+          "name": "WL_ELEV",
+          "type": "double"
+        },
+        {
+          "name": "WL_MAP",
+          "type": "string"
+        },
+        {
+          "name": "WL_NSCORE",
+          "type": "double"
+        },
+        {
+          "name": "WL_ICV",
+          "type": "string"
+        },
+        {
+          "name": "WL_RCV",
+          "type": "string"
+        },
+        {
+          "name": "WL_LTENSEC",
+          "type": "string"
+        },
+        {
+          "name": "WL_LTS_M",
+          "type": "double"
+        },
+        {
+          "name": "WL_LTS_H",
+          "type": "double"
+        },
+        {
+          "name": "WL_CMPI1",
+          "type": "string"
+        },
+        {
+          "name": "WL_CMPP1",
+          "type": "string"
+        },
+        {
+          "name": "WL_CMPI2",
+          "type": "string"
+        },
+        {
+          "name": "WL_CMPP2",
+          "type": "string"
+        },
+        {
+          "name": "CAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "WL_NSCOR_C",
+          "type": "string"
+        },
+        {
+          "name": "SUBCAT_ID",
+          "type": "double"
+        },
+        {
+          "name": "WL_NAME",
+          "type": "string"
+        },
+        {
+          "name": "WL_SVDIV",
+          "type": "double"
+        },
+        {
+          "name": "WL_INFO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST CFEV Wetlands (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 39591,
+      "file:checksum": "1220e7d8ba2626235e2ff381bfe9669aa459d46f6e6057a1b96301b20d9144be7960"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

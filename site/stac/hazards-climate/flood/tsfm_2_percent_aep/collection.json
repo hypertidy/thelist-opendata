@@ -1,0 +1,180 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "tsfm_2_percent_aep",
+  "title": "TSFM 2 Percent AEP",
+  "description": "TSFM 2 Percent AEP: LIST product `TSFM_2_PERCENT_AEP`, statewide. Float32 grid, 10 x 10 cells, EPSG:28355; 8 grids. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-02-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TSFM 2 Percent AEP\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TSFM_2_PERCENT_AEP",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.502098,
+          -43.619916,
+          148.413756,
+          -40.568085
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-02-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TSFM 2 Percent AEP documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_2_percent_aep%2Fstatewide%2Fdr_peak_flood_depth_2pc_aep_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TSFM_2_PERCENT_AEP_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TSFM_2_PERCENT_AEP_STATEWIDE.zip (LIST, released 2026-02-18)"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_depth_2pc_aep_cog/dr_peak_flood_depth_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_depth_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_hazard_2pc_aep_cog/dr_peak_flood_hazard_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_hazard_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_level_2pc_aep_cog/dr_peak_flood_level_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_level_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_velocity_2pc_aep_cog/dr_peak_flood_velocity_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_velocity_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_depth_2pc_aep_cog/riv_peak_flood_depth_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_depth_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_hazard_2pc_aep_cog/riv_peak_flood_hazard_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_hazard_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_level_2pc_aep_cog/riv_peak_flood_level_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_level_2pc_aep_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_velocity_2pc_aep_cog/riv_peak_flood_velocity_2pc_aep_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_velocity_2pc_aep_cog"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TSFM 2 Percent AEP (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6119,
+      "file:checksum": "1220740fb068d353296b05894521a2b376214f96d17821630b1d0802c1ee1ed9099f"
+    },
+    "geoparquet-items": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "STAC items as GeoParquet",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 19550,
+      "file:checksum": "12203d415984faaae72cd91abd4e97cfd2d0b6a4ebacf62d1295750703aa27f1f0a6"
+    }
+  }
+}

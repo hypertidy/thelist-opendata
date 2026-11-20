@@ -1,0 +1,151 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "nch_es_sodicity_hazard",
+  "title": "NCH ES Sodicity Hazard",
+  "description": "NCH ES Sodicity Hazard: LIST product `NCH_ES_SODICITY_HAZARD`, statewide. Float32 grid, 30 x 30 cells, EPSG:28355. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2020-06-24. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"NCH ES Sodicity Hazard\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "NCH_ES_SODICITY_HAZARD",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          142.324416,
+          -44.152281,
+          149.34259,
+          -38.851851
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-06-24T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:39Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Soil and land hazards"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "NCH ES Sodicity Hazard documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Fnch_es_sodicity_hazard%2Fstatewide%2Fnch_es_sodicity_hazard.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/NCH_ES_SODICITY_HAZARD_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: NCH_ES_SODICITY_HAZARD_STATEWIDE.zip (LIST, released 2020-06-24)"
+    }
+  ],
+  "assets": {
+    "nch_es_sodicity_hazard": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/cog/nch_es_sodicity_hazard/statewide/nch_es_sodicity_hazard.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "nch_es_sodicity_hazard.tif (COG)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 11449880,
+      "file:checksum": "12201eb8d533e8b23096b0faf0ca14a17bf107b1eb5509de11783734af758039dcd9",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        125481.475920822,
+        5111206.92970602,
+        687411.475920822,
+        5690806.92970602
+      ],
+      "proj:shape": [
+        19320,
+        18731
+      ],
+      "proj:transform": [
+        30,
+        0,
+        125481.475920822,
+        0,
+        -30,
+        5690806.92970602
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "NCH ES Sodicity Hazard (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8370,
+      "file:checksum": "1220ad87b4a360a60d468f17cd2fd47189e100539a67b64b4a001bd57b64e3cf33c6"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_land_use_2013_brs",
+  "title": "LIST Land Use 2013 BRS",
+  "description": "LIST Land Use 2013 BRS: LIST product `LIST_LAND_USE_2013_BRS`, statewide. 245,486 features, multi-polygon z (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2018-01-19. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Land Use 2013 BRS\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LAND_USE_2013_BRS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.606137,
+          -43.860343,
+          148.58189,
+          -39.155088
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-19T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:58Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Land use and capability"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Land Use 2013 BRS documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_land_use_2013_brs%2Fstatewide%2Flist_land_use_2013_brs_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2013_BRS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LAND_USE_2013_BRS_STATEWIDE.zip (LIST, released 2018-01-19)"
+    }
+  ],
+  "assets": {
+    "list_land_use_2013_brs_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_land_use_2013_brs/statewide/list_land_use_2013_brs_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_land_use_2013_brs_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 349616316,
+      "file:checksum": "1220e76b0f99795097017b66d6d1735ac8c1584cce67ae8162fdae959f42af9654f8",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        227026.2041,
+        5143634.561,
+        627147.629,
+        5661258.693
+      ],
+      "table:row_count": 245486,
+      "table:columns": [
+        {
+          "name": "LU_CODE",
+          "type": "string"
+        },
+        {
+          "name": "LUC_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "LU_DESCRIPTION",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_CODE",
+          "type": "string"
+        },
+        {
+          "name": "COMMOD_DESC",
+          "type": "string"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "SOURCE_SCALE",
+          "type": "string"
+        },
+        {
+          "name": "LU_CODEN",
+          "type": "int32"
+        },
+        {
+          "name": "SOURCE_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "SOURCE_DATA",
+          "type": "string"
+        },
+        {
+          "name": "CONFIDENCE",
+          "type": "int16"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Land Use 2013 BRS (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13012,
+      "file:checksum": "12200163f44be4db3330ed46469e4829b5c5e05803742f62e5db2fcafa4c2050d006"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

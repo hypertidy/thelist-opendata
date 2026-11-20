@@ -1,0 +1,154 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "enterprise-suitability",
+  "title": "Enterprise suitability (crops)",
+  "description": "Natural Capital Hub land suitability for agricultural enterprises, by crop, current and climate-change scenarios (2030, 2050; A2, B1). 20 groups.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Enterprise suitability (crops) documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./barley/catalog.json",
+      "type": "application/json",
+      "title": "Barley"
+    },
+    {
+      "rel": "child",
+      "href": "./blueberries/catalog.json",
+      "type": "application/json",
+      "title": "Blueberries"
+    },
+    {
+      "rel": "child",
+      "href": "./carrot-seed/catalog.json",
+      "type": "application/json",
+      "title": "Carrot seed"
+    },
+    {
+      "rel": "child",
+      "href": "./carrots/catalog.json",
+      "type": "application/json",
+      "title": "Carrots"
+    },
+    {
+      "rel": "child",
+      "href": "./cherries/catalog.json",
+      "type": "application/json",
+      "title": "Cherries"
+    },
+    {
+      "rel": "child",
+      "href": "./hazelnuts/catalog.json",
+      "type": "application/json",
+      "title": "Hazelnuts"
+    },
+    {
+      "rel": "child",
+      "href": "./industrial-hemp/catalog.json",
+      "type": "application/json",
+      "title": "Industrial hemp"
+    },
+    {
+      "rel": "child",
+      "href": "./linseed/catalog.json",
+      "type": "application/json",
+      "title": "Linseed"
+    },
+    {
+      "rel": "child",
+      "href": "./lucerne/catalog.json",
+      "type": "application/json",
+      "title": "Lucerne"
+    },
+    {
+      "rel": "child",
+      "href": "./olives/catalog.json",
+      "type": "application/json",
+      "title": "Olives"
+    },
+    {
+      "rel": "child",
+      "href": "./onions/catalog.json",
+      "type": "application/json",
+      "title": "Onions"
+    },
+    {
+      "rel": "child",
+      "href": "./poppies/catalog.json",
+      "type": "application/json",
+      "title": "Poppies"
+    },
+    {
+      "rel": "child",
+      "href": "./potatoes/catalog.json",
+      "type": "application/json",
+      "title": "Potatoes"
+    },
+    {
+      "rel": "child",
+      "href": "./pyrethrum/catalog.json",
+      "type": "application/json",
+      "title": "Pyrethrum"
+    },
+    {
+      "rel": "child",
+      "href": "./raspberries/catalog.json",
+      "type": "application/json",
+      "title": "Raspberries"
+    },
+    {
+      "rel": "child",
+      "href": "./rye-grass/catalog.json",
+      "type": "application/json",
+      "title": "Rye grass"
+    },
+    {
+      "rel": "child",
+      "href": "./sparkling-wine-grapes/catalog.json",
+      "type": "application/json",
+      "title": "Sparkling wine grapes"
+    },
+    {
+      "rel": "child",
+      "href": "./strawberries/catalog.json",
+      "type": "application/json",
+      "title": "Strawberries"
+    },
+    {
+      "rel": "child",
+      "href": "./table-wine-grapes/catalog.json",
+      "type": "application/json",
+      "title": "Table wine grapes"
+    },
+    {
+      "rel": "child",
+      "href": "./wheat/catalog.json",
+      "type": "application/json",
+      "title": "Wheat"
+    }
+  ]
+}

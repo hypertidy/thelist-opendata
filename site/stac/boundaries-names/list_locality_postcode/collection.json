@@ -1,0 +1,370 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_locality_postcode",
+  "title": "LIST Locality Postcode",
+  "description": "LIST Locality Postcode: LIST product `LIST_LOCALITY_POSTCODE`, statewide. 777 features, multi-polygon (EPSG:28355). Built from the 29 per-LGA LIST zips: features LIST clipped at LGA boundaries are rejoined to one row per `LIST_GUID`, and an `lga` column names the source LGA(s); parts outside every LGA (over open water) are not in any LGA file. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Locality Postcode\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_LOCALITY_POSTCODE",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          143.646143,
+          -43.643451,
+          148.558467,
+          -39.576383
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-11-20T09:00:30Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and place names"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Locality Postcode documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_locality_postcode%2Fstatewide%2Flist_locality_postcode_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_BREAK_O_DAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_BREAK_O_DAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_BRIGHTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_BRIGHTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_BURNIE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_BURNIE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_CENTRAL_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_CENTRAL_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_CENTRAL_HIGHLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_CENTRAL_HIGHLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_CIRCULAR_HEAD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_CIRCULAR_HEAD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_CLARENCE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_CLARENCE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_DERWENT_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_DERWENT_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_DEVONPORT.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_DEVONPORT.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_DORSET.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_DORSET.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_FLINDERS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_FLINDERS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_GEORGE_TOWN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_GEORGE_TOWN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_GLAMORGAN_SPRING_BAY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_GLAMORGAN_SPRING_BAY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_GLENORCHY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_GLENORCHY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_HOBART.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_HOBART.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_HUON_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_HUON_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_KENTISH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_KENTISH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_KING_ISLAND.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_KING_ISLAND.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_KINGBOROUGH.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_KINGBOROUGH.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_LATROBE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_LATROBE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_LAUNCESTON.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_LAUNCESTON.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_MEANDER_VALLEY.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_MEANDER_VALLEY.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_NORTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_NORTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_SORELL.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_SORELL.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_SOUTHERN_MIDLANDS.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_SOUTHERN_MIDLANDS.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_TASMAN.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_TASMAN.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_WARATAH_WYNYARD.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_WARATAH_WYNYARD.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_WEST_COAST.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_WEST_COAST.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LOCALITY_POSTCODE_WEST_TAMAR.zip",
+      "type": "text/html",
+      "title": "Source: LIST_LOCALITY_POSTCODE_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "list_locality_postcode_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_locality_postcode/statewide/list_locality_postcode_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_locality_postcode_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16711077,
+      "file:checksum": "122007f804a6bdea8bb30191feef476ca9f53cb2f73fde7a3c998251906bff524f76",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        229274.062,
+        5167723.589,
+        625717.415,
+        5614511.638
+      ],
+      "table:row_count": 777,
+      "table:columns": [
+        {
+          "name": "LOCAL_ID",
+          "type": "int32"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "POSTCODE",
+          "type": "int16"
+        },
+        {
+          "name": "PLAN_REF",
+          "type": "string"
+        },
+        {
+          "name": "GAZ_DATE",
+          "type": "datetime"
+        },
+        {
+          "name": "NOM_REG_NO",
+          "type": "string"
+        },
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "lga",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Locality Postcode (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 18288,
+      "file:checksum": "1220c4fa9064622634df843ed7ea24d1b056164e504b736785b9c597df7b20e1ae6f"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

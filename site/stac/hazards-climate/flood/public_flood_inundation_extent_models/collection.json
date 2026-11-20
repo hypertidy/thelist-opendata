@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "public_flood_inundation_extent_models",
+  "title": "Public Flood Inundation Extent Models",
+  "description": "Public Flood Inundation Extent Models: LIST product `PUBLIC_FLOOD_INUNDATION_EXTENT_MODELS`, statewide. 35 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2025-07-17. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Public Flood Inundation Extent Models\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "PUBLIC_FLOOD_INUNDATION_EXTENT_MODELS",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.365635,
+          -42.784137,
+          147.448835,
+          -41.222992
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-17T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:22:03Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Public Flood Inundation Extent Models documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Fpublic_flood_inundation_extent_models%2Fstatewide%2Fpublic_flood_inundation_extent_models_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/PUBLIC_FLOOD_INUNDATION_EXTENT_MODELS_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: PUBLIC_FLOOD_INUNDATION_EXTENT_MODELS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    }
+  ],
+  "assets": {
+    "public_flood_inundation_extent_models_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/public_flood_inundation_extent_models/statewide/public_flood_inundation_extent_models_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "public_flood_inundation_extent_models_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 576364,
+      "file:checksum": "122067ac8bab5d488d4f2dac61f48d31d7e3c1af159a1a8304368ca927355c4f93e0",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        448111.754,
+        5263155.8669,
+        536712.169,
+        5436303.4749
+      ],
+      "table:row_count": 35,
+      "table:columns": [
+        {
+          "name": "UFI",
+          "type": "string"
+        },
+        {
+          "name": "CUSTOD_ID",
+          "type": "int32"
+        },
+        {
+          "name": "RIVERBASIN",
+          "type": "string"
+        },
+        {
+          "name": "MODELLINGORG",
+          "type": "string"
+        },
+        {
+          "name": "DATASETCUSTODIAN",
+          "type": "string"
+        },
+        {
+          "name": "FEATURECLASSNAME",
+          "type": "string"
+        },
+        {
+          "name": "CREATED_ON",
+          "type": "string"
+        },
+        {
+          "name": "DELETE_FLAG",
+          "type": "string"
+        },
+        {
+          "name": "FLOODSCENARIO",
+          "type": "string"
+        },
+        {
+          "name": "STUDYDATE",
+          "type": "string"
+        },
+        {
+          "name": "DAM_ID",
+          "type": "int16"
+        },
+        {
+          "name": "STUDYURL",
+          "type": "string"
+        },
+        {
+          "name": "DAM_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SIMPLESCENARIO",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Public Flood Inundation Extent Models (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1791,
+      "file:checksum": "122019b25d05edc278a398fa51d0fcb2fad02a43ebe6b9ed0265f2212448891ede84"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

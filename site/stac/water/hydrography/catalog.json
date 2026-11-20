@@ -1,0 +1,64 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json"],
+  "id": "water-hydrography",
+  "title": "Hydrography",
+  "description": "Water and hydrography: Hydrography. 5 collections.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water and hydrography"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Hydrography documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "child",
+      "href": "./list_groundwater_boreholes/collection.json",
+      "type": "application/json",
+      "title": "LIST Groundwater Boreholes"
+    },
+    {
+      "rel": "child",
+      "href": "./list_hydarea/collection.json",
+      "type": "application/json",
+      "title": "LIST Hydarea"
+    },
+    {
+      "rel": "child",
+      "href": "./list_hydline/collection.json",
+      "type": "application/json",
+      "title": "LIST Hydline"
+    },
+    {
+      "rel": "child",
+      "href": "./list_hydpnt/collection.json",
+      "type": "application/json",
+      "title": "LIST Hydpnt"
+    },
+    {
+      "rel": "child",
+      "href": "./list_ramsar_wetlands/collection.json",
+      "type": "application/json",
+      "title": "LIST Ramsar Wetlands"
+    }
+  ]
+}

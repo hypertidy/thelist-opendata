@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "interim_planning_scheme_zone_boundaries",
+  "title": "Interim Planning Scheme Zone Boundaries",
+  "description": "Interim Planning Scheme Zone Boundaries: LIST product `INTERIM_PLANNING_SCHEME_ZONE_BOUNDARIES`, statewide. 79 features, multi-linestring (EPSG:28355+5711). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-08-20. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"Interim Planning Scheme Zone Boundaries\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "INTERIM_PLANNING_SCHEME_ZONE_BOUNDARIES",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          147.16642,
+          -43.368724,
+          147.365616,
+          -42.938151
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-08-20T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:54Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Planning and heritage"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Interim Planning Scheme Zone Boundaries documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Finterim_planning_scheme_zone_boundaries%2Fstatewide%2Finterim_planning_scheme_zone_boundaries_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/INTERIM_PLANNING_SCHEME_ZONE_BOUNDARIES_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: INTERIM_PLANNING_SCHEME_ZONE_BOUNDARIES_STATEWIDE.zip (LIST, released 2026-08-20)"
+    }
+  ],
+  "assets": {
+    "interim_planning_scheme_zone_boundaries_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/interim_planning_scheme_zone_boundaries/statewide/interim_planning_scheme_zone_boundaries_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "interim_planning_scheme_zone_boundaries_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 36441,
+      "file:checksum": "122047d1df79e8f54c35b8ba6787470894f5a033893b0e01b792ffb0ec37c8d3d170",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        513578.111,
+        5198224.079,
+        529622.152,
+        5245989.442
+      ],
+      "table:row_count": 79,
+      "table:columns": [
+        {
+          "name": "DESC_",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMECODE",
+          "type": "int16"
+        },
+        {
+          "name": "PLANSCHEME",
+          "type": "string"
+        },
+        {
+          "name": "SCHEMEDATE",
+          "type": "datetime"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "string"
+        },
+        {
+          "name": "DISCLAIMER",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "double"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Interim Planning Scheme Zone Boundaries (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7155,
+      "file:checksum": "12201d6e261cc68a163ffde7cbd43cb9c4a03bce0b2e8061c939777173ec17154942"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}

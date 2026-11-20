@@ -1,0 +1,180 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "tsfm_1_percent_aep_climate_change",
+  "title": "TSFM 1 Percent AEP Climate Change",
+  "description": "TSFM 1 Percent AEP Climate Change: LIST product `TSFM_1_PERCENT_AEP_CLIMATE_CHANGE`, statewide. Float32 grid, 10 x 10 cells, EPSG:28355; 8 grids. Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-02-18. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"TSFM 1 Percent AEP Climate Change\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "TSFM_1_PERCENT_AEP_CLIMATE_CHANGE",
+    "raster"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          144.502098,
+          -43.621176,
+          148.413756,
+          -40.568085
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-02-18T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:36:40Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Flood"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "TSFM 1 Percent AEP Climate Change documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#cog%2Ftsfm_1_percent_aep_climate_change%2Fstatewide%2Fdr_peak_flood_depth_1pc_aep_cc_cog.tif",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/TSFM_1_PERCENT_AEP_CLIMATE_CHANGE_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: TSFM_1_PERCENT_AEP_CLIMATE_CHANGE_STATEWIDE.zip (LIST, released 2026-02-18)"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_depth_1pc_aep_cc_cog/dr_peak_flood_depth_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_depth_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_hazard_1pc_aep_cc_cog/dr_peak_flood_hazard_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_hazard_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_level_1pc_aep_cc_cog/dr_peak_flood_level_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_level_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./dr_peak_flood_velocity_1pc_aep_cc_cog/dr_peak_flood_velocity_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "dr_peak_flood_velocity_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_depth_1pc_aep_cc_cog/riv_peak_flood_depth_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_depth_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_hazard_1pc_aep_cc_cog/riv_peak_flood_hazard_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_hazard_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_level_1pc_aep_cc_cog/riv_peak_flood_level_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_level_1pc_aep_cc_cog"
+    },
+    {
+      "rel": "item",
+      "href": "./riv_peak_flood_velocity_1pc_aep_cc_cog/riv_peak_flood_velocity_1pc_aep_cc_cog.json",
+      "type": "application/geo+json",
+      "title": "riv_peak_flood_velocity_1pc_aep_cc_cog"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "TSFM 1 Percent AEP Climate Change (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6160,
+      "file:checksum": "1220481b3407da420d69219a6373383301367d9ccc85258ba714788d2d025d20103c"
+    },
+    "geoparquet-items": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "STAC items as GeoParquet",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 19860,
+      "file:checksum": "1220ef55b0a6c03c7a27ad116964c6eade5034c03dd6485e3bbfcacea08ed1ad5175"
+    }
+  }
+}

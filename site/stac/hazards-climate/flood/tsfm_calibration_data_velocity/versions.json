@@ -1,0 +1,24 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-11-20T10:56:14.873170Z",
+      "breaking": false,
+      "assets": {
+        "items.parquet": {
+          "sha256": "0870837fa80d3a345b73322aa0a0abbf065d0f4ab4be9fb7bbf60e546f38bce0",
+          "size_bytes": 22360,
+          "href": "hazards-climate/flood/tsfm_calibration_data_velocity/items.parquet",
+          "mtime": 1795172174.8679185,
+          "source_fingerprint": "03ed99ea5306ae0e013972dff05db43aca11c82fc29c6bff0885e9d9087a75a8"
+        }
+      },
+      "changes": [
+        "items.parquet"
+      ],
+      "message": "Generated items.parquet for STAC GeoParquet queries"
+    }
+  ]
+}

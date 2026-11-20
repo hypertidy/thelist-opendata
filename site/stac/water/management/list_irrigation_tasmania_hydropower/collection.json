@@ -1,0 +1,174 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "id": "list_irrigation_tasmania_hydropower",
+  "title": "LIST Irrigation Tasmania Hydropower",
+  "description": "LIST Irrigation Tasmania Hydropower: LIST product `LIST_IRRIGATION_TASMANIA_HYDROPOWER`, statewide. 5 features, multi-point (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released 2026-06-10. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"LIST Irrigation Tasmania Hydropower\" from theLIST (c) State of Tasmania.",
+  "keywords": [
+    "Tasmania",
+    "theLIST",
+    "LIST_IRRIGATION_TASMANIA_HYDROPOWER",
+    "vector"
+  ],
+  "license": "CC-BY-3.0-AU",
+  "providers": [
+    {
+      "name": "Land Tasmania (theLIST)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.thelist.tas.gov.au/",
+      "description": "Publishes the LIST open data bulk downloads, the source of every file here."
+    },
+    {
+      "name": "hypertidy/thelist-opendata",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://github.com/hypertidy/thelist-opendata",
+      "description": "Converted the LIST zips to GeoParquet and COG; built the statewide layers of LGA-split products."
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/mdsumner/thelist-opendata"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          146.617673,
+          -42.112306,
+          147.897966,
+          -41.105925
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-06-10T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "updated": "2026-09-17T07:21:57Z",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Tasmania LIST open data, cloud-ready"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Water management and irrigation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "LIST Irrigation Tasmania Hydropower documentation"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guidance for agents"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/au/",
+      "type": "text/html",
+      "title": "CC BY 3.0 AU"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://hypertidy.github.io/thelist-opendata/#geoparquet%2Flist_irrigation_tasmania_hydropower%2Fstatewide%2Flist_irrigation_tasmania_hydropower_statewide.parquet",
+      "type": "text/html",
+      "title": "Listing with read-in-place examples (DuckDB, GDAL, R, Python, QGIS)"
+    },
+    {
+      "rel": "via",
+      "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_IRRIGATION_TASMANIA_HYDROPOWER_STATEWIDE.zip",
+      "type": "text/html",
+      "title": "Source: LIST_IRRIGATION_TASMANIA_HYDROPOWER_STATEWIDE.zip (LIST, released 2026-06-10)"
+    }
+  ],
+  "assets": {
+    "list_irrigation_tasmania_hydropower_statewide": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/geoparquet/list_irrigation_tasmania_hydropower/statewide/list_irrigation_tasmania_hydropower_statewide.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "list_irrigation_tasmania_hydropower_statewide.parquet (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10001,
+      "file:checksum": "122091441eb2fcb1142291cfe77ed46cf4a7816948e2a6d6297251c4916c9f3e62ed",
+      "proj:code": "EPSG:28355",
+      "proj:bbox": [
+        468392,
+        5337754.4,
+        574240.885,
+        5449107.572
+      ],
+      "table:row_count": 5,
+      "table:columns": [
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "SCHEME",
+          "type": "string"
+        },
+        {
+          "name": "GLOBALID",
+          "type": "string"
+        },
+        {
+          "name": "LIST_GUID",
+          "type": "string"
+        },
+        {
+          "name": "CRC_ID",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "binary",
+          "description": "WKB"
+        },
+        {
+          "name": "geometry_bbox",
+          "type": "struct<xmin: float, ymin: float, xmax: float, ymax: float>"
+        }
+      ],
+      "table:primary_geometry": "geometry"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "LIST Irrigation Tasmania Hydropower (preview)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1939,
+      "file:checksum": "122004e3aa1c1911db9f46c39221e707f059a2a193e4cf154bb577c29e80e3f92158"
+    }
+  },
+  "table:primary_geometry": "geometry"
+}
