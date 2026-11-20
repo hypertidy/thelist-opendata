@@ -5,6 +5,10 @@ data bulk downloads (https://listdata.thelist.tas.gov.au/opendata/data/),
 with a manifest describing every source file and the etag each output was
 built from. The original zips are not mirrored; fetch them from the source.
 
+**Browse the datasets: https://hypertidy.github.io/thelist-opendata/**
+Every statewide dataset with its columns, extent and source zips, and
+copy-ready snippets to read it in place with DuckDB, GDAL, R, Python or QGIS.
+
 Data: (c) State of Tasmania, Creative Commons Attribution 3.0 Australia.
 Code that built this: https://github.com/hypertidy/thelist-opendata (MIT).
 
