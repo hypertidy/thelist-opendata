@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "ses_historic_flood_event_extent",
   "title": "SES Historic Flood Event Extent",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/SES_HISTORIC_FLOOD_EVENT_EXTENT_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: SES_HISTORIC_FLOOD_EVENT_EXTENT_STATEWIDE.zip (LIST, released 2022-09-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/ses_historic_flood_event_extent/statewide/ses_historic_flood_event_extent_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "SES Historic Flood Event Extent (vector tiles)",
+      "pmtiles:layers": [
+        "ses_historic_flood_event_extent"
+      ]
     }
   ],
   "assets": {
@@ -612,6 +622,27 @@
       ],
       "file:size": 21900,
       "file:checksum": "12206c8182867b040d270b4a1f1940a26340b89d3ee12e59d91bac7c9c654b81c35e"
+    },
+    "ses_historic_flood_event_extent-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/ses_historic_flood_event_extent/statewide/ses_historic_flood_event_extent_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "SES Historic Flood Event Extent (vector tiles, zoom 6-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 14128056,
+      "file:checksum": "12203170f6f1383956c4922862e583c70e8668be9370498033783410e15344e6af31"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "SES Historic Flood Event Extent by event",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 3286,
+      "file:checksum": "122035412345937b8f67b3baa4d32ed3f3ab755a4810fd1af0ac139ec1bef2b532d1"
     }
   },
   "table:primary_geometry": "geometry"

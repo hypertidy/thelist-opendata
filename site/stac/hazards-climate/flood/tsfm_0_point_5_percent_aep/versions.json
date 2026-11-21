@@ -4,15 +4,15 @@
   "versions": [
     {
       "version": "1.0.0",
-      "created": "2026-11-21T05:53:19.755091Z",
+      "created": "2026-11-21T06:47:13.489869Z",
       "breaking": false,
       "assets": {
         "items.parquet": {
           "sha256": "6704073d845de09f6f3b01298eaeae0bdd13d287509802e9db8b0ddd3d5d1014",
           "size_bytes": 19743,
           "href": "hazards-climate/flood/tsfm_0_point_5_percent_aep/items.parquet",
-          "mtime": 1795240399.7443001,
-          "source_fingerprint": "9710a3c90a8f3bca21c3845f4968d2f65b8b324f978ad94284414a31f2de78b3"
+          "mtime": 1795243633.478641,
+          "source_fingerprint": "6727fc20ef29681e430d45bfdb0ca3141f05bc60d836b4740cf680c54a7c3421"
         }
       },
       "changes": [
