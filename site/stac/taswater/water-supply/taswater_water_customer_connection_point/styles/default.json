@@ -1,0 +1,54 @@
+{
+  "version": 8,
+  "name": "TASWATER Water Customer Connection Point",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/taswater_water_customer_connection_point/statewide/taswater_water_customer_connection_point_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "taswater_water_customer_connection_point-point",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "taswater_water_customer_connection_point",
+      "paint": {
+        "circle-color": "#1f6f5c",
+        "circle-opacity": 0.85,
+        "circle-radius": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1.2,
+          14,
+          4.5
+        ],
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          14,
+          0.8
+        ]
+      }
+    }
+  ]
+}

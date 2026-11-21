@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_hydarea",
   "title": "LIST Hydarea",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDAREA_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_HYDAREA_WEST_TAMAR.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydarea/statewide/list_hydarea_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydarea (vector tiles)",
+      "pmtiles:layers": [
+        "list_hydarea"
+      ]
     }
   ],
   "assets": {
@@ -416,6 +426,27 @@
       ],
       "file:size": 33841,
       "file:checksum": "12209858ab4f34a34b4bdc7594842d3c4e4abd12188bb115d240bb8c04b673c0fabd"
+    },
+    "list_hydarea_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydarea/statewide/list_hydarea_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydarea (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 70481324,
+      "file:checksum": "12205996296551b103e4e868c9dd56742740acbe1e6ab319ee37c9e9ae315dfe74c1"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Hydarea",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1048,
+      "file:checksum": "12204a976dfc30e8483e5dde369dde1f8bb3366f0bf1939057cf82ebcb468435994c"
     }
   },
   "table:primary_geometry": "geometry"

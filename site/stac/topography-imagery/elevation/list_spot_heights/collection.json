@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_spot_heights",
   "title": "LIST Spot Heights",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_SPOT_HEIGHTS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_SPOT_HEIGHTS_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_spot_heights/statewide/list_spot_heights_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Spot Heights (vector tiles)",
+      "pmtiles:layers": [
+        "list_spot_heights"
+      ]
     }
   ],
   "assets": {
@@ -188,6 +198,27 @@
       ],
       "file:size": 41672,
       "file:checksum": "12205fb6975f20384754619a5e6dc5fe258bdc03e3ccf58b38e80d4fa0605a9da412"
+    },
+    "list_spot_heights_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_spot_heights/statewide/list_spot_heights_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Spot Heights (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 19678255,
+      "file:checksum": "12203f3d670c76f489a65be28ff7cb8d0c97be4ba84e1ad96e1a1e5f3ae2c2652b5b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Spot Heights",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1150,
+      "file:checksum": "1220dd924b2812eadb702e2fbe43471548df48331709045e3f8972545aee5df2ab1c"
     }
   },
   "table:primary_geometry": "geometry"

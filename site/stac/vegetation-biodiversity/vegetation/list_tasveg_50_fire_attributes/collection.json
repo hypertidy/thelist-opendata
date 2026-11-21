@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasveg_50_fire_attributes",
   "title": "LIST TASVEG 50 Fire Attributes",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_50_FIRE_ATTRIBUTES_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASVEG_50_FIRE_ATTRIBUTES_STATEWIDE.zip (LIST, released 2025-11-25)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_50_fire_attributes/statewide/list_tasveg_50_fire_attributes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 50 Fire Attributes (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasveg_50_fire_attributes"
+      ]
     }
   ],
   "assets": {
@@ -200,6 +210,27 @@
       ],
       "file:size": 11983,
       "file:checksum": "1220d9f7b3b214963b63ece0cc4772528cae8a46b223dcaa00894d3de255ae3e7afb"
+    },
+    "list_tasveg_50_fire_attributes_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_50_fire_attributes/statewide/list_tasveg_50_fire_attributes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 50 Fire Attributes (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 318821207,
+      "file:checksum": "122017e12933e16bdff47473a160c7e323f8ca7179ff7436a80e1775768e57911104"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASVEG 50 Fire Attributes",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1174,
+      "file:checksum": "1220001f4f0b4640863dbb8456bcd1971c4330131eb4e2477732ad6f56fde73b19f8"
     }
   },
   "table:primary_geometry": "geometry"

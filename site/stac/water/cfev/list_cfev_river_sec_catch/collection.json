@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_cfev_river_sec_catch",
   "title": "LIST CFEV River Sec Catch",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVER_SEC_CATCH_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_CFEV_RIVER_SEC_CATCH_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_river_sec_catch/statewide/list_cfev_river_sec_catch_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV River Sec Catch (vector tiles)",
+      "pmtiles:layers": [
+        "list_cfev_river_sec_catch"
+      ]
     }
   ],
   "assets": {
@@ -196,6 +206,27 @@
       ],
       "file:size": 11134,
       "file:checksum": "1220a6708d368b6c57a5317587ebf19cacf4682f8c8c574428f5c52504f4bccfe6bf"
+    },
+    "list_cfev_river_sec_catch_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_river_sec_catch/statewide/list_cfev_river_sec_catch_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV River Sec Catch (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 297657117,
+      "file:checksum": "122094aadce0e663a00e7dc3e6ec7d706435303ae07a0a3dd31a1ec17607e000daa6"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST CFEV River Sec Catch",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1139,
+      "file:checksum": "12209ef08357ed416d832298cae27eda397a485556fa846ed821bfbde5106cfa6f01"
     }
   },
   "table:primary_geometry": "geometry"

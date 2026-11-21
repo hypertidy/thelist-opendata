@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasveg_30_groups",
   "title": "LIST TASVEG 30 Groups",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_30_GROUPS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASVEG_30_GROUPS_STATEWIDE.zip (LIST, released 2018-01-30)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_30_groups/statewide/list_tasveg_30_groups_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 30 Groups (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasveg_30_groups"
+      ]
     }
   ],
   "assets": {
@@ -164,6 +174,27 @@
       ],
       "file:size": 13151,
       "file:checksum": "1220fe903ebb4ba162f58590c3b3994582687d3b48623f1ba25711b6f1c498a8a07a"
+    },
+    "list_tasveg_30_groups_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_30_groups/statewide/list_tasveg_30_groups_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 30 Groups (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 189159690,
+      "file:checksum": "12207313cb37ce0adc45949563a49dfda550f44def12f5313c07c38fbaa115be8305"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASVEG 30 Groups",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1111,
+      "file:checksum": "12209b261be0fb76a6f5df79f165e7e7a3880a751d3b8088afd5b0322ebe6cf7424b"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastal_projected_sea_level_rise_20161201",
   "title": "LIST Coastal Projected Sea Level Rise 20161201",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_PROJECTED_SEA_LEVEL_RISE_20161201_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTAL_PROJECTED_SEA_LEVEL_RISE_20161201_STATEWIDE.zip (LIST, released 2024-09-24)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_projected_sea_level_rise_20161201/statewide/list_coastal_projected_sea_level_rise_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Projected Sea Level Rise 20161201 (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastal_projected_sea_level_rise_20161201"
+      ]
     }
   ],
   "assets": {
@@ -184,6 +194,27 @@
       ],
       "file:size": 13758,
       "file:checksum": "12204dfaee1a6b47256f37d24927d927c38ff452395242af3403bce0ca9a31a2a845"
+    },
+    "list_coastal_projected_sea_level_rise_20161201_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_projected_sea_level_rise_20161201/statewide/list_coastal_projected_sea_level_rise_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Projected Sea Level Rise 20161201 (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 34992922,
+      "file:checksum": "1220e1d6aba1416e38934abc402d364a3f3dafa2fab74565c04a0459a420c15268df"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastal Projected Sea Level Rise 20161201",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1286,
+      "file:checksum": "12204302907c441593fe9a33703d83383e7893eb17ea69f5faeac9c0b9cc2ff776db"
     }
   },
   "table:primary_geometry": "geometry"

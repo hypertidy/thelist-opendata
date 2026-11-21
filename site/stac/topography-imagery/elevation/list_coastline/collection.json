@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastline",
   "title": "LIST Coastline",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTLINE_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTLINE_STATEWIDE.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastline/statewide/list_coastline_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastline (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastline"
+      ]
     }
   ],
   "assets": {
@@ -228,6 +238,27 @@
       ],
       "file:size": 13907,
       "file:checksum": "1220c35d819e4ab6a4b38c8c6e63c6ae8a9106f837fe679b00a309e5ef6655a31961"
+    },
+    "list_coastline_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastline/statewide/list_coastline_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastline (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 21477493,
+      "file:checksum": "122085f829055b0715ca32b54ffcd013dbce7ad77b278dbac0f51ddecb5f881d6fb8"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastline",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 838,
+      "file:checksum": "12201e48650312e1dbf19633815f191333366fdf5e10539f874ef72cde7cb088ccda"
     }
   },
   "table:primary_geometry": "geometry"

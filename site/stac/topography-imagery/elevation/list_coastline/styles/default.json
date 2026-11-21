@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "name": "LIST Coastline",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastline/statewide/list_coastline_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_coastline-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_coastline",
+      "paint": {
+        "line-color": "#1f6f5c",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.4,
+          14,
+          2
+        ]
+      }
+    }
+  ]
+}

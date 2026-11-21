@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_address_points",
   "title": "LIST Address Points",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_ADDRESS_POINTS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_ADDRESS_POINTS_STATEWIDE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_address_points/statewide/list_address_points_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Address Points (vector tiles)",
+      "pmtiles:layers": [
+        "list_address_points"
+      ]
     }
   ],
   "assets": {
@@ -288,6 +298,27 @@
       ],
       "file:size": 23678,
       "file:checksum": "1220782f46a92aaae37fc7f8bc96f993c1f537e0e03b39ce49cecac15ff0edca6e99"
+    },
+    "list_address_points_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_address_points/statewide/list_address_points_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Address Points (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 25468960,
+      "file:checksum": "1220771a7e869ca45ba99f69bd0e76f6ad2fd1c380890b9debff688b8bc3795a6a02"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Address Points",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1160,
+      "file:checksum": "12200e14b6ecfb5c8872c32d5a109a2da84db5230329d8ee553f2c9ffba5762f02ee"
     }
   },
   "table:primary_geometry": "geometry"

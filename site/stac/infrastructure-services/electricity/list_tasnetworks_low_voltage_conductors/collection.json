@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasnetworks_low_voltage_conductors",
   "title": "LIST Tasnetworks Low Voltage Conductors",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASNETWORKS_LOW_VOLTAGE_CONDUCTORS_STATEWIDE.zip (LIST, released 2025-07-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasnetworks_low_voltage_conductors/statewide/list_tasnetworks_low_voltage_conductors_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasnetworks Low Voltage Conductors (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasnetworks_low_voltage_conductors"
+      ]
     }
   ],
   "assets": {
@@ -156,6 +166,27 @@
       ],
       "file:size": 35213,
       "file:checksum": "1220e07e41b764889ebb3575a9d17969682e050e2d57c73e494e95eedd3905b8a144"
+    },
+    "list_tasnetworks_low_voltage_conductors_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasnetworks_low_voltage_conductors/statewide/list_tasnetworks_low_voltage_conductors_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Tasnetworks Low Voltage Conductors (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 15566860,
+      "file:checksum": "1220a059c9d8c2c824364d13213676f8c4e0ac3ba3496db8f97e15eeeba9041d23f4"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Tasnetworks Low Voltage Conductors",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 963,
+      "file:checksum": "12200c75cf18a66e8fe01259066152361d84b1657dfd41236b52ae46320835032e5b"
     }
   },
   "table:primary_geometry": "geometry"

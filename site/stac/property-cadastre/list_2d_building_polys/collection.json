@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_2d_building_polys",
   "title": "LIST 2D Building Polys",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_2D_BUILDING_POLYS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_2D_BUILDING_POLYS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_2d_building_polys/statewide/list_2d_building_polys_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 2D Building Polys (vector tiles)",
+      "pmtiles:layers": [
+        "list_2d_building_polys"
+      ]
     }
   ],
   "assets": {
@@ -372,6 +382,27 @@
       ],
       "file:size": 21421,
       "file:checksum": "1220ce9c7f380ea4378d990050f8f15af061d55cfe465115df563872f50b8ead2a6b"
+    },
+    "list_2d_building_polys_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_2d_building_polys/statewide/list_2d_building_polys_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 2D Building Polys (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 41417145,
+      "file:checksum": "12205ab2abd4b814d40f8b7a8c78f892080efb308f64e2c5114bf46685bef2a53a43"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST 2D Building Polys",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1118,
+      "file:checksum": "1220c24b5c127dee341a88c89365b5dc69e0cafbe305f65ef9dbd804d77bd314466d"
     }
   },
   "table:primary_geometry": "geometry"

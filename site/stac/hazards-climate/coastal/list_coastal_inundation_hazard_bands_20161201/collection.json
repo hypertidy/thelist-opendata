@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_coastal_inundation_hazard_bands_20161201",
   "title": "LIST Coastal Inundation Hazard Bands 20161201",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_COASTAL_INUNDATION_HAZARD_BANDS_20161201_STATEWIDE.zip (LIST, released 2019-10-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_inundation_hazard_bands_20161201/statewide/list_coastal_inundation_hazard_bands_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201 (vector tiles)",
+      "pmtiles:layers": [
+        "list_coastal_inundation_hazard_bands_20161201"
+      ]
     }
   ],
   "assets": {
@@ -220,6 +230,27 @@
       ],
       "file:size": 14163,
       "file:checksum": "1220c2eb210f502f8725a2297b08850547c855d9afd92026287acaf9a6c6504ab73f"
+    },
+    "list_coastal_inundation_hazard_bands_20161201_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_inundation_hazard_bands_20161201/statewide/list_coastal_inundation_hazard_bands_20161201_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201 (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 38723241,
+      "file:checksum": "1220d97f3dca0f6f4f183f228c03f93a80e4d25618be58679b32277f1e745f48da69"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Coastal Inundation Hazard Bands 20161201",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1279,
+      "file:checksum": "1220c9e0fe7df27eb557274eeb164db4011d8e8730633f5e99df336a2adb8a81cb2c"
     }
   },
   "table:primary_geometry": "geometry"

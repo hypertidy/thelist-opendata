@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_cfev_rivers",
   "title": "LIST CFEV Rivers",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_CFEV_RIVERS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_CFEV_RIVERS_WEST_TAMAR.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_rivers/statewide/list_cfev_rivers_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV Rivers (vector tiles)",
+      "pmtiles:layers": [
+        "list_cfev_rivers"
+      ]
     }
   ],
   "assets": {
@@ -432,6 +442,27 @@
       ],
       "file:size": 51976,
       "file:checksum": "122098635cab55df24de956f03e0427297a983a82856024fbdb31d0d809efc889a98"
+    },
+    "list_cfev_rivers_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_rivers/statewide/list_cfev_rivers_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST CFEV Rivers (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 159198543,
+      "file:checksum": "12209ad5c497223b4557b58adde666784376ec407dbdc4ecfc11e287c5bb122db21b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST CFEV Rivers",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 848,
+      "file:checksum": "122088df0d984163ea4f4ac95c4b97d2ffd7b2faf687a64a69c72add3c4fa6f9bd50"
     }
   },
   "table:primary_geometry": "geometry"
