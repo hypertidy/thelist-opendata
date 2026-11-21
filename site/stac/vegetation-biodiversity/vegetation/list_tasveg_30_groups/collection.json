@@ -178,12 +178,12 @@
     "list_tasveg_30_groups_statewide-tiles": {
       "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_30_groups/statewide/list_tasveg_30_groups_statewide.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "LIST TASVEG 30 Groups (vector tiles, zoom 9-14)",
+      "title": "LIST TASVEG 30 Groups (vector tiles, zoom 7-14)",
       "roles": [
         "visual"
       ],
-      "file:size": 189159690,
-      "file:checksum": "12207313cb37ce0adc45949563a49dfda550f44def12f5313c07c38fbaa115be8305"
+      "file:size": 198816619,
+      "file:checksum": "1220ce5ed6e0eb85e614fa2502cae5411c5075ad8a0a14ea423d148314f615adebd6"
     },
     "style-default": {
       "href": "./styles/default.json",

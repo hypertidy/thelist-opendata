@@ -71,10 +71,10 @@ OVER_ROWS <- 10000; OVER_BYTES <- 52428800                     # the Portolan Br
 SYSTEM_FIELDS <- c("SHAPE_Length", "SHAPE_Area", "SHAPE_LENG", "OBJECTID", "FID", "UFI", "LIST_GUID", "CREATED_ON", "COMP_AREA",
                    "COMP_LEN", "MEAS_AREA", "FMP", "NOM_REG_NO", "CRC_ID", "lga", "SHAPE", "geometry", "geometry_bbox", "SHAPE_bbox")
 ASSIGN_CRS <- c(list_tasveg_20 = "EPSG:28355")                  # no CRS in its GeoParquet (would read as lon/lat); MGA55 metres
-## style settings for automatic layers: their fields and zooms stay automatic, so restyling needs no new tiles
-TASVEG_STYLE <- list(by = "VEG_GROUP", palette = "tasveg", opacity = 0.75, outline = FALSE)
-AUTO_STYLE <- list(list_tasveg_30 = TASVEG_STYLE, list_tasveg_30_groups = TASVEG_STYLE,
-                   list_tasveg_40_fire_attributes = TASVEG_STYLE, list_tasveg_50_fire_attributes = TASVEG_STYLE)
+## overrides for automatic layers: style settings only restyle; tile settings (fields, zooms) rebuild the tiles
+TASVEG_LIKE <- list(by = "VEG_GROUP", palette = "tasveg", opacity = 0.75, outline = FALSE, minzoom = 7)   # drawn like TASVEG 4.0 and 5.0
+AUTO_OVERRIDES <- list(list_tasveg_30 = TASVEG_LIKE, list_tasveg_30_groups = TASVEG_LIKE,
+                       list_tasveg_40_fire_attributes = TASVEG_LIKE, list_tasveg_50_fire_attributes = TASVEG_LIKE)
 auto_cfg <- function(it) {
   cols <- setdiff(vapply(it$columns, function(c) c[[1]], ""), SYSTEM_FIELDS)
   pri <- grepl("NAME|TYPE|_TY$|CLASS|CATEG|DESC|CODE|ZONE|STATUS|GROUP|BAND|PURPOSE", cols, ignore.case = TRUE)
@@ -95,7 +95,7 @@ if (AUTO_MAX > 0) {
     if (!identical(src_of(prod)$path, it$path)) next             # one tileset per product: its first vector file
     TILESETS[[prod]] <- auto_cfg(it)
     if (prod %in% names(ASSIGN_CRS)) TILESETS[[prod]]$crs <- ASSIGN_CRS[[prod]]
-    if (prod %in% names(AUTO_STYLE)) TILESETS[[prod]] <- modifyList(TILESETS[[prod]], AUTO_STYLE[[prod]])
+    if (prod %in% names(AUTO_OVERRIDES)) TILESETS[[prod]] <- modifyList(TILESETS[[prod]], AUTO_OVERRIDES[[prod]])
   }
 }
 todo <- names(TILESETS)

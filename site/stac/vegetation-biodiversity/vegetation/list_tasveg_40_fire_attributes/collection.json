@@ -378,12 +378,12 @@
     "list_tasveg_40_fire_attributes_statewide-tiles": {
       "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_40_fire_attributes/statewide/list_tasveg_40_fire_attributes_statewide.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "LIST TASVEG 40 Fire Attributes (vector tiles, zoom 9-14)",
+      "title": "LIST TASVEG 40 Fire Attributes (vector tiles, zoom 7-14)",
       "roles": [
         "visual"
       ],
-      "file:size": 305407692,
-      "file:checksum": "12206a8d96eaa95201eb2d93a450cdffe115f0cb5a5a3da3ccb501ce1ec2aac5ac61"
+      "file:size": 319751549,
+      "file:checksum": "12208786796f692e775a0aa75fb06956cdec09f3827d2608998d025b2fa0f9b35340"
     },
     "style-default": {
       "href": "./styles/default.json",
