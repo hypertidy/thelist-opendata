@@ -39,14 +39,20 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   CRS), so small layers stay GeoParquet-only; 81 of 235 vector layers are over
   that. Tiled so far (GDAL's PMTiles writer), 69 layers:
   - configured in `TILESETS`, coloured by a category: parcels, TASVEG 4.0 and
-    5.0 (one shared vegetation-group palette), transport segments, landslide
-    hazard bands
-  - automatic, every other over-cap layer up to 500,000 features:
-    `AUTO_MAX_ROWS=500000 make pmtiles` picks up to 8 descriptive fields, one
-    colour styled by geometry type (fill and outline, line, circle) and the
-    minimum zoom from the feature count (z6 up to 50k, z8 up to 150k, z9 up
-    to 500k, z10 above). `DRY=1` lists the plan without building.
+    5.0, transport segments, landslide hazard bands
+  - automatic, every other over-cap layer up to `AUTO_MAX_ROWS` features
+    (500,000 in `make pmtiles`): up to 8 descriptive fields, one colour
+    styled by geometry type (fill and outline, line, circle) and the minimum
+    zoom from the feature count (z6 up to 50k, z8 up to 150k, z9 up to 500k,
+    z10 above). `DRY=1` lists the plan without building. `AUTO_STYLE`
+    restyles an automatic layer: TASVEG 3.0, 3.0 groups and the 4.0 and 5.0
+    fire attributes share the vegetation-group palette with 4.0 and 5.0.
     `ASSIGN_CRS` gives a CRS to a source that lacks one (TASVEG 2.0).
+
+  A tileset is rebuilt only when its source or its tile settings (fields,
+  zooms, derived columns, CRS) change; style settings just rewrite the
+  style. Tiles already in the store at their recorded size count as built,
+  so a fresh checkout (CI) rebuilds only what changed. `FORCE=regex` rebuilds.
 
   Still untiled: the 7 layers over 500,000 features (10 m contours, hydline,
   boundary segments, landslide components, the planning code overlay, the

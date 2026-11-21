@@ -1,8 +1,64 @@
 {
   "version": 8,
-  "name": "LIST TASVEG 30",
+  "name": "LIST TASVEG 30 by vegetation group",
   "metadata": {
-    "legend": [],
+    "legend": [
+      {
+        "label": "Agricultural, urban and exotic vegetation",
+        "value": "Agricultural, urban and exotic vegetation",
+        "color": "#e8d9a8"
+      },
+      {
+        "label": "Wet eucalypt forest and woodland",
+        "value": "Wet eucalypt forest and woodland",
+        "color": "#1b7837"
+      },
+      {
+        "label": "Dry eucalypt forest and woodland",
+        "value": "Dry eucalypt forest and woodland",
+        "color": "#a6cf6b"
+      },
+      {
+        "label": "Scrub, heathland and coastal complexes",
+        "value": "Scrub, heathland and coastal complexes",
+        "color": "#c2a35b"
+      },
+      {
+        "label": "Rainforest and related scrub",
+        "value": "Rainforest and related scrub",
+        "color": "#00441b"
+      },
+      {
+        "label": "Non eucalypt forest and woodland",
+        "value": "Non eucalypt forest and woodland",
+        "color": "#5aae61"
+      },
+      {
+        "label": "Moorland, sedgeland, rushland and peatland",
+        "value": "Moorland, sedgeland, rushland and peatland",
+        "color": "#c994c7"
+      },
+      {
+        "label": "Other natural environments",
+        "value": "Other natural environments",
+        "color": "#bdbdbd"
+      },
+      {
+        "label": "Native grassland",
+        "value": "Native grassland",
+        "color": "#fdd49e"
+      },
+      {
+        "label": "Highland and treeless vegetation",
+        "value": "Highland and treeless vegetation",
+        "color": "#8c6bb1"
+      },
+      {
+        "label": "Saltmarsh and wetland",
+        "value": "Saltmarsh and wetland",
+        "color": "#4eb3d3"
+      }
+    ],
     "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
   },
   "sources": {
@@ -19,30 +75,37 @@
       "source": "data",
       "source-layer": "list_tasveg_30",
       "paint": {
-        "fill-color": "#1f6f5c",
-        "fill-opacity": 0.45
-      }
-    },
-    {
-      "id": "list_tasveg_30-line",
-      "type": "line",
-      "source": "data",
-      "source-layer": "list_tasveg_30",
-      "paint": {
-        "line-color": "#1f4e45",
-        "line-width": [
-          "interpolate",
+        "fill-color": [
+          "match",
           [
-            "linear"
+            "get",
+            "VEG_GROUP"
           ],
-          [
-            "zoom"
-          ],
-          10,
-          0.2,
-          16,
-          1.2
-        ]
+          "Agricultural, urban and exotic vegetation",
+          "#e8d9a8",
+          "Wet eucalypt forest and woodland",
+          "#1b7837",
+          "Dry eucalypt forest and woodland",
+          "#a6cf6b",
+          "Scrub, heathland and coastal complexes",
+          "#c2a35b",
+          "Rainforest and related scrub",
+          "#00441b",
+          "Non eucalypt forest and woodland",
+          "#5aae61",
+          "Moorland, sedgeland, rushland and peatland",
+          "#c994c7",
+          "Other natural environments",
+          "#bdbdbd",
+          "Native grassland",
+          "#fdd49e",
+          "Highland and treeless vegetation",
+          "#8c6bb1",
+          "Saltmarsh and wetland",
+          "#4eb3d3",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.75
       }
     }
   ]

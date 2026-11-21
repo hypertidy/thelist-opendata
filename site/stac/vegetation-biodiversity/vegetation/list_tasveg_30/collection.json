@@ -224,13 +224,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "LIST TASVEG 30",
+      "title": "LIST TASVEG 30 by vegetation group",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 1062,
-      "file:checksum": "122002f35bcdc0117d55212c332eee5c32fa10c9eedb219a159ce2c3f84317047d34"
+      "file:size": 3148,
+      "file:checksum": "12207ba69a0d13bed99ae7cbd2c11a04f6277e359d1f340ed71b5ee6d0624efd0f66"
     }
   },
   "table:primary_geometry": "geometry"

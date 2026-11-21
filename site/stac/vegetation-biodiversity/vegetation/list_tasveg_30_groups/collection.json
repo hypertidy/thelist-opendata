@@ -188,13 +188,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "LIST TASVEG 30 Groups",
+      "title": "LIST TASVEG 30 Groups by vegetation group",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 1111,
-      "file:checksum": "12209b261be0fb76a6f5df79f165e7e7a3880a751d3b8088afd5b0322ebe6cf7424b"
+      "file:size": 3183,
+      "file:checksum": "1220e13df5668967c7acfe633e6362f219dbff4287dea50e9022a4813037e3e4c460"
     }
   },
   "table:primary_geometry": "geometry"

@@ -4,15 +4,15 @@
   "versions": [
     {
       "version": "1.0.0",
-      "created": "2026-11-21T03:45:41.265913Z",
+      "created": "2026-11-21T05:07:14.002774Z",
       "breaking": false,
       "assets": {
         "items.parquet": {
           "sha256": "ef55b0a6c03c7a27ad116964c6eade5034c03dd6485e3bbfcacea08ed1ad5175",
           "size_bytes": 19860,
           "href": "hazards-climate/flood/tsfm_1_percent_aep_climate_change/items.parquet",
-          "mtime": 1795232741.2614105,
-          "source_fingerprint": "266ba6ce244ef427b684c98364805db521f47981b730bef0b789270759ee23f1"
+          "mtime": 1795237633.9981287,
+          "source_fingerprint": "8cefa3bfab2d1877497a9667142dae7567162a8a4d1a414481e59af7baec91bd"
         }
       },
       "changes": [

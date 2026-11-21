@@ -8,6 +8,6 @@ statewide: ; Rscript R/04_statewide.R
 catalog: ; Rscript R/20_catalog.R
 checksums: ; Rscript R/21_checksums.R
 thumbnails: ; Rscript R/23_thumbnails.R
-pmtiles: ; Rscript R/24_pmtiles.R
+pmtiles: ; AUTO_MAX_ROWS=$${AUTO_MAX_ROWS:-500000} Rscript R/24_pmtiles.R
 stac: ; Rscript R/22_stac.R && portolan stac-geoparquet --catalog site/stac
 test:    ; Rscript tests/test_parse.R
