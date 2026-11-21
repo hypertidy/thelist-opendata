@@ -224,13 +224,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "LIST TASVEG 50 Fire Attributes",
+      "title": "LIST TASVEG 50 Fire Attributes by vegetation group",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 1174,
-      "file:checksum": "1220001f4f0b4640863dbb8456bcd1971c4330131eb4e2477732ad6f56fde73b19f8"
+      "file:size": 3096,
+      "file:checksum": "1220c8457dcfd72d4bfbd8e047a3ee99a1809427ce96f0dcf8bf1b59086ea6d3d025"
     }
   },
   "table:primary_geometry": "geometry"

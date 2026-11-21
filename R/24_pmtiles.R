@@ -35,6 +35,9 @@ TASVEG_COLOURS <- setNames(
                "Rainforest and related scrub", "Non eucalypt forest and woodland", "Other natural environments", "Moorland, sedgeland and rushland",
                "Highland and treeless vegetation", "Saltmarsh and wetland", "Native grassland")))
 TASVEG_COLOURS[norm_group("Highland treeless vegetation")] <- TASVEG_COLOURS[norm_group("Highland and treeless vegetation")]
+## 3.0 and the 4.0 fire attributes use the older names of two groups
+TASVEG_COLOURS[norm_group("Agricultural, urban and exotic vegetation")] <- TASVEG_COLOURS[norm_group("Modified land")]
+TASVEG_COLOURS[norm_group("Moorland, sedgeland, rushland and peatland")] <- TASVEG_COLOURS[norm_group("Moorland, sedgeland and rushland")]
 ## TASVEG 5.0 carries only the group code; names from its fire-attributes companion (joined on VEGCODE)
 TASVEG5_GROUPS <- c(`1` = "Dry eucalypt forest and woodland", `2` = "Wet eucalypt forest and woodland", `3` = "Rainforest and related scrub",
                     `4` = "Non eucalypt forest and woodland", `5` = "Saltmarsh and wetland", `6` = "Scrub heathland and coastal complexes",
@@ -68,6 +71,10 @@ OVER_ROWS <- 10000; OVER_BYTES <- 52428800                     # the Portolan Br
 SYSTEM_FIELDS <- c("SHAPE_Length", "SHAPE_Area", "SHAPE_LENG", "OBJECTID", "FID", "UFI", "LIST_GUID", "CREATED_ON", "COMP_AREA",
                    "COMP_LEN", "MEAS_AREA", "FMP", "NOM_REG_NO", "CRC_ID", "lga", "SHAPE", "geometry", "geometry_bbox", "SHAPE_bbox")
 ASSIGN_CRS <- c(list_tasveg_20 = "EPSG:28355")                  # no CRS in its GeoParquet (would read as lon/lat); MGA55 metres
+## style settings for automatic layers: their fields and zooms stay automatic, so restyling needs no new tiles
+TASVEG_STYLE <- list(by = "VEG_GROUP", palette = "tasveg", opacity = 0.75, outline = FALSE)
+AUTO_STYLE <- list(list_tasveg_30 = TASVEG_STYLE, list_tasveg_30_groups = TASVEG_STYLE,
+                   list_tasveg_40_fire_attributes = TASVEG_STYLE, list_tasveg_50_fire_attributes = TASVEG_STYLE)
 auto_cfg <- function(it) {
   cols <- setdiff(vapply(it$columns, function(c) c[[1]], ""), SYSTEM_FIELDS)
   pri <- grepl("NAME|TYPE|_TY$|CLASS|CATEG|DESC|CODE|ZONE|STATUS|GROUP|BAND|PURPOSE", cols, ignore.case = TRUE)
@@ -88,6 +95,7 @@ if (AUTO_MAX > 0) {
     if (!identical(src_of(prod)$path, it$path)) next             # one tileset per product: its first vector file
     TILESETS[[prod]] <- auto_cfg(it)
     if (prod %in% names(ASSIGN_CRS)) TILESETS[[prod]]$crs <- ASSIGN_CRS[[prod]]
+    if (prod %in% names(AUTO_STYLE)) TILESETS[[prod]] <- modifyList(TILESETS[[prod]], AUTO_STYLE[[prod]])
   }
 }
 todo <- names(TILESETS)
@@ -149,6 +157,12 @@ style_for <- function(prod, cfg, it, cats, url) {
        layers = layers)
 }
 
+remote_size <- function(url) {                                   # Content-Length from a HEAD request; NA if unreachable
+  h <- tryCatch(curlGetHeaders(url), error = function(e) character())
+  cl <- grep("^content-length:", h, ignore.case = TRUE, value = TRUE)
+  if (length(cl)) as.numeric(trimws(sub("^[^:]*:", "", cl[length(cl)]))) else NA_real_
+}
+
 build <- function(prod) {
   cfg <- TILESETS[[prod]]; it <- src_of(prod)
   src_sha <- sha[[it$path]]
@@ -164,11 +178,16 @@ build <- function(prod) {
     writeLines(toJSON(style_for(prod, cfg, it, cats, store_url), auto_unbox = TRUE, pretty = TRUE),
                file.path(STYLES, paste0(prod, ".json")))
   }
-  cfg_hash <- { f <- tempfile(); writeLines(as.character(toJSON(cfg, auto_unbox = TRUE)), f); h <- unname(tools::md5sum(f)); unlink(f); h }
-  ## unchanged source and config: keep the tiles (an entry from before config hashes counts as unchanged); FORCE=regex rebuilds
-  force <- nzchar(Sys.getenv("FORCE")) && grepl(Sys.getenv("FORCE"), prod)
-  if (!force && !is.null(prev) && identical(prev$source_sha256, src_sha) && identical(prev$config_md5 %||% cfg_hash, cfg_hash) && file.exists(out)) {
-    write_style(); prev$config_md5 <- cfg_hash; return(prev)
+  ## only what goes into the tiles decides a rebuild; style settings (by, palette, type, opacity, ...) just rewrite the style
+  tile_cfg <- cfg[intersect(c("fields", "minzoom", "maxzoom", "derive", "crs"), names(cfg))]
+  tiles_hash <- { f <- tempfile(); writeLines(as.character(toJSON(tile_cfg, auto_unbox = TRUE)), f); h <- unname(tools::md5sum(f)); unlink(f); h }
+  same_tiles <- !is.null(prev) && (if (!is.null(prev$tiles_md5)) identical(prev$tiles_md5, tiles_hash) else   # older entries: what they record
+    identical(as.character(unlist(prev$fields)), as.character(cfg$fields)) && prev$minzoom == cfg$minzoom && prev$maxzoom == cfg$maxzoom)
+  ## the tiles are here, or (a fresh checkout, e.g. CI) already in the store at the recorded size
+  have <- file.exists(out) || (!is.null(prev$bytes) && identical(remote_size(store_url), as.numeric(prev$bytes)))
+  force <- nzchar(Sys.getenv("FORCE")) && grepl(Sys.getenv("FORCE"), prod)        # FORCE=regex rebuilds
+  if (!force && same_tiles && identical(prev$source_sha256, src_sha) && have) {
+    write_style(); prev$tiles_md5 <- tiles_hash; prev$config_md5 <- NULL; prev["color_by"] <- list(cfg$by); return(prev)
   }
   src_layer <- sub("\\.parquet$", "", basename(it$path))
   gcol <- local({                                                # the primary geometry column ('SHAPE' in files from bare gdbs)
@@ -199,7 +218,7 @@ build <- function(prod) {
   write_style()
   message(prod, ": ", round(file.size(out) / 1e6, 1), " MB in ", round(as.numeric(difftime(Sys.time(), t0, units = "mins")), 1), " min")
   list(path = rel, layer = prod, minzoom = cfg$minzoom, maxzoom = cfg$maxzoom, fields = cfg$fields, color_by = cfg$by,
-       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha, config_md5 = cfg_hash,
+       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha, tiles_md5 = tiles_hash,
        center = NULL, built = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"))
 }
 
