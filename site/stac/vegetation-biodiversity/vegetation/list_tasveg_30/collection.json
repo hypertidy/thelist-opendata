@@ -214,12 +214,12 @@
     "list_tasveg_30_statewide-tiles": {
       "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_30/statewide/list_tasveg_30_statewide.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "LIST TASVEG 30 (vector tiles, zoom 9-14)",
+      "title": "LIST TASVEG 30 (vector tiles, zoom 7-14)",
       "roles": [
         "visual"
       ],
-      "file:size": 287126055,
-      "file:checksum": "122098c32ad7074e8611759095e29f1c87848837f464f1712f8cf05778ec750ecdda"
+      "file:size": 301008232,
+      "file:checksum": "12204505d8c45c2875e57c4419f7a3a92fad714af2cc279549627779609bd71a6e33"
     },
     "style-default": {
       "href": "./styles/default.json",

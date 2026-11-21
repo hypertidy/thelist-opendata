@@ -44,9 +44,10 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
     (500,000 in `make pmtiles`): up to 8 descriptive fields, one colour
     styled by geometry type (fill and outline, line, circle) and the minimum
     zoom from the feature count (z6 up to 50k, z8 up to 150k, z9 up to 500k,
-    z10 above). `DRY=1` lists the plan without building. `AUTO_STYLE`
-    restyles an automatic layer: TASVEG 3.0, 3.0 groups and the 4.0 and 5.0
-    fire attributes share the vegetation-group palette with 4.0 and 5.0.
+    z10 above). `DRY=1` lists the plan without building. `AUTO_OVERRIDES`
+    changes an automatic layer's settings: TASVEG 3.0, 3.0 groups and the 4.0
+    and 5.0 fire attributes are drawn like 4.0 and 5.0 (the vegetation-group
+    palette, from z7).
     `ASSIGN_CRS` gives a CRS to a source that lacks one (TASVEG 2.0).
 
   A tileset is rebuilt only when its source or its tile settings (fields,
