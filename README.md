@@ -37,9 +37,15 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   `stac-styles/`, `manifest/pmtiles.json`). The Portolan Browser draws a
   GeoParquet directly up to 10,000 features and 50 MB (reprojecting from its
   CRS), so small layers stay GeoParquet-only; 81 of 235 vector layers are over
-  that. Tiled so far (GDAL's PMTiles writer), 69 layers:
+  that. Tiled so far (GDAL's PMTiles writer), 70 tilesets:
   - configured in `TILESETS`, coloured by a category: parcels, TASVEG 4.0 and
     5.0, transport segments, landslide hazard bands
+  - stacked: the SES historic flood events, a file per event, as one layer
+    with an `EVENT` column, coloured by date (`stack` in its config: GDAL
+    `vector concat` with each feature's file named). One tileset per file
+    would not do: the browser draws a collection from its tiles instead of
+    its files, so tiling only June 2016 (the one over the limit) would hide
+    the other twelve events
   - automatic, every other over-cap layer up to `AUTO_MAX_ROWS` features
     (500,000 in `make pmtiles`): up to 8 descriptive fields, one colour
     styled by geometry type (fill and outline, line, circle) and the minimum
@@ -57,9 +63,7 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
 
   Still untiled: the 7 layers over 500,000 features (10 m contours, hydline,
   boundary segments, landslide components, the planning code overlay, the
-  high and low eagle nesting habitat grids), and products with several
-  vector files (e.g. the SES historic flood events), since it builds one
-  tileset per product.
+  high and low eagle nesting habitat grids).
 - `R/22_stac.R` then `portolan stac-geoparquet`: the catalogue in `site/stac/`
   (with `items.parquet` mirrors for multi-COG collections); a tileset is
   linked (`rel: pmtiles`, a `visual` asset, a `style` asset) once it is live

@@ -232,7 +232,7 @@ make_collection <- function(prod, its) {
   tiles <- pmt[[prod]]
   style_src <- if (!is.null(tiles)) file.path("stac-styles", paste0(prod, ".json"))
   if (!is.null(tiles) && file.exists(style_src)) {
-    pkey <- sub("\\.parquet$", "", basename(tiles$source))
+    pkey <- if (grepl("/$", tiles$source)) prod else sub("\\.parquet$", "", basename(tiles$source))   # a stacked tileset: named for the product
     assets[[paste0(pkey, "-tiles")]] <- list(href = paste0(ASSET_BASE, "/", tiles$path), type = "application/vnd.pmtiles",
       title = sprintf("%s (vector tiles, zoom %d-%d)", title, tiles$minzoom, tiles$maxzoom), roles = I("visual"),
       `file:size` = tiles$bytes, `file:checksum` = paste0("1220", tiles$sha256))

@@ -1,0 +1,148 @@
+{
+  "version": 8,
+  "name": "SES Historic Flood Event Extent by event",
+  "metadata": {
+    "legend": [
+      {
+        "label": "May 1969",
+        "value": "May 1969",
+        "color": "#CDF0CB"
+      },
+      {
+        "label": "August 1970",
+        "value": "August 1970",
+        "color": "#B6E7C3"
+      },
+      {
+        "label": "July 2000",
+        "value": "July 2000",
+        "color": "#9ADCBB"
+      },
+      {
+        "label": "January 2004",
+        "value": "January 2004",
+        "color": "#77D1B5"
+      },
+      {
+        "label": "September 2005",
+        "value": "September 2005",
+        "color": "#47C4B1"
+      },
+      {
+        "label": "August 2007",
+        "value": "August 2007",
+        "color": "#00B6AF"
+      },
+      {
+        "label": "September 2009",
+        "value": "September 2009",
+        "color": "#00A6AE"
+      },
+      {
+        "label": "January 2011",
+        "value": "January 2011",
+        "color": "#0095AF"
+      },
+      {
+        "label": "March 2011",
+        "value": "March 2011",
+        "color": "#0083B2"
+      },
+      {
+        "label": "August 2013",
+        "value": "August 2013",
+        "color": "#006AA8"
+      },
+      {
+        "label": "June 2016",
+        "value": "June 2016",
+        "color": "#004F93"
+      },
+      {
+        "label": "July 2016",
+        "value": "July 2016",
+        "color": "#04347A"
+      },
+      {
+        "label": "May 2018",
+        "value": "May 2018",
+        "color": "#26185F"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/ses_historic_flood_event_extent/statewide/ses_historic_flood_event_extent_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "ses_historic_flood_event_extent-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "ses_historic_flood_event_extent",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "EVENT"
+          ],
+          "May 1969",
+          "#CDF0CB",
+          "August 1970",
+          "#B6E7C3",
+          "July 2000",
+          "#9ADCBB",
+          "January 2004",
+          "#77D1B5",
+          "September 2005",
+          "#47C4B1",
+          "August 2007",
+          "#00B6AF",
+          "September 2009",
+          "#00A6AE",
+          "January 2011",
+          "#0095AF",
+          "March 2011",
+          "#0083B2",
+          "August 2013",
+          "#006AA8",
+          "June 2016",
+          "#004F93",
+          "July 2016",
+          "#04347A",
+          "May 2018",
+          "#26185F",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.55
+      }
+    },
+    {
+      "id": "ses_historic_flood_event_extent-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "ses_historic_flood_event_extent",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

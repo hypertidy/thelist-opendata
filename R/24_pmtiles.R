@@ -62,7 +62,23 @@ TILESETS <- list(
 cat_json <- fromJSON("site/catalog.json", simplifyVector = FALSE)
 sums <- read.csv("manifest/checksums.csv", colClasses = "character"); sha <- setNames(sums$sha256, sums$path)
 man <- if (file.exists(MANF)) fromJSON(MANF, simplifyVector = FALSE) else list()
-src_of <- function(prod) Filter(function(it) it$kind == "vector" && strsplit(it$path, "/")[[1]][2] == prod, cat_json$items)[[1]]
+vec_items <- function(prod) Filter(function(it) it$kind == "vector" && strsplit(it$path, "/")[[1]][2] == prod, cat_json$items)
+src_of <- function(prod) vec_items(prod)[[1]]
+md5_str <- function(x) { f <- tempfile(); writeLines(x, f); h <- unname(tools::md5sum(f)); unlink(f); h }
+
+## SES historic flood events: a file per event. One tileset stacks them all into one layer (stack: the field
+## naming each feature's file), since the browser draws a collection from its tiles instead of its files:
+## tiling only June 2016, the one file over its limit, would hide the other events. Coloured by date.
+flood_files <- sort(sub("\\.parquet$", "", basename(vapply(vec_items("ses_historic_flood_event_extent"), `[[`, "", "path"))))
+if (length(flood_files)) {
+  lab <- gsub("_", " ", sub("^flood_extent_", "", flood_files))                         # flood_extent_june_2016 -> June 2016
+  lab <- paste0(toupper(substr(lab, 1, 1)), substring(lab, 2))                          # (toTitleCase keeps 'may' lower case)
+  when <- as.numeric(sub(".* ", "", lab)) * 12 + match(tolower(sub(" .*", "", lab)), tolower(month.name))
+  TILESETS$ses_historic_flood_event_extent <- list(stack = "SOURCE", fields = character(), type = "fill", by = "EVENT",
+    minzoom = 6, maxzoom = 14, opacity = 0.55, outline = TRUE, order = lab[order(when)],
+    colours = hcl.colors(length(lab) + 3, "YlGnBu", rev = TRUE)[-(1:3)],                 # oldest lightest; the palest dropped
+    derive = list(name = "EVENT", from = "SOURCE", map = setNames(lab, flood_files)))
+}
 
 ## Any other layer over the browser's direct-draw limit can be tiled with a default config:
 ## AUTO_MAX_ROWS=50000 tiles every unconfigured over-limit layer up to that many features.
@@ -165,7 +181,8 @@ remote_size <- function(url) {                                   # Content-Lengt
 
 build <- function(prod) {
   cfg <- TILESETS[[prod]]; it <- src_of(prod)
-  src_sha <- sha[[it$path]]
+  paths <- if (is.null(cfg$stack)) it$path else vapply(vec_items(prod), `[[`, "", "path")   # stacked: every vector file
+  src_sha <- if (length(paths) == 1) sha[[it$path]] else md5_str(paste(paths, sha[paths]))
   rel <- sprintf("pmtiles/%s/statewide/%s_statewide.pmtiles", prod, prod)
   out <- file.path(DEST, rel); dir.create(dirname(out), recursive = TRUE, showWarnings = FALSE)
   prev <- man[[prod]]
@@ -173,13 +190,13 @@ build <- function(prod) {
   store_url <- paste0(PUBLIC, "/", rel)
   write_style <- function() {                                   # styles are cheap: always rewritten
     dir.create(STYLES, showWarnings = FALSE)
-    cats <- if (is.null(cfg$by)) NULL else if (is.null(cfg$derive)) categories(url, cfg$by, cfg$order) else {
+    cats <- if (is.null(cfg$by)) NULL else if (!is.null(cfg$stack)) data.frame(v = cfg$order) else if (is.null(cfg$derive)) categories(url, cfg$by, cfg$order) else {
       d <- categories(url, cfg$derive$from); d$v <- unname(cfg$derive$map[as.character(d$v)]); d }
     writeLines(toJSON(style_for(prod, cfg, it, cats, store_url), auto_unbox = TRUE, pretty = TRUE),
                file.path(STYLES, paste0(prod, ".json")))
   }
   ## only what goes into the tiles decides a rebuild; style settings (by, palette, type, opacity, ...) just rewrite the style
-  tile_cfg <- cfg[intersect(c("fields", "minzoom", "maxzoom", "derive", "crs"), names(cfg))]
+  tile_cfg <- cfg[intersect(c("fields", "minzoom", "maxzoom", "derive", "crs", "stack"), names(cfg))]
   tiles_hash <- { f <- tempfile(); writeLines(as.character(toJSON(tile_cfg, auto_unbox = TRUE)), f); h <- unname(tools::md5sum(f)); unlink(f); h }
   same_tiles <- !is.null(prev) && (if (!is.null(prev$tiles_md5)) identical(prev$tiles_md5, tiles_hash) else   # older entries: what they record
     identical(as.character(unlist(prev$fields)), as.character(cfg$fields)) && prev$minzoom == cfg$minzoom && prev$maxzoom == cfg$maxzoom)
@@ -190,7 +207,16 @@ build <- function(prod) {
     write_style(); prev$tiles_md5 <- tiles_hash; prev$config_md5 <- NULL; prev["color_by"] <- list(cfg$by); return(prev)
   }
   src_layer <- sub("\\.parquet$", "", basename(it$path))
-  gcol <- local({                                                # the primary geometry column ('SHAPE' in files from bare gdbs)
+  input <- paste0("/vsicurl/", url)
+  if (!is.null(cfg$stack)) {                                     # one local GeoParquet of all the files, each feature's file in cfg$stack
+    input <- file.path(tempdir(), paste0(prod, ".parquet")); src_layer <- prod
+    rc <- system2("gdal", c("vector", "concat", "--mode single", "--overwrite", "--source-layer-field-name", cfg$stack,
+                            "--source-layer-field-content", shQuote("{DS_BASENAME}"),
+                            shQuote(paste0("/vsicurl/", PUBLIC, "/", paths)), shQuote(input)),
+                  stdout = FALSE, stderr = file.path(tempdir(), paste0(prod, "-concat.log")))
+    if (rc != 0L) stop(prod, ": gdal concat failed, see ", file.path(tempdir(), paste0(prod, "-concat.log")))
+  }
+  gcol <- if (!is.null(cfg$stack)) "geometry" else local({                                                # the primary geometry column ('SHAPE' in files from bare gdbs)
     con <- dbConnect(duckdb(shared_home = FALSE)); on.exit(dbDisconnect(con, shutdown = TRUE))
     invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
     g <- dbGetQuery(con, sprintf("SELECT decode(value) v FROM parquet_kv_metadata('%s') WHERE decode(key) = 'geo'", url))$v
@@ -198,11 +224,12 @@ build <- function(prod) {
   pick <- if (is.null(cfg$derive)) paste("! select", paste("--field", cfg$fields, collapse = " "), "--geometry-field", gcol)   # name the geometry (a bare field list drops it)
           else {                                                 # add a derived name column with a CASE over the code
             dv <- cfg$derive
-            case <- paste0("CASE ", dv$from, " ", paste(sprintf("WHEN %s THEN '%s'", names(dv$map), gsub("'", "''", dv$map)), collapse = " "), " END AS ", dv$name)
-            paste("! sql --dialect SQLite", shQuote(sprintf("SELECT %s, %s, geometry FROM \"%s\"", paste(cfg$fields, collapse = ", "), case, src_layer)))
+            key <- names(dv$map); if (!all(grepl("^-?[0-9.]+$", key))) key <- sprintf("'%s'", gsub("'", "''", key))   # quote text codes
+            case <- paste0("CASE ", dv$from, " ", paste(sprintf("WHEN %s THEN '%s'", key, gsub("'", "''", dv$map)), collapse = " "), " END AS ", dv$name)
+            paste("! sql --dialect SQLite", shQuote(sprintf("SELECT %s FROM \"%s\"", paste(c(cfg$fields, case, "geometry"), collapse = ", "), src_layer)))
           }
   args <- c("vector", "pipeline", paste(
-    "read", shQuote(paste0("/vsicurl/", url)),
+    "read", shQuote(input),
     if (is.null(cfg$crs)) "" else paste("! edit --crs", cfg$crs),   # assign, not reproject
     pick,
     "! write --of PMTiles --overwrite",
@@ -210,7 +237,7 @@ build <- function(prod) {
     "--co SIMPLIFICATION=2 --co SIMPLIFICATION_MAX_ZOOM=1",
     "--co MAX_SIZE=2000000 --co MAX_FEATURES=400000",
     sprintf("--co NAME=%s", shQuote(it$title)),
-    sprintf("--co DESCRIPTION=%s", shQuote(paste0("theLIST (c) State of Tasmania, CC BY 3.0 AU. From ", it$path))),
+    sprintf("--co DESCRIPTION=%s", shQuote(paste0("theLIST (c) State of Tasmania, CC BY 3.0 AU. From ", paste(paths, collapse = ", ")))),
     "--output-layer", prod, shQuote(out)))
   t0 <- Sys.time(); message(prod, ": tiling z", cfg$minzoom, "-", cfg$maxzoom)
   rc <- system2("gdal", args, stdout = FALSE, stderr = file.path(tempdir(), paste0(prod, ".log")))
@@ -218,7 +245,8 @@ build <- function(prod) {
   write_style()
   message(prod, ": ", round(file.size(out) / 1e6, 1), " MB in ", round(as.numeric(difftime(Sys.time(), t0, units = "mins")), 1), " min")
   list(path = rel, layer = prod, minzoom = cfg$minzoom, maxzoom = cfg$maxzoom, fields = cfg$fields, color_by = cfg$by,
-       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = it$path, source_sha256 = src_sha, tiles_md5 = tiles_hash,
+       geometry = it$geometry, bytes = file.size(out), sha256 = sha_file(out), source = if (length(paths) == 1) it$path else paste0(dirname(it$path), "/"),
+       sources = if (length(paths) > 1) paths, source_sha256 = src_sha, tiles_md5 = tiles_hash,
        center = NULL, built = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"))
 }
 
