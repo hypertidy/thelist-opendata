@@ -67,6 +67,7 @@ src_of <- function(prod) Filter(function(it) it$kind == "vector" && strsplit(it$
 OVER_ROWS <- 10000; OVER_BYTES <- 52428800                     # the Portolan Browser's GeoParquet limits
 SYSTEM_FIELDS <- c("SHAPE_Length", "SHAPE_Area", "SHAPE_LENG", "OBJECTID", "FID", "UFI", "LIST_GUID", "CREATED_ON", "COMP_AREA",
                    "COMP_LEN", "MEAS_AREA", "FMP", "NOM_REG_NO", "CRC_ID", "lga", "SHAPE", "geometry", "geometry_bbox", "SHAPE_bbox")
+ASSIGN_CRS <- c(list_tasveg_20 = "EPSG:28355")                  # no CRS in its GeoParquet (would read as lon/lat); MGA55 metres
 auto_cfg <- function(it) {
   cols <- setdiff(vapply(it$columns, function(c) c[[1]], ""), SYSTEM_FIELDS)
   pri <- grepl("NAME|TYPE|_TY$|CLASS|CATEG|DESC|CODE|ZONE|STATUS|GROUP|BAND|PURPOSE", cols, ignore.case = TRUE)
@@ -86,6 +87,7 @@ if (AUTO_MAX > 0) {
         prod == "tasveg_5_release" || grepl("\\.gdb\\.parquet$", it$path)) next
     if (!identical(src_of(prod)$path, it$path)) next             # one tileset per product: its first vector file
     TILESETS[[prod]] <- auto_cfg(it)
+    if (prod %in% names(ASSIGN_CRS)) TILESETS[[prod]]$crs <- ASSIGN_CRS[[prod]]
   }
 }
 todo <- names(TILESETS)
@@ -182,6 +184,7 @@ build <- function(prod) {
           }
   args <- c("vector", "pipeline", paste(
     "read", shQuote(paste0("/vsicurl/", url)),
+    if (is.null(cfg$crs)) "" else paste("! edit --crs", cfg$crs),   # assign, not reproject
     pick,
     "! write --of PMTiles --overwrite",
     sprintf("--co MINZOOM=%d --co MAXZOOM=%d", cfg$minzoom, cfg$maxzoom),

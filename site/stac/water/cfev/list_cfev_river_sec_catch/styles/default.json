@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST CFEV River Sec Catch",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_cfev_river_sec_catch/statewide/list_cfev_river_sec_catch_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_cfev_river_sec_catch-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_cfev_river_sec_catch",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_cfev_river_sec_catch-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_cfev_river_sec_catch",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

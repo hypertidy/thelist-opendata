@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_building_pts",
   "title": "LIST Building Pts",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_BUILDING_PTS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_BUILDING_PTS_WEST_TAMAR.zip (LIST, released 2023-06-08)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_building_pts/statewide/list_building_pts_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Building Pts (vector tiles)",
+      "pmtiles:layers": [
+        "list_building_pts"
+      ]
     }
   ],
   "assets": {
@@ -376,6 +386,27 @@
       ],
       "file:size": 26114,
       "file:checksum": "1220bc8967c461cfe60f8bd2199109b24caa924db8a4e8d3304ecd7a2e2ad647819a"
+    },
+    "list_building_pts_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_building_pts/statewide/list_building_pts_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Building Pts (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 14061072,
+      "file:checksum": "122029e5d418e05262c3b7d613f0ac0d30849973bfb9e4a46494f4366f3962378a18"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Building Pts",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1150,
+      "file:checksum": "1220804927bdc4added25f556432f88832fa627d146f43ea988099e1bb0a35086983"
     }
   },
   "table:primary_geometry": "geometry"

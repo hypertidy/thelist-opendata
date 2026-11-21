@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "LIST Coastal Inundation Hazard Bands 20161201",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_coastal_inundation_hazard_bands_20161201/statewide/list_coastal_inundation_hazard_bands_20161201_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_coastal_inundation_hazard_bands_20161201-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_coastal_inundation_hazard_bands_20161201",
+      "paint": {
+        "fill-color": "#1f6f5c",
+        "fill-opacity": 0.45
+      }
+    },
+    {
+      "id": "list_coastal_inundation_hazard_bands_20161201-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_coastal_inundation_hazard_bands_20161201",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

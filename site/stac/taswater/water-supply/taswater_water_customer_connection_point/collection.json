@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "taswater_water_customer_connection_point",
   "title": "TASWATER Water Customer Connection Point",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASWATER_WATER_CUSTOMER_CONNECTION_POINT_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: TASWATER_WATER_CUSTOMER_CONNECTION_POINT_STATEWIDE.zip (LIST, released 2025-07-17)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/taswater_water_customer_connection_point/statewide/taswater_water_customer_connection_point_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "TASWATER Water Customer Connection Point (vector tiles)",
+      "pmtiles:layers": [
+        "taswater_water_customer_connection_point"
+      ]
     }
   ],
   "assets": {
@@ -168,6 +178,27 @@
       ],
       "file:size": 15056,
       "file:checksum": "12201eb75e163cc8d89a45531c72c037fd29db6ff5b84e82581f0bfd317b68332530"
+    },
+    "taswater_water_customer_connection_point_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/taswater_water_customer_connection_point/statewide/taswater_water_customer_connection_point_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "TASWATER Water Customer Connection Point (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 13503606,
+      "file:checksum": "1220b940ab3bb7cc3c0833448282709e5afb42b10d77e6f16c268a382c2cf8f5b543"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "TASWATER Water Customer Connection Point",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1265,
+      "file:checksum": "1220baef4b9264a8a1fbd4e1c65504cabed1b65b588d6f29ff034420052c43931d7a"
     }
   },
   "table:primary_geometry": "geometry"

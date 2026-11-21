@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_aerial_photo_centres",
   "title": "LIST Aerial Photo Centres",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_AERIAL_PHOTO_CENTRES_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_AERIAL_PHOTO_CENTRES_STATEWIDE.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_aerial_photo_centres/statewide/list_aerial_photo_centres_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Aerial Photo Centres (vector tiles)",
+      "pmtiles:layers": [
+        "list_aerial_photo_centres"
+      ]
     }
   ],
   "assets": {
@@ -296,6 +306,27 @@
       ],
       "file:size": 36496,
       "file:checksum": "1220ac357603e8d9243097357866d68f4f7c2d58a3fc86c64335455e04ce7a289221"
+    },
+    "list_aerial_photo_centres_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_aerial_photo_centres/statewide/list_aerial_photo_centres_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Aerial Photo Centres (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 48517149,
+      "file:checksum": "12205a4343f3b4bbb47a8530c5e5dc750de20089c7ed244b949359a3bdf408c85f7d"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Aerial Photo Centres",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1190,
+      "file:checksum": "1220cdcad44aa57495e9211adc17ac3af5e2a2ee70391eede32917ccd592e4fd2c8a"
     }
   },
   "table:primary_geometry": "geometry"

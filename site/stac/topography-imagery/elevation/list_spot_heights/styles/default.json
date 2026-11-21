@@ -1,0 +1,54 @@
+{
+  "version": 8,
+  "name": "LIST Spot Heights",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_spot_heights/statewide/list_spot_heights_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_spot_heights-point",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "list_spot_heights",
+      "paint": {
+        "circle-color": "#1f6f5c",
+        "circle-opacity": 0.85,
+        "circle-radius": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1.2,
+          14,
+          4.5
+        ],
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          14,
+          0.8
+        ]
+      }
+    }
+  ]
+}

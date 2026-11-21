@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_transport_nodes",
   "title": "LIST Transport Nodes",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TRANSPORT_NODES_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_TRANSPORT_NODES_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_transport_nodes/statewide/list_transport_nodes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Transport Nodes (vector tiles)",
+      "pmtiles:layers": [
+        "list_transport_nodes"
+      ]
     }
   ],
   "assets": {
@@ -404,6 +414,27 @@
       ],
       "file:size": 41827,
       "file:checksum": "122038f83028dab7e29878c7dbd6b6385e8fa02aba03a72a3c2da11214d1dd34f933"
+    },
+    "list_transport_nodes_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_transport_nodes/statewide/list_transport_nodes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Transport Nodes (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 18972994,
+      "file:checksum": "1220a304ea0a67a7c9736ff8619ff0582f2d5db5d7cf68bc2146aa753f662543e900"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Transport Nodes",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1165,
+      "file:checksum": "1220986f2f896492b9d31197642b78013afb00e372280c5bc3161051aaececb526aa"
     }
   },
   "table:primary_geometry": "geometry"

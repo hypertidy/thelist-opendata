@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasveg_20",
   "title": "LIST TASVEG 20",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_20_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_TASVEG_20_STATEWIDE.zip (LIST, released 2018-01-19)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_20/statewide/list_tasveg_20_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 20 (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasveg_20"
+      ]
     }
   ],
   "assets": {
@@ -248,6 +258,27 @@
       ],
       "file:size": 13401,
       "file:checksum": "12203978221248e6c8cb7d8813096d4f70431b11f5710961d9ef8bf3c2b1c0071d63"
+    },
+    "list_tasveg_20_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_20/statewide/list_tasveg_20_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 20 (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 250568169,
+      "file:checksum": "12200e5e3461c82cc136f410713af589e8dfe8559f5099efc20d2eb24072e570a70d"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASVEG 20",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1062,
+      "file:checksum": "1220b8e6b5d4bf75cff7096b441df9d6f9a7bbd6c208d2e9f9bd54d979fe657ec4f0"
     }
   },
   "table:primary_geometry": "geometry"

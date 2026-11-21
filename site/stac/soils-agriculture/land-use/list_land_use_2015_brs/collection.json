@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_land_use_2015_brs",
   "title": "LIST Land Use 2015 BRS",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LAND_USE_2015_BRS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LAND_USE_2015_BRS_STATEWIDE.zip (LIST, released 2019-10-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2015_brs/statewide/list_land_use_2015_brs_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Use 2015 BRS (vector tiles)",
+      "pmtiles:layers": [
+        "list_land_use_2015_brs"
+      ]
     }
   ],
   "assets": {
@@ -228,6 +238,27 @@
       ],
       "file:size": 13053,
       "file:checksum": "1220e74c1a59a09fef4c02e29fc0ce9e243dcd796d80e17d733a7fcedb6a750dea41"
+    },
+    "list_land_use_2015_brs_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_land_use_2015_brs/statewide/list_land_use_2015_brs_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Land Use 2015 BRS (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 122820454,
+      "file:checksum": "1220b78ea94dbb4d9a0021adbb1801546c5a904fe4f4b985ea7af0e9b62c75ee7c7b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Land Use 2015 BRS",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1118,
+      "file:checksum": "1220dfee1e0ec5248363c8a3c229e3e269afbdf31e0e4e74545c8b2ab4784d86426c"
     }
   },
   "table:primary_geometry": "geometry"

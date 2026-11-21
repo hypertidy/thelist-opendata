@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_tasveg_40_fire_attributes",
   "title": "LIST TASVEG 40 Fire Attributes",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_TASVEG_40_FIRE_ATTRIBUTES_WEST_TAMAR.zip (LIST, released 2020-11-04)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_40_fire_attributes/statewide/list_tasveg_40_fire_attributes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 40 Fire Attributes (vector tiles)",
+      "pmtiles:layers": [
+        "list_tasveg_40_fire_attributes"
+      ]
     }
   ],
   "assets": {
@@ -364,6 +374,27 @@
       ],
       "file:size": 12313,
       "file:checksum": "1220fc44a2d3241cccd13b11da74692ea3798a8eedd08ceb48e70d41ca1a28b1c192"
+    },
+    "list_tasveg_40_fire_attributes_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_tasveg_40_fire_attributes/statewide/list_tasveg_40_fire_attributes_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST TASVEG 40 Fire Attributes (vector tiles, zoom 9-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 305407692,
+      "file:checksum": "12206a8d96eaa95201eb2d93a450cdffe115f0cb5a5a3da3ccb501ce1ec2aac5ac61"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST TASVEG 40 Fire Attributes",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1174,
+      "file:checksum": "122010ccb25970150f18b3bd52f8dd3105a5691c10206f471a9d8d45df1d635c1cac"
     }
   },
   "table:primary_geometry": "geometry"
