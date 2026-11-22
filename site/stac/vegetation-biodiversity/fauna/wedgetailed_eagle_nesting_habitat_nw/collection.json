@@ -192,13 +192,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Wedgetailed Eagle Nesting Habitat NW",
+      "title": "Wedgetailed Eagle Nesting Habitat NW by gridcode",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 1216,
-      "file:checksum": "1220293836e91de02a481c47c98006326253938a6f2e8d6c02afae1d9b611e9a95a1"
+      "file:size": 2540,
+      "file:checksum": "122081e5cbfa14322941e4c6a88801921ba2aa296e344c405fd67c640cef8206ea5d"
     }
   },
   "table:primary_geometry": "geometry"

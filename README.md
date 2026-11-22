@@ -37,7 +37,7 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   `stac-styles/`, `manifest/pmtiles.json`). The Portolan Browser draws a
   GeoParquet directly up to 10,000 features and 50 MB (reprojecting from its
   CRS), so small layers stay GeoParquet-only; 81 of 235 vector layers are over
-  that. Tiled so far (GDAL's PMTiles writer), 70 tilesets:
+  that. All of them are tiled (GDAL's PMTiles writer), 77 tilesets:
   - configured in `TILESETS`, coloured by a category: parcels, TASVEG 4.0 and
     5.0, transport segments, landslide hazard bands
   - stacked: the SES historic flood events, a file per event, as one layer
@@ -47,13 +47,14 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
     its files, so tiling only June 2016 (the one over the limit) would hide
     the other twelve events
   - automatic, every other over-cap layer up to `AUTO_MAX_ROWS` features
-    (500,000 in `make pmtiles`): up to 8 descriptive fields, one colour
+    (all of them in `make pmtiles`): up to 8 descriptive fields, one colour
     styled by geometry type (fill and outline, line, circle) and the minimum
     zoom from the feature count (z6 up to 50k, z8 up to 150k, z9 up to 500k,
     z10 above). `DRY=1` lists the plan without building. `AUTO_OVERRIDES`
     changes an automatic layer's settings: TASVEG 3.0, 3.0 groups and the 4.0
     and 5.0 fire attributes are drawn like 4.0 and 5.0 (the vegetation-group
-    palette, from z7).
+    palette, from z7), landslide components like the hazard bands, and the
+    wedge-tailed eagle nesting habitat grids by their 0-9 score.
     `ASSIGN_CRS` gives a CRS to a source that lacks one (TASVEG 2.0).
 
   A tileset is rebuilt only when its source or its tile settings (fields,
@@ -61,9 +62,6 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   style. Tiles already in the store at their recorded size count as built,
   so a fresh checkout (CI) rebuilds only what changed. `FORCE=regex` rebuilds.
 
-  Still untiled: the 7 layers over 500,000 features (10 m contours, hydline,
-  boundary segments, landslide components, the planning code overlay, the
-  high and low eagle nesting habitat grids).
 - `R/22_stac.R` then `portolan stac-geoparquet`: the catalogue in `site/stac/`
   (with `items.parquet` mirrors for multi-COG collections); a tileset is
   linked (`rel: pmtiles`, a `visual` asset, a `style` asset) once it is live

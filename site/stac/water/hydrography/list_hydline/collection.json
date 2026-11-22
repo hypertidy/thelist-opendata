@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_hydline",
   "title": "LIST Hydline",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_HYDLINE_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_HYDLINE_WEST_TAMAR.zip (LIST, released 2025-07-10)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydline/statewide/list_hydline_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydline (vector tiles)",
+      "pmtiles:layers": [
+        "list_hydline"
+      ]
     }
   ],
   "assets": {
@@ -400,6 +410,27 @@
       ],
       "file:size": 45002,
       "file:checksum": "122099fa60b5dfbfacf1d04569d948cfa2403fec21a06922083d4d5d3e7a1eaa3a03"
+    },
+    "list_hydline_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydline/statewide/list_hydline_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Hydline (vector tiles, zoom 10-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 183895983,
+      "file:checksum": "1220f3625ff209adf283dd6e5411129961b3be0d24c97f987e8c3fd52745692ac6c8"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Hydline",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 828,
+      "file:checksum": "1220bb10583c7d3e92e9925a7805d8417c22288359a984e13e98b9999de2f7290b88"
     }
   },
   "table:primary_geometry": "geometry"

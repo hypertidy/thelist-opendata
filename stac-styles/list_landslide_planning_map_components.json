@@ -1,0 +1,85 @@
+{
+  "version": 8,
+  "name": "LIST Landslide Planning Map Components by hazard band 1",
+  "metadata": {
+    "legend": [
+      {
+        "label": "Low",
+        "value": "Low",
+        "color": "#f2e394"
+      },
+      {
+        "label": "Medium",
+        "value": "Medium",
+        "color": "#f2b134"
+      },
+      {
+        "label": "Medium - Active",
+        "value": "Medium - Active",
+        "color": "#e4572e"
+      },
+      {
+        "label": "High",
+        "value": "High",
+        "color": "#a4161a"
+      }
+    ],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_components/statewide/list_landslide_planning_map_components_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_landslide_planning_map_components-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "list_landslide_planning_map_components",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "HAZARD_BAND_1"
+          ],
+          "Low",
+          "#f2e394",
+          "Medium",
+          "#f2b134",
+          "Medium - Active",
+          "#e4572e",
+          "High",
+          "#a4161a",
+          "#9a9a9a"
+        ],
+        "fill-opacity": 0.7
+      }
+    },
+    {
+      "id": "list_landslide_planning_map_components-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_landslide_planning_map_components",
+      "paint": {
+        "line-color": "#1f4e45",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          16,
+          1.2
+        ]
+      }
+    }
+  ]
+}

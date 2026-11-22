@@ -89,8 +89,13 @@ SYSTEM_FIELDS <- c("SHAPE_Length", "SHAPE_Area", "SHAPE_LENG", "OBJECTID", "FID"
 ASSIGN_CRS <- c(list_tasveg_20 = "EPSG:28355")                  # no CRS in its GeoParquet (would read as lon/lat); MGA55 metres
 ## overrides for automatic layers: style settings only restyle; tile settings (fields, zooms) rebuild the tiles
 TASVEG_LIKE <- list(by = "VEG_GROUP", palette = "tasveg", opacity = 0.75, outline = FALSE, minzoom = 7)   # drawn like TASVEG 4.0 and 5.0
+LANDSLIDE_BANDS <- TILESETS$list_landslide_planning_map_hazard_bands[c("by", "order", "colours", "opacity")]   # as the hazard bands layer
+EAGLE_SCORE <- list(by = "GRIDCODE", order = 0:9, colours = hcl.colors(10, "YlOrBr", rev = TRUE))   # nesting habitat score 0-9, darker higher
 AUTO_OVERRIDES <- list(list_tasveg_30 = TASVEG_LIKE, list_tasveg_30_groups = TASVEG_LIKE,
-                       list_tasveg_40_fire_attributes = TASVEG_LIKE, list_tasveg_50_fire_attributes = TASVEG_LIKE)
+                       list_tasveg_40_fire_attributes = TASVEG_LIKE, list_tasveg_50_fire_attributes = TASVEG_LIKE,
+                       list_landslide_planning_map_components = LANDSLIDE_BANDS,
+                       wedgetailed_eagle_nesting_habitat_high = EAGLE_SCORE, wedgetailed_eagle_nesting_habitat_low = EAGLE_SCORE,
+                       wedgetailed_eagle_nesting_habitat_nw = EAGLE_SCORE)
 auto_cfg <- function(it) {
   cols <- setdiff(vapply(it$columns, function(c) c[[1]], ""), SYSTEM_FIELDS)
   pri <- grepl("NAME|TYPE|_TY$|CLASS|CATEG|DESC|CODE|ZONE|STATUS|GROUP|BAND|PURPOSE", cols, ignore.case = TRUE)

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_landslide_planning_map_components",
   "title": "LIST Landslide Planning Map Components",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: LIST_LANDSLIDE_PLANNING_MAP_COMPONENTS_STATEWIDE.zip (LIST, released 2019-10-16)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_components/statewide/list_landslide_planning_map_components_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Landslide Planning Map Components (vector tiles)",
+      "pmtiles:layers": [
+        "list_landslide_planning_map_components"
+      ]
     }
   ],
   "assets": {
@@ -200,6 +210,27 @@
       ],
       "file:size": 56063,
       "file:checksum": "12204fe9492cc7bc4e52cf0da0afcd5541abf9444249ebfd81d6edec54a6d6d8feba"
+    },
+    "list_landslide_planning_map_components_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_landslide_planning_map_components/statewide/list_landslide_planning_map_components_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST Landslide Planning Map Components (vector tiles, zoom 10-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 177734525,
+      "file:checksum": "1220a0909405c4d667dee186a783b4870aed6c88533844fa6db16c6b12d6cd0541d9"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST Landslide Planning Map Components by hazard band 1",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1931,
+      "file:checksum": "122004874320c965cffc19b9a38d4c21c89c91139e4083ab7c3d5a59b79541e9d19f"
     }
   },
   "table:primary_geometry": "geometry"

@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "wedgetailed_eagle_nesting_habitat_high",
   "title": "Wedgetailed Eagle Nesting Habitat High",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: WEDGETAILED_EAGLE_NESTING_HABITAT_HIGH_WEST_TAMAR.zip (LIST, released 2021-03-18)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/wedgetailed_eagle_nesting_habitat_high/statewide/wedgetailed_eagle_nesting_habitat_high_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Wedgetailed Eagle Nesting Habitat High (vector tiles)",
+      "pmtiles:layers": [
+        "wedgetailed_eagle_nesting_habitat_high"
+      ]
     }
   ],
   "assets": {
@@ -336,6 +346,27 @@
       ],
       "file:size": 40840,
       "file:checksum": "122007a3422a914f9f9583d9459f4f41fcf9b9dc6eb12e1ae418af609578870cb9a5"
+    },
+    "wedgetailed_eagle_nesting_habitat_high_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/wedgetailed_eagle_nesting_habitat_high/statewide/wedgetailed_eagle_nesting_habitat_high_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Wedgetailed Eagle Nesting Habitat High (vector tiles, zoom 10-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 72734778,
+      "file:checksum": "122078540aaaa0147d878baf3e118dd63d2784cad6d0f4dd79853fe28e9e9f72ea53"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Wedgetailed Eagle Nesting Habitat High by gridcode",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 2554,
+      "file:checksum": "12209098f4e4d640bc472c9be65d607c5030fe82544ec7cce4ce645a904ae755ede2"
     }
   },
   "table:primary_geometry": "geometry"
