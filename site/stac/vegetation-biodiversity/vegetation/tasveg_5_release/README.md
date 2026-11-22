@@ -1,6 +1,6 @@
 # TASVEG 5 Release
 
-TASVEG 5 Release: LIST product `TASVEG_5_RELEASE`, statewide. 482,138 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. Source released . Data (c) State of Tasmania, CC BY 3.0 AU: cite as "TASVEG 5 Release" from theLIST (c) State of Tasmania.
+TASVEG 5 Release: LIST product `TASVEG_5_RELEASE`, statewide. 482,138 features, multi-polygon (EPSG:28355). Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept. LIST gives no release date for the source. Data (c) State of Tasmania, CC BY 3.0 AU: cite as "TASVEG 5 Release" from theLIST (c) State of Tasmania.
 
 ## Files
 

@@ -9,6 +9,11 @@ built from. The original zips are not mirrored; fetch them from the source.
 Every statewide dataset with its columns, extent and source zips, and
 copy-ready snippets to read it in place with DuckDB, GDAL, R, Python or QGIS.
 
+**STAC catalogue: https://data.source.coop/mdsumner/thelist-opendata/stac/catalog.json**
+(STAC 1.1, Portolan profile), with every asset in one GeoParquet table at
+`stac/collections.parquet`. On a map:
+https://browser.portolan-sdi.org/#/external/data.source.coop/mdsumner/thelist-opendata/stac/catalog.json
+
 Data: (c) State of Tasmania, Creative Commons Attribution 3.0 Australia.
 Code that built this: https://github.com/hypertidy/thelist-opendata (MIT).
 
@@ -50,6 +55,11 @@ This mirror converts each layer once, from the FileGDB where there is one.
     cog/<product>/<region>/<name>.tif
                    rasters as COG (ZSTD, 512 px blocks, overviews); the LGA-split
                    DEM 25 m is also mosaicked to cog/list_dem_25m/statewide/
+    pmtiles/<product>/statewide/<layer>_statewide.pmtiles
+                   vector tiles of the statewide layers too big to draw directly
+                   (over 10,000 features or 50 MB), for web maps
+    stac/          the STAC catalogue of the statewide files (catalog.json) and
+                   its flat index (collections.parquet)
 
 Sizes as of the first release: 13 GB GeoParquet, 7 GB COG (the source zips,
 not mirrored, total 183 GB).

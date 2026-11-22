@@ -6,9 +6,15 @@ public file you can read in place; nothing needs downloading first.
 
 ## Finding data
 
-- Start at `catalog.json`. Children: `vector/` (GeoParquet), `raster/` (COG),
-  `tables/` (Parquet with no geometry). Each `<group>/<product>/collection.json`
-  is one LIST product; its `assets` are the statewide files.
+- Quickest: `collections.parquet` beside `catalog.json` lists every asset of
+  every collection and item in one GeoParquet table (absolute `href`,
+  `media_type`, `roles`, `proj_code`, `row_count`, `column_names`, `file_size`,
+  `file_checksum`; geometry is the lon/lat bbox). Filter
+  `list_contains(roles, 'data')` for the data files.
+- Or walk from `catalog.json`: its children are 14 themes. Each
+  `<theme>[/<sub>]/<product>/collection.json` is one LIST product; its
+  `assets` are the statewide files, or, where a product has several COGs, its
+  `item` links lead to one item per COG.
 - Collection `id` is the product folder in the store; `keywords` include the
   LIST product code (e.g. `LIST_PARCELS`).
 - Asset fields: `href` (HTTPS), `type`, `file:size`, `file:checksum`

@@ -1,4 +1,4 @@
-.PHONY: all crawl parse peek convert statewide catalog checksums thumbnails pmtiles stac test
+.PHONY: all crawl parse peek convert statewide catalog checksums thumbnails pmtiles stac publish-stac test
 all: crawl parse peek
 crawl:   ; Rscript R/00_crawl.R
 parse:   ; Rscript R/01_parse.R
@@ -9,5 +9,9 @@ catalog: ; Rscript R/20_catalog.R
 checksums: ; Rscript R/21_checksums.R
 thumbnails: ; Rscript R/23_thumbnails.R
 pmtiles: ; AUTO_MAX_ROWS=$${AUTO_MAX_ROWS:-Inf} Rscript R/24_pmtiles.R
-stac: ; Rscript R/22_stac.R && portolan stac-geoparquet --catalog site/stac
+stac: ; Rscript R/22_stac.R && portolan stac-geoparquet --catalog site/stac && Rscript R/25_stac_index.R
+## the catalogue into the store, beside the data (GDAL /vsis3/ credentials and AWS_S3_ENDPOINT from the environment);
+## objects of a collection no longer in the catalogue are left, unlinked
+STORE ?= /vsis3/mdsumner/thelist-opendata
+publish-stac: ; gdal vsi sync -r --strategy ETag site/stac/ $(STORE)/stac/
 test:    ; Rscript tests/test_parse.R

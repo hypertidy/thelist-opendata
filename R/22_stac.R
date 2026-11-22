@@ -15,17 +15,20 @@
 ## (what is in the store; R/20_catalog.R), manifest/checksums.csv
 ## (R/21_checksums.R) and, when present, stac-thumbs/ (R/23_thumbnails.R).
 ## No data file moves: asset hrefs are absolute https URLs into the store
-## (ASSET_BASE), so the tree can be served from anywhere; it is staged on GitHub
-## Pages under site/stac/.
+## (ASSET_BASE), so the tree can be served from anywhere: it is published in the
+## store under stac/ (STAC_BASE, `make publish-stac`), with a copy on GitHub Pages
+## under site/stac/.
 ##
 ##   Rscript R/22_stac.R                 # STAC_OUT=site/stac
-##   portolan stac-geoparquet --catalog site/stac   # items.parquet mirrors (make stac does both)
+##   portolan stac-geoparquet --catalog site/stac   # items.parquet mirrors
+##   Rscript R/25_stac_index.R           # collections.parquet, the flat index (make stac does all three)
 ## Also writes site/stac-paths.json (product -> collection.json) for the site.
 
 suppressPackageStartupMessages({ library(jsonlite); library(PROJ); library(wk) })
 
 ASSET_BASE <- Sys.getenv("ASSET_BASE", "https://data.source.coop/mdsumner/thelist-opendata")
 STAC_OUT   <- Sys.getenv("STAC_OUT", "site/stac")
+STAC_BASE  <- Sys.getenv("STAC_BASE", paste0(ASSET_BASE, "/stac"))   # where the catalogue is published (make publish-stac); Pages has a copy
 THUMBS     <- Sys.getenv("THUMBS", "stac-thumbs")          # <product>.png, made by R/23_thumbnails.R
 SITE       <- Sys.getenv("SITE", "https://hypertidy.github.io/thelist-opendata/")
 STAC_VERSION <- "1.1.0"
@@ -200,7 +203,8 @@ make_collection <- function(prod, its) {
   path <- c(theme_path(code), prod); depth <- length(path)          # collection dir depth below root
   bbs <- Filter(Negate(is.null), lapply(its, function(it) if (!is.null(it$bbox)) to_lonlat(it$bbox, it$crs %||% NA)))
   bbox <- if (length(bbs)) { m <- do.call(rbind, bbs); c(min(m[, 1]), min(m[, 2]), max(m[, 3]), max(m[, 4])) } else TAS
-  released <- max(unlist(lapply(its, function(it) it$source$released)) %||% NA)
+  released <- Filter(nzchar, unlist(lapply(its, function(it) it$source$released)))   # "" when LIST gives no date (a folder, not a zip)
+  released <- if (length(released)) max(released) else NA
   built <- max(unlist(lapply(its, function(it) it$source$built)) %||% cat_json$generated)
   stacked <- any(grepl("stacked", vapply(its, function(it) it$source$status %||% "", "")))
   rid <- regmatches(src$status %||% "", regexpr("id [A-Za-z_]+;", src$status %||% ""))
@@ -218,7 +222,8 @@ make_collection <- function(prod, its) {
   } else "Converted from the LIST statewide zip (from the FileGDB where there is one): field names and types kept, geometries promoted to multi, native CRS kept."
   desc <- gsub("\\s+", " ", paste(sprintf("%s: LIST product `%s`, statewide.", title, code), what, how,
                                   if (!is.null(main$crs_note)) paste0("Note: ", main$crs_note, ".") else "",
-                                  sprintf("Source released %s. Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"%s\" from theLIST (c) State of Tasmania.", released, title)))
+                                  if (is.na(released)) "LIST gives no release date for the source." else sprintf("Source released %s.", released),
+                                  sprintf("Data (c) State of Tasmania, CC BY 3.0 AU: cite as \"%s\" from theLIST (c) State of Tasmania.", title)))
   ## one item per COG only where a product has several; a single file stays a collection asset (Portolan COL-001/COL-004)
   rasters <- Filter(function(it) it$kind == "raster", its)
   if (length(rasters) < 2) rasters <- list()
@@ -374,6 +379,9 @@ root <- list(type = "Catalog", stac_version = STAC_VERSION, stac_extensions = I(
                                 link("describedby", "./README.md", "text/markdown", "About this catalogue"),
                                 link("agents", "./AGENTS.md", "text/markdown", "Guidance for agents"),
                                 link("license", LICENSE_URL, "text/html", "CC BY 3.0 AU"),
+                                link("canonical", paste0(STAC_BASE, "/catalog.json"), "application/json", "This catalogue in the store (the published copy)"),
+                                link("alternate", "./collections.parquet", "application/vnd.apache.parquet",
+                                     "Every asset of every collection and item as one GeoParquet table (R/25_stac_index.R)"),
                                 link("alternate", SITE, "text/html", "Listing with read-in-place examples"),
                                 link("via", "https://listdata.thelist.tas.gov.au/opendata/data/", "text/html", "LIST open data bulk downloads (the source)")),
                            lapply(top, function(t) link("child", sprintf("./%s/catalog.json", t), "application/json", theme_by_id[[t]]$title))),

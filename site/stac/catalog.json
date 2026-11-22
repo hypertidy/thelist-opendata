@@ -31,6 +31,18 @@
       "title": "CC BY 3.0 AU"
     },
     {
+      "rel": "canonical",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/stac/catalog.json",
+      "type": "application/json",
+      "title": "This catalogue in the store (the published copy)"
+    },
+    {
+      "rel": "alternate",
+      "href": "./collections.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Every asset of every collection and item as one GeoParquet table (R/25_stac_index.R)"
+    },
+    {
       "rel": "alternate",
       "href": "https://hypertidy.github.io/thelist-opendata/",
       "type": "text/html",

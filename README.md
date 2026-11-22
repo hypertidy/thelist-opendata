@@ -19,10 +19,15 @@ dataset with its columns, extent, source zips and read-in-place snippets for
 DuckDB, GDAL, R, Python and QGIS; built from the store by `R/20_catalog.R`
 into `site/catalog.json`, published by `.github/workflows/pages.yml`).
 
-STAC: https://hypertidy.github.io/thelist-opendata/stac/catalog.json, a STAC
+STAC: https://data.source.coop/mdsumner/thelist-opendata/stac/catalog.json, a STAC
 1.1 catalogue in the [Portolan](https://cloudnativegeo.org/blog/2026/09/introducing-portolan/)
-profile (passes `portolan check`). Browse it on a map in the
-[Portolan Browser](https://browser.portolan-sdi.org/#/external/hypertidy.github.io/thelist-opendata/stac/catalog.json).
+profile (passes `portolan check`), in the store beside the data, with a copy at
+https://hypertidy.github.io/thelist-opendata/stac/catalog.json. Browse it on a map in the
+[Portolan Browser](https://browser.portolan-sdi.org/#/external/data.source.coop/mdsumner/thelist-opendata/stac/catalog.json).
+`stac/collections.parquet` beside it is the whole catalogue as one GeoParquet
+table, one row per asset (absolute href, media type, roles, CRS, row count,
+columns, size, checksum, lon/lat bbox), for clients that want one read rather
+than a walk of 340 JSON files.
 Themed subcatalogs, one collection per product, one item per COG where a
 product has several; every asset points into the store with its size and
 sha256. Built by `make checksums thumbnails pmtiles stac`:
@@ -66,9 +71,13 @@ sha256. Built by `make checksums thumbnails pmtiles stac`:
   (with `items.parquet` mirrors for multi-COG collections); a tileset is
   linked (`rel: pmtiles`, a `visual` asset, a `style` asset) once it is live
   in the store
+- `R/25_stac_index.R`: `site/stac/collections.parquet`, the flat index. It only
+  follows the catalogue's child and item links, so it works on any static STAC
+  catalogue (`STAC_OUT`, and `STAC_BASE` for where it is published)
 
-It is staged on GitHub Pages with absolute asset hrefs into the store; it can
-move to the store root later unchanged.
+`make publish-stac` syncs `site/stac/` to `stac/` in the store (`gdal vsi
+sync`, credentials from the environment); Pages serves the same tree. Asset
+hrefs are absolute, so both copies resolve to the same files.
 
     https://data.source.coop/mdsumner/thelist-opendata/<path>                 (HTTP, CORS open, range requests)
     s3://us-west-2.opendata.source.coop/mdsumner/thelist-opendata/<path>      (anonymous S3, AWS_NO_SIGN_REQUEST=YES)
