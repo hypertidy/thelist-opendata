@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "tasmanian_planning_scheme_code_overlay",
   "title": "Tasmanian Planning Scheme Code Overlay",
@@ -106,6 +107,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/TASMANIAN_PLANNING_SCHEME_CODE_OVERLAY_STATEWIDE.zip",
       "type": "text/html",
       "title": "Source: TASMANIAN_PLANNING_SCHEME_CODE_OVERLAY_STATEWIDE.zip (LIST, released 2026-08-20)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/tasmanian_planning_scheme_code_overlay/statewide/tasmanian_planning_scheme_code_overlay_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Tasmanian Planning Scheme Code Overlay (vector tiles)",
+      "pmtiles:layers": [
+        "tasmanian_planning_scheme_code_overlay"
+      ]
     }
   ],
   "assets": {
@@ -216,6 +226,27 @@
       ],
       "file:size": 43917,
       "file:checksum": "122094e296d42e6a4a13137517b76c0365470c435bede73c0b16567f5871613ff300"
+    },
+    "tasmanian_planning_scheme_code_overlay_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/tasmanian_planning_scheme_code_overlay/statewide/tasmanian_planning_scheme_code_overlay_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Tasmanian Planning Scheme Code Overlay (vector tiles, zoom 10-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 322069643,
+      "file:checksum": "12201a1f74474f1920810f7049599a4f3c4ba5fe19251e092c9b05b28d1f8a16ed2f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Tasmanian Planning Scheme Code Overlay",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1230,
+      "file:checksum": "1220d027fc51564055eb2303bebdb7d90d5a86c86f35cc35a3a5850a629a1348c5c1"
     }
   },
   "table:primary_geometry": "geometry"

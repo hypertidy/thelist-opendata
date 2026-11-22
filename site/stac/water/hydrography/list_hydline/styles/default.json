@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "name": "LIST Hydline",
+  "metadata": {
+    "legend": [],
+    "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+  },
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_hydline/statewide/list_hydline_statewide.pmtiles",
+      "attribution": "theLIST (c) State of Tasmania, CC BY 3.0 AU"
+    }
+  },
+  "layers": [
+    {
+      "id": "list_hydline-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "list_hydline",
+      "paint": {
+        "line-color": "#1f6f5c",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.4,
+          14,
+          2
+        ]
+      }
+    }
+  ]
+}

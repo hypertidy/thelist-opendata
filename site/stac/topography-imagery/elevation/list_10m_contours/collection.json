@@ -5,7 +5,8 @@
     "https://schemas.portolan-sdi.org/portolan/v0.1.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
   "id": "list_10m_contours",
   "title": "LIST 10 m Contours",
@@ -274,6 +275,15 @@
       "href": "https://listdata.thelist.tas.gov.au/opendata/data/LIST_10M_CONTOURS_WEST_TAMAR.zip",
       "type": "text/html",
       "title": "Source: LIST_10M_CONTOURS_WEST_TAMAR.zip (LIST, released 2025-07-09)"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_10m_contours/statewide/list_10m_contours_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 10 m Contours (vector tiles)",
+      "pmtiles:layers": [
+        "list_10m_contours"
+      ]
     }
   ],
   "assets": {
@@ -356,6 +366,27 @@
       ],
       "file:size": 45862,
       "file:checksum": "1220b5448174fce43724469090a0c1bfa4e52ab833f6bf7d0eb57175b3002012d290"
+    },
+    "list_10m_contours_statewide-tiles": {
+      "href": "https://data.source.coop/mdsumner/thelist-opendata/pmtiles/list_10m_contours/statewide/list_10m_contours_statewide.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "LIST 10 m Contours (vector tiles, zoom 10-14)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 394246422,
+      "file:checksum": "122077d4049c753f114ebae11b6d53c907325b5c2ac6d0588f50dd790b90e3bb634f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "LIST 10 m Contours",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 854,
+      "file:checksum": "1220892ae77b50689330eaf02e973bcd9ae8780579b18ef1f26f631408c74634c5ec"
     }
   },
   "table:primary_geometry": "geometry"
